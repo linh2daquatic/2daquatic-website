@@ -50,3 +50,28 @@ footer .logo .logo-dark,
   height: 48px;
   width: auto;
 }
+
+
+/* === FIX: Logo footer (dark background needs LIGHT logo) === */
+footer .logo-dark,
+.footer .logo-dark {
+  display: none !important;
+}
+footer .logo-light,
+.footer .logo-light {
+  display: inline-block !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* === FIX: Logo nav (light background needs DARK logo) === */
+nav .logo-light,
+.navbar .logo-light,
+header .logo-light {
+  display: inline-block !important;
+}
+nav .logo-dark,
+.navbar .logo-dark,
+header .logo-dark {
+  display: none !important;
+}
