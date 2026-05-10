@@ -1,0 +1,8 @@
+{
+  "name": "Bể cá ProMax",
+  "slug": "be-ca-promax",
+  "description": "Bể cá biển lọc vách tích hợp, gọn gàng tinh tế. Phù hợp người mới chơi.",
+  "icon": "🐠",
+  "show_in_menu": true,
+  "order": 1
+}

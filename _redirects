@@ -1,0 +1,41 @@
+# Netlify redirects configuration
+# Last updated: 2026-05-09
+
+# ===== OLD URLS (.html extension) → NEW CLEAN URLS =====
+/index.html                 /                    301!
+/san-pham.html              /san-pham            301!
+/be-ca.html                 /be-ca               301!
+/dich-vu.html               /dich-vu             301!
+/ho-tro.html                /ho-tro              301!
+/lien-he.html               /lien-he             301!
+
+# ===== TRAILING SLASH CONSISTENCY =====
+# Bỏ trailing slash khi không phải root
+/san-pham/                  /san-pham            301!
+/be-ca/                     /be-ca               301!
+/dich-vu/                   /dich-vu             301!
+/ho-tro/                    /ho-tro              301!
+/lien-he/                   /lien-he             301!
+
+# ===== OLD WORDPRESS / E-COMMERCE URLS =====
+/he-thong-lam-mat-be-ca     /san-pham            301
+/xay-dung-be-ca             /be-ca               301
+/thuc-an-ca-san-ho          /san-pham            301
+/my-account/*               /lien-he             301
+/wishlist                   /lien-he             301
+/cart                       /lien-he             301
+/checkout                   /lien-he             301
+/shop                       /san-pham            301
+/product/*                  /san-pham            301
+/category/*                 /san-pham            301
+
+# ===== COMMON TYPOS / OLD PATHS =====
+/be_ca                      /be-ca               301
+/san_pham                   /san-pham            301
+/dich_vu                    /dich-vu             301
+/contact                    /lien-he             301
+/about                      /              301
+/faq                        /ho-tro#faq          301
+
+# ===== FALLBACK 404 =====
+/*    /404.html    404

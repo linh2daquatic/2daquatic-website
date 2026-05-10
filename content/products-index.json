@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "2d-promax-s60",
+    "title": "2D ProMax S60",
+    "short_description": "Bể cá biển 60L lọc vách tích hợp, hoàn hảo cho người mới chơi",
+    "image": "/images/slide1-desktop.jpg",
+    "price": 8000000,
+    "sale_price": 7500000,
+    "category": "be-ca-promax",
+    "in_stock": true,
+    "featured": true
+  }
+]

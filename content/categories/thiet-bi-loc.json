@@ -1,0 +1,8 @@
+{
+  "name": "Lọc & Skimmer",
+  "slug": "thiet-bi-loc",
+  "description": "Hệ thống lọc và skimmer chuyên dụng cho bể cá biển.",
+  "icon": "⚙️",
+  "show_in_menu": true,
+  "order": 3
+}

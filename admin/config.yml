@@ -1,0 +1,271 @@
+# Decap CMS Configuration for 2D Aquatic
+# Docs: https://decapcms.org/docs/configuration-options/
+
+# Backend: Lưu trữ data lên GitHub
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: 'Tạo {{collection}} "{{slug}}"'
+    update: 'Cập nhật {{collection}} "{{slug}}"'
+    delete: 'Xóa {{collection}} "{{slug}}"'
+    uploadMedia: 'Tải lên ảnh "{{path}}"'
+    deleteMedia: 'Xóa ảnh "{{path}}"'
+
+# Tiếng Việt cho UI
+locale: 'vi'
+
+# Đường dẫn lưu media
+media_folder: 'images/uploads'
+public_folder: '/images/uploads'
+
+# Cài đặt site URL
+site_url: https://2daquatic.com
+display_url: https://2daquatic.com
+logo_url: https://2daquatic.com/images/logo-light.png
+
+# Editor mặc định
+editor:
+  preview: false
+
+# === COLLECTIONS (Các loại nội dung quản lý được) ===
+collections:
+
+  # ========== 1. CÀI ĐẶT WEBSITE (Singleton - chỉ 1 file) ==========
+  - name: 'settings'
+    label: '⚙️ Cài đặt chung'
+    description: 'Thông tin chung của website (hotline, địa chỉ, giờ mở cửa...)'
+    files:
+      - name: 'general'
+        label: 'Thông tin doanh nghiệp'
+        file: 'content/settings/general.json'
+        fields:
+          - {label: 'Tên công ty', name: 'company_name', widget: 'string', default: 'Công ty TNHH 2D Aquatic'}
+          - {label: 'Tên thương hiệu', name: 'brand', widget: 'string', default: '2D Aquatic'}
+          - {label: 'Tagline', name: 'tagline', widget: 'string', default: 'Bể cá biển cao cấp & San hô tại Hà Nội'}
+          - {label: 'Hotline 1', name: 'phone1', widget: 'string', default: '0975.112.334'}
+          - {label: 'Hotline 2', name: 'phone2', widget: 'string', default: '0866.112.334'}
+          - {label: 'Email', name: 'email', widget: 'string', default: 'thelinhtts2@gmail.com'}
+          - {label: 'Địa chỉ showroom', name: 'address', widget: 'string', default: '305 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội'}
+          - {label: 'Giờ mở cửa', name: 'hours', widget: 'string', default: '8:00 - 21:00 (tất cả các ngày)'}
+          - {label: 'Facebook URL', name: 'facebook', widget: 'string', default: 'https://www.facebook.com/2DAquatic/'}
+          - {label: 'Zalo URL', name: 'zalo', widget: 'string', default: 'https://zalo.me/0975112334'}
+
+      - name: 'homepage'
+        label: 'Trang chủ - Slider'
+        file: 'content/settings/homepage.json'
+        fields:
+          - label: 'Slider trang chủ'
+            name: 'slides'
+            widget: 'list'
+            min: 1
+            max: 5
+            fields:
+              - {label: 'Tiêu đề (badge)', name: 'badge', widget: 'string', hint: 'Ví dụ: Sản phẩm chủ lực, Flagship, Custom'}
+              - {label: 'Tên sản phẩm', name: 'title', widget: 'string', hint: 'Ví dụ: 2D ProMax S Series'}
+              - {label: 'Mô tả ngắn', name: 'description', widget: 'text'}
+              - {label: 'Ảnh desktop (tỉ lệ 2.4:1)', name: 'image_desktop', widget: 'image'}
+              - {label: 'Ảnh mobile (tỉ lệ 3:4)', name: 'image_mobile', widget: 'image'}
+              - {label: 'Link CTA', name: 'cta_link', widget: 'string', default: '/be-ca'}
+              - {label: 'Text CTA', name: 'cta_text', widget: 'string', default: 'Khám phá ngay'}
+
+  # ========== 2. DANH MỤC SẢN PHẨM ==========
+  - name: 'categories'
+    label: '📁 Danh mục sản phẩm'
+    label_singular: 'Danh mục'
+    description: 'Phân loại sản phẩm (VD: Lọc & Skimmer, Đèn LED, Hóa chất...)'
+    folder: 'content/categories'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    extension: 'json'
+    format: 'json'
+    summary: '{{name}} ({{slug}})'
+    fields:
+      - {label: 'Tên danh mục', name: 'name', widget: 'string', hint: 'VD: Lọc & Skimmer'}
+      - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: loc-skimmer (không dấu, không khoảng trắng)'}
+      - {label: 'Mô tả ngắn', name: 'description', widget: 'text', required: false}
+      - {label: 'Ảnh đại diện', name: 'image', widget: 'image', required: false}
+      - {label: 'Icon emoji', name: 'icon', widget: 'string', required: false, hint: 'VD: 🐠 ⚙️ 💡'}
+      - {label: 'Hiển thị trên menu?', name: 'show_in_menu', widget: 'boolean', default: true}
+      - {label: 'Thứ tự', name: 'order', widget: 'number', default: 1, hint: 'Số nhỏ hiển thị trước'}
+
+  # ========== 3. SẢN PHẨM ==========
+  - name: 'products'
+    label: '🛒 Sản phẩm'
+    label_singular: 'Sản phẩm'
+    description: 'Quản lý tất cả sản phẩm (bể cá, lọc, đèn, hóa chất, sinh vật...)'
+    folder: 'content/products'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    extension: 'md'
+    format: 'frontmatter'
+    summary: '{{title}} | {{price}}đ'
+    sortable_fields: ['title', 'price', 'date']
+    view_filters:
+      - label: 'Sản phẩm nổi bật'
+        field: featured
+        pattern: true
+      - label: 'Còn hàng'
+        field: in_stock
+        pattern: true
+    fields:
+      - {label: 'Tên sản phẩm', name: 'title', widget: 'string', hint: 'VD: 2D ProMax S60'}
+      - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: 2d-promax-s60'}
+      - label: 'Danh mục'
+        name: 'category'
+        widget: 'select'
+        options:
+          - { label: 'Bể cá - ProMax', value: 'be-ca-promax' }
+          - { label: 'Bể cá - Infinity', value: 'be-ca-infinity' }
+          - { label: 'Bể cá - Custom', value: 'be-ca-custom' }
+          - { label: 'Thiết bị - Lọc & Skimmer', value: 'thiet-bi-loc' }
+          - { label: 'Thiết bị - Đèn LED', value: 'thiet-bi-den' }
+          - { label: 'Hóa chất - Reef Balance', value: 'hoa-chat' }
+          - { label: 'Sinh vật - Cá biển', value: 'sinh-vat-ca' }
+          - { label: 'Sinh vật - San hô', value: 'sinh-vat-san-ho' }
+          - { label: 'Phụ kiện khác', value: 'phu-kien' }
+      - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
+      - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}
+      - {label: 'Ảnh chính', name: 'image', widget: 'image'}
+      - label: 'Ảnh phụ (tối đa 8)'
+        name: 'gallery'
+        widget: 'list'
+        max: 8
+        required: false
+        field: {label: 'Ảnh', name: 'image', widget: 'image'}
+      - {label: 'Giá (VND)', name: 'price', widget: 'number', value_type: 'int', min: 0, hint: 'VD: 8000000 (8 triệu)'}
+      - {label: 'Giá khuyến mãi (VND)', name: 'sale_price', widget: 'number', value_type: 'int', min: 0, required: false}
+      - {label: 'Đơn vị tính', name: 'unit', widget: 'string', default: 'cái', hint: 'cái, bộ, chai, con...'}
+      - {label: 'SKU (mã sản phẩm)', name: 'sku', widget: 'string', required: false}
+      - label: 'Thông số kỹ thuật'
+        name: 'specs'
+        widget: 'list'
+        required: false
+        fields:
+          - {label: 'Tên thông số', name: 'key', widget: 'string', hint: 'VD: Dung tích'}
+          - {label: 'Giá trị', name: 'value', widget: 'string', hint: 'VD: 60 lít'}
+      - {label: 'Còn hàng?', name: 'in_stock', widget: 'boolean', default: true}
+      - {label: 'Sản phẩm nổi bật?', name: 'featured', widget: 'boolean', default: false, hint: 'Hiển thị trên trang chủ'}
+      - {label: 'Bảo hành', name: 'warranty', widget: 'string', default: '5 năm', required: false}
+      - {label: 'Ngày đăng', name: 'date', widget: 'datetime', default: ''}
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        collapsed: true
+        fields:
+          - {label: 'Meta title (60 ký tự)', name: 'meta_title', widget: 'string', required: false}
+          - {label: 'Meta description (160 ký tự)', name: 'meta_description', widget: 'text', required: false}
+
+  # ========== 4. BÀI VIẾT / BLOG ==========
+  - name: 'articles'
+    label: '📝 Bài viết'
+    label_singular: 'Bài viết'
+    description: 'Blog: Hướng dẫn nuôi cá, kinh nghiệm setup bể, tin tức...'
+    folder: 'content/articles'
+    create: true
+    delete: true
+    slug: '{{slug}}'
+    extension: 'md'
+    format: 'frontmatter'
+    summary: '{{title}} - {{date | date("DD/MM/YYYY")}}'
+    sortable_fields: ['title', 'date']
+    view_filters:
+      - label: 'Đã xuất bản'
+        field: published
+        pattern: true
+      - label: 'Bài nổi bật'
+        field: featured
+        pattern: true
+    fields:
+      - {label: 'Tiêu đề bài viết', name: 'title', widget: 'string'}
+      - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: huong-dan-setup-be-ca-bien'}
+      - {label: 'Tác giả', name: 'author', widget: 'string', default: 'Đội ngũ 2D Aquatic'}
+      - {label: 'Ngày đăng', name: 'date', widget: 'datetime'}
+      - {label: 'Ảnh đại diện', name: 'cover', widget: 'image'}
+      - {label: 'Mô tả ngắn (excerpt)', name: 'excerpt', widget: 'text', hint: 'Hiển thị ở danh sách bài viết và trên Google'}
+      - label: 'Thẻ (tags)'
+        name: 'tags'
+        widget: 'list'
+        required: false
+        hint: 'VD: hướng dẫn, kinh nghiệm, setup, bảo trì'
+      - label: 'Danh mục bài viết'
+        name: 'category'
+        widget: 'select'
+        options:
+          - { label: 'Hướng dẫn nuôi cá', value: 'huong-dan' }
+          - { label: 'Kinh nghiệm setup', value: 'setup' }
+          - { label: 'Bảo trì bể cá', value: 'bao-tri' }
+          - { label: 'Sản phẩm mới', value: 'san-pham-moi' }
+          - { label: 'Câu chuyện khách hàng', value: 'khach-hang' }
+          - { label: 'Tin tức', value: 'tin-tuc' }
+        default: 'huong-dan'
+      - {label: 'Nội dung bài viết', name: 'body', widget: 'markdown', hint: 'Viết như Word: bôi đậm, link, ảnh, list...'}
+      - {label: 'Đã xuất bản?', name: 'published', widget: 'boolean', default: true}
+      - {label: 'Bài nổi bật?', name: 'featured', widget: 'boolean', default: false}
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        collapsed: true
+        fields:
+          - {label: 'Meta title', name: 'meta_title', widget: 'string', required: false}
+          - {label: 'Meta description', name: 'meta_description', widget: 'text', required: false}
+          - {label: 'Từ khóa', name: 'keywords', widget: 'string', required: false, hint: 'Cách nhau bằng dấu phẩy'}
+
+  # ========== 5. FAQ ==========
+  - name: 'faqs'
+    label: '❓ Câu hỏi thường gặp (FAQ)'
+    label_singular: 'FAQ'
+    description: 'Quản lý câu hỏi-trả lời trên trang Hỗ trợ (xuất hiện trong Rich Snippets Google)'
+    folder: 'content/faqs'
+    create: true
+    delete: true
+    slug: 'faq-{{slug}}'
+    extension: 'md'
+    format: 'frontmatter'
+    summary: '{{question}}'
+    sortable_fields: ['order', 'question']
+    fields:
+      - {label: 'Câu hỏi', name: 'question', widget: 'string'}
+      - {label: 'Câu trả lời', name: 'answer', widget: 'markdown'}
+      - {label: 'Thứ tự hiển thị', name: 'order', widget: 'number', default: 1}
+      - {label: 'Hiển thị?', name: 'visible', widget: 'boolean', default: true}
+
+  # ========== 6. TRANG TĨNH ==========
+  - name: 'pages'
+    label: '📄 Trang nội dung'
+    description: 'Sửa nội dung các trang chính (Bể cá, Dịch vụ, Hỗ trợ, Liên hệ)'
+    files:
+      - name: 'be_ca'
+        label: 'Trang Bể cá'
+        file: 'content/pages/be-ca.md'
+        fields:
+          - {label: 'Tiêu đề (H1)', name: 'title', widget: 'string'}
+          - {label: 'Mô tả meta (SEO)', name: 'meta_description', widget: 'text'}
+          - {label: 'Nội dung', name: 'body', widget: 'markdown'}
+
+      - name: 'dich_vu'
+        label: 'Trang Dịch vụ'
+        file: 'content/pages/dich-vu.md'
+        fields:
+          - {label: 'Tiêu đề (H1)', name: 'title', widget: 'string'}
+          - {label: 'Mô tả meta (SEO)', name: 'meta_description', widget: 'text'}
+          - {label: 'Nội dung', name: 'body', widget: 'markdown'}
+          - label: 'Các dịch vụ'
+            name: 'services'
+            widget: 'list'
+            fields:
+              - {label: 'Tên dịch vụ', name: 'name', widget: 'string'}
+              - {label: 'Mô tả', name: 'description', widget: 'text'}
+              - {label: 'Icon', name: 'icon', widget: 'string', required: false}
+              - {label: 'Giá từ', name: 'price_from', widget: 'string', required: false}
+
+      - name: 'lien_he'
+        label: 'Trang Liên hệ'
+        file: 'content/pages/lien-he.md'
+        fields:
+          - {label: 'Tiêu đề (H1)', name: 'title', widget: 'string'}
+          - {label: 'Mô tả meta (SEO)', name: 'meta_description', widget: 'text'}
+          - {label: 'Lời mời', name: 'intro', widget: 'text'}
+          - {label: 'URL Cal.com đặt lịch', name: 'booking_url', widget: 'string', hint: 'VD: https://cal.com/2daquatic/tu-van', required: false}

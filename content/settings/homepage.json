@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "badge": "Sản phẩm chủ lực",
+      "title": "2D ProMax S Series",
+      "description": "Bể cá biển lọc vách tích hợp, gọn gàng tinh tế",
+      "image_desktop": "/images/slide1-desktop.jpg",
+      "image_mobile": "/images/slide1-mobile.jpg",
+      "cta_link": "/be-ca#promax",
+      "cta_text": "Khám phá ngay"
+    },
+    {
+      "badge": "Flagship",
+      "title": "2D Infinity S Series",
+      "description": "Bể flagship lọc tràn dưới, đẳng cấp",
+      "image_desktop": "/images/slide2-desktop.jpg",
+      "image_mobile": "/images/slide2-mobile.jpg",
+      "cta_link": "/be-ca#infinity",
+      "cta_text": "Tìm hiểu thêm"
+    }
+  ]
+}

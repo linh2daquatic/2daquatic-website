@@ -1,0 +1,51 @@
+[
+  {
+    "question": "Bể cá biển cần đầu tư bao nhiêu để bắt đầu?",
+    "order": 1,
+    "visible": true,
+    "body": "Tùy vào dòng bể và quy mô. Bể 2D ProMax compact (60-100L) trọn gói khoảng 8-15 triệu. Bể Infinity flagship lọc tràn dưới (300L+) trọn gói từ 25 triệu trở lên. Liên hệ để được tư vấn báo giá chi tiết theo nhu cầu cụ thể của bạn.\n",
+    "filename": "faq-001-chi-phi.md"
+  },
+  {
+    "question": "Người mới chơi nên bắt đầu với bể nào?",
+    "order": 2,
+    "visible": true,
+    "body": "Người mới nên bắt đầu với bể 2D ProMax S Series có lọc vách tích hợp. Hệ thống đơn giản, dễ vận hành, sẵn sàng chạy chỉ trong 24 giờ. Phù hợp với người chưa có kinh nghiệm.\n",
+    "filename": "faq-002-nguoi-moi.md"
+  },
+  {
+    "question": "Tôi không có thời gian chăm sóc, có dịch vụ bảo trì không?",
+    "order": 3,
+    "visible": true,
+    "body": "Có. 2D Aquatic cung cấp gói bảo trì định kỳ hàng tuần hoặc hàng tháng. Đội kỹ thuật đến tận nhà vệ sinh, kiểm tra hệ thống lọc, thay nước, kiểm tra thông số. Bạn chỉ việc thưởng thức.\n",
+    "filename": "faq-003-bao-tri.md"
+  },
+  {
+    "question": "Bể cá biển có khó nuôi như mọi người nói không?",
+    "order": 4,
+    "visible": true,
+    "body": "Với hệ thống chuẩn của 2D Aquatic và hướng dẫn từ chuyên gia, bể cá biển không khó như nhiều người nghĩ. Khó khăn chính nằm ở giai đoạn setup ban đầu - đó là lý do chúng tôi cung cấp dịch vụ trọn gói.\n",
+    "filename": "faq-004-kho-nuoi.md"
+  },
+  {
+    "question": "Sinh vật chết có được đổi không?",
+    "order": 5,
+    "visible": true,
+    "body": "2D Aquatic bảo hành sinh vật trong 7 ngày kể từ ngày giao. Nếu sinh vật chết do nguyên nhân từ phía cửa hàng (vận chuyển, sức khỏe ban đầu), chúng tôi sẽ đổi miễn phí.\n",
+    "filename": "faq-005-bao-hanh-sinh-vat.md"
+  },
+  {
+    "question": "2D Aquatic có giao hàng toàn quốc không?",
+    "order": 6,
+    "visible": true,
+    "body": "Có. Thiết bị và hóa chất giao toàn quốc qua đối tác vận chuyển. Sinh vật sống chỉ giao trong khu vực Hà Nội và phụ cận để đảm bảo tỉ lệ sống cao nhất.\n",
+    "filename": "faq-006-giao-hang.md"
+  },
+  {
+    "question": "Tôi muốn thiết kế bể custom, quy trình thế nào?",
+    "order": 7,
+    "visible": true,
+    "body": "Quy trình 4 bước: 1) Khảo sát miễn phí tại nhà bạn; 2) Thiết kế concept và báo giá; 3) Thi công bể; 4) Vận chuyển, lắp đặt và setup. Toàn bộ thời gian khoảng 2-4 tuần tùy quy mô.\n",
+    "filename": "faq-007-custom.md"
+  }
+]

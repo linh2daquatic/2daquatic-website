@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Bể cá Infinity",
+    "slug": "be-ca-infinity",
+    "description": "Bể flagship lọc tràn dưới, đẳng cấp.",
+    "icon": "🌊",
+    "show_in_menu": true,
+    "order": 2,
+    "filename": "be-ca-infinity.json"
+  },
+  {
+    "name": "Bể cá ProMax",
+    "slug": "be-ca-promax",
+    "description": "Bể cá biển lọc vách tích hợp, gọn gàng tinh tế. Phù hợp người mới chơi.",
+    "icon": "🐠",
+    "show_in_menu": true,
+    "order": 1,
+    "filename": "be-ca-promax.json"
+  },
+  {
+    "name": "Lọc & Skimmer",
+    "slug": "thiet-bi-loc",
+    "description": "Hệ thống lọc và skimmer chuyên dụng cho bể cá biển.",
+    "icon": "⚙️",
+    "show_in_menu": true,
+    "order": 3,
+    "filename": "thiet-bi-loc.json"
+  }
+]
