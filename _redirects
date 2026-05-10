@@ -1,16 +1,5 @@
-# Netlify redirects configuration
-# Last updated: 2026-05-10 (FIXED redirect loop bug)
-
-# ===== OLD URLS (.html extension) -> NEW CLEAN URLS =====
-/index.html                 /                    301!
-/san-pham.html              /san-pham            301!
-/be-ca.html                 /be-ca               301!
-/dich-vu.html               /dich-vu             301!
-/ho-tro.html                /ho-tro              301!
-/lien-he.html               /lien-he             301!
-
-# NOTE: REMOVED trailing slash redirects (caused infinite loop)
-# Netlify handles trailing slash automatically with Pretty URLs
+# Cloudflare Pages redirects configuration
+# Last updated: 2026-05-10
 
 # ===== OLD WORDPRESS / E-COMMERCE URLS =====
 /he-thong-lam-mat-be-ca     /san-pham            301
@@ -30,7 +19,7 @@
 /dich_vu                    /dich-vu             301
 /contact                    /lien-he             301
 /about                      /                    301
-/faq                        /ho-tro#faq          301
+/faq                        /ho-tro              301
 
 # ===== FALLBACK 404 =====
 /*    /404.html    404
