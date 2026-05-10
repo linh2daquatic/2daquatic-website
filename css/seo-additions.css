@@ -29,17 +29,24 @@
   top: 0;
 }
 
-/* Logo PNG sizing - hiển thị height cố định, width auto theo aspect ratio thực */
-.logo img.logo-light,
-.logo img.logo-dark {
-  height: 40px;
-  width: auto;
-  display: block;
+/* ===== LOGO DISPLAY LOGIC ===== */
+/* Default: hide both logos */
+.logo .logo-light,
+.logo .logo-dark {
+  display: none !important;
 }
 
-/* Logo trong footer có thể to hơn */
-footer .logo img,
-.footer-logo img {
+/* In nav (header dark): show light logo only */
+nav .logo .logo-light {
+  display: block !important;
+  height: 40px;
+  width: auto;
+}
+
+/* In footer (light bg): show dark logo only */
+footer .logo .logo-dark,
+.foot-brand .logo .logo-dark {
+  display: block !important;
   height: 48px;
   width: auto;
 }
