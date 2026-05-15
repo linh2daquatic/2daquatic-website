@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Build Script for 2D Aquatic - Outputs to dist/
- * NO _redirects file (use Cloudflare Bulk Redirects instead if needed)
+ * Copies all static files including _headers and _redirects for Netlify
  */
 
 const fs = require('fs');
@@ -48,7 +48,7 @@ const ROOT_FILES = [
   'apple-touch-icon.png', 'favicon-16.png', 'favicon-32.png',
   'favicon.ico', 'icon-192.png', 'icon-512.png',
   'site.webmanifest', 'robots.txt', 'sitemap.xml',
-  '_headers'
+  '_headers', '_redirects'
 ];
 
 ROOT_FILES.forEach(file => {
@@ -61,7 +61,7 @@ ROOT_FILES.forEach(file => {
 
 const FOLDERS = [
   'admin', 'be-ca', 'san-pham', 'dich-vu', 'ho-tro', 'lien-he',
-  'blog', 'cam-on', 'css', 'images', 'content'
+  'blog', 'cam-on', 'css', 'images', 'content', 'functions'
 ];
 
 FOLDERS.forEach(folder => {
@@ -75,4 +75,3 @@ FOLDERS.forEach(folder => {
 console.log('');
 console.log('✅ Build complete! Output in dist/');
 console.log(`   Files in dist/: ${fs.readdirSync(DIST).length}`);
-console.log('   NOTE: No _redirects file - Cloudflare will serve index.html for root');

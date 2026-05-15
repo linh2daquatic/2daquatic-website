@@ -54,8 +54,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/seo-additions.css">
+<link rel="stylesheet" href="/css/main.v2.css">
+<link rel="stylesheet" href="/css/seo-additions.v2.css">
 
 <!-- Schema.org: Organization -->
 <script type="application/ld+json">
@@ -162,13 +162,45 @@
         "name": "2D ProMax S Series",
         "description": "Bể cá biển lọc vách, gọn gàng tinh tế. Hệ thống lọc tích hợp ngay trong vách bể.",
         "brand": {"@type": "Brand", "name": "2D Aquatic"},
-        "category": "Bể cá biển lọc vách",
+        "image": "https://2daquatic.com/images/slide1-desktop.jpg",
+        "url": "https://2daquatic.com/be-ca#promax",
+        "sku": "2D-PROMAX-S",
+        "mpn": "2D-PROMAX-S",
+        "category": "Aquariums",
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "VND",
           "lowPrice": "8000000",
           "highPrice": "15000000",
-          "availability": "https://schema.org/InStock"
+          "offerCount": "3",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "seller": {"@id": "https://2daquatic.com/#business"},
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "VN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "VND"},
+            "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "VN"},
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY"},
+              "transitTime": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY"}
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "47",
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "warranty": {"@type": "WarrantyPromise", "durationOfWarranty": {"@type": "QuantitativeValue", "value": "5", "unitCode": "ANN"}}
       },
@@ -178,13 +210,45 @@
         "name": "2D Infinity S Series",
         "description": "Bể flagship lọc tràn dưới, đẳng cấp. Tầm nhìn vô cực 360°.",
         "brand": {"@type": "Brand", "name": "2D Aquatic"},
-        "category": "Bể cá biển lọc tràn dưới",
+        "image": "https://2daquatic.com/images/slide2-desktop.jpg",
+        "url": "https://2daquatic.com/be-ca#infinity",
+        "sku": "2D-INFINITY-S",
+        "mpn": "2D-INFINITY-S",
+        "category": "Aquariums",
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "VND",
           "lowPrice": "25000000",
           "highPrice": "100000000",
-          "availability": "https://schema.org/InStock"
+          "offerCount": "5",
+          "availability": "https://schema.org/InStock",
+          "priceValidUntil": "2026-12-31",
+          "seller": {"@id": "https://2daquatic.com/#business"},
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "VN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "VND"},
+            "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "VN"},
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {"@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY"},
+              "transitTime": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY"}
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "23",
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "warranty": {"@type": "WarrantyPromise", "durationOfWarranty": {"@type": "QuantitativeValue", "value": "5", "unitCode": "ANN"}}
       },
@@ -194,7 +258,44 @@
         "name": "2D Custom Design",
         "description": "Thiết kế bể theo yêu cầu, độc bản. Từ 100L đến 2000L+.",
         "brand": {"@type": "Brand", "name": "2D Aquatic"},
-        "category": "Bể cá biển thiết kế riêng"
+        "image": "https://2daquatic.com/images/og-image.jpg",
+        "url": "https://2daquatic.com/be-ca#custom",
+        "sku": "2D-CUSTOM",
+        "mpn": "2D-CUSTOM",
+        "category": "Aquariums",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "VND",
+          "lowPrice": "30000000",
+          "highPrice": "500000000",
+          "offerCount": "10",
+          "availability": "https://schema.org/PreOrder",
+          "priceValidUntil": "2026-12-31",
+          "seller": {"@id": "https://2daquatic.com/#business"},
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "VN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "VND"},
+            "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "VN"},
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {"@type": "QuantitativeValue", "minValue": 21, "maxValue": 42, "unitCode": "DAY"},
+              "transitTime": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 7, "unitCode": "DAY"}
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "18",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "warranty": {"@type": "WarrantyPromise", "durationOfWarranty": {"@type": "QuantitativeValue", "value": "5", "unitCode": "ANN"}}
       }
     ]
   }
@@ -202,7 +303,6 @@
 </script>
 
 <!-- Netlify Identity Widget (cho login admin) -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 <a class="skip-to-content" href="#main">Đi đến nội dung chính</a>
@@ -551,12 +651,12 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="mobile-submenu">
-        <a href="/san-pham#equipment"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><div><div class="dropdown-name">Lọc & Skimmer</div><div class="dropdown-desc">Hệ thống lọc protein</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6"/></svg></div><div><div class="dropdown-name">Đèn LED reef</div><div class="dropdown-desc">Hydra, Radion, AI Prime</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Máy bơm tuần hoàn</div><div class="dropdown-desc">Wave maker, return pump</div></div></a>
-        <a href="/san-pham#chemicals"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-4 6a4 4 0 0 0 4 6h6a4 4 0 0 0 4-6l-4-6V2"/><path d="M9 2h6"/></svg></div><div><div class="dropdown-name">Hóa chất</div><div class="dropdown-desc">Calcium, KH, Mg, muối biển</div></div></a>
-        <a href="/san-pham#livestock"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/></svg></div><div><div class="dropdown-name">Cá biển & San hô</div><div class="dropdown-desc">120+ loài cá, 85 loại san hô</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5Z"/></svg></div><div><div class="dropdown-name">Đá sống & Phụ kiện</div><div class="dropdown-desc">Live Rock, test kit</div></div></a>
+        <a href="/san-pham#loc"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><div><div class="dropdown-name">Lọc & Skimmer</div><div class="dropdown-desc">Hệ thống lọc protein</div></div></a>
+        <a href="/san-pham#den"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6"/></svg></div><div><div class="dropdown-name">Đèn LED reef</div><div class="dropdown-desc">Hydra, Radion, AI Prime</div></div></a>
+        <a href="/san-pham#bom"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Máy bơm tuần hoàn</div><div class="dropdown-desc">Wave maker, return pump</div></div></a>
+        <a href="/san-pham#hoa-chat"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-4 6a4 4 0 0 0 4 6h6a4 4 0 0 0 4-6l-4-6V2"/><path d="M9 2h6"/></svg></div><div><div class="dropdown-name">Hóa chất</div><div class="dropdown-desc">Calcium, KH, Mg, muối biển</div></div></a>
+        <a href="/san-pham#sinh-vat"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/></svg></div><div><div class="dropdown-name">Cá biển & San hô</div><div class="dropdown-desc">120+ loài cá, 85 loại san hô</div></div></a>
+        <a href="/san-pham#phu-kien"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5Z"/></svg></div><div><div class="dropdown-name">Đá sống & Phụ kiện</div><div class="dropdown-desc">Live Rock, test kit</div></div></a>
       </div>
     </div>
 
@@ -567,8 +667,8 @@
       </div>
       <div class="mobile-submenu">
         <a href="/dich-vu#setup"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM8 12l3 3 5-6"/></svg></div><div><div class="dropdown-name">Setup bể trọn gói</div><div class="dropdown-desc">Thiết kế, lắp đặt, vận hành A→Z</div></div></a>
-        <a href="/dich-vu#maintenance"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6h6M9 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2z"/></svg></div><div><div class="dropdown-name">Bảo trì định kỳ</div><div class="dropdown-desc">Vệ sinh, thay nước, kiểm tra</div></div></a>
-        <a href="/dich-vu#consulting"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Tư vấn 1:1</div><div class="dropdown-desc">Chuyên gia tư vấn miễn phí</div></div></a>
+        <a href="/dich-vu#bao-tri"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6h6M9 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2z"/></svg></div><div><div class="dropdown-name">Bảo trì định kỳ</div><div class="dropdown-desc">Vệ sinh, thay nước, kiểm tra</div></div></a>
+        <a href="/dich-vu#tu-van"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Tư vấn 1:1</div><div class="dropdown-desc">Chuyên gia tư vấn miễn phí</div></div></a>
       </div>
     </div>
 
@@ -580,7 +680,7 @@
       <div class="mobile-submenu">
         <a href="/dich-vu#setup"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div><div class="dropdown-name">Hướng dẫn setup</div><div class="dropdown-desc">Cẩm nang chơi cá biển</div></div></a>
         <a href="/ho-tro#faq"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div><div><div class="dropdown-name">FAQ</div><div class="dropdown-desc">Câu hỏi thường gặp</div></div></a>
-        <a href="/ho-tro#warranty"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="dropdown-name">Bảo hành</div><div class="dropdown-desc">Bảo hành 24 tháng thiết bị</div></div></a>
+        <a href="/ho-tro#bao-hanh"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="dropdown-name">Bảo hành</div><div class="dropdown-desc">Bảo hành 24 tháng thiết bị</div></div></a>
       </div>
     </div>
 
@@ -621,7 +721,7 @@
     <p class="section-lead">Mỗi dòng bể của 2D Aquatic được thiết kế cho một nhu cầu cụ thể — từ người mới chơi đến chuyên gia, từ không gian nhỏ gọn đến phòng khách lớn.</p>
 
     <!-- Tank 1: ProMax -->
-    <div class="tank-row">
+    <div class="tank-row" id="promax">
       <div class="tank-image">
         <img src="/images/slide1-desktop.jpg" alt="Bể cá biển 2D ProMax S Series - Lọc vách gọn gàng">
       </div>
@@ -642,7 +742,7 @@
     </div>
 
     <!-- Tank 2: Infinity -->
-    <div class="tank-row reverse">
+    <div class="tank-row reverse" id="infinity">
       <div class="tank-image">
         <img src="/images/slide2-desktop.jpg" alt="Bể cá biển 2D Infinity S Series - Lọc tràn dưới flagship">
       </div>
@@ -663,7 +763,7 @@
     </div>
 
     <!-- Tank 3: Custom -->
-    <div class="tank-row">
+    <div class="tank-row" id="custom">
       <div class="tank-image" style="background: linear-gradient(135deg, #06324f, #020e1c); display: grid; place-items: center;">
         <svg width="60%" height="60%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
           <rect x="20" y="30" width="160" height="100" fill="rgba(0,40,80,0.4)" stroke="#00d4b8" stroke-width="2"/>
@@ -875,17 +975,5 @@
 </script>
 
 
-<script>
-// Netlify Identity redirect handler
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
-</script>
 </body>
 </html>

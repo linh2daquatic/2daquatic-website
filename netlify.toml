@@ -1,1 +1,10 @@
+# Netlify build configuration for 2daquatic.com
 
+[build]
+  command = "node build.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Headers và redirects được quản lý qua file _headers và _redirects trong publish dir

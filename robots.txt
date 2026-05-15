@@ -1,40 +1,23 @@
 # robots.txt for 2daquatic.com
-# Last updated: 2026-05-09
+# Last updated: 2026-05-15
 
 # Cho phép tất cả bot crawl toàn bộ site
 User-agent: *
 Allow: /
 
-# Chặn các trang không cần index
-Disallow: /404.html
+# Chặn trang admin và các trang không cần index
+Disallow: /admin/
+Disallow: /admin
+Disallow: /cam-on
 Disallow: /404
-Disallow: /*.html$
-Disallow: /cart
-Disallow: /wishlist
-Disallow: /my-account/
 
-# Chặn truy cập các file kỹ thuật
-Disallow: /css/
-Disallow: /*.json$
+# Chặn truy cập các file kỹ thuật (không phải nội dung)
 Disallow: /_redirects
 Disallow: /_headers
+Disallow: /netlify.toml
+Disallow: /build.js
 
-# Cho phép Googlebot crawl ảnh và CSS để hiểu layout
-User-agent: Googlebot
-Allow: /css/
-Allow: /images/
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.svg$
-Allow: /*.jpg$
-Allow: /*.png$
-Allow: /*.webp$
-
-# Cho phép bot ảnh
-User-agent: Googlebot-Image
-Allow: /images/
-
-# Chặn các bot không mong muốn (tùy chọn)
+# Chặn các bot rác (tùy chọn)
 User-agent: AhrefsBot
 Crawl-delay: 10
 

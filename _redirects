@@ -1,0 +1,51 @@
+# Netlify _redirects for 2daquatic.com
+# Last updated: 2026-05-15
+
+# === Trailing slash → no slash (canonical) ===
+/be-ca/      /be-ca      301!
+/san-pham/   /san-pham   301!
+/dich-vu/    /dich-vu    301!
+/ho-tro/     /ho-tro     301!
+/lien-he/    /lien-he    301!
+/blog/       /blog       301!
+/cam-on/     /cam-on     301!
+/admin/      /admin/index.html 200
+
+# === .html → clean URLs ===
+/be-ca/index.html     /be-ca       301!
+/san-pham/index.html  /san-pham    301!
+/dich-vu/index.html   /dich-vu     301!
+/ho-tro/index.html    /ho-tro      301!
+/lien-he/index.html   /lien-he     301!
+/blog/index.html      /blog        301!
+/cam-on/index.html    /cam-on      301!
+/index.html           /            301!
+
+# === Tiếng Anh → tiếng Việt (URLs cũ nếu có) ===
+/aquarium      /be-ca       301
+/aquariums     /be-ca       301
+/products      /san-pham    301
+/services      /dich-vu     301
+/support       /ho-tro      301
+/faq           /ho-tro#faq  301
+/contact       /lien-he     301
+/about         /lien-he     301
+
+# === Common typos ===
+/be_ca         /be-ca       301
+/san_pham      /san-pham    301
+/dich_vu       /dich-vu     301
+/ho_tro        /ho-tro      301
+/lien_he       /lien-he     301
+/beca          /be-ca       301
+/sanpham       /san-pham    301
+/dichvu        /dich-vu     301
+/hotro         /ho-tro      301
+/lienhe        /lien-he     301
+
+# === Forms ===
+/thank-you     /cam-on      301
+/thanks        /cam-on      301
+
+# === Fallback 404 ===
+/*             /404.html    404

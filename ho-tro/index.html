@@ -54,8 +54,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/seo-additions.css">
+<link rel="stylesheet" href="/css/main.v2.css">
+<link rel="stylesheet" href="/css/seo-additions.v2.css">
 
 <!-- Schema.org: Organization -->
 <script type="application/ld+json">
@@ -212,7 +212,6 @@
 </script>
 
 <!-- Netlify Identity Widget (cho login admin) -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 <a class="skip-to-content" href="#main">Đi đến nội dung chính</a>
@@ -561,12 +560,12 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="mobile-submenu">
-        <a href="/san-pham#equipment"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><div><div class="dropdown-name">Lọc & Skimmer</div><div class="dropdown-desc">Hệ thống lọc protein</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6"/></svg></div><div><div class="dropdown-name">Đèn LED reef</div><div class="dropdown-desc">Hydra, Radion, AI Prime</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Máy bơm tuần hoàn</div><div class="dropdown-desc">Wave maker, return pump</div></div></a>
-        <a href="/san-pham#chemicals"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-4 6a4 4 0 0 0 4 6h6a4 4 0 0 0 4-6l-4-6V2"/><path d="M9 2h6"/></svg></div><div><div class="dropdown-name">Hóa chất</div><div class="dropdown-desc">Calcium, KH, Mg, muối biển</div></div></a>
-        <a href="/san-pham#livestock"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/></svg></div><div><div class="dropdown-name">Cá biển & San hô</div><div class="dropdown-desc">120+ loài cá, 85 loại san hô</div></div></a>
-        <a href="/san-pham#equipment"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5Z"/></svg></div><div><div class="dropdown-name">Đá sống & Phụ kiện</div><div class="dropdown-desc">Live Rock, test kit</div></div></a>
+        <a href="/san-pham#loc"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><div><div class="dropdown-name">Lọc & Skimmer</div><div class="dropdown-desc">Hệ thống lọc protein</div></div></a>
+        <a href="/san-pham#den"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6"/></svg></div><div><div class="dropdown-name">Đèn LED reef</div><div class="dropdown-desc">Hydra, Radion, AI Prime</div></div></a>
+        <a href="/san-pham#bom"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Máy bơm tuần hoàn</div><div class="dropdown-desc">Wave maker, return pump</div></div></a>
+        <a href="/san-pham#hoa-chat"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-4 6a4 4 0 0 0 4 6h6a4 4 0 0 0 4-6l-4-6V2"/><path d="M9 2h6"/></svg></div><div><div class="dropdown-name">Hóa chất</div><div class="dropdown-desc">Calcium, KH, Mg, muối biển</div></div></a>
+        <a href="/san-pham#sinh-vat"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/></svg></div><div><div class="dropdown-name">Cá biển & San hô</div><div class="dropdown-desc">120+ loài cá, 85 loại san hô</div></div></a>
+        <a href="/san-pham#phu-kien"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5Z"/></svg></div><div><div class="dropdown-name">Đá sống & Phụ kiện</div><div class="dropdown-desc">Live Rock, test kit</div></div></a>
       </div>
     </div>
 
@@ -577,8 +576,8 @@
       </div>
       <div class="mobile-submenu">
         <a href="/dich-vu#setup"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM8 12l3 3 5-6"/></svg></div><div><div class="dropdown-name">Setup bể trọn gói</div><div class="dropdown-desc">Thiết kế, lắp đặt, vận hành A→Z</div></div></a>
-        <a href="/dich-vu#maintenance"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6h6M9 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2z"/></svg></div><div><div class="dropdown-name">Bảo trì định kỳ</div><div class="dropdown-desc">Vệ sinh, thay nước, kiểm tra</div></div></a>
-        <a href="/dich-vu#consulting"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Tư vấn 1:1</div><div class="dropdown-desc">Chuyên gia tư vấn miễn phí</div></div></a>
+        <a href="/dich-vu#bao-tri"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6h6M9 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2z"/></svg></div><div><div class="dropdown-name">Bảo trì định kỳ</div><div class="dropdown-desc">Vệ sinh, thay nước, kiểm tra</div></div></a>
+        <a href="/dich-vu#tu-van"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><div class="dropdown-name">Tư vấn 1:1</div><div class="dropdown-desc">Chuyên gia tư vấn miễn phí</div></div></a>
       </div>
     </div>
 
@@ -590,7 +589,7 @@
       <div class="mobile-submenu">
         <a href="/dich-vu#setup"><div class="dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div><div class="dropdown-name">Hướng dẫn setup</div><div class="dropdown-desc">Cẩm nang chơi cá biển</div></div></a>
         <a href="/ho-tro#faq"><div class="dropdown-icon" style="background:linear-gradient(135deg,#ff6b4a,#e8533a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div><div><div class="dropdown-name">FAQ</div><div class="dropdown-desc">Câu hỏi thường gặp</div></div></a>
-        <a href="/ho-tro#warranty"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="dropdown-name">Bảo hành</div><div class="dropdown-desc">Bảo hành 24 tháng thiết bị</div></div></a>
+        <a href="/ho-tro#bao-hanh"><div class="dropdown-icon" style="background:linear-gradient(135deg,#9b59b6,#6c3483)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="dropdown-name">Bảo hành</div><div class="dropdown-desc">Bảo hành 24 tháng thiết bị</div></div></a>
       </div>
     </div>
 
@@ -630,7 +629,7 @@
     <h2 class="section-title">Chúng tôi <em>luôn ở bên cạnh</em> bạn.</h2>
 
     <div class="card-grid" style="margin-bottom: 80px">
-      <div class="feature-card">
+      <div class="feature-card" id="huong-dan">
         <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
         <h3>Hướng dẫn cho người mới</h3>
         <p>Tổng hợp các bài viết hướng dẫn từ A-Z: setup bể, chọn cá, chăm sóc san hô, xử lý sự cố. Cập nhật thường xuyên.</p>
@@ -648,7 +647,7 @@
         </a>
       </div>
 
-      <div class="feature-card">
+      <div class="feature-card" id="bao-hanh">
         <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <h3>Chính sách bảo hành</h3>
         <p>Bể cá bảo hành 5 năm. Sinh vật bảo hành sống 7 ngày. Thiết bị theo chính sách hãng. Quy trình rõ ràng, minh bạch.</p>
@@ -886,17 +885,5 @@
 </script>
 
 
-<script>
-// Netlify Identity redirect handler
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
-</script>
 </body>
 </html>
