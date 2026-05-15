@@ -1600,5 +1600,75 @@
   });
 </script>
 
+<!-- =====================================================
+     DYNAMIC SLIDER LOADER
+     Đọc /content/settings/homepage.json (CMS quản lý)
+     Override slider tĩnh nếu có data mới.
+     Fallback: dùng HTML hardcode nếu fetch fail.
+===================================================== -->
+<script>
+(function loadDynamicSlider() {
+  fetch('/content/settings/homepage.json?v=' + Date.now())
+    .then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(data) {
+      if (!data || !data.slides || !data.slides.length) return;
+
+      var slidesContainer = document.querySelector('.hero .slides');
+      var slidesEls = document.querySelectorAll('.hero .slide');
+      if (!slidesContainer || !slidesEls.length) return;
+
+      data.slides.forEach(function(slideData, idx) {
+        var slideEl = slidesEls[idx];
+        if (!slideEl) return; // Có nhiều slide trong JSON hơn HTML — bỏ qua
+
+        // 1. Update badge
+        var badgeEl = slideEl.querySelector('.slide-badge');
+        if (badgeEl && slideData.badge) badgeEl.textContent = slideData.badge;
+
+        // 2. Update heading
+        var headingEl = slideEl.querySelector('.slide-heading');
+        if (headingEl && slideData.title) {
+          // Tách phần đầu và phần em (nếu có)
+          var titleParts = slideData.title.split(/\s+(?=[A-Z]\s*Series$|S Series$)/i);
+          if (titleParts.length === 2) {
+            headingEl.innerHTML = titleParts[0] + ' <em>' + titleParts[1] + '</em>';
+          } else {
+            headingEl.textContent = slideData.title;
+          }
+        }
+
+        // 3. Update description
+        var descEl = slideEl.querySelector('.slide-desc');
+        if (descEl && slideData.description) descEl.textContent = slideData.description;
+
+        // 4. Update tagline (nếu CMS có field này)
+        var tagEl = slideEl.querySelector('.slide-tagline');
+        if (tagEl && slideData.tagline) tagEl.textContent = slideData.tagline;
+
+        // 5. Update images
+        var img = slideEl.querySelector('.slide-bg img');
+        var source = slideEl.querySelector('.slide-bg source');
+        if (img && slideData.image_desktop) img.src = slideData.image_desktop;
+        if (source && slideData.image_mobile) source.srcset = slideData.image_mobile;
+
+        // 6. Update CTA
+        var ctaEl = slideEl.querySelector('.slide-cta');
+        if (ctaEl) {
+          if (slideData.cta_link) ctaEl.setAttribute('href', slideData.cta_link);
+          if (slideData.cta_text) {
+            // Giữ lại icon SVG, chỉ đổi text node đầu tiên
+            var svg = ctaEl.querySelector('svg');
+            ctaEl.innerHTML = slideData.cta_text + ' ';
+            if (svg) ctaEl.appendChild(svg);
+          }
+        }
+      });
+    })
+    .catch(function(err) {
+      console.warn('[Slider] Không load được homepage.json, dùng nội dung tĩnh:', err);
+    });
+})();
+</script>
+
 </body>
 </html>
