@@ -2,19 +2,9 @@
 # Format: Netlify-compatible, also works on Cloudflare Pages
 # Last updated: 2026-05-15
 
-# ===== ADMIN PANEL (Decap CMS) - CSP LỎNG HƠN =====
-# Decap CMS cần 'unsafe-eval' để compile schema và source maps từ unpkg
-/admin/*
-  X-Frame-Options: SAMEORIGIN
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' data:; img-src 'self' data: https: blob:; connect-src 'self' https://unpkg.com https://api.github.com https://github.com https://static.cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'
-
-/admin
-  X-Frame-Options: SAMEORIGIN
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' data:; img-src 'self' data: https: blob:; connect-src 'self' https://unpkg.com https://api.github.com https://github.com https://static.cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'# ===== GLOBAL SECURITY HEADERS =====
+# ===== GLOBAL HEADERS =====
+# Lưu ý: Trên Cloudflare Pages, nhiều block /* sẽ CỘNG DỒN headers thay vì
+# override. Vì vậy CSP phải gộp vào 1 block duy nhất, bao phủ cả admin và site.
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
@@ -22,7 +12,7 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://app.cal.com https://cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://api.github.com https://*.cal.com https://api.web3forms.com; frame-src https://www.google.com https://cal.com https://app.cal.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://app.cal.com https://cal.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://api.github.com https://github.com https://*.cal.com https://api.web3forms.com https://unpkg.com https://static.cloudflareinsights.com; frame-src https://www.google.com https://cal.com https://app.cal.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com
 
 # ===== HTML PAGES - Luôn fresh =====
 /*.html
@@ -31,16 +21,15 @@
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-# ===== CSS - Cache 1 ngày (KHÔNG immutable để dễ update) =====
+# ===== CSS - Cache 1 ngày =====
 /css/*
   Cache-Control: public, max-age=86400, must-revalidate
   X-Content-Type-Options: nosniff
 
-# ===== JS - Cache 1 ngày =====
 /js/*
   Cache-Control: public, max-age=86400, must-revalidate
 
-# ===== IMAGES - Cache 30 ngày (ít thay đổi) =====
+# ===== IMAGES - Cache 30 ngày =====
 /images/*
   Cache-Control: public, max-age=2592000
 
