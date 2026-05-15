@@ -2,7 +2,19 @@
 # Format: Netlify-compatible, also works on Cloudflare Pages
 # Last updated: 2026-05-15
 
-# ===== GLOBAL SECURITY HEADERS =====
+# ===== ADMIN PANEL (Decap CMS) - CSP LỎNG HƠN =====
+# Decap CMS cần 'unsafe-eval' để compile schema và source maps từ unpkg
+/admin/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' data:; img-src 'self' data: https: blob:; connect-src 'self' https://unpkg.com https://api.github.com https://github.com https://static.cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'
+
+/admin
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' data:; img-src 'self' data: https: blob:; connect-src 'self' https://unpkg.com https://api.github.com https://github.com https://static.cloudflareinsights.com; frame-ancestors 'self'; base-uri 'self'# ===== GLOBAL SECURITY HEADERS =====
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
