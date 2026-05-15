@@ -5,7 +5,7 @@
 # Backend: Lưu trữ data lên GitHub qua OAuth proxy chạy trên Cloudflare Functions
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME  # ⚠️ ĐỔI: vd "linhtts/2daquatic-website"
+  repo: linh2daquatic/2daquatic-website
   branch: main
   base_url: https://2daquatic.com  # URL của site (nơi đặt /api/auth)
   auth_endpoint: /api/auth
