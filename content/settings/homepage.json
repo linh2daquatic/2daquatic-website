@@ -17,6 +17,15 @@
       "image_mobile": "/images/slide2-mobile.jpg",
       "cta_link": "/be-ca#infinity",
       "cta_text": "Tìm hiểu thêm"
+    },
+    {
+      "cta_link": "/be-ca",
+      "cta_text": "Khám phá ngay",
+      "badge": "Custom",
+      "title": "2D Custom Design",
+      "description": "Đội ngũ kỹ thuật của 2D Aquatic sẽ làm việc trực tiếp với bạn để thiết kế bể độc bản theo không gian, thẩm mỹ và ngân sách. Từ 100L đến 2000L+, lọc vách hoặc tràn dưới.",
+      "image_desktop": "/images/uploads/img_8725.jpg",
+      "image_mobile": "/images/uploads/img_8725.jpg"
     }
   ]
 }
