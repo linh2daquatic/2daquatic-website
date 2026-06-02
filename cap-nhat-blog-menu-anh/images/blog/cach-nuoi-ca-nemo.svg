@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#103a4a"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#bg)"/>
+<g opacity="0.15" fill="none" stroke="#16a085" stroke-width="3">
+<path d="M0 420 Q300 380 600 420 T1200 420"/><path d="M0 450 Q300 415 600 450 T1200 450"/></g>
+<!-- anemone -->
+<g transform="translate(250,300)"><g fill="#7b5ea7" opacity="0.9">
+<ellipse cx="0" cy="120" rx="150" ry="40" fill="#3a2f5a"/>
+<path d="M-90 90 Q-100 -10 -70 80Z"/><path d="M-60 95 Q-70 -30 -40 85Z"/><path d="M-30 90 Q-35 -45 -10 88Z"/><path d="M0 92 Q0 -55 25 88Z"/><path d="M30 90 Q40 -40 55 85Z"/><path d="M60 92 Q75 -20 80 88Z"/><path d="M85 95 Q105 10 100 92Z"/></g></g>
+<!-- clownfish -->
+<g transform="translate(620,250)">
+<ellipse cx="0" cy="0" rx="160" ry="95" fill="#ff7a3c"/>
+<path d="M150 0 L250 -70 L250 70 Z" fill="#ff7a3c"/>
+<rect x="-95" y="-95" width="48" height="190" rx="24" fill="#fff"/>
+<rect x="5" y="-90" width="48" height="185" rx="24" fill="#fff"/>
+<rect x="100" y="-60" width="34" height="125" rx="17" fill="#fff"/>
+<path d="M-95 -95 q-20 5 -22 25 M-47 -95 q-2 0 0 0" stroke="#1a1a1a" stroke-width="6" fill="none"/>
+<path d="M-140 0 q-30 -55 0 -75 q15 30 30 40Z" fill="#ff7a3c"/>
+<path d="M-140 0 q-30 55 0 75 q15 -30 30 -40Z" fill="#ff7a3c"/>
+<circle cx="-110" cy="-12" r="20" fill="#fff"/><circle cx="-110" cy="-12" r="11" fill="#1a1a1a"/>
+<rect x="-95" y="-95" width="48" height="190" rx="24" fill="none" stroke="#1a1a1a" stroke-width="4" opacity="0.25"/>
+</g>
+<circle cx="900" cy="150" r="9" fill="#16a085" opacity="0.6"/><circle cx="940" cy="110" r="6" fill="#16a085" opacity="0.5"/><circle cx="960" cy="170" r="5" fill="#16a085" opacity="0.4"/>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · CẨM NANG</text>
+</svg>
