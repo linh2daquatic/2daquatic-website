@@ -50,4 +50,4 @@ Nếu bể của bạn mới chạy được vài tuần và xuất hiện lớp
 
 Cách tốt nhất để không phải xử lý rêu là phòng từ đầu: dùng nước RO, skimmer đủ mạnh, cho ăn điều độ, và kiểm tra thông số nước định kỳ. Một bể cân bằng dinh dưỡng tốt sẽ rất ít khi bùng rêu.
 
-Nếu bạn đang vật lộn với rêu hại và không rõ nguyên nhân, hãy [liên hệ 2D Aquatic](/lien-he/) — chúng tôi có thể tư vấn dựa trên thông số bể của bạn và gợi ý [thiết bị lọc, skimmer phù hợp](/san-pham/). Đọc thêm bài [thông số nước bể cá biển chuẩn] để hiểu rõ các chỉ số cần theo dõi.
+Nếu bạn đang vật lộn với rêu hại và không rõ nguyên nhân, hãy [liên hệ 2D Aquatic](/lien-he/) — chúng tôi có thể tư vấn dựa trên thông số bể của bạn và gợi ý [thiết bị lọc, skimmer phù hợp](/san-pham/). Đọc thêm bài [Các thông số nước bể cá biển chuẩn](/blog/thong-so-nuoc-be-ca-bien-chuan/) để hiểu rõ các chỉ số cần theo dõi.
