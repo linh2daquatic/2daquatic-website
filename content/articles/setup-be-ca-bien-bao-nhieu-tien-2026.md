@@ -3,7 +3,7 @@ title: "Setup Bể Cá Biển Bao Nhiêu Tiền? Bảng Chi Phí Chi Tiết 2026
 slug: setup-be-ca-bien-bao-nhieu-tien-2026
 author: Đội ngũ 2D Aquatic
 date: 2026-05-27T08:00:00.000Z
-cover: ""
+cover: "/images/blog/setup-be-ca-bien-bao-nhieu-tien.svg"
 excerpt: "Setup bể cá biển bao nhiêu tiền? Bảng chi phí chi tiết 2026 theo từng kích thước bể, từ thiết bị đến sinh vật. Tư vấn minh bạch từ 2D Aquatic Hà Nội."
 category: setup
 tags:

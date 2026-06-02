@@ -3,7 +3,7 @@ title: "10 Loài Cá Biển Dễ Nuôi Nhất Cho Người Mới (2026)"
 slug: ca-bien-de-nuoi-cho-nguoi-moi
 author: Đội ngũ 2D Aquatic
 date: 2026-05-23T08:00:00.000Z
-cover: ""
+cover: "/images/blog/ca-bien-de-nuoi.svg"
 excerpt: "Top 10 loài cá biển dễ nuôi nhất cho người mới chơi reef: cá hề, cá thia, cá bống, cá khế... Đặc điểm, độ khó và lưu ý khi nuôi. Tư vấn bởi 2D Aquatic."
 category: huong-dan
 tags:

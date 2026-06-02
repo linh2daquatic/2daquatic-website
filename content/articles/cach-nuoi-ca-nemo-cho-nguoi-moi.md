@@ -3,7 +3,7 @@ title: "Cách Nuôi Cá Nemo (Cá Hề) Cho Người Mới Từ A Đến Z"
 slug: cach-nuoi-ca-nemo-cho-nguoi-moi
 author: Đội ngũ 2D Aquatic
 date: 2026-05-20T08:00:00.000Z
-cover: ""
+cover: "/images/blog/cach-nuoi-ca-nemo.svg"
 excerpt: "Hướng dẫn cách nuôi cá Nemo (cá hề) cho người mới: chọn cá khỏe, thông số nước, cho ăn, ghép cặp và nuôi chung hải quỳ. Kinh nghiệm thực tế từ 2D Aquatic Hà Nội."
 category: huong-dan
 tags:

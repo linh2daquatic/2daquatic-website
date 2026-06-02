@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#14324a"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#bg3)"/>
+<!-- tank -->
+<g transform="translate(250,150)"><rect x="0" y="0" width="300" height="200" rx="10" fill="#0e2a3a" stroke="#16a085" stroke-width="5"/>
+<rect x="10" y="150" width="280" height="40" rx="4" fill="#d9c7a0" opacity="0.7"/>
+<path d="M60 160 q30 -60 70 -10 q30 -40 60 5 q20 -25 40 0 l0 35 -170 0Z" fill="#16a085" opacity="0.55"/>
+<rect x="0" y="200" width="300" height="44" rx="6" fill="#cfd8dc"/></g>
+<!-- coins -->
+<g transform="translate(720,250)">
+<ellipse cx="0" cy="120" rx="80" ry="22" fill="#e0a82e"/><ellipse cx="0" cy="100" rx="80" ry="22" fill="#f4c430"/>
+<ellipse cx="0" cy="80" rx="80" ry="22" fill="#e0a82e"/><ellipse cx="0" cy="60" rx="80" ry="22" fill="#f4c430"/>
+<ellipse cx="0" cy="40" rx="80" ry="22" fill="#e0a82e"/><ellipse cx="0" cy="20" rx="80" ry="22" fill="#f4c430"/>
+<text x="0" y="28" text-anchor="middle" fill="#0a1628" font-family="Inter,Arial" font-size="30" font-weight="800">₫</text></g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · CHI PHÍ 2026</text>
+</svg>
