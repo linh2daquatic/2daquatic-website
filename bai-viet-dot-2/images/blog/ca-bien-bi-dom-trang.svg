@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#103a4a"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#b2)"/>
+<g transform="translate(480,250)">
+<ellipse rx="180" ry="105" fill="#f4a23c"/><path d="M170 0 L280 -78 L280 78 Z" fill="#f4a23c"/>
+<circle cx="-120" cy="-15" r="22" fill="#fff"/><circle cx="-120" cy="-15" r="12" fill="#1a1a1a"/>
+<g fill="#ffffff"><circle cx="-40" cy="-30" r="9"/><circle cx="10" cy="10" r="9"/><circle cx="60" cy="-20" r="9"/><circle cx="-10" cy="-55" r="8"/><circle cx="90" cy="25" r="8"/><circle cx="-70" cy="35" r="8"/><circle cx="40" cy="50" r="8"/></g>
+</g>
+<g transform="translate(940,150)"><circle r="58" fill="#00d4b8"/><rect x="-10" y="-34" width="20" height="68" rx="6" fill="#fff"/><rect x="-34" y="-10" width="68" height="20" rx="6" fill="#fff"/></g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · SỨC KHỎE CÁ</text>
+</svg>
