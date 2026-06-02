@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="bs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="0.6" stop-color="#0e3a52"/><stop offset="1" stop-color="#155e63"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#bs)"/>
+<!-- water caustics -->
+<g opacity="0.10" fill="none" stroke="#7fe3d4" stroke-width="3"><path d="M0 120 Q200 90 400 120 T800 120 T1200 120"/><path d="M0 160 Q200 130 400 160 T800 160 T1200 160"/></g>
+<!-- sandy floor -->
+<path d="M0 430 Q300 405 600 425 T1200 420 L1200 500 L0 500Z" fill="#d9c7a0" opacity="0.85"/>
+<!-- coral colonies -->
+<g transform="translate(250,430)">
+<g fill="#ff7a9c"><circle cx="0" cy="-30" r="26"/><circle cx="-34" cy="-10" r="20"/><circle cx="34" cy="-12" r="22"/><circle cx="-14" cy="-58" r="18"/><circle cx="18" cy="-56" r="16"/></g></g>
+<!-- branching SPS -->
+<g transform="translate(520,430)" stroke="#7b5ea7" stroke-width="16" stroke-linecap="round" fill="none">
+<path d="M0 0 L0 -70"/><path d="M0 -40 L-34 -90"/><path d="M0 -45 L34 -95"/><path d="M-34 -90 L-44 -130"/><path d="M34 -95 L46 -135"/><path d="M0 -70 L0 -120"/></g>
+<g transform="translate(520,430)" fill="#9b78c9"><circle cx="0" cy="-122" r="9"/><circle cx="-46" cy="-132" r="8"/><circle cx="46" cy="-137" r="8"/></g>
+<!-- LPS brain -->
+<g transform="translate(760,430)"><ellipse cx="0" cy="-22" rx="58" ry="34" fill="#3ec6a8"/><g stroke="#0a4a40" stroke-width="4" fill="none" opacity="0.5"><path d="M-44 -22 q22 -14 44 0 q22 14 44 0"/><path d="M-40 -10 q20 -10 40 0 q20 10 38 0"/><path d="M-40 -34 q20 10 40 0 q20 -10 38 0"/></g></g>
+<!-- soft coral polyps -->
+<g transform="translate(940,430)" fill="#f4c430" opacity="0.92"><path d="M0 0 Q-8 -60 0 -80 Q8 -60 0 0Z"/><path d="M-26 0 Q-36 -50 -26 -70 Q-16 -50 -26 0Z"/><path d="M26 0 Q16 -55 26 -72 Q36 -55 26 0Z"/></g>
+<!-- little fish -->
+<g transform="translate(640,180)"><ellipse rx="34" ry="20" fill="#ff7a3c"/><path d="M30 0 L54 -16 L54 16Z" fill="#ff7a3c"/><circle cx="-18" cy="-4" r="5" fill="#fff"/><circle cx="-18" cy="-4" r="2.5" fill="#1a1a1a"/></g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · BỂ SAN HÔ</text>
+</svg>
