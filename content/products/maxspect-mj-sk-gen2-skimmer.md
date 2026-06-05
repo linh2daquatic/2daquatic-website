@@ -7,7 +7,7 @@ short_description: "Maxspect Jump SK2200 là dòng skimmer thế hệ mới (Gen
   (dual intake) và bánh xe kim kép (dual needle wheel). "
 image: /images/uploads/screenshot-2026-06-05-at-14.09.35.png
 price: 5500000
-sale_price: 525000
+sale_price: 5250002
 unit: cái
 specs:
   - key: Series
