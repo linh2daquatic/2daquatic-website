@@ -327,6 +327,7 @@ try {
       '<link rel="stylesheet" href="/css/main.v2.css">\n' +
       '<style>' + ARTICLE_CSS + '</style>\n' +
       '<script type="application/ld+json">' + JSON.stringify(schema) + '</scr' + 'ipt>\n' +
+      '<script type="application/ld+json">' + JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang ch\u1ee7","item":"https://2daquatic.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://2daquatic.com/blog/"},{"@type":"ListItem","position":3,"name":title,"item":url}]}) + '</scr' + 'ipt>\n' +
       '</head>\n<body>\n' +
       '<header class="nav-wrap" style="position:sticky;top:0;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);z-index:100">\n' +
       '  <nav style="max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n' +
@@ -393,6 +394,36 @@ try {
   console.warn('  (Bo qua tao blog: ' + e.message + ')');
   try { fs.writeFileSync(path.join(DIST, 'content', 'articles-index.json'), '[]', 'utf8'); } catch (_) {}
 }
+
+
+// ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====
+try {
+  var SM_STATIC = [
+    {u:'https://2daquatic.com/',           p:'1.0', c:'weekly'},
+    {u:'https://2daquatic.com/be-ca/',     p:'0.9', c:'weekly'},
+    {u:'https://2daquatic.com/san-pham/',  p:'0.9', c:'weekly'},
+    {u:'https://2daquatic.com/dich-vu/',   p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/ho-tro/',    p:'0.7', c:'monthly'},
+    {u:'https://2daquatic.com/lien-he/',   p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/blog/',      p:'0.8', c:'weekly'},
+    {u:'https://2daquatic.com/blog/setup-be-ca-bien-200l-cho-nguoi-moi-tu-a-den-z/', p:'0.7', c:'monthly'},
+  ];
+  var smToday = new Date().toISOString().split('T')[0];
+  var smEntries = SM_STATIC.map(function(s){
+    return '  <url>\n    <loc>'+s.u+'</loc>\n    <changefreq>'+s.c+'</changefreq>\n    <priority>'+s.p+'</priority>\n    <lastmod>'+smToday+'</lastmod>\n  </url>';
+  });
+  // Add all published blog articles
+  var smIdxPath = path.join(DIST,'content','articles-index.json');
+  if(fs.existsSync(smIdxPath)){
+    JSON.parse(fs.readFileSync(smIdxPath,'utf8')).filter(function(a){return a.published!==false;}).forEach(function(a){
+      var lm = a.date ? new Date(a.date).toISOString().split('T')[0] : smToday;
+      smEntries.push('  <url>\n    <loc>https://2daquatic.com/blog/'+a.slug+'/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n    <lastmod>'+lm+'</lastmod>\n  </url>');
+    });
+  }
+  var smXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + smEntries.join('\n') + '\n</urlset>';
+  fs.writeFileSync(path.join(DIST,'sitemap.xml'), smXml, 'utf8');
+  console.log('  \u2713 sitemap.xml (' + smEntries.length + ' URLs)');
+} catch(e) { console.warn('  (sitemap error: '+e.message+')'); }
 
 
 console.log('');
