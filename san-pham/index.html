@@ -750,7 +750,7 @@
   grid.addEventListener("click", function(e){
     var c = e.target.closest(".pf-card"); if(!c) return;
     var p = all.filter(function(x){return x.slug===c.getAttribute("data-slug");})[0];
-    if(p) openModal(p);
+    if(p) window.location.href='/san-pham/'+p.slug+'/';
   });
 
   fetch("/products.json?v=" + Date.now())
