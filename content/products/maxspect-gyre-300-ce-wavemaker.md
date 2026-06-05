@@ -4,7 +4,7 @@ slug: maxspect-gyre-300-ce-wavemaker
 category: thiet-bi-bom
 short_description: Wavemaker cross-flow cao cấp, tạo dòng chảy ngang diện rộng,
   điều khiển qua app CE Cloud. Lý tưởng cho bể SPS cần dòng mạnh đa hướng.
-image: /images/uploads/screenshot-2026-06-05-at-19.04.59.png
+image: /images/uploads/screenshot-2026-06-05-at-19.06.13.png
 gallery:
   - /images/uploads/screenshot-2026-06-05-at-19.06.13.png
   - /images/uploads/screenshot-2026-06-05-at-19.05.28.png
