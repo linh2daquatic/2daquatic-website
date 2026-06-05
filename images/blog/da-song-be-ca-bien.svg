@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#0a2030"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#b)"/>
+<path d="M0 430 Q300 405 600 415 T1200 425 L1200 500 L0 500Z" fill="#d9c7a0" opacity="0.8"/>
+     <g fill="#16a085" opacity="0.85">
+     <ellipse cx="350" cy="420" rx="80" ry="30"/>
+     <ellipse cx="600" cy="415" rx="100" ry="35"/>
+     <ellipse cx="850" cy="420" rx="70" ry="28"/>
+     </g>
+     <g fill="#555" opacity="0.6">
+     <ellipse cx="350" cy="415" rx="60" ry="20"/>
+     <ellipse cx="600" cy="410" rx="75" ry="22"/>
+     <ellipse cx="850" cy="414" rx="55" ry="18"/>
+     </g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · SETUP BỂ CÁ BIỂN</text>
+</svg>

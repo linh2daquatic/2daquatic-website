@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#0a2030"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#b)"/>
+<g transform="translate(560,270)">
+     <ellipse rx="130" ry="80" fill="#f4a23c" opacity="0.9"/>
+     <path d="M120 0 L190 -60 L190 60Z" fill="#f4a23c" opacity="0.9"/>
+     <circle cx="-80" cy="-12" r="18" fill="#fff"/><circle cx="-80" cy="-12" r="9" fill="#0a1628"/>
+     </g>
+     <g transform="translate(840,200)">
+     <circle r="50" fill="#ff5a4a" opacity="0.9"/>
+     <text x="0" y="14" text-anchor="middle" fill="#fff" font-family="Inter,Arial" font-size="46" font-weight="900">?</text>
+     </g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · SỨC KHỎE CÁ</text>
+</svg>

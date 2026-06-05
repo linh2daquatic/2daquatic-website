@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#0a2840"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#b)"/>
+<g transform="translate(600,270)">
+     <rect x="-100" y="-110" width="200" height="220" rx="20" fill="#16384a" stroke="#5aa9e6" stroke-width="6"/>
+     <g fill="none" stroke="#5aa9e6" stroke-width="5" opacity="0.7">
+     <path d="M-50 -50 L0 -10 L50 -50"/><path d="M-50 10 L0 50 L50 10"/>
+     </g>
+     <text x="0" y="12" text-anchor="middle" fill="#5aa9e6" font-family="Inter,Arial" font-size="48" font-weight="900">❄</text>
+     </g>
+     <text x="850" y="290" fill="#5aa9e6" font-family="Inter,Arial" font-size="55" font-weight="900" opacity="0.8">26°C</text>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · THIẾT BỊ REEF</text>
+</svg>

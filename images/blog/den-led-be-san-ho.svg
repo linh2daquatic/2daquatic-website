@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#0a2840"/></linearGradient></defs>
+<rect width="1200" height="500" fill="url(#b)"/>
+<g transform="translate(600,260)">
+     <circle r="110" fill="none" stroke="#f4c430" stroke-width="6" opacity="0.5"/>
+     <circle r="70" fill="#f4c430" opacity="0.15"/>
+     <circle r="45" fill="#f4c430" opacity="0.5"/>
+     <g stroke="#f4c430" stroke-width="5" fill="none">
+     <line x1="0" y1="-130" x2="0" y2="-145"/><line x1="92" y1="-92" x2="102" y2="-102"/>
+     <line x1="130" y1="0" x2="145" y2="0"/><line x1="92" y1="92" x2="102" y2="102"/>
+     <line x1="0" y1="130" x2="0" y2="145"/><line x1="-92" y1="92" x2="-102" y2="102"/>
+     <line x1="-130" y1="0" x2="-145" y2="0"/><line x1="-92" y1="-92" x2="-102" y2="-102"/>
+     </g></g>
+<text x="60" y="80" fill="#00d4b8" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3">2D AQUATIC · ÁNH SÁNG REEF</text>
+</svg>
