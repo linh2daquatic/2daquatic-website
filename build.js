@@ -396,6 +396,150 @@ try {
 }
 
 
+// ===== AUTO-GENERATE PRODUCT DETAIL PAGES (/san-pham/<slug>/) =====
+try {
+  function escH(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function vndFmt(n){ return n ? Number(n).toLocaleString('vi-VN')+'đ' : 'Liên hệ'; }
+
+  function productPage(p) {
+    var url = 'https://2daquatic.com/san-pham/' + p.slug + '/';
+    var title = p.title || 'Sản phẩm';
+    var desc = (p.short_description || p.body || title).replace(/\s+/g,' ').trim().slice(0,160);
+    var img = p.image || '/images/og-image.jpg';
+    var imgAbs = img.indexOf('http')===0 ? img : ('https://2daquatic.com'+img);
+    var priceNum = p.price || 0;
+    var salePriceNum = p.sale_price;
+    var priceDisplay = salePriceNum ? vndFmt(salePriceNum) : vndFmt(priceNum);
+    var priceOld = salePriceNum ? ('<span style="text-decoration:line-through;opacity:.5;font-size:18px;margin-left:8px">'+vndFmt(priceNum)+'</span>') : '';
+    var specsHtml = (p.specs && p.specs.length) ?
+      '<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">' +
+      p.specs.map(function(s){
+        return '<tr><td style="padding:9px 12px;border-bottom:1px solid rgba(0,0,0,.08);color:#666;width:44%">'+escH(s.key)+'</td>'+
+               '<td style="padding:9px 12px;border-bottom:1px solid rgba(0,0,0,.08);font-weight:600">'+escH(s.value)+'</td></tr>';
+      }).join('') + '</table>' : '';
+    var warrantyHtml = p.warranty ? '<p style="font-size:14px;color:#16a085;margin:8px 0">🛡️ Bảo hành: '+escH(p.warranty)+'</p>' : '';
+    var stockHtml = p.in_stock ?
+      '<span style="color:#16a085;font-weight:600;font-size:14px">✅ Còn hàng</span>' :
+      '<span style="color:#e55;font-weight:600;font-size:14px">⏳ Tạm hết hàng</span>';
+    // body markdown lite
+    var bodyHtml = (p.body||p.short_description||'').split('\n').map(function(ln){
+      var t=ln.trim();
+      if(!t) return '';
+      var m=t.match(/^(#{1,3})\s+(.*)/);
+      if(m){var lv=m[1].length+1;return '<h'+lv+' style="color:#0a1628;margin:20px 0 8px">'+escH(m[2])+'</h'+lv+'>';}
+      t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*]+)\*/g,'$1<em>$2</em>');
+      if(t.match(/^[-*]\s/)){return '<li style="margin:4px 0">'+t.replace(/^[-*]\s/,'')+'</li>';}
+      return '<p style="margin:10px 0;line-height:1.7;color:#2a3340">'+t+'</p>';
+    }).join('');
+    // Product schema
+    var schema = JSON.stringify({
+      "@context":"https://schema.org","@type":"Product",
+      "name":title,"description":desc,"image":imgAbs,"url":url,
+      "brand":{"@type":"Brand","name":"2D Aquatic"},
+      "offers":{"@type":"Offer","price":salePriceNum||priceNum||0,
+        "priceCurrency":"VND","availability":p.in_stock?"https://schema.org/InStock":"https://schema.org/OutOfStock",
+        "url":url,"seller":{"@type":"Organization","name":"2D Aquatic"}}
+    });
+    var breadcrumb = JSON.stringify({
+      "@context":"https://schema.org","@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://2daquatic.com/"},
+        {"@type":"ListItem","position":2,"name":"Sản phẩm","item":"https://2daquatic.com/san-pham/"},
+        {"@type":"ListItem","position":3,"name":title,"item":url}
+      ]
+    });
+    return '<!DOCTYPE html>\n<html lang="vi">\n<head>\n'+
+      '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a1628">\n'+
+      '<title>'+escH(title)+' | 2D Aquatic</title>\n'+
+      '<meta name="description" content="'+escH(desc)+'">\n'+
+      '<link rel="canonical" href="'+url+'">\n'+
+      '<meta property="og:type" content="product"><meta property="og:url" content="'+url+'">\n'+
+      '<meta property="og:title" content="'+escH(title)+'">\n'+
+      '<meta property="og:description" content="'+escH(desc)+'">\n'+
+      '<meta property="og:image" content="'+escH(imgAbs)+'">\n'+
+      '<meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="2D Aquatic">\n'+
+      '<script type="application/ld+json">'+schema+'</scr'+'ipt>\n'+
+      '<script type="application/ld+json">'+breadcrumb+'</scr'+'ipt>\n'+
+      '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n'+
+      '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'+
+      '<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">\n'+
+      '<link rel="stylesheet" href="/css/main.v2.css">\n'+
+      '<style>*{box-sizing:border-box}body{font-family:Inter,sans-serif;margin:0;background:#fafaf7;color:#2a3340}'+
+      '.sp-wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}'+
+      '@media(max-width:700px){.sp-wrap{grid-template-columns:1fr;padding:24px 16px 60px}}'+
+      '.sp-img{width:100%;border-radius:16px;background:#0e1e2c;aspect-ratio:4/3;object-fit:contain}'+
+      '.sp-breadcrumb{font-size:13px;color:#888;margin-bottom:8px}.sp-breadcrumb a{color:#16a085;text-decoration:none}'+
+      '.sp-cat{font-size:12px;font-weight:700;color:#16a085;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}'+
+      '.sp-title{font-family:Fraunces,serif;font-size:clamp(22px,4vw,34px);font-weight:700;color:#0a1628;margin:0 0 12px;line-height:1.25}'+
+      '.sp-price{font-size:30px;font-weight:700;color:#16a085;margin:12px 0}'+
+      '.sp-stock-row{display:flex;align-items:center;gap:16px;margin:8px 0 20px}'+
+      '.sp-cta{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}'+
+      '.sp-btn{padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px;display:inline-block}'+
+      '.sp-btn-primary{background:#00d4b8;color:#fff}.sp-btn-ghost{border:2px solid #0a1628;color:#0a1628}'+
+      '.sp-section{margin:28px 0}.sp-section h3{font-family:Fraunces,serif;font-size:18px;color:#0a1628;margin:0 0 10px}'+
+      '.sp-back{display:inline-flex;align-items:center;gap:6px;color:#16a085;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:24px}'+
+      '</style>\n'+
+      '</head>\n<body>\n'+
+      '<header class="nav-wrap" style="position:sticky;top:0;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);z-index:100">\n'+
+      '  <nav style="max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n'+
+      '    <a href="/" style="display:flex;align-items:center;text-decoration:none"><img src="/images/logo-light.png" alt="2D Aquatic" width="120" height="52" style="height:42px;width:auto"></a>\n'+
+      '    <div style="display:flex;gap:24px;align-items:center">\n'+
+      '      <a href="/be-ca/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Bể cá</a>\n'+
+      '      <a href="/san-pham/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Sản phẩm</a>\n'+
+      '      <a href="/blog/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Blog</a>\n'+
+      '      <a href="/lien-he/" style="background:#00d4b8;color:white;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600">Liên hệ</a>\n'+
+      '    </div>\n  </nav>\n</header>\n'+
+      '<div style="max-width:1100px;margin:20px auto;padding:0 24px">\n'+
+      '  <a href="/san-pham/" class="sp-back">← Tất cả sản phẩm</a>\n'+
+      '  <div class="sp-breadcrumb"><a href="/">Trang chủ</a> / <a href="/san-pham/">Sản phẩm</a> / '+escH(title)+'</div>\n'+
+      '</div>\n'+
+      '<div class="sp-wrap">\n'+
+      '  <div>\n'+
+      (img && img !== '' ? '    <img class="sp-img" src="'+escH(img)+'" alt="'+escH(title)+'" loading="eager">\n' :
+       '    <div class="sp-img" style="display:flex;align-items:center;justify-content:center;background:#0e1e2c"><span style="color:#16a085;font-size:48px">🪸</span></div>\n')+
+      '  </div>\n'+
+      '  <div>\n'+
+      '    <div class="sp-cat">'+escH(p.category||'')+'</div>\n'+
+      '    <h1 class="sp-title">'+escH(title)+'</h1>\n'+
+      '    <div class="sp-price">'+priceDisplay+priceOld+'</div>\n'+
+      '    <div class="sp-stock-row">'+stockHtml+(warrantyHtml)+'</div>\n'+
+      '    <p style="font-size:15px;line-height:1.65;color:#444;margin:0 0 20px">'+escH(p.short_description||'')+'</p>\n'+
+      '    <div class="sp-cta">\n'+
+      '      <a class="sp-btn sp-btn-primary" href="https://zalo.me/0975112334" target="_blank" rel="noopener">📞 Nhắn Zalo tư vấn</a>\n'+
+      '      <a class="sp-btn sp-btn-ghost" href="https://www.facebook.com/2DAquatic/" target="_blank" rel="noopener">Facebook</a>\n'+
+      '    </div>\n'+
+      (specsHtml ? '    <div class="sp-section"><h3>Thông số kỹ thuật</h3>'+specsHtml+'</div>\n' : '')+
+      '  </div>\n'+
+      '</div>\n'+
+      (bodyHtml ? '<div style="max-width:760px;margin:0 auto;padding:0 24px 60px">'+bodyHtml+'</div>\n' : '')+
+      '<footer style="background:#0a1628;color:white;padding:48px 24px;text-align:center;margin-top:40px">\n'+
+      '  <img src="/images/logo-light.png" alt="2D Aquatic" width="120" style="margin-bottom:16px;height:auto">\n'+
+      '  <p style="color:rgba(255,255,255,.7);margin-bottom:8px">Bể cá biển cao cấp tại Hà Nội</p>\n'+
+      '  <p style="color:rgba(255,255,255,.5);font-size:14px">305 Nguyễn Văn Cừ, Bồ Đề, Long Biên · Hotline: <a href="tel:0975112334" style="color:#00d4b8">0975.112.334</a></p>\n'+
+      '</footer>\n</body>\n</html>\n';
+  }
+
+  // Generate product detail pages & update sitemap
+  var prodDir = path.join(DIST,'content','products-data');
+  if(!fs.existsSync(prodDir)) prodDir=path.join(DIST,'content');
+  var prodJsonPath=path.join(DIST,'products.json');
+  if(fs.existsSync(prodJsonPath)){
+    var allProds=JSON.parse(fs.readFileSync(prodJsonPath,'utf8'));
+    var madeP=0;
+    allProds.forEach(function(p){
+      if(!p.slug) return;
+      try{
+        var dir=path.join(DIST,'san-pham',p.slug);
+        fs.mkdirSync(dir,{recursive:true});
+        fs.writeFileSync(path.join(dir,'index.html'),productPage(p),'utf8');
+        madeP++;
+      }catch(e){console.warn('  (loi trang san pham: '+p.slug+')');}
+    });
+    console.log('  \u2713 product pages: '+madeP+' trang (/san-pham/<slug>/)');
+  }
+} catch(e){ console.warn('  (product pages error: '+e.message+')'); }
+
+
 // ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====
 try {
   var SM_STATIC = [
@@ -408,6 +552,7 @@ try {
     {u:'https://2daquatic.com/blog/',      p:'0.8', c:'weekly'},
     {u:'https://2daquatic.com/blog/setup-be-ca-bien-200l-cho-nguoi-moi-tu-a-den-z/', p:'0.7', c:'monthly'},
   ];
+
   var smToday = new Date().toISOString().split('T')[0];
   var smEntries = SM_STATIC.map(function(s){
     return '  <url>\n    <loc>'+s.u+'</loc>\n    <changefreq>'+s.c+'</changefreq>\n    <priority>'+s.p+'</priority>\n    <lastmod>'+smToday+'</lastmod>\n  </url>';
@@ -420,6 +565,11 @@ try {
       smEntries.push('  <url>\n    <loc>https://2daquatic.com/blog/'+a.slug+'/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n    <lastmod>'+lm+'</lastmod>\n  </url>');
     });
   }
+  // add product pages to sitemap
+  var pjSm=path.join(DIST,'products.json');
+  if(fs.existsSync(pjSm)){JSON.parse(fs.readFileSync(pjSm,'utf8')).filter(function(pr){return pr.slug;}).forEach(function(pr){
+    smEntries.push('  <url>\n    <loc>https://2daquatic.com/san-pham/'+pr.slug+'/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>');
+  });}
   var smXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + smEntries.join('\n') + '\n</urlset>';
   fs.writeFileSync(path.join(DIST,'sitemap.xml'), smXml, 'utf8');
   console.log('  \u2713 sitemap.xml (' + smEntries.length + ' URLs)');
