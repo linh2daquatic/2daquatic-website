@@ -495,6 +495,184 @@
   }
 }
 </script>
+
+<!-- CSS cải tiến cho showcase section -->
+<style>
+/* Showcase grid: Desktop 2x2, Mobile 1 cột */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 3rem;
+  }
+}
+
+/* Showcase card */
+.showcase-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Tag */
+.showcase-tag {
+  display: inline-block;
+  background: var(--reef, #00d4d4);
+  color: var(--ink, #0a1628);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+/* Title */
+.showcase-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink, #0a1628);
+  margin: 0.75rem 1.5rem 0;
+  line-height: 1.2;
+}
+
+.showcase-title em {
+  font-style: normal;
+  color: var(--coral, #ff6b6b);
+  font-weight: 700;
+}
+
+/* Customer info - TRẮNG, CHỮ ĐEN */
+.showcase-customer-info {
+  background: white;
+  color: #000;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1rem 1.5rem 0;
+  border-radius: 8px;
+  border-left: 3px solid var(--reef, #00d4d4);
+}
+
+.showcase-customer-info p {
+  margin: 0.4rem 0;
+}
+
+.showcase-customer-info strong {
+  color: var(--ink, #0a1628);
+  font-weight: 600;
+}
+
+/* Links container */
+.showcase-links {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.25rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Link button - TRẮNG, CHỮ ĐEN, ĐỒNG BỘ */
+.showcase-btn {
+  background: white !important;
+  color: var(--ink, #0a1628) !important;
+  border: 1.5px solid var(--ink, #0a1628);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.showcase-btn:hover {
+  background: var(--ink, #0a1628) !important;
+  color: white !important;
+  transform: translateX(2px);
+}
+
+.showcase-btn svg {
+  stroke: currentColor;
+}
+
+/* Showcase visual - HỌC ẢNH LỚN HƠN DESKTOP */
+.showcase-visual {
+  flex-grow: 1;
+  min-height: 200px;
+  background: #e0e0e0;
+  margin: 1rem 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .showcase-visual {
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .showcase-visual {
+    min-height: 350px;
+  }
+}
+
+.showcase-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Order: tag, title, info, visual, links */
+.showcase-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-tag {
+  order: 1;
+}
+
+.showcase-title {
+  order: 2;
+}
+
+.showcase-customer-info {
+  order: 3;
+}
+
+.showcase-visual {
+  order: 4;
+  flex-grow: 1;
+}
+
+.showcase-links {
+  order: 5;
+  margin-top: auto;
+}
+</style>
 </head>
 <body>
 <a class="skip-to-content" href="#main">Đi đến nội dung chính</a>
@@ -1089,50 +1267,68 @@
   </div>
 </section>
 
-<!-- SHOWCASE 4 nhóm sản phẩm -->
+<!-- SHOWCASE: BỆ THỰC TẾ CỦA KHÁCH HÀNG (2D Promax S40, S50, 2D Infinity) -->
 <section class="showcase">
   <div class="showcase-grid">
 
-    <!-- Card 1: Bể cá -->
+    <!-- Card 1: 2D Promax S40 -->
     <div class="showcase-card">
-      <div class="showcase-tag">Bể cá biển</div>
-      <h3 class="showcase-title">Bể cao cấp <em>cho mọi không gian</em></h3>
-      <div class="showcase-links">
-        <a href="#tanks" class="showcase-link">Mua ngay <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-        <a href="#tanks" class="showcase-link">So sánh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      <div class="showcase-tag">Bể lọc vách</div>
+      <h3 class="showcase-title">2D Promax <em>S40</em></h3>
+      <div class="showcase-customer-info">
+        <p><strong>Khách hàng:</strong> Chị Hương</p>
+        <p><strong>Kích thước:</strong> 40×25×30 cm</p>
+        <p><strong>Hệ thống:</strong> Lọc vách, 2 cánh quạt</p>
       </div>
-      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-1.jpg" alt="Bể cá biển đẹp - 2D Aquatic" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/slide1-desktop.jpg'"></div>
+      <div class="showcase-links">
+        <a href="/san-pham/" class="showcase-link showcase-btn">Khám phá ngay <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </div>
+      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-1.jpg" alt="Bể 2D Promax S40 - Khách hàng Chị Hương" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/tank-1.jpg'"></div>
     </div>
 
-    <!-- Card 2: Thiết bị -->
+    <!-- Card 2: 2D Promax S50 -->
     <div class="showcase-card">
-      <div class="showcase-tag">Thiết bị chuyên dụng</div>
-      <h3 class="showcase-title">Lọc, đèn LED, <em>skimmer</em> chính hãng</h3>
-      <div class="showcase-links">
-        <a href="/san-pham#loc" class="showcase-link">Khám phá <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-        <a href="/san-pham#den" class="showcase-link">Bestseller <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      <div class="showcase-tag">Bể lọc vách</div>
+      <h3 class="showcase-title">2D Promax <em>S50</em></h3>
+      <div class="showcase-customer-info">
+        <p><strong>Khách hàng:</strong> Anh Minh</p>
+        <p><strong>Kích thước:</strong> 50×30×35 cm</p>
+        <p><strong>Hệ thống:</strong> Lọc vách cao cấp, 3 cánh quạt</p>
       </div>
-      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-2.jpg" alt="Thiết bị bể cá biển chính hãng - 2D Aquatic" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/slide2-desktop.jpg'"></div>
+      <div class="showcase-links">
+        <a href="/san-pham/" class="showcase-link showcase-btn">Khám phá ngay <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </div>
+      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-2.jpg" alt="Bể 2D Promax S50 - Khách hàng Anh Minh" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/tank-2.jpg'"></div>
     </div>
 
-    <!-- Card 3: Hóa chất -->
+    <!-- Card 3: 2D Infinity (1) -->
     <div class="showcase-card">
-      <div class="showcase-tag">Hóa chất chuyên dụng</div>
-      <h3 class="showcase-title">Reef Balance — <em>nước hoàn hảo</em></h3>
-      <div class="showcase-links">
-        <a href="/san-pham#hoa-chat" class="showcase-link">Tìm hiểu thêm <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      <div class="showcase-tag">Bể lọc tràn</div>
+      <h3 class="showcase-title">2D Infinity <em>Premium</em></h3>
+      <div class="showcase-customer-info">
+        <p><strong>Khách hàng:</strong> Anh Long</p>
+        <p><strong>Kích thước:</strong> 60×40×45 cm</p>
+        <p><strong>Hệ thống:</strong> Lọc tràn dưới, sump 30L</p>
       </div>
-      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-3.jpg" alt="Bể san hô Reef Balance - 2D Aquatic" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/slide1-desktop.jpg'"></div>
+      <div class="showcase-links">
+        <a href="/san-pham/" class="showcase-link showcase-btn">Khám phá ngay <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </div>
+      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-3.jpg" alt="Bể 2D Infinity Premium - Khách hàng Anh Long" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/tank-3.jpg'"></div>
     </div>
 
-    <!-- Card 4: Sinh vật -->
+    <!-- Card 4: 2D Infinity (2) -->
     <div class="showcase-card">
-      <div class="showcase-tag">Cá biển & San hô</div>
-      <h3 class="showcase-title">Sinh vật <em>tươi sống</em>, BH 7 ngày</h3>
-      <div class="showcase-links">
-        <a href="/san-pham#sinh-vat" class="showcase-link">Đặt trước <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      <div class="showcase-tag">Bể lọc tràn</div>
+      <h3 class="showcase-title">2D Infinity <em>Ultimate</em></h3>
+      <div class="showcase-customer-info">
+        <p><strong>Khách hàng:</strong> Chị Liêu</p>
+        <p><strong>Kích thước:</strong> 80×50×50 cm</p>
+        <p><strong>Hệ thống:</strong> Lọc tràn kép, sump 50L</p>
       </div>
-      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-4.jpg" alt="Cá biển san hô tươi sống - 2D Aquatic" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/slide2-desktop.jpg'"></div>
+      <div class="showcase-links">
+        <a href="/san-pham/" class="showcase-link showcase-btn">Khám phá ngay <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </div>
+      <div class="showcase-visual" style="position:relative;overflow:hidden;"><img src="/images/tank-4.jpg" alt="Bể 2D Infinity Ultimate - Khách hàng Chị Liêu" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;position:absolute;inset:0;" loading="lazy" onerror="this.onerror=null;this.src='/images/tank-4.jpg'"></div>
     </div>
 
   </div>
