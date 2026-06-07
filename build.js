@@ -547,6 +547,7 @@ try {
     {u:'https://2daquatic.com/dich-vu/',   p:'0.8', c:'monthly'},
     {u:'https://2daquatic.com/ho-tro/',    p:'0.7', c:'monthly'},
     {u:'https://2daquatic.com/lien-he/',   p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/bao-gia/',   p:'0.8', c:'weekly'},
     {u:'https://2daquatic.com/blog/',      p:'0.8', c:'weekly'},
     {u:'https://2daquatic.com/blog/setup-be-ca-bien-200l-cho-nguoi-moi-tu-a-den-z/', p:'0.7', c:'monthly'},
   ];
