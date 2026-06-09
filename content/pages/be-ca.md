@@ -11,7 +11,7 @@ promax:
   spec1_label: Dung tích
   spec2_label: Lọc
   spec3_label: Bảo hành
-  tagline: Cho người mới bắt đầu và không gian gọn gàng.
+  tagline: Nhỏ gọn thẩm mỹ, chi phí tối giản
   desc: Hệ thống lọc tích hợp ngay trong vách bể, không cần tủ sump bên dưới —
     tiết kiệm không gian tối đa. Phù hợp cho phòng khách, phòng làm việc, văn
     phòng, quầy lễ tân. Sẵn sàng vận hành chỉ trong 24 giờ sau khi lắp đặt.
