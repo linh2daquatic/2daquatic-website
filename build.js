@@ -335,11 +335,11 @@ try {
       '    <div style="display:flex;gap:24px;align-items:center">\n' +
       '      <a href="/be-ca/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Bể cá</a>\n' +
       '      <a href="/san-pham/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Sản phẩm</a>\n' +
-      '      <a href="/blog/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Blog</a>\n' +
+      '      <a href="/blog/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Cẩm nang</a>\n' +
       '      <a href="/lien-he/" style="background:#00d4b8;color:white;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600">Liên hệ</a>\n' +
       '    </div>\n  </nav>\n</header>\n' +
       '<section class="article-hero">\n' +
-      '  <div class="breadcrumb"><a href="/">Trang chủ</a> / <a href="/blog/">Blog</a> / <span>' + bEscapeHtml(title) + '</span></div>\n' +
+      '  <div class="breadcrumb"><a href="/">Trang chủ</a> / <a href="/blog/">Cẩm nang</a> / <span>' + bEscapeHtml(title) + '</span></div>\n' +
       '  <h1>' + bEscapeHtml(title) + '</h1>\n' +
       (desc ? '  <p class="lead">' + bEscapeHtml(desc) + '</p>\n' : '') +
       '  <div class="article-meta-bar">' +
@@ -481,7 +481,7 @@ try {
       '    <div style="display:flex;gap:20px;align-items:center">\n'+
       '      <a href="/be-ca/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Bể cá</a>\n'+
       '      <a href="/san-pham/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Sản phẩm</a>\n'+
-      '      <a href="/blog/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Blog</a>\n'+
+      '      <a href="/blog/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Cẩm nang</a>\n'+
       '      <a href="/lien-he/" style="background:#00d4b8;color:#fff;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600">Liên hệ</a>\n'+
       '    </div>\n  </nav>\n</header>\n'+
       // HERO SECTION (dark, below nav)
@@ -536,6 +536,58 @@ try {
     console.log('  \u2713 product pages: '+madeP+' trang (/san-pham/<slug>/)');
   }
 } catch(e){ console.warn('  (product pages error: '+e.message+')'); }
+
+
+// ===== INJECT be-ca PAGE CONTENT FROM CMS =====
+try {
+  var becaMdPath = path.join(ROOT, 'content', 'pages', 'be-ca.md');
+  if (fs.existsSync(becaMdPath)) {
+    var becaRaw = fs.readFileSync(becaMdPath, 'utf8');
+    // Parse nested YAML frontmatter: top-level keys and 2-space-indented sub-keys
+    var becaFm = becaRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (becaFm) {
+      var becaData = {};
+      var curSection = null;
+      becaFm[1].split(/\r?\n/).forEach(function(line) {
+        var topMatch = line.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)?$/);
+        var subMatch = line.match(/^  ([a-zA-Z_][a-zA-Z0-9_]*):\s*"?(.*?)"?\s*$/);
+        if (topMatch && !line.startsWith(' ')) {
+          var val = topMatch[2] ? topMatch[2].replace(/^["']|["']$/g,'').trim() : null;
+          if (!val) { curSection = topMatch[1]; becaData[curSection] = {}; }
+          else { becaData[topMatch[1]] = val; curSection = null; }
+        } else if (subMatch && curSection) {
+          becaData[curSection][subMatch[1]] = subMatch[2].replace(/^["']|["']$/g,'').trim();
+        }
+      });
+
+      var becaHtmlPath = path.join(DIST, 'be-ca', 'index.html');
+      if (fs.existsSync(becaHtmlPath)) {
+        var becaHtml = fs.readFileSync(becaHtmlPath, 'utf8');
+        // Replace data-cms="section.field" elements (text content only)
+        becaHtml = becaHtml.replace(
+          /(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,
+          function(m, tag, field) {
+            var parts = field.split('.');
+            var val = parts.length === 2 && becaData[parts[0]] ? becaData[parts[0]][parts[1]] : becaData[field];
+            return tag + (val != null ? val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : m.replace(tag,''));
+          }
+        );
+        // Replace h2 with headline1 + <em>headline2</em>
+        becaHtml = becaHtml.replace(
+          /<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em>\.<\/h2>/g,
+          function(m, attrs, h1field, emfield) {
+            var parts1=h1field.split('.'), partsE=emfield.split('.');
+            var v1=parts1.length===2&&becaData[parts1[0]]?becaData[parts1[0]][parts1[1]]:'';
+            var vE=partsE.length===2&&becaData[partsE[0]]?becaData[partsE[0]][partsE[1]]:'';
+            return '<h2'+attrs+'>'+v1+' <em>'+vE+'</em>.</h2>';
+          }
+        );
+        fs.writeFileSync(becaHtmlPath, becaHtml, 'utf8');
+        console.log('  \u2713 be-ca: injected CMS content (ProMax / Infinity / Custom)');
+      }
+    }
+  }
+} catch(e) { console.warn('  (be-ca CMS inject error: '+e.message+')'); }
 
 
 // ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====

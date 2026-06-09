@@ -245,9 +245,53 @@ collections:
         label: 'Trang Bể cá'
         file: 'content/pages/be-ca.md'
         fields:
-          - {label: 'Tiêu đề (H1)', name: 'title', widget: 'string'}
-          - {label: 'Mô tả meta (SEO)', name: 'meta_description', widget: 'text'}
-          - {label: 'Nội dung', name: 'body', widget: 'markdown'}
+          - {label: 'Tiêu đề SEO', name: 'title', widget: 'string'}
+          - {label: 'Mô tả meta', name: 'meta_description', widget: 'text', required: false}
+          - label: '🔵 Dòng ProMax'
+            name: promax
+            widget: object
+            fields:
+              - {label: 'Nhãn dòng', name: eyebrow, widget: string, hint: 'VD: 2D ProMax S Series'}
+              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string, hint: 'VD: Bể lọc vách,'}
+              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string, hint: 'VD: gọn gàng tinh tế'}
+              - {label: 'Phụ đề', name: tagline, widget: string}
+              - {label: 'Mô tả', name: desc, widget: text}
+              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
+              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
+              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
+              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
+              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
+              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
+          - label: '🟢 Dòng Infinity'
+            name: infinity
+            widget: object
+            fields:
+              - {label: 'Nhãn dòng', name: eyebrow, widget: string}
+              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string}
+              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string}
+              - {label: 'Phụ đề', name: tagline, widget: string}
+              - {label: 'Mô tả', name: desc, widget: text}
+              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
+              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
+              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
+              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
+              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
+              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
+          - label: '✏️ Custom Design'
+            name: custom
+            widget: object
+            fields:
+              - {label: 'Nhãn dòng', name: eyebrow, widget: string}
+              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string}
+              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string}
+              - {label: 'Phụ đề', name: tagline, widget: string}
+              - {label: 'Mô tả', name: desc, widget: text}
+              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
+              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
+              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
+              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
+              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
+              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
 
       - name: 'dich_vu'
         label: 'Trang Dịch vụ'
