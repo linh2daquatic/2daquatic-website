@@ -172,56 +172,427 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--gray-50);color:var
 </div>
 <script>
 const CONFIG={
-  shopName:'2DAquatic',
-  shopAddress:'305 Nguyễn Văn Cừ, Long Biên, Hà Nội',
-  shopPhone:'0866 112 334',
-  shopPhone2:'0975 112 334',
-  tanks:[
-    {id:'s35',name:'2D Promax S35',price:999000,badge:'basic',badgeText:'Nhỏ gọn',desc:'Cân bằng giữa kích thước và chi phí. Lý tưởng cho người mới bắt đầu.'},
-    {id:'s40',name:'2D Promax S40',price:1500000,badge:'bestseller',badgeText:'Best Seller',desc:'Không gian rộng rãi, hệ sinh thái ổn định. Nhiều lựa chọn san hô.'},
-    {id:'s50',name:'2D Promax S50',price:2000000,badge:'upgrade',badgeText:'Cao cấp',desc:'Bể lớn, ấn tượng. San hô phát triển mạnh, giữ cá dễ dàng hơn.'},
+  "tanks": [
+    {
+      "id": "s35",
+      "name": "2D Promax S35",
+      "price": 999000,
+      "badge": "basic",
+      "badgeText": "Nhỏ gọn",
+      "desc": "Kích thước nhỏ gọn thiết kế đặc biệt không cần tạo sóng"
+    },
+    {
+      "id": "s40",
+      "name": "2D Promax S40",
+      "price": 1500000,
+      "badge": "bestseller",
+      "badgeText": "Best Seller",
+      "desc": "Kích thước tiêu chuẩn, cho trải nghiệm tốt nhất "
+    },
+    {
+      "id": "s50",
+      "name": "2D Promax S50",
+      "price": 2000000,
+      "badge": "upgrade",
+      "badgeText": "Plus",
+      "desc": "Không gian rộng, thả nhiều sinh vật hơn "
+    }
   ],
-  pumps:[
-    {id:'ac305',name:'AC Atman 305',price:250000,badge:'basic',badgeText:'Tiết kiệm',desc:'Bơm AC ổn định, bền bỉ. Phù hợp ngân sách tiết kiệm.',compatible:['s35','s40','s50']},
-    {id:'dc_jebao',name:'DC Jebao EP 1500',price:1150000,badge:'bestseller',badgeText:'Best Seller',desc:'Bơm DC tiết kiệm 40% điện, chạy êm, điều chỉnh lưu lượng.',compatible:['s35','s40','s50']},
+  "pumps": [
+    {
+      "id": "ac305",
+      "name": "AC Atman 305",
+      "price": 250000,
+      "badge": "basic",
+      "badgeText": "Tiết kiệm",
+      "desc": "Bơm AC phù hợp ngân sách tiết kiệm.",
+      "compatible": [
+        "s35",
+        "s40",
+        "s50"
+      ]
+    },
+    {
+      "id": "dc_jebao",
+      "name": "DC Jebao EP 1500",
+      "price": 1150000,
+      "badge": "upgrade",
+      "badgeText": "Cao cấp",
+      "desc": "Bơm DC chống giật tiết kiệm 40% điện, chạy êm, điều chỉnh lưu lượng",
+      "compatible": [
+        "s35",
+        "s40",
+        "s50"
+      ]
+    }
   ],
-  lights:[
-    {id:'zoox',name:'Zoox Mini',price:1250000,badge:'basic',badgeText:'Entry',desc:'Đèn LED cơ bản, ánh sáng đủ cho soft coral và LPS.',compatible:['s35']},
-    {id:'mjl230',name:'Maxspect MJL 230',price:1950000,badge:'bestseller',badgeText:'Best Seller',desc:'Tích hợp chỉnh màu, hẹn giờ. Phù hợp LPS & một số SPS.',compatible:['s35','s40']},
-    {id:'mjl260',name:'Maxspect MJL 260',price:3650000,badge:'upgrade',badgeText:'Pro',desc:'Công suất cao, full spectrum. Nuôi được mọi loại san hô SPS.',compatible:['s35','s40','s50']},
+  "lights": [
+    {
+      "id": "zoox",
+      "name": "Zoox Mini",
+      "price": 1250000,
+      "badge": "basic",
+      "badgeText": "Cơ bản",
+      "desc": "Đèn LED cơ bản, ánh sáng đủ cho soft coral và LPS.",
+      "compatible": [
+        "s35"
+      ]
+    },
+    {
+      "id": "mjl230",
+      "name": "Maxspect MJL 230",
+      "price": 1950000,
+      "badge": "bestseller",
+      "badgeText": "Best Seller",
+      "desc": "Tích hợp chỉnh màu, hẹn giờ. Phù hợp LPS & một số SPS.",
+      "compatible": [
+        "s35",
+        "s40",
+        "s50"
+      ]
+    },
+    {
+      "id": "mjl260",
+      "name": "Maxspect MJL 260",
+      "price": 3650000,
+      "badge": "upgrade",
+      "badgeText": "Nâng cao",
+      "desc": "Công suất cao, full spectrum. Nuôi được mọi loại san hô SPS.",
+      "compatible": [
+        "s35",
+        "s40",
+        "s50"
+      ]
+    }
   ],
-  skimmers:[
-    {id:'sq50',name:'SQ 50 Pro',price:850000,badge:'basic',badgeText:'Tiết kiệm',desc:'Skimmer nhỏ gọn, hoạt động êm. Phù hợp bể nhỏ.',compatible:['s35']},
-    {id:'sq90',name:'SQ 90 Plus',price:1450000,badge:'bestseller',badgeText:'Best Seller',desc:'Hiệu suất cao, tách bẩn mạnh, tăng oxy trong nước.',compatible:['s35','s40','s50']},
+  "skimmers": [
+    {
+      "id": "sq50",
+      "name": "SQ 50 Pro",
+      "price": 850000,
+      "badge": "basic",
+      "badgeText": "Tiết kiệm",
+      "desc": "Skimmer nhỏ gọn, hoạt động êm. Phù hợp bể nhỏ.",
+      "compatible": [
+        "s35",
+        "s40"
+      ]
+    },
+    {
+      "id": "sq90",
+      "name": "SQ 90 Plus",
+      "price": 1450000,
+      "badge": "bestseller",
+      "badgeText": "Best Seller",
+      "desc": "Hiệu suất cao, tách bẩn mạnh, tăng oxy trong nước.",
+      "compatible": [
+        "s35",
+        "s40",
+        "s50"
+      ]
+    }
   ],
-  layoutPrices:{s35:450000,s40:500000,s50:600000},
-  accessories:[
-    {id:'do_man',name:'Đo mặn',options:{
-      s35:[{id:'atc',name:'Ống nhôm ATC',price:250000,badge:'basic',desc:'Đo nhanh, sai số ±2‰'},{id:'vastocean',name:'Vastocean',price:380000,badge:'bestseller',desc:'Chính xác cao, bền bỉ'},{id:'tropic',name:'Thủy kế Tropic Marin',price:1650000,badge:'upgrade',desc:'Chính xác tuyệt đối, chuyên nghiệp'}],
-      s40:[{id:'atc',name:'Ống nhôm ATC',price:250000,badge:'basic',desc:'Đo nhanh, sai số ±2‰'},{id:'vastocean',name:'Vastocean',price:380000,badge:'bestseller',desc:'Chính xác cao, bền bỉ'},{id:'tropic',name:'Thủy kế Tropic Marin',price:1650000,badge:'upgrade',desc:'Chính xác tuyệt đối, chuyên nghiệp'}],
-      s50:[{id:'atc',name:'Ống nhôm ATC',price:250000,badge:'basic',desc:'Đo nhanh, sai số ±2‰'},{id:'vastocean',name:'Vastocean',price:380000,badge:'bestseller',desc:'Chính xác cao, bền bỉ'},{id:'tropic',name:'Thủy kế Tropic Marin',price:1650000,badge:'upgrade',desc:'Chính xác tuyệt đối, chuyên nghiệp'}],
-    }},
-    {id:'vat_lieu_loc',name:'Vật liệu lọc',options:{
-      s35:[{id:'basic',name:'Gói cơ bản',price:200000,badge:'basic',desc:'Bông lọc + đá nham thạch'},{id:'pro',name:'Gói nâng cao',price:350000,badge:'bestseller',desc:'Khối đậu phụ san hô + bio media'}],
-      s40:[{id:'basic',name:'Gói cơ bản',price:300000,badge:'basic',desc:'Bông lọc + đá nham thạch'},{id:'pro',name:'Gói nâng cao',price:400000,badge:'bestseller',desc:'Khối đậu phụ san hô 20.9.5 + bio media'}],
-      s50:[{id:'basic',name:'Gói cơ bản',price:400000,badge:'basic',desc:'Bông lọc + đá nham thạch'},{id:'pro',name:'Gói nâng cao',price:500000,badge:'bestseller',desc:'Khối đậu phụ san hô 20.9.5 + bio media'}],
-    }},
-    {id:'cat_nen',name:'Cắt nền',options:{
-      s35:[{id:'voso',name:'Cát vỏ sò',price:35000,badge:'basic',desc:'Tiết kiệm, tự nhiên'},{id:'hang',name:'Cát hãng chuyên dụng',price:120000,badge:'bestseller',desc:'Ổn định pH, đẹp mắt'}],
-      s40:[{id:'voso',name:'Cát vỏ sò',price:50000,badge:'basic',desc:'Tiết kiệm, tự nhiên'},{id:'hang',name:'Cát hãng chuyên dụng',price:180000,badge:'bestseller',desc:'Ổn định pH, đẹp mắt'}],
-      s50:[{id:'voso',name:'Cát vỏ sò',price:70000,badge:'basic',desc:'Tiết kiệm, tự nhiên'},{id:'hang',name:'Cát hãng chuyên dụng',price:250000,badge:'bestseller',desc:'Ổn định pH, đẹp mắt'}],
-    }},
-    {id:'muoi',name:'Muối biển',options:{
-      s35:[{id:'blue',name:'Bluetreasure',price:210000,badge:'basic',desc:'Muối tiết kiệm, pha nhanh'},{id:'premium',name:'Muối cao cấp',price:450000,badge:'bestseller',desc:'Ổn định thông số, vi lượng đầy đủ'}],
-      s40:[{id:'blue',name:'Bluetreasure x2',price:420000,badge:'basic',desc:'Muối tiết kiệm, pha nhanh'},{id:'premium',name:'Muối cao cấp x2',price:900000,badge:'bestseller',desc:'Ổn định thông số, vi lượng đầy đủ'}],
-      s50:[{id:'blue',name:'Bluetreasure x3',price:630000,badge:'basic',desc:'Muối tiết kiệm, pha nhanh'},{id:'premium',name:'Muối cao cấp x3',price:1350000,badge:'bestseller',desc:'Ổn định thông số, vi lượng đầy đủ'}],
-    }},
-    {id:'vi_sinh',name:'Vi sinh khởi tạo',options:{
-      s35:[{id:'bios2',name:'Bios Aquaforest x2',price:560000,badge:'basic',desc:'Gói tiết kiệm'},{id:'bios3',name:'Bios Aquaforest x3',price:840000,badge:'bestseller',desc:'Đủ liều khởi tạo + duy trì'}],
-      s40:[{id:'bios3',name:'Bios Aquaforest x3',price:840000,badge:'bestseller',desc:'Đủ liều khởi tạo + duy trì'}],
-      s50:[{id:'bios3',name:'Bios Aquaforest x3',price:840000,badge:'basic',desc:'Gói tiêu chuẩn'},{id:'bios4',name:'Bios Aquaforest x4',price:1120000,badge:'bestseller',desc:'Đủ liều cho bể lớn'}],
-    }},
+  "layoutPrices": {
+    "s35": 450000,
+    "s40": 500000,
+    "s50": 600000
+  },
+  "accessories": [
+    {
+      "id": "do_man",
+      "name": "Đo mặn",
+      "options": {
+        "s35": [
+          {
+            "id": "atc",
+            "name": "Ống nhôm ATC",
+            "price": 250000,
+            "badge": "basic",
+            "desc": "Đơn giản, chi phí tối giản"
+          },
+          {
+            "id": "vastocean",
+            "name": "Vastocean",
+            "price": 380000,
+            "badge": "bestseller",
+            "desc": "Chính xác cao, ít sai số theo thời gian"
+          },
+          {
+            "id": "tropic",
+            "name": "Tropic Marin",
+            "price": 1650000,
+            "badge": "upgrade",
+            "desc": "Chính xác tuyệt đối, chuyên nghiệp"
+          }
+        ],
+        "s40": [
+          {
+            "id": "atc",
+            "name": "Ống nhôm ATC",
+            "price": 250000,
+            "badge": "basic",
+            "desc": "Đơn giản, chi phí tối giản"
+          },
+          {
+            "id": "vastocean",
+            "name": "Vastocean",
+            "price": 380000,
+            "badge": "bestseller",
+            "desc": "Chính xác cao, ít sai số theo thời gian"
+          },
+          {
+            "id": "tropic",
+            "name": "Tropic Marin",
+            "price": 1650000,
+            "badge": "upgrade",
+            "desc": "Chính xác tuyệt đối, chuyên nghiệp"
+          }
+        ],
+        "s50": [
+          {
+            "id": "atc",
+            "name": "Ống nhôm ATC",
+            "price": 250000,
+            "badge": "basic",
+            "desc": "Đơn giản, chi phí tối giản"
+          },
+          {
+            "id": "vastocean",
+            "name": "Vastocean",
+            "price": 380000,
+            "badge": "bestseller",
+            "desc": "Chính xác cao, ít sai số theo thời gian"
+          },
+          {
+            "id": "tropic",
+            "name": "Tropic Marin",
+            "price": 1650000,
+            "badge": "upgrade",
+            "desc": "Chính xác tuyệt đối, chuyên nghiệp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vat_lieu_loc",
+      "name": "Vật liệu lọc",
+      "options": {
+        "s35": [
+          {
+            "id": "basic",
+            "name": "Gói cơ bản",
+            "price": 200000,
+            "badge": "basic",
+            "desc": "VLL Đậu phụ san hô khối"
+          },
+          {
+            "id": "pro",
+            "name": "Gói nâng cao",
+            "price": 400000,
+            "badge": "bestseller",
+            "desc": "Maxspect Bio Sphere"
+          }
+        ],
+        "s40": [
+          {
+            "id": "basic",
+            "name": "Gói cơ bản",
+            "price": 400000,
+            "badge": "basic",
+            "desc": "VLL Đậu phụ san hô khối"
+          },
+          {
+            "id": "pro",
+            "name": "Gói nâng cao",
+            "price": 400000,
+            "badge": "bestseller",
+            "desc": "Maxspect Bio Sphere"
+          }
+        ],
+        "s50": [
+          {
+            "id": "basic",
+            "name": "Gói cơ bản",
+            "price": 600000,
+            "badge": "basic",
+            "desc": "VLL Đậu phụ san hô khối"
+          },
+          {
+            "id": "pro",
+            "name": "Gói nâng cao",
+            "price": 750000,
+            "badge": "bestseller",
+            "desc": "Maxspect Bio Sphere"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cat_nen",
+      "name": "Cát nền",
+      "options": {
+        "s35": [
+          {
+            "id": "voso",
+            "name": "Cát vỏ sò",
+            "price": 35000,
+            "badge": "basic",
+            "desc": "Rẻ, tiết kiệm "
+          },
+          {
+            "id": "hang",
+            "name": "Cát hãng chuyên dụng",
+            "price": 200000,
+            "badge": "upgrade",
+            "desc": "Ổn định pH, sạch, an toàn "
+          }
+        ],
+        "s40": [
+          {
+            "id": "voso",
+            "name": "Cát vỏ sò",
+            "price": 70000,
+            "badge": "basic",
+            "desc": "Rẻ, tiết kiệm "
+          },
+          {
+            "id": "hang",
+            "name": "Cát hãng chuyên dụng",
+            "price": 300000,
+            "badge": "upgrade",
+            "desc": "Ổn định pH, sạch, an toàn "
+          }
+        ],
+        "s50": [
+          {
+            "id": "voso",
+            "name": "Cát vỏ sò",
+            "price": 105000,
+            "badge": "basic",
+            "desc": "Rẻ, tiết kiệm "
+          },
+          {
+            "id": "hang",
+            "name": "Cát hãng chuyên dụng",
+            "price": 400000,
+            "badge": "upgrade",
+            "desc": "Ổn định pH, sạch, an toàn "
+          }
+        ]
+      }
+    },
+    {
+      "id": "muoi",
+      "name": "Muối biển",
+      "options": {
+        "s35": [
+          {
+            "id": "blue",
+            "name": "Bluetreasure",
+            "price": 210000,
+            "badge": "basic",
+            "desc": "Muối tiết kiệm, đáp ứng nhu cầu san hô cơ bản"
+          },
+          {
+            "id": "premium",
+            "name": "Muối cao cấp",
+            "price": 500000,
+            "badge": "bestseller",
+            "desc": "Ổn định thông số, vi lượng đầy đủ"
+          }
+        ],
+        "s40": [
+          {
+            "id": "blue",
+            "name": "Bluetreasure",
+            "price": 420000,
+            "badge": "basic",
+            "desc": "Muối tiết kiệm, đáp ứng nhu cầu san hô cơ bản"
+          },
+          {
+            "id": "premium",
+            "name": "Muối cao cấp",
+            "price": 500000,
+            "badge": "bestseller",
+            "desc": "Ổn định thông số, vi lượng đầy đủ"
+          }
+        ],
+        "s50": [
+          {
+            "id": "blue",
+            "name": "Bluetreasure",
+            "price": 420000,
+            "badge": "basic",
+            "desc": "Muối tiết kiệm, đáp ứng nhu cầu san hô cơ bản"
+          },
+          {
+            "id": "premium",
+            "name": "Muối cao cấp",
+            "price": 500000,
+            "badge": "bestseller",
+            "desc": "Ổn định thông số, vi lượng đầy đủ"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vi_sinh",
+      "name": "Vi sinh khởi tạo",
+      "options": {
+        "s35": [
+          {
+            "id": "bios2",
+            "name": "Bios Aquaforest x1",
+            "price": 280000,
+            "badge": "basic",
+            "desc": "vi sinh khởi tạo cycled"
+          },
+          {
+            "id": "bios3",
+            "name": "Bios Aquaforest x3",
+            "price": 840000,
+            "badge": "bestseller",
+            "desc": "Vi sinh khởi tạo kèm thức ăn vi sinh và vi sinh duy trì "
+          }
+        ],
+        "s40": [
+          {
+            "id": "bios2",
+            "name": "Bios Aquaforest x1",
+            "price": 280000,
+            "badge": "basic",
+            "desc": "vi sinh khởi tạo cycled"
+          },
+          {
+            "id": "bios3",
+            "name": "Bios Aquaforest x3",
+            "price": 840000,
+            "badge": "bestseller",
+            "desc": "Vi sinh khởi tạo kèm thức ăn vi sinh và vi sinh duy trì "
+          }
+        ],
+        "s50": [
+          {
+            "id": "bios2",
+            "name": "Bios Aquaforest x1",
+            "price": 280000,
+            "badge": "basic",
+            "desc": "vi sinh khởi tạo cycled"
+          },
+          {
+            "id": "bios3",
+            "name": "Bios Aquaforest x3",
+            "price": 840000,
+            "badge": "bestseller",
+            "desc": "Vi sinh khởi tạo kèm thức ăn vi sinh và vi sinh duy trì "
+          }
+        ]
+      }
+    }
   ],
+  "shopAddress": "305 Nguyễn Văn Cừ, Long Biên, Hà Nội",
+  "shopPhone": "0866 112 334",
+  "shopPhone2": "0975 112 334"
 };
 
 let state={currentStep:1,totalSteps:6,tank:null,pump:null,light:null,skimmer:null,accessories:{},accUnlocked:false};
