@@ -25,12 +25,12 @@ infinity:
   spec1_label: Dung tích
   spec2_label: Lọc
   spec3_label: Bảo hành
-  tagline: Đẳng cấp cho không gian lớn và chuyên gia.
+  tagline: "Tối ưu vận hành cho cả người mới và người chơi chuyên nghiệp "
   desc: Hệ thống lọc đặt trong tủ sump dưới — bể trên hoàn toàn không có cấu kiện,
     tầm nhìn vô cực 360°. Dung tích lớn, công suất lọc mạnh mẽ cho hệ sinh thái
     phức tạp nhất với cá lớn và san hô SPS đa dạng.
-  headline1: Bể flagship
-  headline2: lọc tràn dưới
+  headline1: 2D Infinity
+  headline2: Thiết kế vô cực tích hợp van thay nước tự động
 custom:
   spec1_value: 100-2000L+
   spec2_value: 1-3 tuần
