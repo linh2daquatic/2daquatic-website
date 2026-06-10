@@ -1,6 +1,6 @@
 ---
-title: TẠO SÓNG Maxspect MJ-GF 308
-slug: maxspect-mj-gf-308pump
+title: TẠO SÓNG Maxspect MJ-GF 316
+slug: maxspect-mj-gf-316pump
 category: phu-kien
 short_description: Giải pháp tạo dòng chảy tuần hoàn tiên tiến cho bể cá biển.
   Model GF308/GF316 cho bể nhỏ đến lớn.
@@ -13,22 +13,22 @@ sale_price: null
 unit: cái
 specs:
   - key: Model
-    value: "MJ-GF308 "
+    value: MJ-GF316
   - key: Kích Thước
-    value: 22,3 x 7,2 x 3,8 cm
+    value: 30,8 x 8 x 4,3 cm
   - key: Công Suất
-    value: 25W
+    value: 45W
   - key: Lưu Lượng
-    value: 7000 L/H
+    value: 15000 L/H
   - key: "Phù Hợp Với Bể "
-    value: 135-300 L
+    value: 200-500 L
   - key: "Trọng Lượng "
-    value: 457g
+    value: 711g
   - key: Độ Dày Kính Tiêu Chuẩn
-    value: 15mm
+    value: 20mm
 in_stock: true
 featured: false
 warranty: 12 tháng
-date: 2026-06-10T16:30:00.000Z
+date: 2026-06-10T16:34:00.000Z
 ---
 Máy bơm tuần hoàn dòng Jump Series gắn trong bể bằng nam châm mạnh, không cần khoan lỗ. Tốc độ điều chỉnh linh hoạt qua controller. GF308 phù hợp bể nhỏ–vừa, GF316 cho bể lớn cần dòng mạnh. Thiết kế nhỏ gọn, dễ vệ sinh impeller.
