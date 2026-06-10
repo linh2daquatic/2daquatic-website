@@ -241,57 +241,103 @@ collections:
     label: '📄 Trang nội dung'
     description: 'Sửa nội dung các trang chính (Bể cá, Dịch vụ, Hỗ trợ, Liên hệ)'
     files:
+      - name: 'home'
+        label: '🏠 Trang chủ (Slide + Showcase)'
+        file: 'content/pages/home.md'
+        fields:
+          - {label: '🖼️ Slide 1 — Badge', name: slide1_badge, widget: string, hint: 'VD: Best Seller, Flagship, Custom'}
+          - {label: '🖼️ Slide 1 — Tiêu đề (thường)', name: slide1_headline1, widget: string}
+          - {label: '🖼️ Slide 1 — Tiêu đề (nghiêng)', name: slide1_headline2, widget: string}
+          - {label: '🖼️ Slide 1 — Phụ đề', name: slide1_tagline, widget: string}
+          - {label: '🖼️ Slide 1 — Mô tả', name: slide1_desc, widget: string, hint: 'Một đoạn ngắn dưới 200 ký tự'}
+          - {label: '🖼️ Slide 1 — Nút (chữ)', name: slide1_cta_text, widget: string}
+          - {label: '🖼️ Slide 1 — Nút (link)', name: slide1_cta_href, widget: string}
+          - {label: '🖼️ Slide 2 — Badge', name: slide2_badge, widget: string, hint: 'VD: Best Seller, Flagship, Custom'}
+          - {label: '🖼️ Slide 2 — Tiêu đề (thường)', name: slide2_headline1, widget: string}
+          - {label: '🖼️ Slide 2 — Tiêu đề (nghiêng)', name: slide2_headline2, widget: string}
+          - {label: '🖼️ Slide 2 — Phụ đề', name: slide2_tagline, widget: string}
+          - {label: '🖼️ Slide 2 — Mô tả', name: slide2_desc, widget: string, hint: 'Một đoạn ngắn dưới 200 ký tự'}
+          - {label: '🖼️ Slide 2 — Nút (chữ)', name: slide2_cta_text, widget: string}
+          - {label: '🖼️ Slide 2 — Nút (link)', name: slide2_cta_href, widget: string}
+          - {label: '🖼️ Slide 3 — Badge', name: slide3_badge, widget: string, hint: 'VD: Best Seller, Flagship, Custom'}
+          - {label: '🖼️ Slide 3 — Tiêu đề (thường)', name: slide3_headline1, widget: string}
+          - {label: '🖼️ Slide 3 — Tiêu đề (nghiêng)', name: slide3_headline2, widget: string}
+          - {label: '🖼️ Slide 3 — Phụ đề', name: slide3_tagline, widget: string}
+          - {label: '🖼️ Slide 3 — Mô tả', name: slide3_desc, widget: string, hint: 'Một đoạn ngắn dưới 200 ký tự'}
+          - {label: '🖼️ Slide 3 — Nút (chữ)', name: slide3_cta_text, widget: string}
+          - {label: '🖼️ Slide 3 — Nút (link)', name: slide3_cta_href, widget: string}
+          - {label: '🃏 Ô 1 — Nhãn nhỏ', name: showcase1_tag, widget: string}
+          - {label: '🃏 Ô 1 — Tiêu đề (thường)', name: showcase1_title1, widget: string}
+          - {label: '🃏 Ô 1 — Tiêu đề (nghiêng)', name: showcase1_title2, widget: string}
+          - {label: '🃏 Ô 1 — Tiêu đề (sau nghiêng)', name: showcase1_title3, widget: string, required: false, hint: 'Để trống nếu không cần'}
+          - {label: '🃏 Ô 1 — Link 1 (chữ)', name: showcase1_link1_text, widget: string}
+          - {label: '🃏 Ô 1 — Link 1 (URL)', name: showcase1_link1_href, widget: string}
+          - {label: '🃏 Ô 1 — Link 2 (chữ)', name: showcase1_link2_text, widget: string, required: false}
+          - {label: '🃏 Ô 1 — Link 2 (URL)', name: showcase1_link2_href, widget: string, required: false}
+          - {label: '🃏 Ô 2 — Nhãn nhỏ', name: showcase2_tag, widget: string}
+          - {label: '🃏 Ô 2 — Tiêu đề (thường)', name: showcase2_title1, widget: string}
+          - {label: '🃏 Ô 2 — Tiêu đề (nghiêng)', name: showcase2_title2, widget: string}
+          - {label: '🃏 Ô 2 — Tiêu đề (sau nghiêng)', name: showcase2_title3, widget: string, required: false, hint: 'Để trống nếu không cần'}
+          - {label: '🃏 Ô 2 — Link 1 (chữ)', name: showcase2_link1_text, widget: string}
+          - {label: '🃏 Ô 2 — Link 1 (URL)', name: showcase2_link1_href, widget: string}
+          - {label: '🃏 Ô 2 — Link 2 (chữ)', name: showcase2_link2_text, widget: string, required: false}
+          - {label: '🃏 Ô 2 — Link 2 (URL)', name: showcase2_link2_href, widget: string, required: false}
+          - {label: '🃏 Ô 3 — Nhãn nhỏ', name: showcase3_tag, widget: string}
+          - {label: '🃏 Ô 3 — Tiêu đề (thường)', name: showcase3_title1, widget: string}
+          - {label: '🃏 Ô 3 — Tiêu đề (nghiêng)', name: showcase3_title2, widget: string}
+          - {label: '🃏 Ô 3 — Tiêu đề (sau nghiêng)', name: showcase3_title3, widget: string, required: false, hint: 'Để trống nếu không cần'}
+          - {label: '🃏 Ô 3 — Link 1 (chữ)', name: showcase3_link1_text, widget: string}
+          - {label: '🃏 Ô 3 — Link 1 (URL)', name: showcase3_link1_href, widget: string}
+          - {label: '🃏 Ô 3 — Link 2 (chữ)', name: showcase3_link2_text, widget: string, required: false}
+          - {label: '🃏 Ô 3 — Link 2 (URL)', name: showcase3_link2_href, widget: string, required: false}
+          - {label: '🃏 Ô 4 — Nhãn nhỏ', name: showcase4_tag, widget: string}
+          - {label: '🃏 Ô 4 — Tiêu đề (thường)', name: showcase4_title1, widget: string}
+          - {label: '🃏 Ô 4 — Tiêu đề (nghiêng)', name: showcase4_title2, widget: string}
+          - {label: '🃏 Ô 4 — Tiêu đề (sau nghiêng)', name: showcase4_title3, widget: string, required: false, hint: 'Để trống nếu không cần'}
+          - {label: '🃏 Ô 4 — Link 1 (chữ)', name: showcase4_link1_text, widget: string}
+          - {label: '🃏 Ô 4 — Link 1 (URL)', name: showcase4_link1_href, widget: string}
+          - {label: '🃏 Ô 4 — Link 2 (chữ)', name: showcase4_link2_text, widget: string, required: false}
+          - {label: '🃏 Ô 4 — Link 2 (URL)', name: showcase4_link2_href, widget: string, required: false}
+
       - name: 'be_ca'
-        label: 'Trang Bể cá'
+        label: '🐠 Trang Bể cá (ProMax / Infinity / Custom)'
         file: 'content/pages/be-ca.md'
         fields:
-          - {label: 'Tiêu đề SEO', name: 'title', widget: 'string'}
-          - {label: 'Mô tả meta', name: 'meta_description', widget: 'text', required: false}
-          - label: '🔵 Dòng ProMax'
-            name: promax
-            widget: object
-            fields:
-              - {label: 'Nhãn dòng', name: eyebrow, widget: string, hint: 'VD: 2D ProMax S Series'}
-              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string, hint: 'VD: Bể lọc vách,'}
-              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string, hint: 'VD: gọn gàng tinh tế'}
-              - {label: 'Phụ đề', name: tagline, widget: string}
-              - {label: 'Mô tả', name: desc, widget: text}
-              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
-              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
-              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
-              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
-              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
-              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
-          - label: '🟢 Dòng Infinity'
-            name: infinity
-            widget: object
-            fields:
-              - {label: 'Nhãn dòng', name: eyebrow, widget: string}
-              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string}
-              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string}
-              - {label: 'Phụ đề', name: tagline, widget: string}
-              - {label: 'Mô tả', name: desc, widget: text}
-              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
-              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
-              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
-              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
-              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
-              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
-          - label: '✏️ Custom Design'
-            name: custom
-            widget: object
-            fields:
-              - {label: 'Nhãn dòng', name: eyebrow, widget: string}
-              - {label: 'Tiêu đề (phần thường)', name: headline1, widget: string}
-              - {label: 'Tiêu đề (phần in nghiêng)', name: headline2, widget: string}
-              - {label: 'Phụ đề', name: tagline, widget: string}
-              - {label: 'Mô tả', name: desc, widget: text}
-              - {label: 'Thông số 1 – Nhãn', name: spec1_label, widget: string}
-              - {label: 'Thông số 1 – Giá trị', name: spec1_value, widget: string}
-              - {label: 'Thông số 2 – Nhãn', name: spec2_label, widget: string}
-              - {label: 'Thông số 2 – Giá trị', name: spec2_value, widget: string}
-              - {label: 'Thông số 3 – Nhãn', name: spec3_label, widget: string}
-              - {label: 'Thông số 3 – Giá trị', name: spec3_value, widget: string}
+          - {label: 'Tiêu đề SEO', name: title, widget: string}
+          - {label: 'Mô tả meta', name: meta_description, widget: string, required: false}
+          - {label: '🔵 ProMax | Nhãn dòng', name: promax_eyebrow, widget: string}
+          - {label: '🔵 ProMax | Tiêu đề (thường)', name: promax_headline1, widget: string}
+          - {label: '🔵 ProMax | Tiêu đề (nghiêng)', name: promax_headline2, widget: string}
+          - {label: '🔵 ProMax | Phụ đề', name: promax_tagline, widget: string}
+          - {label: '🔵 ProMax | Mô tả', name: promax_desc, widget: string}
+          - {label: '🔵 ProMax | Spec 1 Nhãn', name: promax_spec1_label, widget: string}
+          - {label: '🔵 ProMax | Spec 1 Giá trị', name: promax_spec1_value, widget: string}
+          - {label: '🔵 ProMax | Spec 2 Nhãn', name: promax_spec2_label, widget: string}
+          - {label: '🔵 ProMax | Spec 2 Giá trị', name: promax_spec2_value, widget: string}
+          - {label: '🔵 ProMax | Spec 3 Nhãn', name: promax_spec3_label, widget: string}
+          - {label: '🔵 ProMax | Spec 3 Giá trị', name: promax_spec3_value, widget: string}
+          - {label: '🟢 Infinity | Nhãn dòng', name: infinity_eyebrow, widget: string}
+          - {label: '🟢 Infinity | Tiêu đề (thường)', name: infinity_headline1, widget: string}
+          - {label: '🟢 Infinity | Tiêu đề (nghiêng)', name: infinity_headline2, widget: string}
+          - {label: '🟢 Infinity | Phụ đề', name: infinity_tagline, widget: string}
+          - {label: '🟢 Infinity | Mô tả', name: infinity_desc, widget: string}
+          - {label: '🟢 Infinity | Spec 1 Nhãn', name: infinity_spec1_label, widget: string}
+          - {label: '🟢 Infinity | Spec 1 Giá trị', name: infinity_spec1_value, widget: string}
+          - {label: '🟢 Infinity | Spec 2 Nhãn', name: infinity_spec2_label, widget: string}
+          - {label: '🟢 Infinity | Spec 2 Giá trị', name: infinity_spec2_value, widget: string}
+          - {label: '🟢 Infinity | Spec 3 Nhãn', name: infinity_spec3_label, widget: string}
+          - {label: '🟢 Infinity | Spec 3 Giá trị', name: infinity_spec3_value, widget: string}
+          - {label: '✏️ Custom | Nhãn dòng', name: custom_eyebrow, widget: string}
+          - {label: '✏️ Custom | Tiêu đề (thường)', name: custom_headline1, widget: string}
+          - {label: '✏️ Custom | Tiêu đề (nghiêng)', name: custom_headline2, widget: string}
+          - {label: '✏️ Custom | Phụ đề', name: custom_tagline, widget: string}
+          - {label: '✏️ Custom | Mô tả', name: custom_desc, widget: string}
+          - {label: '✏️ Custom | Spec 1 Nhãn', name: custom_spec1_label, widget: string}
+          - {label: '✏️ Custom | Spec 1 Giá trị', name: custom_spec1_value, widget: string}
+          - {label: '✏️ Custom | Spec 2 Nhãn', name: custom_spec2_label, widget: string}
+          - {label: '✏️ Custom | Spec 2 Giá trị', name: custom_spec2_value, widget: string}
+          - {label: '✏️ Custom | Spec 3 Nhãn', name: custom_spec3_label, widget: string}
+          - {label: '✏️ Custom | Spec 3 Giá trị', name: custom_spec3_value, widget: string}
 
       - name: 'dich_vu'
         label: 'Trang Dịch vụ'

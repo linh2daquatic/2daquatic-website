@@ -538,56 +538,77 @@ try {
 } catch(e){ console.warn('  (product pages error: '+e.message+')'); }
 
 
-// ===== INJECT be-ca PAGE CONTENT FROM CMS =====
+// ===== INJECT HOMEPAGE CONTENT FROM CMS (slides + showcase) =====
 try {
-  var becaMdPath = path.join(ROOT, 'content', 'pages', 'be-ca.md');
-  if (fs.existsSync(becaMdPath)) {
-    var becaRaw = fs.readFileSync(becaMdPath, 'utf8');
-    // Parse nested YAML frontmatter: top-level keys and 2-space-indented sub-keys
-    var becaFm = becaRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    if (becaFm) {
-      var becaData = {};
-      var curSection = null;
-      becaFm[1].split(/\r?\n/).forEach(function(line) {
-        var topMatch = line.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)?$/);
-        var subMatch = line.match(/^  ([a-zA-Z_][a-zA-Z0-9_]*):\s*"?(.*?)"?\s*$/);
-        if (topMatch && !line.startsWith(' ')) {
-          var val = topMatch[2] ? topMatch[2].replace(/^["']|["']$/g,'').trim() : null;
-          if (!val) { curSection = topMatch[1]; becaData[curSection] = {}; }
-          else { becaData[topMatch[1]] = val; curSection = null; }
-        } else if (subMatch && curSection) {
-          becaData[curSection][subMatch[1]] = subMatch[2].replace(/^["']|["']$/g,'').trim();
+  var homeMdPath=path.join(ROOT,'content','pages','home.md');
+  if(fs.existsSync(homeMdPath)){
+    var homeRaw=fs.readFileSync(homeMdPath,'utf8');
+    var homeData={};
+    var homeFm=homeRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if(homeFm){
+      var hLines=homeFm[1].split(/\r?\n/); var hi=0;
+      while(hi<hLines.length){
+        var hl=hLines[hi];
+        var hm2=hl.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$/);
+        if(hm2&&!hl.startsWith(' ')){
+          var hkey=hm2[1],hval2=hm2[2].trim();
+          if(hval2==='>-'||hval2==='|-'||hval2==='|'||hval2==='>'){
+            var bls2=[];hi++;
+            while(hi<hLines.length&&(hLines[hi].startsWith('  ')||hLines[hi].trim()==='')){bls2.push(hLines[hi].trim());hi++;}
+            homeData[hkey]=bls2.filter(Boolean).join(' ');continue;
+          } else { homeData[hkey]=hval2.replace(/^["']|["']$/g,'').trim(); }
         }
-      });
-
-      var becaHtmlPath = path.join(DIST, 'be-ca', 'index.html');
-      if (fs.existsSync(becaHtmlPath)) {
-        var becaHtml = fs.readFileSync(becaHtmlPath, 'utf8');
-        // Replace data-cms="section.field" elements (text content only)
-        becaHtml = becaHtml.replace(
-          /(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,
-          function(m, tag, field) {
-            var parts = field.split('.');
-            var val = parts.length === 2 && becaData[parts[0]] ? becaData[parts[0]][parts[1]] : becaData[field];
-            return tag + (val != null ? val.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : m.replace(tag,''));
-          }
-        );
-        // Replace h2 with headline1 + <em>headline2</em>
-        becaHtml = becaHtml.replace(
-          /<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em>\.<\/h2>/g,
-          function(m, attrs, h1field, emfield) {
-            var parts1=h1field.split('.'), partsE=emfield.split('.');
-            var v1=parts1.length===2&&becaData[parts1[0]]?becaData[parts1[0]][parts1[1]]:'';
-            var vE=partsE.length===2&&becaData[partsE[0]]?becaData[partsE[0]][partsE[1]]:'';
-            return '<h2'+attrs+'>'+v1+' <em>'+vE+'</em>.</h2>';
-          }
-        );
-        fs.writeFileSync(becaHtmlPath, becaHtml, 'utf8');
-        console.log('  \u2713 be-ca: injected CMS content (ProMax / Infinity / Custom)');
+        hi++;
       }
     }
+    var homeHtmlPath=path.join(DIST,'index.html');
+    if(fs.existsSync(homeHtmlPath)&&Object.keys(homeData).length>0){
+      var homeHtml=fs.readFileSync(homeHtmlPath,'utf8');
+      function esc2(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+      homeHtml=homeHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,key){var v=homeData[key];return tag+(v!=null?esc2(v):m.replace(tag,''));});
+      homeHtml=homeHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em><\/h2>/g,function(m,attrs,h1k,emk){return '<h2'+attrs+'>'+esc2(homeData[h1k]||'')+' <em>'+esc2(homeData[emk]||'')+'</em></h2>';});
+      homeHtml=homeHtml.replace(/<h3([^>]*data-cms-title="(\d+)"[^>]*)>[^<]*<em>[^<]*<\/em>[^<]*<\/h3>/g,function(m,attrs,n){var t1=homeData['showcase'+n+'_title1']||'',t2=homeData['showcase'+n+'_title2']||'',t3=homeData['showcase'+n+'_title3']||'';return '<h3'+attrs+'>'+esc2(t1)+' <em>'+esc2(t2)+'</em>'+(t3?' '+esc2(t3):'')+' </h3>';});
+      fs.writeFileSync(homeHtmlPath,homeHtml,'utf8');
+      console.log('  \u2713 homepage: injected CMS content (3 slides + 4 showcase)');
+    }
   }
-} catch(e) { console.warn('  (be-ca CMS inject error: '+e.message+')'); }
+} catch(e){console.warn('  (homepage CMS inject error: '+e.message+')');}
+
+
+// ===== INJECT be-ca PAGE CONTENT FROM CMS =====
+try {
+  var becaMdPath=path.join(ROOT,'content','pages','be-ca.md');
+  if(fs.existsSync(becaMdPath)){
+    var becaRaw=fs.readFileSync(becaMdPath,'utf8');
+    var becaData={};
+    var becaFm=becaRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if(becaFm){
+      var bLines2=becaFm[1].split(/\r?\n/); var bi2=0;
+      while(bi2<bLines2.length){
+        var bl2=bLines2[bi2];
+        var bm2=bl2.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$/);
+        if(bm2&&!bl2.startsWith(' ')){
+          var bkey2=bm2[1],bval2=bm2[2].trim();
+          if(bval2==='>-'||bval2==='|-'||bval2==='|'||bval2==='>'){
+            var bls3=[];bi2++;
+            while(bi2<bLines2.length&&(bLines2[bi2].startsWith('  ')||bLines2[bi2].trim()==='')){bls3.push(bLines2[bi2].trim());bi2++;}
+            becaData[bkey2]=bls3.filter(Boolean).join(' ');continue;
+          } else { becaData[bkey2]=bval2.replace(/^["']|["']$/g,'').trim(); }
+        }
+        bi2++;
+      }
+    }
+    function escB2(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    var becaHtmlPath=path.join(DIST,'be-ca','index.html');
+    if(fs.existsSync(becaHtmlPath)&&Object.keys(becaData).length>0){
+      var becaHtml=fs.readFileSync(becaHtmlPath,'utf8');
+      becaHtml=becaHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,key){var v=becaData[key];return tag+(v!=null?escB2(v):m.replace(tag,''));});
+      becaHtml=becaHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em>\.<\/h2>/g,function(m,attrs,h1k,emk){return '<h2'+attrs+'>'+escB2(becaData[h1k]||'')+' <em>'+escB2(becaData[emk]||'')+'</em>.</h2>';});
+      fs.writeFileSync(becaHtmlPath,becaHtml,'utf8');
+      console.log('  \u2713 be-ca: injected CMS content (ProMax / Infinity / Custom)');
+    }
+  }
+} catch(e){console.warn('  (be-ca CMS inject error: '+e.message+')');}
 
 
 // ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====
