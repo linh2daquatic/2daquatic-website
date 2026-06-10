@@ -10,8 +10,12 @@ image: /images/uploads/img_8724.jpg
 price: 9300000
 unit: cái
 specs:
-  - key: "Kích thước "
+  - key: Dung Tích
+    value: 135 L
+  - key: "Kích Thước "
     value: 60x50x45
+  - key: Dạng Lọc
+    value: Tràn dưới
 in_stock: true
 featured: true
 warranty: ""
