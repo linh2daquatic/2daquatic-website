@@ -5,6 +5,9 @@ category: phu-kien
 short_description: Kính lọc màu gắn iPhone, xem và chụp ảnh san hô dưới đèn reef
   màu xanh cho thấy màu sắc tự nhiên thật sự.
 image: /images/uploads/screenshot-2026-06-10-at-14.42.51.png
+gallery:
+  - /images/uploads/screenshot-2026-06-10-at-14.46.13.png
+  - /images/uploads/screenshot-2026-06-10-at-14.45.59.png
 price: 950000
 sale_price: 850000
 unit: cái
