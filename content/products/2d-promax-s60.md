@@ -4,9 +4,9 @@ slug: 2d-promax-s60
 category: be-ca-promax
 short_description: |-
   
-  - Hút mặt toàn dải, chống tràn tuyệt đối
-  - Bơm thổi toàn dải, không cần tạo sóng
-  - Hạn chế tối rủi ro khi chơi hải quỳ 
+  Thiết kế đặc biệt không cần tạo sóng
+  Hút mặt toàn dải chống tràn tuyệt đối
+  Gọn gàng, thẩm mỹ, hiệu quả
 image: /images/slide1-desktop.jpg
 gallery:
   - image: /images/slide1-desktop.jpg
