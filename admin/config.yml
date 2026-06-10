@@ -65,13 +65,29 @@ collections:
             min: 1
             max: 5
             fields:
-              - {label: 'Tiêu đề (badge)', name: 'badge', widget: 'string', hint: 'Ví dụ: Sản phẩm chủ lực, Flagship, Custom'}
-              - {label: 'Tên sản phẩm', name: 'title', widget: 'string', hint: 'Ví dụ: 2D ProMax S Series'}
-              - {label: 'Mô tả ngắn', name: 'description', widget: 'text'}
+              - {label: 'Badge (nhãn nhỏ)', name: 'badge', widget: 'string', hint: 'VD: Sản phẩm chủ lực, Flagship, Custom'}
+              - {label: 'Tiêu đề (phần thường)', name: 'title', widget: 'string', hint: 'VD: 2D ProMax'}
+              - {label: 'Tiêu đề (phần in nghiêng)', name: 'title_em', widget: 'string', hint: 'VD: S Series — phần chữ nghiêng'}
+              - {label: 'Phụ đề (1 dòng)', name: 'tagline', widget: 'string', hint: 'VD: Bể cá biển lọc vách, gọn gàng tinh tế.'}
+              - {label: 'Mô tả ngắn', name: 'description', widget: 'string', hint: '1-2 câu ngắn gọn'}
               - {label: 'Ảnh desktop (tỉ lệ 2.4:1)', name: 'image_desktop', widget: 'image'}
               - {label: 'Ảnh mobile (tỉ lệ 3:4)', name: 'image_mobile', widget: 'image'}
-              - {label: 'Link CTA', name: 'cta_link', widget: 'string', default: '/be-ca'}
-              - {label: 'Text CTA', name: 'cta_text', widget: 'string', default: 'Khám phá ngay'}
+              - {label: 'Link nút CTA', name: 'cta_link', widget: 'string', default: '/be-ca'}
+              - {label: 'Chữ nút CTA', name: 'cta_text', widget: 'string', default: 'Khám phá ngay'}
+          - label: '4 ô showcase (dưới slider)'
+            name: 'showcase'
+            widget: 'list'
+            min: 4
+            max: 4
+            fields:
+              - {label: 'Nhãn nhỏ', name: 'tag', widget: 'string', hint: 'VD: Bể cá biển'}
+              - {label: 'Tiêu đề (thường)', name: 'title', widget: 'string', hint: 'VD: Bể cao cấp'}
+              - {label: 'Tiêu đề (nghiêng)', name: 'title_em', widget: 'string', hint: 'VD: cho mọi không gian'}
+              - {label: 'Tiêu đề (sau nghiêng)', name: 'title_after', widget: 'string', required: false, hint: 'VD: chính hãng — để trống nếu không có'}
+              - {label: 'Link 1 — Chữ', name: 'link1_text', widget: 'string'}
+              - {label: 'Link 1 — URL', name: 'link1_href', widget: 'string'}
+              - {label: 'Link 2 — Chữ', name: 'link2_text', widget: 'string', required: false}
+              - {label: 'Link 2 — URL', name: 'link2_href', widget: 'string', required: false}
 
   # ========== 2. DANH MỤC SẢN PHẨM ==========
   - name: 'categories'

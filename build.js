@@ -540,37 +540,99 @@ try {
 
 // ===== INJECT HOMEPAGE CONTENT FROM CMS (slides + showcase) =====
 try {
-  var homeMdPath=path.join(ROOT,'content','pages','home.md');
-  if(fs.existsSync(homeMdPath)){
-    var homeRaw=fs.readFileSync(homeMdPath,'utf8');
-    var homeData={};
-    var homeFm=homeRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    if(homeFm){
-      var hLines=homeFm[1].split(/\r?\n/); var hi=0;
-      while(hi<hLines.length){
-        var hl=hLines[hi];
-        var hm2=hl.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$/);
-        if(hm2&&!hl.startsWith(' ')){
-          var hkey=hm2[1],hval2=hm2[2].trim();
-          if(hval2==='>-'||hval2==='|-'||hval2==='|'||hval2==='>'){
-            var bls2=[];hi++;
-            while(hi<hLines.length&&(hLines[hi].startsWith('  ')||hLines[hi].trim()==='')){bls2.push(hLines[hi].trim());hi++;}
-            homeData[hkey]=bls2.filter(Boolean).join(' ');continue;
-          } else { homeData[hkey]=hval2.replace(/^["']|["']$/g,'').trim(); }
+  // Read from settings/homepage.json (primary) or pages/home.md (fallback)
+  var homeData = {};
+  var homeJsonPath = path.join(ROOT,'content','settings','homepage.json');
+  var homeMdPath2  = path.join(ROOT,'content','pages','home.md');
+
+  if(fs.existsSync(homeJsonPath)){
+    var homeJson = JSON.parse(fs.readFileSync(homeJsonPath,'utf8'));
+    // Map slides array to flat keys
+    (homeJson.slides||[]).forEach(function(s,i){
+      var n=i+1;
+      homeData['slide'+n+'_badge']       = s.badge||'';
+      homeData['slide'+n+'_headline1']   = s.title||'';
+      homeData['slide'+n+'_headline2']   = s.title_em||'';
+      homeData['slide'+n+'_tagline']     = s.tagline||'';
+      homeData['slide'+n+'_desc']        = s.description||'';
+      homeData['slide'+n+'_img_desktop'] = s.image_desktop||'';
+      homeData['slide'+n+'_img_mobile']  = s.image_mobile||'';
+      homeData['slide'+n+'_cta_text']    = s.cta_text||'';
+      homeData['slide'+n+'_cta_href']    = s.cta_link||'';
+    });
+    // Map showcase array to flat keys
+    (homeJson.showcase||[]).forEach(function(c,i){
+      var n=i+1;
+      homeData['showcase'+n+'_tag']        = c.tag||'';
+      homeData['showcase'+n+'_title1']     = c.title||'';
+      homeData['showcase'+n+'_title2']     = c.title_em||'';
+      homeData['showcase'+n+'_title3']     = c.title_after||'';
+      homeData['showcase'+n+'_link1_text'] = c.link1_text||'';
+      homeData['showcase'+n+'_link1_href'] = c.link1_href||'';
+      homeData['showcase'+n+'_link2_text'] = c.link2_text||'';
+      homeData['showcase'+n+'_link2_href'] = c.link2_href||'';
+    });
+  } else if(fs.existsSync(homeMdPath2)){
+    // Fallback: flat YAML
+    var hmRaw=fs.readFileSync(homeMdPath2,'utf8');
+    var hmFm=hmRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if(hmFm){
+      hmFm[1].split(/\r?\n/).forEach(function(l){
+        var m=l.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*"?(.*?)"?\s*$/);
+        if(m&&!l.startsWith(' ')) homeData[m[1]]=m[2].replace(/^["']|["']$/g,'');
+      });
+    }
+  }
+
+  var homeHtmlPath=path.join(DIST,'index.html');
+  if(fs.existsSync(homeHtmlPath)&&Object.keys(homeData).length>0){
+    var homeHtml=fs.readFileSync(homeHtmlPath,'utf8');
+    function esc3(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+    // Text content replacements (data-cms="key")
+    homeHtml=homeHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,k){
+      var v=homeData[k];return tag+(v!=null?esc3(v):m.replace(tag,''));
+    });
+    // H2 slide headings (data-cms-h1 + data-cms-em)
+    homeHtml=homeHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em><\/h2>/g,function(m,attrs,h1k,emk){
+      return '<h2'+attrs+'>'+esc3(homeData[h1k]||'')+' <em>'+esc3(homeData[emk]||'')+'</em></h2>';
+    });
+    // Showcase H3 titles (data-cms-title="N")
+    homeHtml=homeHtml.replace(/<h3([^>]*data-cms-title="(\d+)"[^>]*)>[^<]*<em>[^<]*<\/em>[^<]*<\/h3>/g,function(m,attrs,n){
+      var t1=homeData['showcase'+n+'_title1']||'',t2=homeData['showcase'+n+'_title2']||'',t3=homeData['showcase'+n+'_title3']||'';
+      return '<h3'+attrs+'>'+esc3(t1)+' <em>'+esc3(t2)+'</em>'+(t3?' '+esc3(t3):'')+' </h3>';
+    });
+    // Slide img src (data-cms-imgsrc="key") — order-independent
+    homeHtml=homeHtml.replace(/<img([^>]*)>/g,function(m,attrs){
+      var km=attrs.match(/data-cms-imgsrc="([^"]+)"/);
+      if(!km) return m;
+      var v=homeData[km[1]];
+      if(!v) return m;
+      return '<img'+attrs.replace(/src="[^"]*"/,'src="'+v+'"')+'>';
+    });
+    // Slide source srcset (data-cms-srcset="key") — order-independent
+    homeHtml=homeHtml.replace(/<source([^>]*)>/g,function(m,attrs){
+      var km=attrs.match(/data-cms-srcset="([^"]+)"/);
+      if(!km) return m;
+      var v=homeData[km[1]];
+      if(!v) return m;
+      return '<source'+attrs.replace(/srcset="[^"]*"/,'srcset="'+v+'"')+'>';
+    });
+    // Slide 3 optional photo: if image_desktop provided, replace SVG bg with <img>
+    var s3img=homeData['slide3_img_desktop'];
+    if(s3img){
+      homeHtml=homeHtml.replace(
+        /(<div class="slide slide-3"[^>]*>[\s\S]{0,200}?<div class="slide-bg">)[\s\S]{0,3000}?(<div class="slide-overlay">)/,
+        function(m,before,after){
+          var mobileTag=homeData['slide3_img_mobile']?'<source media="(max-width:820px)" srcset="'+homeData['slide3_img_mobile']+'">':'';
+          return before+'<picture>'+mobileTag+'<img src="'+s3img+'" alt="2D Custom Design" style="width:100%;height:100%;object-fit:cover"></picture>'+after;
         }
-        hi++;
-      }
+      );
     }
-    var homeHtmlPath=path.join(DIST,'index.html');
-    if(fs.existsSync(homeHtmlPath)&&Object.keys(homeData).length>0){
-      var homeHtml=fs.readFileSync(homeHtmlPath,'utf8');
-      function esc2(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-      homeHtml=homeHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,key){var v=homeData[key];return tag+(v!=null?esc2(v):m.replace(tag,''));});
-      homeHtml=homeHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em><\/h2>/g,function(m,attrs,h1k,emk){return '<h2'+attrs+'>'+esc2(homeData[h1k]||'')+' <em>'+esc2(homeData[emk]||'')+'</em></h2>';});
-      homeHtml=homeHtml.replace(/<h3([^>]*data-cms-title="(\d+)"[^>]*)>[^<]*<em>[^<]*<\/em>[^<]*<\/h3>/g,function(m,attrs,n){var t1=homeData['showcase'+n+'_title1']||'',t2=homeData['showcase'+n+'_title2']||'',t3=homeData['showcase'+n+'_title3']||'';return '<h3'+attrs+'>'+esc2(t1)+' <em>'+esc2(t2)+'</em>'+(t3?' '+esc2(t3):'')+' </h3>';});
-      fs.writeFileSync(homeHtmlPath,homeHtml,'utf8');
-      console.log('  \u2713 homepage: injected CMS content (3 slides + 4 showcase)');
-    }
+
+    fs.writeFileSync(homeHtmlPath,homeHtml,'utf8');
+    var srcCnt=Object.keys(homeData).length;
+    console.log('  \u2713 homepage: injected CMS content ('+srcCnt+' fields from '+(fs.existsSync(homeJsonPath)?'homepage.json':'home.md')+')');
   }
 } catch(e){console.warn('  (homepage CMS inject error: '+e.message+')');}
 
@@ -609,6 +671,7 @@ try {
     }
   }
 } catch(e){console.warn('  (be-ca CMS inject error: '+e.message+')');}
+
 
 
 // ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====
