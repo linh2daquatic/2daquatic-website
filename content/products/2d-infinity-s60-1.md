@@ -4,15 +4,18 @@ slug: 2d-infinity-s60
 category: be-ca-infinity
 short_description: |-
   Bể cá biển tích hợp van thay nước tự động 10%
-  Thiết kế vô cực, hút mặt hút đáy toàn dải
+  Thiết kế view vô cực, hút mặt hút đáy toàn dải
   Gọn gàng, thẩm mỹ, hiệu quả
 image: /images/uploads/img_8724.jpg
-price: 6300000
+price: 9300000
 unit: cái
+specs:
+  - key: "Kích thước "
+    value: 60x50x45
 in_stock: true
 featured: true
 warranty: ""
-date: 2026-06-05T09:50:00.000Z
+date: 2026-06-10T15:48:00.000Z
 seo:
   meta_title: Bể cá biển tích hợp van thay nước tự động 10% Thiết kế vô cực, hút
     mặt hút đáy toàn dải Gọn gàng, thẩm mỹ, hiệu quả
@@ -21,8 +24,8 @@ seo:
     Thiết kế vô cực, hút mặt hút đáy toàn dải
     Gọn gàng, thẩm mỹ, hiệu quả
 ---
-Bể cá biển tích hợp van thay nước tự động 10%
+ Bể cá biển tích hợp van thay nước tự động 10%
 
-Thiết kế vô cực, hút mặt hút đáy toàn dải
+Thiết kế view vô cực, hút mặt hút đáy toàn dải
 
 Gọn gàng, thẩm mỹ, hiệu quả
