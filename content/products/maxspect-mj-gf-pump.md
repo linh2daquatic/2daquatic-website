@@ -27,4 +27,4 @@ featured: false
 warranty: 12 tháng
 date: 2026-06-10T14:51:00.000Z
 ---
-Máy bơm tuần hoàn dòng Jump Series, gắn trong bể bằng nam châm mạnh, không cần khoan lỗ. Tốc độ điều chỉnh linh hoạt qua controller. GF308 phù hợp bể nhỏ–vừa, GF316 cho bể lớn cần dòng mạnh. Thiết kế nhỏ gọn, dễ vệ sinh impeller.
+Máy bơm tuần hoàn dòng Jump Series gắn trong bể bằng nam châm mạnh, không cần khoan lỗ. Tốc độ điều chỉnh linh hoạt qua controller. GF308 phù hợp bể nhỏ–vừa, GF316 cho bể lớn cần dòng mạnh. Thiết kế nhỏ gọn, dễ vệ sinh impeller.
