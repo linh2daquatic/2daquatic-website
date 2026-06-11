@@ -2,10 +2,9 @@
 title: 2D Promax S50
 slug: 2D-Promax-S50
 category: be-ca-promax
-short_description: |-
-  Thiết kế đặc biệt không cần tạo sóng
-  Hút mặt toàn dải chống tràn tuyệt đối
-  Gọn gàng, thẩm mỹ, hiểu quả
+short_description: "- Bể lọc vách được thiết kế nhỏ gọn, thẩm mỹ với hệ thống
+  lọc được tích hợp phía sau bể. Dễ sử dụng, tiết kiệm diện tích và tối ưu chi
+  phí. Phù hợp để setup những bể cá biển đơn giản cho anh em mới chơi."
 image: /images/uploads/img_8724.jpg
 price: 2000000
 unit: cái
@@ -28,7 +27,7 @@ seo:
   meta_description: "Bể cá biển với thiết kế đặc biệt không cần tạo sóng Hút mặt
     toàn dải chống tràn tuyệt đối Gọn gàng, thẩm mỹ, hiểu quả "
 ---
-* Thiết kế đặc biệt luồng bơm thổi giúp nước lưu thông tốt mà  không cần tạo sóng.
+* Thiết kế đặc biệt luồng bơm thổi giúp nước lưu thông tốt mà không cần tạo sóng.
 * Hút mặt toàn dải, mở rộng tối đa diện tích hút mặt. Nâng cao hiệu quả lọc, chống tràn tuyệt đối.
 * Gọn gàng, thẩm mỹ, hiệu quả với thiết kế không mỏ vịt không tạo sóng rườm rà.
 * Hạn chế tối đa rủi ro khi chơi hải quỳ.
