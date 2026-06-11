@@ -7,6 +7,8 @@ image: /images/uploads/img_8724.jpg
 price: 2000000
 unit: cái
 specs:
+  - key: Model
+    value: 2D PROMAX S50
   - key: "Dung Tích "
     value: 45 L
   - key: Kích Thước
