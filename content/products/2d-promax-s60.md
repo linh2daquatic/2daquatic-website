@@ -11,6 +11,8 @@ sale_price: ""
 unit: Cái
 sku: PMS60-001
 specs:
+  - key: Model
+    value: " 2D PROMAX S60"
   - key: Dung Tích
     value: 65 L
   - key: Kích Thước
