@@ -1,5 +1,5 @@
 ---
-title: Maxspect Nano-Tech Bio-Blocks
+title: VẬT LIỆU LỌC Maxspect Nano-Tech Bio-Blocks
 slug: maxspect-Bio-blocks
 category: phu-kien
 short_description: Sứ lọc sinh học cao cấp cho bể cá biển
