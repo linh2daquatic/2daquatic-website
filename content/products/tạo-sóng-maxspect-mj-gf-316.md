@@ -3,7 +3,6 @@ title: TẠO SÓNG Maxspect MJ-GF 316
 slug: maxspect-mj-gf-316pump
 category: phu-kien
 short_description: Giải pháp tạo dòng chảy tuần hoàn tiên tiến cho bể cá biển.
-  Model GF308/GF316 cho bể nhỏ đến lớn.
 image: /images/uploads/screenshot-2026-06-10-at-14.50.24.png
 gallery:
   - /images/uploads/screenshot-2026-06-10-at-14.50.33.png
@@ -31,4 +30,66 @@ featured: false
 warranty: 12 tháng
 date: 2026-06-10T16:34:00.000Z
 ---
-Máy bơm tuần hoàn dòng Jump Series gắn trong bể bằng nam châm mạnh, không cần khoan lỗ. Tốc độ điều chỉnh linh hoạt qua controller. GF308 phù hợp bể nhỏ–vừa, GF316 cho bể lớn cần dòng mạnh. Thiết kế nhỏ gọn, dễ vệ sinh impeller.
+1. Luồng nước Gyre tuần hoàn toàn bể
+
+Công nghệ Crossflow/Gyre tạo dòng chảy ngang dài từ đầu này sang đầu kia bể, sau đó nước phản hồi ngược lại tạo thành vòng tuần hoàn khép kín. Điều này giúp:
+
+Giảm tối đa các "điểm chết" (dead spots).
+
+Hạn chế tích tụ cặn bẩn.
+
+Phân bố oxy và dinh dưỡng đồng đều cho san hô.
+
+2. Dòng chảy rộng và đều
+
+
+
+Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF316 tạo dòng chảy trải rộng trên toàn chiều dài bể:
+
+Ít gây stress cho SPS, LPS.
+
+Dễ bố trí san hô hơn.
+
+Mô phỏng dòng hải lưu tự nhiên tốt hơn.
+
+
+
+3. Lưu lượng mạnh
+
+Lưu lượng tối đa khoảng 15.000–16.000 lít/giờ.
+
+Phù hợp cho bể biển khoảng 50–450 lít theo Maxspect, nhiều nhà bán lẻ đánh giá có thể dùng cho bể lớn hơn tùy bố cục đá.
+
+
+
+4. Hoạt động khá êm
+
+MJ-GF316 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect quảng bá cho dòng Jump Gyre.
+
+
+
+5. Điều chỉnh linh hoạt
+
+Bộ điều khiển tích hợp nhiều chế độ:
+
+Random (ngẫu nhiên)
+
+Pulse nhanh/chậm
+
+Constant Speed
+
+Gradual Speed (mô phỏng thủy triều)
+
+Feeding Mode (cho ăn)
+
+
+
+6. Điều hướng dòng nước 360°
+
+Dòng MJ-GF mới có các flow director cho phép chỉnh hướng nước linh hoạt hơn so với các gyre đời trước. Điều này giúp tối ưu luồng chảy theo bố cục đá và san hô.
+
+
+
+7. Đồng bộ nhiều máy
+
+Có thể liên kết và đồng bộ tới 32 bơm trong cùng một nhóm để tạo các kiểu dòng chảy phức tạp cho bể lớn.
