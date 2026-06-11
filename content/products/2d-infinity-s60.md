@@ -32,3 +32,5 @@ seo:
 * Hút mặt toàn dải, mở rộng tối đa diện tích hút mặt. Nâng cao hiệu quả lọc, chống tràn tuyệt đối.
 * Gọn gàng, thẩm mỹ, hiệu quả với thiết kế không mỏ vịt không tạo sóng rườm rà.
 * Hạn chế tối đa rủi ro khi chơi hải quỳ.
+
+Liên hệ ngay **0975.112.334 hoặc 0866.112.334** để được tư vấn chi tiết và đặt hàng.
