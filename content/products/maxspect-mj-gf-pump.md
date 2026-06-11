@@ -28,44 +28,49 @@ specs:
 in_stock: true
 featured: false
 warranty: 12 tháng
-date: 2026-06-10T16:46:00.000Z
+date: 2026-06-11T15:00:00.000Z
 ---
-✅ Luồng nước dạng Gyre (dòng tuần hoàn)
+1. Luồng nước Gyre tuần hoàn toàn bể
 
-Khác với tạo sóng cánh quạt truyền thống chỉ thổi một hướng, GF308 tạo dòng chảy vòng quanh hồ.
+* Công nghệ Crossflow/Gyre tạo dòng chảy ngang dài từ đầu này sang đầu kia bể, sau đó nước phản hồi ngược lại tạo thành vòng tuần hoàn khép kín. Điều này giúp:
+* Giảm tối đa các "điểm chết" (dead spots).
+* Hạn chế tích tụ cặn bẩn.
+* Phân bố oxy và dinh dưỡng đồng đều cho san hô.
 
-Giảm đáng kể điểm chết (dead spots), giúp cặn bẩn khó lắng đọng và san hô nhận được dòng chảy đều hơn.
+2. Dòng chảy rộng và đều
 
+* Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF316 tạo dòng chảy trải rộng trên toàn chiều dài bể:
+* Ít gây stress cho SPS, LPS.
+* Dễ bố trí san hô hơn.
+* Mô phỏng dòng hải lưu tự nhiên tốt hơn.
 
+   2. Lưu lượng mạnh
 
-✅ Phân bố dòng nước rộng
+* Lưu lượng tối đa khoảng 15.000–16.000 lít/giờ.
+* Phù hợp cho bể biển khoảng 200–450 lít theo Maxspect, nhiều nhà bán lẻ đánh giá có thể dùng cho bể lớn hơn tùy bố cục đá.
 
-Không tạo tia nước quá mạnh tại một điểm như nhiều wavemaker truyền thống.
+   3. Hoạt động khá êm
 
-Phù hợp cho hồ SPS, LPS hoặc mixed reef vì dòng chảy trải đều toàn bể.
+* MJ-GF316 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect quảng bá cho dòng Jump Gyre.
 
+\    4. Điều chỉnh linh hoạt
 
+* Bộ điều khiển tích hợp nhiều chế độ:
 
-✅ Điều chỉnh hướng dòng 360°
+\    + Random (ngẫu nhiên)
 
-Phiên bản Jump mới có flow director cho phép chỉnh hướng nước linh hoạt hơn so với các đời Gyre cũ.
+\    +  Pulse nhanh/chậm
 
+\    + Constant Speed
 
+\    + Gradual Speed (mô phỏng thủy triều)
 
-✅ Nhiều chế độ hoạt động
+\    +  Feeding Mode (cho ăn)
 
-Constant Flow
+\    5. Điều hướng dòng nước 360°
 
-Pulse
+* Dòng MJ-GF mới có các flow director cho phép chỉnh hướng nước linh hoạt hơn so với các gyre đời trước. Điều này giúp tối ưu luồng chảy theo bố cục đá và san hô.
 
-Random
+\    6. Đồng bộ nhiều máy
 
-Feeding Mode
-
-Link-up nhiều máy cùng lúc bằng controller.
-
-
-
-✅ Hoạt động khá êm
-
-Sử dụng công nghệ điều khiển sóng sin (Sine Wave) giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ.
+* Có thể liên kết và đồng bộ tới 32 bơm trong cùng một nhóm để tạo các kiểu dòng chảy phức tạp cho bể lớn.
