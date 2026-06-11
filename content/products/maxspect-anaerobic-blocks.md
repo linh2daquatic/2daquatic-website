@@ -1,25 +1,32 @@
 ---
-title: "Maxspect Nano-Tech Anaerobic Blocks"
-slug: maxspect-anaerobic-blocks
-category: vat-lieu-loc
-short_description: "Vật liệu lọc yếm khí khử nitrate tự nhiên, cấu trúc xốp đa tầng. An toàn cho san hô, không thải độc tố."
-unit: "hộp"
+title: Maxspect Nano-Tech Bio-Blocks
+slug: maxspect-Bio-blocks
+category: phu-kien
+short_description: Sứ lọc sinh học cao cấp cho bể cá biển
+image: /images/uploads/screenshot-2026-06-11-at-13.21.52.png
+gallery:
+  - /images/uploads/screenshot-2026-06-11-at-14.39.12.png
 price: 0
-sale_price: 
-image: ""
+sale_price: null
+unit: hộp
 specs:
-  - key: "Loại"
-    value: "Vật liệu yếm khí"
-  - key: "Tác dụng"
-    value: "Khử nitrate tự nhiên"
-  - key: "Cấu trúc"
-    value: "Xốp đa tầng"
-  - key: "An toàn"
-    value: "Cho san hô và cá"
-  - key: "Kích cỡ"
-    value: "250g / 500g"
+  - key: Model
+    value: Maxspect Nano -Tech bio - Block
+  - key: Công Dụng
+    value: "Xử lí các chất độc trong bể "
+  - key: Kích Cỡ
+    value: 10 x10 x 2.5 cm
+  - key: Quy Cách Đóng Gói
+    value: "Hộp 2 viên "
 in_stock: true
 featured: false
 warranty: ""
+date: 2026-06-11T14:45:00.000Z
 ---
-Vật liệu lọc sinh học yếm khí của Maxspect, tạo môi trường cho vi khuẩn yếm khí khử nitrate tự nhiên từ nước bể. Cấu trúc xốp đa tầng tối ưu diện tích bề mặt. Phù hợp bể reef muốn kiểm soát nitrate ở mức thấp mà không cần thay nước quá thường xuyên. An toàn cho san hô và cá.
+* **Maxspect Nano-Tech Bio-Block** sử dụng công nghệ độc quyền để tạo hình các hạt gốm trơ thành hình khối dễ sử dụng.
+* Công nghệ xử lý nước thải sinh học ổn định bằng bộ lọc sục khí sinh học **(W-BAF)** giúp Bio-Block dễ dàng xử lí hiệu quả Amoni-Nitrogen (NH4-N) và Nitrat-Nitrogen (NO3-N)
+* Tỷ lệ diện tích cắt ngang bề mặt và diện tích lọc cực cao. Mỗi viên Bio Block có diện tích bề mặt lên đến **1.080m² (11.635ft²)** để hình thành hệ vi sinh, giúp kiểm soát hiệu quả chất lượng và độ ổn định của cột nước.
+* Các hạt sinh học tạo điều kiện thuận lợi cho sự phát triển của các quần thể vi khuẩn dưới dạng màng sinh học nano tổng hợp, cho phép nhiều loài vi khuẩn và nấm phát triển trên diện tích bề mặt lớn của chúng, chẳng hạn như vi khuẩn nitrat hóa (bao gồm các loài thuộc chi Nitrosomonas, Nitrosococcus, Nitrobacter và Nitrococcus), nấm men, vi khuẩn quang hợp, v.v.
+* Các hạt sinh học được sản xuất cẩn thận để đảm bảo chất lượng, cấu trúc xốp được thiết kế tốt tạo ra điều kiện sống và môi trường lý tưởng cho các quần thể vi khuẩn, nhưng sẽ không bị phân hủy bởi các quần thể vi khuẩn phát triển bên trong chúng.
+* Đặt Bio Block  trực tiếp vào bể lọc hoặc khu vực có dòng chảy mạnh.
+* Nên thay thế Bio-Block sau mỗi 6 tháng để đạt hiệu quả tối ưu. Tuy nhiên, khi thay thế Bio-Blocks cũ, **KHÔNG** nên thay thế tất cả cùng một lúc,hãy thay thế một nửa số Bio-Block.
