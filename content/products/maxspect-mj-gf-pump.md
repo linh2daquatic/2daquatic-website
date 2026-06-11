@@ -37,23 +37,22 @@ date: 2026-06-11T15:00:00.000Z
 * Hạn chế tích tụ cặn bẩn.
 * Phân bố oxy và dinh dưỡng đồng đều cho san hô.
 
-2. Dòng chảy rộng và đều
+   2. Dòng chảy rộng và đều
 
 * Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF308 tạo dòng chảy trải rộng trên toàn chiều dài bể:
 * Ít gây stress cho SPS, LPS.
 * Dễ bố trí san hô hơn.
 * Mô phỏng dòng hải lưu tự nhiên tốt hơn.
 
-   2. Lưu lượng mạnh
+\    3. Lưu lượng mạnh
 
 * Lưu lượng tối đa khoảng 7000 L/H
 * Phù hợp cho bể biển khoảng 135-250 lít  
 
-   3. Hoạt động khá êm
-
+  3. Hoạt động khá êm
 * MJ-GF308 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect cải tiến cho dòng Jump Gyre.
 
-\    4. Điều chỉnh linh hoạt
+   4. Điều chỉnh linh hoạt
 
 * Bộ điều khiển tích hợp nhiều chế độ:
 
@@ -71,6 +70,6 @@ date: 2026-06-11T15:00:00.000Z
 
 * Dòng MJ-GF mới có các flow director cho phép chỉnh hướng nước linh hoạt hơn so với các gyre đời trước. Điều này giúp tối ưu luồng chảy theo bố cục đá và san hô.
 
-\    6. Đồng bộ nhiều máy
+   6. Đồng bộ nhiều máy
 
 * Có thể liên kết và đồng bộ tới 32 bơm trong cùng một nhóm để tạo các kiểu dòng chảy phức tạp cho bể lớn.
