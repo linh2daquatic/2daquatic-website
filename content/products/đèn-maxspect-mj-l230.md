@@ -33,9 +33,9 @@ featured: false
 warranty: ""
 date: 2026-06-11T16:47:00.000Z
 ---
-*  Maxspect MJ-L230 thuộc dòng Jump Series nổi tiếng – thiết kế nhỏ gọn nhưng hiệu năng cực kỳ ấn tượng.
-*  Phù hợp cho bể nano – bể reef kích thước nhỏ, giúp san hô lên màu đẹp – phát triển khỏe mạnh.
-*  Ánh sáng chuẩn reef hiện đại (blue/UV tối ưu)
+* Maxspect MJ-L230 thuộc dòng Jump Series nổi tiếng – thiết kế nhỏ gọn nhưng hiệu năng cực kỳ ấn tượng.
+* Phù hợp cho bể nano – bể reef kích thước nhỏ, giúp san hô lên màu đẹp – phát triển khỏe mạnh.
+* Ánh sáng chuẩn reef hiện đại (blue/UV tối ưu)
 * Thiết kế cao cấp & Tản nhiệt thụ động: Vỏ đèn làm bằng nhôm nguyên khối màu đen bóng bẩy với lớp sơn mờ, vừa sang trọng vừa hỗ trợ tản nhiệt hiệu quả.
 * Đèn hoạt động êm ái do không sử dụng quạt tản nhiệt 
 * Hệ thống LED chuyên sâu: Gồm 43 bóng LED phủ dải quang phổ rộng (Deep Blue, Sky Blue, Cool White, Violet và UV), loại bỏ hoàn toàn ánh sáng đỏ không cần thiết.
