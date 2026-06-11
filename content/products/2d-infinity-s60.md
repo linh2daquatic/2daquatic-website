@@ -2,9 +2,7 @@
 title: 2D Promax S50
 slug: 2D-Promax-S50
 category: be-ca-promax
-short_description: "- Bể lọc vách được thiết kế nhỏ gọn, thẩm mỹ với hệ thống
-  lọc được tích hợp phía sau bể. Dễ sử dụng, tiết kiệm diện tích và tối ưu chi
-  phí. Phù hợp để setup những bể cá biển đơn giản cho anh em mới chơi."
+short_description: "- Bể lọc vách thiết kế nhỏ gọn, thẩm mỹ & tối ưu chi phí."
 image: /images/uploads/img_8724.jpg
 price: 2000000
 unit: cái
