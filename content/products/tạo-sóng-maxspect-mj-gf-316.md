@@ -30,47 +30,54 @@ featured: false
 warranty: 12 tháng
 date: 2026-06-11T15:08:00.000Z
 ---
-1. Luồng nước Gyre tuần hoàn toàn bể
+* Luồng nước Gyre tuần hoàn toàn bể
 
-* Công nghệ Crossflow/Gyre tạo dòng chảy ngang dài từ đầu này sang đầu kia bể, sau đó nước phản hồi ngược lại tạo thành vòng tuần hoàn khép kín. Điều này giúp:
-* Giảm tối đa các "điểm chết" (dead spots).
-* Hạn chế tích tụ cặn bẩn.
-* Phân bố oxy và dinh dưỡng đồng đều cho san hô.
+Công nghệ Crossflow/Gyre tạo dòng chảy ngang dài từ đầu này sang đầu kia bể, sau đó nước phản hồi ngược lại tạo thành vòng tuần hoàn khép kín. Điều này giúp:
 
-   2. Dòng chảy rộng và đều
+Giảm tối đa các "điểm chết" (dead spots).
 
-* Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF316 tạo dòng chảy trải rộng trên toàn chiều dài bể:
-* Ít gây stress cho SPS, LPS.
-* Dễ bố trí san hô hơn.
-* Mô phỏng dòng hải lưu tự nhiên tốt hơn.
+Hạn chế tích tụ cặn bẩn.
 
-   3. Lưu lượng mạnh
+Phân bố oxy và dinh dưỡng đồng đều cho san hô.
 
-* Lưu lượng tối đa khoảng 15.000 L/H
-* Phù hợp cho bể biển khoảng 200–450 lít 
+* Dòng chảy rộng và đều
 
-   4. Hoạt động khá êm
+Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF316 tạo dòng chảy trải rộng trên toàn chiều dài bể:
 
-* MJ-GF316 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect cải tiến cho dòng Jump Gyre.
+Ít gây stress cho SPS, LPS.
 
-   5. Điều chỉnh linh hoạt
+Dễ bố trí san hô hơn.
 
-* Bộ điều khiển tích hợp nhiều chế độ:
+Mô phỏng dòng hải lưu tự nhiên tốt hơn.
 
-\    +  Random (ngẫu nhiên)
+* Lưu lượng mạnh
 
-\    +  Pulse nhanh/chậm
+Lưu lượng tối đa khoảng 15.000 L/H
 
-\    + Constant Speed
+Phù hợp cho bể biển khoảng 200–450 lít 
 
-\    + Gradual Speed (mô phỏng thủy triều)
+* Hoạt động khá êm
 
-\    +  Feeding Mode (cho ăn)
+MJ-GF316 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect cải tiến cho dòng Jump Gyre.
 
-\    6. Điều hướng dòng nước 360°
+* Điều chỉnh linh hoạt
 
-* Dòng MJ-GF mới có các flow director cho phép chỉnh hướng nước linh hoạt hơn so với các gyre đời trước. Điều này giúp tối ưu luồng chảy theo bố cục đá và san hô.
+Bộ điều khiển tích hợp nhiều chế độ:
 
-\    7. Đồng bộ nhiều máy
+  +  Random (ngẫu nhiên)
 
-* Có thể liên kết và đồng bộ tới 32 bơm trong cùng một nhóm để tạo các kiểu dòng chảy phức tạp cho bể lớn.
+  +  Pulse nhanh/chậm
+
+  + Constant Speed
+
+  + Gradual Speed (mô phỏng thủy triều)
+
+  +  Feeding Mode (cho ăn)
+
+*  Điều hướng dòng nước 360°
+
+Dòng MJ-GF mới có các flow director cho phép chỉnh hướng nước linh hoạt hơn so với các gyre đời trước. Điều này giúp tối ưu luồng chảy theo bố cục đá và san hô.
+
+*  Đồng bộ nhiều máy
+
+Có thể liên kết và đồng bộ tới 32 bơm trong cùng một nhóm để tạo các kiểu dòng chảy phức tạp cho bể lớn.
