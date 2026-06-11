@@ -12,7 +12,7 @@ specs:
   - key: "Dung Tích "
     value: 45 L
   - key: Kích Thước
-    value: 50x40x35 cm
+    value: 50 x 40 x 35 cm
   - key: "Dạng lọc "
     value: "Lọc Vách "
   - key: "Chất Liệu "
