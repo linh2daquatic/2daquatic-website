@@ -2,20 +2,21 @@
 title: 2D Infinity S60
 slug: 2d-infinity-s60
 category: be-ca-infinity
-short_description: |-
-  Bể cá biển tích hợp van thay nước tự động 10%
-  Thiết kế view vô cực, hút mặt hút đáy toàn dải
-  Gọn gàng, thẩm mỹ, hiệu quả
+short_description: "- Bể tràn dưới mang đến khả năng vận hành ổn định, thể tích
+  nước lớn, không gian bố trí thiết bị linh hoạt. Giải pháp hoàn hảo cho người
+  chơi muốn xây dựng một hệ sinh thái biển chuyên nghiệp và bền vững. "
 image: /images/uploads/img_8724.jpg
 price: 9300000
-unit: cái
+unit: Bể, sump, chân tủ, hệ thống ống SANKING
 specs:
   - key: Dung Tích
     value: 135 L
   - key: "Kích Thước "
-    value: 60x50x45
+    value: 60 x 50 x 45 cm
   - key: Dạng Lọc
     value: Tràn dưới
+  - key: "Chất Liệu "
+    value: Kính Việt Nhật 10mm
 in_stock: true
 featured: true
 warranty: ""
@@ -28,8 +29,7 @@ seo:
     Thiết kế vô cực, hút mặt hút đáy toàn dải
     Gọn gàng, thẩm mỹ, hiệu quả
 ---
- Bể cá biển tích hợp van thay nước tự động 10%
-
-Thiết kế view vô cực, hút mặt hút đáy toàn dải
-
-Gọn gàng, thẩm mỹ, hiệu quả
+*  Bể cá biển 2D Infinity  tích hợp van thay nước tự động 10% giúp việc thay nước trở nên nhanh chóng tiện lợi và dễ dàng.
+* Thiết kế view vô cực, không lộ ống, mỏ vịt. Hút mặt, hút đáy toàn dải.
+* Tích hợp bù nước tự động.
+* Gọn gàng, thẩm mỹ, hiệu quả.
