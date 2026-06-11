@@ -2,9 +2,7 @@
 title: 2D ProMax S60
 slug: 2d-promax-s60
 category: be-ca-promax
-short_description: "- Bể lọc vách được thiết kế nhỏ gọn, thẩm mỹ với hệ thống
-  lọc được tích hợp phía sau bể. Dễ sử dụng, tiết kiệm diện tích và tối ưu chi
-  phí. Phù hợp để setup những bể cá biển đơn giản cho anh em mới chơi."
+short_description: "- Bể lọc vách thiết kế nhỏ gọn, thẩm mỹ & tối ưu chi phí."
 image: /images/slide1-desktop.jpg
 gallery:
   - image: /images/slide1-desktop.jpg
