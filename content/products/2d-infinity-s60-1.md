@@ -7,6 +7,8 @@ image: /images/uploads/img_8724.jpg
 price: 9300000
 unit: Bể, sump, chân tủ, hệ thống ống SANKING
 specs:
+  - key: Model
+    value: 2D INFINITY S60
   - key: Dung Tích
     value: 135 L
   - key: "Kích Thước "
