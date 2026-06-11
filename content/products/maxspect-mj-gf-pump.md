@@ -39,19 +39,19 @@ date: 2026-06-11T15:00:00.000Z
 
 2. Dòng chảy rộng và đều
 
-* Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF316 tạo dòng chảy trải rộng trên toàn chiều dài bể:
+* Khác với powerhead thông thường tạo tia nước mạnh tập trung, MJ-GF308 tạo dòng chảy trải rộng trên toàn chiều dài bể:
 * Ít gây stress cho SPS, LPS.
 * Dễ bố trí san hô hơn.
 * Mô phỏng dòng hải lưu tự nhiên tốt hơn.
 
    2. Lưu lượng mạnh
 
-* Lưu lượng tối đa khoảng 15.000–16.000 lít/giờ.
-* Phù hợp cho bể biển khoảng 200–450 lít theo Maxspect, nhiều nhà bán lẻ đánh giá có thể dùng cho bể lớn hơn tùy bố cục đá.
+* Lưu lượng tối đa khoảng 7000 L/H
+* Phù hợp cho bể biển khoảng 135-250 lít  
 
    3. Hoạt động khá êm
 
-* MJ-GF316 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect quảng bá cho dòng Jump Gyre.
+* MJ-GF308 sử dụng công nghệ động cơ Sine Wave giúp giảm tiếng ồn so với nhiều dòng gyre đời cũ. Đây là một trong những điểm được Maxspect cải tiến cho dòng Jump Gyre.
 
 \    4. Điều chỉnh linh hoạt
 
