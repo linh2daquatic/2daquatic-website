@@ -2,9 +2,7 @@
 title: 2D Infinity S60
 slug: 2d-infinity-s60
 category: be-ca-infinity
-short_description: "- Bể tràn dưới mang đến khả năng vận hành ổn định, thể tích
-  nước lớn, không gian bố trí thiết bị linh hoạt. Giải pháp hoàn hảo cho người
-  chơi muốn xây dựng một hệ sinh thái biển chuyên nghiệp và bền vững. "
+short_description: "Giải pháp hoàn hảo cho hệ sinh thái biển chuyên nghiệp và bền vững. "
 image: /images/uploads/img_8724.jpg
 price: 9300000
 unit: Bể, sump, chân tủ, hệ thống ống SANKING
