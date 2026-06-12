@@ -617,16 +617,14 @@ try {
       if(!v) return m;
       return '<source'+attrs.replace(/srcset="[^"]*"/,'srcset="'+v+'"')+'>';
     });
-    // Slide 3 optional photo: if image_desktop provided, replace SVG bg with <img>
+    // Slide 3 image: CSS injection (SVG is 7500+ chars, regex unreliable)
     var s3img=homeData['slide3_img_desktop'];
     if(s3img){
-      homeHtml=homeHtml.replace(
-        /(<div class="slide slide-3"[^>]*>[\s\S]{0,200}?<div class="slide-bg">)[\s\S]{0,3000}?(<div class="slide-overlay">)/,
-        function(m,before,after){
-          var mobileTag=homeData['slide3_img_mobile']?'<source media="(max-width:820px)" srcset="'+homeData['slide3_img_mobile']+'">':'';
-          return before+'<picture>'+mobileTag+'<img src="'+s3img+'" alt="2D Custom Design" style="width:100%;height:100%;object-fit:cover"></picture>'+after;
-        }
-      );
+      var s3mobile=homeData['slide3_img_mobile']?'@media(max-width:820px){.slide-3 .slide-bg{background-image:url("'+homeData['slide3_img_mobile']+'")}}'  :'';
+      var s3css='<style>.slide-3.active.slide-3-has-photo .slide-bg svg,.slide-3.slide-3-has-photo .slide-bg svg{opacity:0!important}.slide-3 .slide-bg{background:url("'+s3img+'") center/cover no-repeat!important}'+s3mobile+'</style>';
+      // Add class to slide-3 div to activate CSS
+      homeHtml=homeHtml.replace('class="slide slide-3"','class="slide slide-3 slide-3-has-photo"');
+      homeHtml=homeHtml.replace('</head>',s3css+'</head>');
     }
 
     fs.writeFileSync(homeHtmlPath,homeHtml,'utf8');
