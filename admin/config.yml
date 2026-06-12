@@ -80,14 +80,11 @@ collections:
             min: 4
             max: 4
             fields:
-              - {label: 'Nhãn nhỏ', name: 'tag', widget: 'string', hint: 'VD: Bể cá biển'}
-              - {label: 'Tiêu đề (thường)', name: 'title', widget: 'string', hint: 'VD: Bể cao cấp'}
-              - {label: 'Tiêu đề (nghiêng)', name: 'title_em', widget: 'string', hint: 'VD: cho mọi không gian'}
-              - {label: 'Tiêu đề (sau nghiêng)', name: 'title_after', widget: 'string', required: false, hint: 'VD: chính hãng — để trống nếu không có'}
-              - {label: 'Link 1 — Chữ', name: 'link1_text', widget: 'string'}
-              - {label: 'Link 1 — URL', name: 'link1_href', widget: 'string'}
-              - {label: 'Link 2 — Chữ', name: 'link2_text', widget: 'string', required: false}
-              - {label: 'Link 2 — URL', name: 'link2_href', widget: 'string', required: false}
+              - {label: 'Nhãn nhỏ (tag)', name: 'tag', widget: 'string', required: false, hint: 'VD: Bể cá biển'}
+              - {label: 'Tiêu đề', name: 'title', widget: 'string', hint: 'VD: Bể cao cấp cho mọi không gian'}
+              - {label: 'Ảnh showcase', name: 'image', widget: 'image', required: false, hint: 'Ảnh bể hoặc sản phẩm nổi bật'}
+              - {label: 'Link CTA — Chữ', name: 'link_text', widget: 'string', required: false, hint: 'VD: Xem ngay (để trống nếu không cần)'}
+              - {label: 'Link CTA — URL', name: 'link_href', widget: 'string', required: false, hint: 'VD: /be-ca'}
 
   # ========== 2. DANH MỤC SẢN PHẨM ==========
   - name: 'categories'

@@ -560,17 +560,20 @@ try {
       homeData['slide'+n+'_cta_text']    = s.cta_text||'';
       homeData['slide'+n+'_cta_href']    = s.cta_link||'';
     });
-    // Map showcase array to flat keys
+    // Map showcase array to flat keys (simplified: tag, title, image, link)
+    var scDefaults=[
+      '/images/tank-1.jpg','/images/tank-2.jpg',
+      '/images/tank-3.jpg','/images/tank-4.jpg'
+    ];
     (homeJson.showcase||[]).forEach(function(c,i){
       var n=i+1;
       homeData['showcase'+n+'_tag']        = c.tag||'';
+      homeData['showcase'+n+'_title']      = c.title||'';
+      homeData['showcase'+n+'_img']        = c.image||scDefaults[i]||'';
+      homeData['showcase'+n+'_link_text']  = c.link_text||'';
+      homeData['showcase'+n+'_link_href']  = c.link_href||'';
+      // Backward compat: also set _title1 for data-cms="showcase1_title"
       homeData['showcase'+n+'_title1']     = c.title||'';
-      homeData['showcase'+n+'_title2']     = c.title_em||'';
-      homeData['showcase'+n+'_title3']     = c.title_after||'';
-      homeData['showcase'+n+'_link1_text'] = c.link1_text||'';
-      homeData['showcase'+n+'_link1_href'] = c.link1_href||'';
-      homeData['showcase'+n+'_link2_text'] = c.link2_text||'';
-      homeData['showcase'+n+'_link2_href'] = c.link2_href||'';
     });
   } else if(fs.existsSync(homeMdPath2)){
     // Fallback: flat YAML
@@ -597,11 +600,7 @@ try {
     homeHtml=homeHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em><\/h2>/g,function(m,attrs,h1k,emk){
       return '<h2'+attrs+'>'+esc3(homeData[h1k]||'')+' <em>'+esc3(homeData[emk]||'')+'</em></h2>';
     });
-    // Showcase H3 titles (data-cms-title="N")
-    homeHtml=homeHtml.replace(/<h3([^>]*data-cms-title="(\d+)"[^>]*)>[^<]*<em>[^<]*<\/em>[^<]*<\/h3>/g,function(m,attrs,n){
-      var t1=homeData['showcase'+n+'_title1']||'',t2=homeData['showcase'+n+'_title2']||'',t3=homeData['showcase'+n+'_title3']||'';
-      return '<h3'+attrs+'>'+esc3(t1)+' <em>'+esc3(t2)+'</em>'+(t3?' '+esc3(t3):'')+' </h3>';
-    });
+    // Showcase H3 titles — now handled by data-cms="showcaseN_title" (simple text)
     // Slide img src (data-cms-imgsrc="key") — order-independent
     homeHtml=homeHtml.replace(/<img([^>]*)>/g,function(m,attrs){
       var km=attrs.match(/data-cms-imgsrc="([^"]+)"/);
