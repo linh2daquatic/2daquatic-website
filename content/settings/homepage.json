@@ -2,30 +2,55 @@
   "slides": [
     {
       "badge": "BEST SELLER",
-      "title": "2D ProMax S Series",
-      "description": "Bể cá biển lọc vách thiết kế đặc biệt, không cần tạo sóng \nHiệu quả, gọn gàng, thẩm mỹ",
-      "image_desktop": "/images/uploads/img_8725.jpg",
       "image_mobile": "/images/slide1-mobile.jpg",
       "cta_link": "/be-ca#promax",
-      "cta_text": "Khám phá ngay"
+      "tagline": "Best Seller 2025-2026",
+      "title_em": "Hút mặt toàn dải",
+      "image_desktop": "/images/uploads/img_8725.jpg",
+      "title": "2D ProMax S Series",
+      "cta_text": "Khám phá ngay",
+      "description": "Bể cá biển lọc vách thiết kế đặc biệt, không cần tạo sóng \nHiệu quả, gọn gàng, thẩm mỹ"
     },
     {
       "badge": "Flagship",
-      "title": "2D Infinity S Series",
-      "description": "Bể flagship lọc tràn dưới, thiết kế vô cực, tích hợp van thay nước 10% dễ dàng bảo trì, chăm sóc",
-      "image_desktop": "/images/uploads/img_8725.jpg",
       "image_mobile": "/images/uploads/img_8724.jpg",
       "cta_link": "/be-ca#infinity",
-      "cta_text": "Tìm hiểu thêm"
+      "tagline": "Best seller phân khúc lọc tràn dưới",
+      "title_em": "Hút mặt, hút đáy toàn dải, view vô cực",
+      "image_desktop": "/images/uploads/img_8725.jpg",
+      "title": "2D Infinity S Series",
+      "cta_text": "Tìm hiểu thêm",
+      "description": "Bể flagship lọc tràn dưới, thiết kế vô cực, tích hợp van thay nước 10% dễ dàng bảo trì, chăm sóc"
     },
     {
-      "cta_link": "/be-ca",
-      "cta_text": "Khám phá ngay",
       "badge": "Custom",
-      "title": "2D Custom Design",
-      "description": "Mỗi không gian đều có cá tính riêng. Bể của bạn sẽ được Linh 2D Aquatic làm việc trực tiếp với bạn để thiết kế hệ thống phù hợp với kiến trúc, ánh sáng và phong cách sống của bạn.",
+      "image_mobile": "/images/uploads/screenshot-2026-06-05-at-19.06.13.png",
+      "cta_link": "/be-ca",
+      "tagline": "2D Design your Desired",
+      "title_em": "Thiết kế riêng cho không gian nhà bạn",
       "image_desktop": "/images/uploads/screenshot-2026-06-05-at-19.05.28.png",
-      "image_mobile": "/images/uploads/screenshot-2026-06-05-at-19.06.13.png"
+      "title": "2D Custom Design",
+      "cta_text": "Khám phá ngay",
+      "description": "Mỗi không gian đều có cá tính riêng. Bể của bạn sẽ được Linh 2D Aquatic làm việc trực tiếp với bạn để thiết kế hệ thống phù hợp với kiến trúc, ánh sáng và phong cách sống của bạn."
+    }
+  ],
+  "showcase": [
+    {
+      "tag": "",
+      "title": "Bể 2D Infinity 2m a Tuấn Park",
+      "image": "/images/uploads/img_5829.jpg"
+    },
+    {
+      "title": "Bể Em Linh 2D",
+      "image": "/images/uploads/img_0732.jpg"
+    },
+    {
+      "title": "Bể anh Sơn ",
+      "image": "/images/uploads/img_0732.jpg"
+    },
+    {
+      "title": "Bể a Long",
+      "image": "/images/uploads/img_0732.jpg"
     }
   ]
 }
