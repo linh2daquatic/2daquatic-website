@@ -3,7 +3,7 @@ title: "Cách Đặt Máy Tạo Sóng Đúng Vị Trí Trong Bể San Hô"
 slug: cach-dat-may-tao-song-dung-vi-tri-be-ca-bien
 author: Linh 2D Aquatic
 date: 2026-05-26T08:00:00.000Z
-cover: "/images/blog/shoal-fish-reef.jpg"
+cover: "/images/blog/cach-dat-may-tao-song-be-ca-bien.svg"
 excerpt: "Vị trí wavemaker ảnh hưởng trực tiếp đến san hô sống hay chết. Linh 2D hướng dẫn cách bố trí flow nước tối ưu cho từng loại bể."
 category: huong-dan
 tags: [wavemaker, máy tạo sóng, flow nước, lưu thông, sanho]

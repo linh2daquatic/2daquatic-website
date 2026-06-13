@@ -3,7 +3,7 @@ title: "Vi Sinh Xử Lý Nitrat Trong Bể San Hô: Aquaforest vs Biopellets vs 
 slug: vi-sinh-xu-ly-nitrat-trong-be-san-ho
 author: Linh 2D Aquatic
 date: 2026-05-13T08:00:00.000Z
-cover: "/images/blog/coral-bioluminescent.jpg"
+cover: "/images/blog/vi-sinh-xu-ly-nitrat-be-san-ho.svg"
 excerpt: "3 phương pháp dùng vi sinh để hạ nitrat bể san hô — Linh 2D so sánh ưu nhược điểm từng cách, giúp bạn chọn đúng phương pháp cho bể của mình."
 category: huong-dan
 tags: [vi sinh, nitrat, biopellets, carbon dosing, aquaforest]

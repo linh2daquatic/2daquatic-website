@@ -3,7 +3,7 @@ title: "Calcium Reactor vs Kalkwasser vs Two-Part: Nên Dùng Gì Để Bổ Sun
 slug: calcium-reactor-kalkwasser-two-part-nen-dung-gi
 author: Linh 2D Aquatic
 date: 2026-06-08T08:00:00.000Z
-cover: "/images/blog/coral-bioluminescent.jpg"
+cover: "/images/blog/calcium-reactor-kalkwasser-be-san-ho.svg"
 excerpt: "3 phương pháp bổ sung Ca và KH cho bể SPS — mỗi cái có ưu nhược điểm khác nhau. Linh 2D so sánh để bạn chọn đúng phương pháp cho quy mô và ngân sách."
 category: huong-dan
 tags: [calcium reactor, kalkwasser, two-part, Ca/KH, bể SPS, reef chemistry]

@@ -3,7 +3,7 @@ title: "Acropora — Hướng Dẫn Nuôi San Hô Khó Nhất Và Đẹp Nhất 
 slug: acropora-huong-dan-nuoi-san-ho-sps
 author: Linh 2D Aquatic
 date: 2026-06-10T08:00:00.000Z
-cover: "/images/blog/coral-reef-color.jpg"
+cover: "/images/blog/acropora-sps-huong-dan-nuoi.svg"
 excerpt: "Acropora là đỉnh cao của reef tank — màu sắc rực rỡ nhất, phức tạp nhất, đòi hỏi nhất. Linh 2D chia sẻ điều kiện cần thiết và những sai lầm cần tránh khi nuôi Acropora."
 category: huong-dan
 tags: [acropora, SPS, san hô cứng, reef tank nâng cao, coral SPS]

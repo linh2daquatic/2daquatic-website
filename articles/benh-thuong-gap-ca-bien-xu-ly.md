@@ -3,7 +3,7 @@ title: "5 Bệnh Thường Gặp Ở Cá Biển Và Cách Chữa Trị Hiệu Qu
 slug: benh-thuong-gap-ca-bien-va-cach-chua-tri
 author: Linh 2D Aquatic
 date: 2026-06-02T08:00:00.000Z
-cover: "/images/blog/clownfish.jpg"
+cover: "/images/blog/benh-thuong-gap-ca-bien-xu-ly.svg"
 excerpt: "Ich, velvet, brook, bacterial infection — bệnh cá biển cần nhận biết và xử lý đúng cách ngay từ sớm. Linh 2D hướng dẫn cách phòng và trị từng loại bệnh phổ biến."
 category: huong-dan
 tags: [bệnh cá biển, ich, velvet, quarantine, chữa bệnh cá]

@@ -3,7 +3,7 @@ title: "Cycle Bể Nước Mặn Từ Đầu: Hướng Dẫn Từng Bước Cho 
 slug: cycle-be-nuoc-man-tu-dau-huong-dan
 author: Linh 2D Aquatic
 date: 2026-06-01T08:00:00.000Z
-cover: "/images/blog/coral-aquarium.jpg"
+cover: "/images/blog/cycle-be-nuoc-man-tu-dau.svg"
 excerpt: "Bước quan trọng nhất khi setup bể mới là cycle — và phần lớn người mới làm sai hoặc bỏ qua. Linh 2D hướng dẫn chi tiết từng bước để cycle thành công."
 category: setup
 tags: [cycle bể, người mới, setup bể, bể cá biển mới]

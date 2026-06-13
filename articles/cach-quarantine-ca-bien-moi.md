@@ -3,7 +3,7 @@ title: "Quarantine Cá Biển Mới: Tại Sao Cần Và Quy Trình Thực Hiệ
 slug: quarantine-ca-bien-moi-tai-sao-can-va-quy-trinh
 author: Linh 2D Aquatic
 date: 2026-06-05T08:00:00.000Z
-cover: "/images/blog/clownfish-anemone.jpg"
+cover: "/images/blog/cach-quarantine-ca-bien-moi.svg"
 excerpt: "Quarantine là bước quan trọng nhất khi mua cá về bể. Bỏ qua bước này là nguyên nhân số 1 khiến reef tank bùng phát dịch bệnh. Linh 2D hướng dẫn setup bể QT và quy trình đúng chuẩn."
 category: huong-dan
 tags: [quarantine, bể QT, phòng bệnh, cá mới, reef tank]

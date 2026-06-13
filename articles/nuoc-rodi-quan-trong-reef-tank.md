@@ -3,7 +3,7 @@ title: "Nước RODI Cho Bể Reef: Tại Sao Bắt Buộc Và Cách Kiểm Tra 
 slug: nuoc-rodi-cho-be-reef-tai-sao-bat-buoc
 author: Linh 2D Aquatic
 date: 2026-06-11T08:00:00.000Z
-cover: "/images/blog/fish-coral-colorful.jpg"
+cover: "/images/blog/nuoc-rodi-quan-trong-reef-tank.svg"
 excerpt: "Dùng nước máy cho bể reef là sai lầm nghiêm trọng. RODI (Reverse Osmosis Deionized) là tiêu chuẩn bắt buộc — Linh 2D giải thích tại sao và cách kiểm tra máy lọc của bạn."
 category: huong-dan
 tags: [nước RODI, máy lọc nước, chất lượng nước, reef tank, TDS]

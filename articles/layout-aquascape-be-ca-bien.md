@@ -3,7 +3,7 @@ title: "4 Phong Cách Layout Aquascape Bể Cá Biển: Bonsai, Shallow, Nature 
 slug: layout-aquascape-be-ca-bien-4-phong-cach
 author: Linh 2D Aquatic
 date: 2026-05-25T08:00:00.000Z
-cover: "/images/blog/shoal-fish-reef.jpg"
+cover: "/images/blog/layout-aquascape-be-ca-bien.svg"
 excerpt: "Aquascape bể biển không kém nghệ thuật bể cỏ. Linh 2D giới thiệu 4 phong cách layout phổ biến nhất — giúp bạn định hình thẩm mỹ trước khi mua đá."
 category: huong-dan
 tags: [aquascape, layout bể, bonsai scape, shallow scape, thiết kế bể]

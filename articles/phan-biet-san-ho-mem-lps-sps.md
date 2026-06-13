@@ -3,7 +3,7 @@ title: "Phân Biệt San Hô Mềm, LPS và SPS: Đặc Điểm, Yêu Cầu Và 
 slug: phan-biet-san-ho-mem-lps-sps-dac-diem
 author: Linh 2D Aquatic
 date: 2026-05-28T08:00:00.000Z
-cover: "/images/blog/coral-reef-color.jpg"
+cover: "/images/blog/phan-biet-san-ho-mem-lps-sps.svg"
 excerpt: "San hô chia làm 3 nhóm chính với yêu cầu nuôi rất khác nhau. Hiểu đúng từng nhóm giúp bạn chọn đúng san hô cho giai đoạn bể và tránh mất tiền oan."
 category: huong-dan
 tags: [san hô mềm, LPS, SPS, phân loại san hô, coral reef]
