@@ -9,12 +9,26 @@ gallery:
   - /images/uploads/screenshot-2026-06-13-at-14.22.39.png
 price: 4950000
 unit: cái
-specs: []
+specs:
+  - key: "Model "
+    value: Maxspect MJ - L290
+  - key: Công Suất
+    value: 93W
+  - key: Kích Thước
+    value: 24.6 x 19.7 x 3.2 cm
+  - key: Trọng Lượng
+    value: 1065 g
+  - key: "Phù Hợp Với Bể "
+    value: 45-70 cm
+  - key: "Số Lượng Bóng Led "
+    value: "48 Bóng "
 in_stock: true
 featured: false
 warranty: ""
 date: 2026-06-13T14:24:00.000Z
 ---
-* Quang phổ chuyên sâu: Đạt dải màu Full-spectrum tập trung vào bước sóng xanh (Blue/Deep Blue). Giúp kích thích tảo cộng sinh phát triển và làm nổi bật màu huỳnh quang của san hô.
-* Tản nhiệt thụ động 100%: Sử dụng thân nhôm nguyên khối thay vì quạt gió. Đèn vận hành im lặng tuyệt đối và không lo hỏng hóc do hơi nước mặn.
-* Điều khiển thông minh: Kết nối trực tiếp qua ứng dụng di động. Cho phép lập trình tự động chu trình ánh sáng 24 giờ bao gồm bình minh, hoàng hôn và ánh trăng.
+* Quang phổ Full Spectrum AB+: Mô phỏng ánh sáng tự nhiên, kích thích san hô phát triển vượt trội.
+* Điều khiển thông minh: Kết nối Wi-Fi qua App Syna-G Cloud mượt mà.
+* Tính năng thông minh: Tùy chỉnh chu kỳ ngày/đêm, giả lập ánh sáng mặt trăng (Lunar Cycle), và có sẵn chế độ thích nghi (Acclimation) cho san hô mới thả.
+* Tản nhiệt đỉnh cao: Quạt làm mát thông minh siêu êm, không lo nóng bể, tăng tuổi thọ bóng LED.
+* Thiết kế sang xịn: Thân đèn siêu mỏng, đi kèm chân treo hợp kim chắc chắn.
