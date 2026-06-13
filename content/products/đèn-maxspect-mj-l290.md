@@ -24,7 +24,7 @@ specs:
     value: 45-70 cm
 in_stock: true
 featured: false
-warranty: ""
+warranty: "12 Tháng "
 date: 2026-06-13T14:24:00.000Z
 ---
 * Quang phổ Full Spectrum AB+: Mô phỏng ánh sáng tự nhiên, kích thích san hô phát triển vượt trội.
