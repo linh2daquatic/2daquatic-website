@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0a1628"/><stop offset="1" stop-color="#000a1e"/></linearGradient></defs>
+<rect width="800" height="420" fill="url(#bg)"/>
+<polygon points="400,100 200,320 600,320" fill="none" stroke="#00d4b8" stroke-width="3"/><polygon points="350,250 280,320 420,320" fill="#0e3a44" stroke="#16a085" stroke-width="2"/><polygon points="470,220 420,320 520,320" fill="#0e3a44" stroke="#16a085" stroke-width="2"/>
+<text x="40" y="48" fill="#00d4b8" font-family="Inter,Arial" font-size="11" font-weight="700" letter-spacing="3">2D AQUATIC · CẨM NANG</text>
+<text x="40" y="400" fill="rgba(255,255,255,.4)" font-family="Inter,Arial" font-size="13">2daquatic.com · Linh 2D</text>
+</svg>
