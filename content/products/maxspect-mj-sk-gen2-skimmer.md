@@ -1,5 +1,5 @@
 ---
-title: Maxspect MJ-SK 2200 Protein Skimmer
+title: "SKIMMER Maxspect MJ-SK 2200 "
 slug: maxspect-mj-sk-gen2-skimmer
 category: thiet-bi-loc
 short_description: Skimmer dòng Jump Series thế hệ 2 với cổng nước vào điều
