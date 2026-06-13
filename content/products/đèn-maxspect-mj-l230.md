@@ -12,6 +12,8 @@ unit: cái
 specs:
   - key: Model
     value: Maxspect MJ-L260
+  - key: Số Lượng Bóng Led
+    value: "36 Bóng "
   - key: Công Suất
     value: 63W
   - key: Kich Thước
