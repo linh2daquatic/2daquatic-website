@@ -12,6 +12,8 @@ unit: cái
 specs:
   - key: "Model "
     value: Maxspect MJ - L290
+  - key: "Số Lượng Bóng Led "
+    value: "48 Bóng "
   - key: Công Suất
     value: 93W
   - key: Kích Thước
@@ -20,8 +22,6 @@ specs:
     value: 1065 g
   - key: "Phù Hợp Với Bể "
     value: 45-70 cm
-  - key: "Số Lượng Bóng Led "
-    value: "48 Bóng "
 in_stock: true
 featured: false
 warranty: ""
