@@ -2,26 +2,55 @@
 title: "SKIMMER Maxspect MJ-SK 2200 "
 slug: maxspect-mj-sk-gen2-skimmer
 category: thiet-bi-loc
-short_description: Skimmer dòng Jump Series thế hệ 2 với cổng nước vào điều
-  chỉnh được trái/phải. Có 3 model SK200/300/400 cho bể 100–400L.
+short_description: Skimmer dòng Jump Series thế hệ 2 được trang bị bánh xe kép
+  và cửa nạp kép, phao chống tràn.
 image: /images/uploads/screenshot-2026-06-05-at-14.09.35.png
+gallery:
+  - /images/uploads/screenshot-2026-06-11-at-10.13.45.png
+  - /images/uploads/screenshot-2026-06-11-at-10.13.58.png
 price: 0
 sale_price: null
 unit: cái
 specs:
-  - key: Series
-    value: SK200 / SK300 / SK400
+  - key: Model
+    value: Maxspect SK 2200
   - key: Phù hợp bể
-    value: 100–400L
-  - key: Loại trục
-    value: Needle wheel Gen 2
-  - key: Cổng vào
-    value: Điều chỉnh trái/phải
-  - key: Dòng sản phẩm
-    value: Jump Series
+    value: 135–600L
+  - key: Công Suất
+    value: 15W
+  - key: "Mực Nước "
+    value: 16-20 cm
+  - key: Chiều Cao
+    value: 47.4 cm
+  - key: "Chân Đế "
+    value: 16.5 x 16.5 cm
+  - key: "Lưu Lượng Nước "
+    value: 500 L/H
+  - key: Lượng Khí Nạp
+    value: 300 L/H
 in_stock: true
 featured: false
 warranty: 12 tháng
 date: 2026-06-10T14:53:00.000Z
 ---
-Skimmer dòng Jump Series, thế hệ 2 với cải tiến cổng nước vào điều chỉnh được trái/phải — linh hoạt lắp đặt trong sump nhiều kích thước. Needle wheel Gen 2 tạo bọt mịn và bền hơn đời trước. 3 model SK200/300/400 cho bể 100–400L. Lựa chọn phổ biến cho người mới bắt đầu bể san hô.
+\-  Tích hợp, Hiệu quả và Tinh gọn
+
+\- Thiết kế bánh xe kim kép được cấp bằng sáng chế
+
+\- Máy lọc bọt khí DC với điều khiển thông minh (Nhiều tính năng: Chế độ cho ăn, bảo vệ chống tràn, độ trễ khởi động, v.v.)
+
+\- Thiết kế sáng tạo - Cải tiến hơn so với thiết kế ban đầu 
+
+\- Bảo trì dễ dàng và nhanh gọn 
+
+\- Tích hợp bộ giảm âm giúp vận hành êm ái
+
+\- Bộc lọc bọt khí đặc biệt để ngăn chặn các bọt khí siêu nhỏ không mong muốn.
+
+\- Có thể điều chỉnh lượng hút một bên 
+
+\- Hoạt động êm hơn so với máy lọc bọt khí thế hệ 1
+
+\- Khả năng tạo bọt khí ổn định hơn so với thế hệ 1
+
+\- Máy lọc cặn sẽ giảm công suất xuống 10% khi cảm biến tràn được kích hoạt
