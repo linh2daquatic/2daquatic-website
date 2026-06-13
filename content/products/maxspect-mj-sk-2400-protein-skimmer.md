@@ -1,10 +1,9 @@
 ---
-title: Maxspect MJ-SK 2400 Protein Skimmer
+title: "SKIMMER Maxspect MJ-SK 2400 "
 slug: maxspect-mj-sk-gen2-skimmer
 category: thiet-bi-loc
-short_description: Skimmer dòng Jump Series thế hệ 2 được trang bị bánh xe kép
-  và cửa nạp kép, phao chống tràn. Có 4 model SK2200/ SK2400 /SK2600/ SK2800 cho
-  bể 135–2700L.
+short_description: "Skimmer dòng Jump Series thế hệ 2 được trang bị bánh xe kép
+  và cửa nạp kép, phao chống tràn. "
 image: /images/uploads/screenshot-2026-06-05-at-14.09.35.png
 gallery:
   - /images/uploads/screenshot-2026-06-11-at-10.13.45.png
