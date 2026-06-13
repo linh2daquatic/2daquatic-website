@@ -3,7 +3,7 @@ title: "San Hô Đầu Tiên Nên Thả Gì? Gợi Ý Cho Người Mới Chơi R
 slug: san-ho-dau-tien-nen-tha-gi-cho-nguoi-moi
 author: Linh 2D Aquatic
 date: 2026-06-09T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-35mIf79_gos?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/clownfish-purple-coral.jpg"
 excerpt: "San hô nào phù hợp cho bể mới? Linh 2D gợi ý các loại san hô mềm và LPS dễ nuôi, bền, đẹp — lý tưởng cho reef tank 3-6 tháng đầu."
 category: huong-dan
 tags: [san hô, LPS, san hô mềm, người mới, reef tank]

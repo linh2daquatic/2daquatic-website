@@ -3,7 +3,7 @@ title: "Hệ Vi Sinh Bể Cá Biển Là Gì? Tại Sao Đây Là Nền Tảng C
 slug: he-vi-sinh-be-ca-bien-la-gi
 author: Linh 2D Aquatic
 date: 2026-05-16T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-TjNa97Ll1pM?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/coral-bioluminescent.jpg"
 excerpt: "Hệ vi sinh là 'linh hồn' của bể san hô. Hiểu đúng cách hoạt động của chu trình nitrogen giúp bạn cycle bể đúng cách và tránh mọi sai lầm phổ biến."
 category: huong-dan
 tags: [vi sinh, cycle bể, chu trình nitrogen, người mới bắt đầu]

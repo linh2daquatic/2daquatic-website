@@ -3,7 +3,7 @@ title: "Chọn Bể Cá Nước Mặn Như Thế Nào? So Sánh AIO, Lọc Vách
 slug: chon-be-ca-nuoc-man-aio-loc-vach-tran-duoi
 author: Linh 2D Aquatic
 date: 2026-05-18T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-TjNa97Ll1pM?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/coral-bioluminescent.jpg"
 excerpt: "3 loại bể cá biển phổ biến nhất — AIO (All-in-One), lọc vách, và tràn dưới (sump). Linh 2D so sánh ưu nhược điểm để bạn chọn đúng ngay từ đầu."
 category: huong-dan
 tags: [chọn bể, AIO, lọc vách, sump, tràn dưới, người mới]

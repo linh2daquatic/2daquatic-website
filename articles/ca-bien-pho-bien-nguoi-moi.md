@@ -3,7 +3,7 @@ title: "10 Loại Cá Biển Dễ Nuôi Nhất Cho Người Mới Bắt Đầu C
 slug: ca-bien-de-nuoi-cho-nguoi-moi-bat-dau
 author: Linh 2D Aquatic
 date: 2026-06-06T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-HDVmdzQxAds?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/clownfish.jpg"
 excerpt: "Không phải cá biển nào cũng dễ nuôi. Linh 2D gợi ý 10 loại cá biển bền, đẹp, phù hợp với bể reef và thân thiện cho người mới bắt đầu."
 category: huong-dan
 tags: [cá biển, cá clown, cá tang, người mới, reef tank]

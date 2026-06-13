@@ -3,7 +3,7 @@ title: "Hướng Dẫn Cho Cá Biển Ăn Đúng Cách: Bao Nhiêu, Bao Lâu, Lo
 slug: huong-dan-cho-ca-bien-an-dung-cach
 author: Linh 2D Aquatic
 date: 2026-05-23T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-krKq7IOI8mQ?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/fish-coral-colorful.jpg"
 excerpt: "Cho cá biển ăn tưởng đơn giản nhưng sai cách gây ra 80% vấn đề chất lượng nước. Linh 2D chia sẻ nguyên tắc cho ăn đúng chuẩn reef tank."
 category: huong-dan
 tags: [cho cá ăn, thức ăn cá biển, chăm sóc bể, dinh dưỡng cá]

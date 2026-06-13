@@ -3,7 +3,7 @@ title: "Kiểm Soát NO3 PO4 Trong Bể San Hô: Bí Quyết Để San Hô Lên 
 slug: kiem-soat-no3-po4-trong-be-san-ho
 author: Linh 2D Aquatic
 date: 2026-05-10T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-HYHYGLs-Rp8?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/coral-reef-color.jpg"
 excerpt: "NO3 và PO4 là hai thông số quyết định màu sắc và sức khỏe san hô. Linh 2D chia sẻ cách kiểm soát NP hiệu quả từ kinh nghiệm thực tế tại showroom 2D Aquatic."
 category: huong-dan
 tags: [no3, po4, thông số nước, san hô SPS, reef chemistry]

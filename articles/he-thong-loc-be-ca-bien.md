@@ -3,7 +3,7 @@ title: "Hệ Thống Lọc Bể Cá Biển: Tất Cả Những Gì Cần Biết 
 slug: he-thong-loc-be-ca-bien-tu-a-den-z
 author: Linh 2D Aquatic
 date: 2026-05-21T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-krKq7IOI8mQ?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/fish-coral-colorful.jpg"
 excerpt: "Lọc sinh học, lọc cơ học, lọc hóa học, skimmer, refugium — hệ thống lọc bể biển phức tạp hơn bể ngọt. Linh 2D giải thích từng thành phần và cách chúng phối hợp."
 category: huong-dan
 tags: [hệ lọc, skimmer, refugium, lọc sinh học, thiết bị reef]

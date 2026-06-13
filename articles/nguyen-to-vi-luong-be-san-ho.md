@@ -3,7 +3,7 @@ title: "Nguyên Tố Vi Lượng Bể San Hô: Ca, KH, Mg và Những Thứ Ít 
 slug: nguyen-to-vi-luong-can-thiet-cho-be-san-ho
 author: Linh 2D Aquatic
 date: 2026-05-20T08:00:00.000Z
-cover: "https://images.unsplash.com/photo-HYHYGLs-Rp8?auto=format&fit=crop&w=800&q=80"
+cover: "/images/blog/coral-reef-color.jpg"
 excerpt: "Canxi, KH, Magie chỉ là bộ ba cơ bản. San hô SPS cần hàng chục nguyên tố vi lượng khác để lên màu và phát triển đỉnh cao. Linh 2D giải thích tất cả."
 category: huong-dan
 tags: [canxi, kali, magie, vi lượng, reef chemistry, SPS]
