@@ -21,7 +21,7 @@ specs:
   - key: "Trọng Lượng "
     value: 1613 g
   - key: "Phù Hợp Bể "
-    value: 60-90 cm
+    value: 60-80 cm
 in_stock: true
 featured: true
 warranty: 12 tháng
