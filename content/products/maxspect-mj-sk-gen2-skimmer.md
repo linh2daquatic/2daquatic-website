@@ -13,7 +13,7 @@ sale_price: null
 unit: cái
 specs:
   - key: Model
-    value: Maxspect SK 2200
+    value: Maxspect jump skimmer SK 2200
   - key: Phù hợp bể
     value: 135–600L
   - key: Công Suất
