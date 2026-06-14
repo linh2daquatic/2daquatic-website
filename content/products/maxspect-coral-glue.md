@@ -4,7 +4,7 @@ slug: maxspect-coral-glue
 category: phu-kien
 short_description: Keo dán san hô chuyên dụng, gốc cyanoacrylate đặc, an toàn
   tuyệt đối cho sinh vật. Có size 5g và 50g.
-image: /images/uploads/screenshot-2026-06-14-at-12.41.14.png
+image: /images/uploads/screenshot-2026-06-14-at-13.26.48.png
 gallery:
   - /images/uploads/screenshot-2026-06-14-at-12.40.51.png
   - /images/uploads/screenshot-2026-06-14-at-13.17.26.png
