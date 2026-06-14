@@ -12,7 +12,7 @@ price: 0
 sale_price: null
 unit: cái
 specs:
-  - key: Series
+  - key: Model
     value: Maxspect Jump Skimmer SK2400
   - key: Phù Hợp Bể
     value: 400-1000L
