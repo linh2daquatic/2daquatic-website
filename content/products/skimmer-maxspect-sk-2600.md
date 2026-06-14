@@ -13,7 +13,7 @@ price: 10500000
 unit: cái
 specs:
   - key: Model
-    value: Maxspect SK 2600
+    value: Maxspect jump skimmer SK 2600
   - key: "Phù Hợp Với Bể "
     value: 600-2000 L
   - key: Công Suất
