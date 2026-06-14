@@ -1,6 +1,6 @@
 ---
-title: ĐÈN Maxspect Ethereal Infinite LED E8-150
-slug: maxspect-ethereal-infinite-E8-150-led
+title: ĐÈN Maxspect Ethereal Infinite LED E8-230
+slug: maxspect-ethereal-infinite-E8-230-Led
 category: thiet-bi-den
 short_description: "Hệ thống chiếu sáng cao cấp cho bể cá biển "
 image: /images/uploads/screenshot-2026-06-14-at-13.38.16.png
