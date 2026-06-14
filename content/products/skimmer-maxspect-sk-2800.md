@@ -1,6 +1,6 @@
 ---
 title: SKIMMER Maxspect SK 2800
-slug: maxspect-gen2-skimmer-sk2800
+slug: maxspect-sk-gen2-skimmer-2800
 category: thiet-bi-loc
 short_description: Skimmer dòng Jump Series thế hệ 2 được trang bị bánh xe kép
   và cửa nạp kép, phao chống tràn.
