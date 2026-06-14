@@ -1,6 +1,6 @@
 ---
 title: SKIMMER Maxspect SK 2600
-slug: maxspect-sk-2600
+slug: maxspect-sk-gen2-skimmer
 category: thiet-bi-loc
 short_description: >
   Skimmer dòng Jump Series thế hệ 2 được trang bị bánh xe kép và cửa nạp kép,
