@@ -2,7 +2,8 @@
 title: VI SINH Brightwell MicroBacter 7
 slug: brightwell-microbacter7
 category: hoa-chat
-short_description: Vi sinh đậm đặc cực tốt cho bể cá biển, có thể dùng dosing để châm.
+short_description: Brightwell Microbacter 7 là Vi sinh đậm đặc cực tốt cho bể cá
+  biển, có thể dùng dosing để châm.
 image: /images/uploads/screenshot-2026-06-15-at-10.03.42.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-10.03.02.png
@@ -31,7 +32,7 @@ date: 2026-06-15T10:08:00.000Z
 
 **Lợi ích**
 
-*  Khử nhanh lượng carbon hữu cơ, amoniac, nitrit, nitrat và phosphat.
+* Khử nhanh lượng carbon hữu cơ, amoniac, nitrit, nitrat và phosphat.
 * Phân hủy thức ăn thừa, chất thải, chất cặn bã và các chất hữu cơ tiềm ẩn khác, giúp làm sạch và cải thiện chất nền trong bể cá.
 * Phân giải các hợp chất hữu cơ thành chất dinh dưỡng, thúc đẩy sự phát triển của các sinh vật quang hợp.
 * Giảm đáng kể lượng khí hydro sunfua.
@@ -47,7 +48,7 @@ date: 2026-06-15T10:08:00.000Z
 
 **Hướng dẫn sử dụng** 
 
-* Lắc đều trước khi sử dụng
+* Lắc kĩ trước khi sử dụng
 * **Hệ thống bể dinh dưỡng vừa – cao :** 5ml/100 lít nước bể sử dụng hàng ngày trong 2 tuần đầu tiên. Sau 2 tuần giảm liều để duy trì nồng độ vi sinh trong bể.
 * **Hệ thống dinh dưỡng thấp :** 5ml/200 lít nước 1-2 lần mỗi tuần. Để duy trì nồng độ ổn định trong bể không nên sử dụng quá 1 giọt/40 lít nước mỗi ngày.
 * Tắt skimmer và đèn UV trong khoảng thời gian 4 giờ sau khi bổ sung vào hồ.
