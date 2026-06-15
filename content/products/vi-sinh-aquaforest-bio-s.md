@@ -37,3 +37,7 @@ date: 2026-06-15T11:50:00.000Z
 **Liều lượng:**
 
 * 1 giọt cho 100 lít nước mỗi ngày trong 2 tuần đầu tiên. Trong các bể cá đang hoạt động, nên sử dụng Bio S sau khi thay nước. Lắc đều trước khi sử dụng.
+
+**Lưu ý**
+
+Không siết nắp quá chặt để tránh làm hỏng ren hoặc nắp chai.
