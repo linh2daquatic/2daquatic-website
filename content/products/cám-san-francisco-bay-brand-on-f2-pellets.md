@@ -37,3 +37,14 @@ date: 2026-06-15T15:25:00.000Z
 * Bổ sung tỏi và tảo Spirulina.
 * Không làm đục nước khi sử dụng đúng cách.
 * Đóng gói trong túi Mylar nạp khí nitơ giúp giữ độ tươi tối đa.
+
+**Khuyên dùng:**
+
+* Thích hợp cho các loài cá biển ăn thịt và ăn tạp, bao gồm cá Thiên Thần, cá Anthias, cá Blennies, cá Bướm, cá Hề, cá Gobby, cá Wrasses… cũng rất tốt cho cua và tôm nhỏ.
+
+**Hướng dẫn sử dụng:**
+
+* Cho cá ăn lượng thức ăn vừa đủ trong vòng năm phút, từ hai đến ba lần mỗi ngày. 
+* Loại bỏ thức ăn thừa.
+* Bảo quản nơi khô ráo, thoáng mát. 
+* Sử dụng trong vòng 4 tháng sau khi mở bao bì.
