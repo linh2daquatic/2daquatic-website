@@ -36,3 +36,7 @@ date: 2026-06-15T13:11:00.000Z
 **Liều lượng:**
 
 * 1 giọt cho 100 lít nước mỗi ngày. Sau khi mở nắp, bảo quản trong tủ lạnh nếu nhiệt độ phòng trên 24°C. Khuyến nghị  dùng kèm với NP Pro để tăng hiệu quả. Lắc đều trước khi sử dụng.
+
+**Lưu ý**
+
+Không siết nắp quá chặt để tránh làm hỏng ren hoặc nắp chai.
