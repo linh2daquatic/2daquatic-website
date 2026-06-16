@@ -35,3 +35,15 @@ date: 2026-06-16T18:01:00.000Z
 * Bổ sung canxi cho bể san hô.
 * Hỗ trợ sự phát triển bộ xương của san hô SPS, LPS, tảo vôi (coralline algae) và các sinh vật tiêu thụ canxi khác.
 * Giúp duy trì nồng độ canxi ổn định khi kết hợp với hệ Balling Light.
+
+**Thứ tự châm hóa chất**
+
+Khi sử dụng Balling Light:
+
+* Magnesium (Mg)
+* Calcium (Ca)
+* Carbonate (KH)
+
+**Cách nhau khoảng 10 phút giữa các lần châm.**
+
+**Tránh châm trực tiếp canxi và carbonate (KH) cùng lúc hoặc cùng một vị trí vì có thể gây kết tủa canxi cacbonat.**
