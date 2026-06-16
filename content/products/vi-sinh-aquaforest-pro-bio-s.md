@@ -1,5 +1,5 @@
 ---
-title: VI SINH Aquaforest Pro Bio S
+title: VI SINH Aquaforest PRO BIO S
 slug: aquaforest-pro-bio s
 category: hoa-chat
 short_description: Aquaforest Pro Bio S là vi sinh probiotic đậm đặc giúp làm
