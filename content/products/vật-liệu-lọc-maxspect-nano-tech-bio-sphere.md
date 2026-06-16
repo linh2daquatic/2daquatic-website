@@ -1,5 +1,5 @@
 ---
-title: VẬT LIỆU LỌC Maxspect Nano-Tech Bio-Sphere
+title: VẬT LIỆU LỌC Maxspect NANO-TECH BIO-SPHERE
 slug: maxspect-Bio-sphere
 category: phu-kien
 short_description: Sứ lọc sinh học cao cấp cho bể cá biển
