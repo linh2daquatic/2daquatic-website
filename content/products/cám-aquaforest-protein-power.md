@@ -1,5 +1,5 @@
 ---
-title: CÁM Aquaforest Protein Power
+title: CÁM Aquaforest PROTEIN POWER
 slug: aquaforest-protein-power
 category: hoa-chat
 short_description: "AF Protein Power là cám hạt mềm, hàm lượng protein cao. "
