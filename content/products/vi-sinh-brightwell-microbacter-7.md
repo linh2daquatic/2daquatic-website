@@ -1,5 +1,5 @@
 ---
-title: VI SINH Brightwell MicroBacter 7
+title: VI SINH Brightwell MICROBACTER 7
 slug: brightwell-microbacter7
 category: hoa-chat
 short_description: Brightwell Microbacter 7 là Vi sinh đậm đặc cực tốt cho bể cá
