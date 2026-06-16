@@ -1,5 +1,5 @@
 ---
-title: THỨC ĂN VI SINH Aquaforest NP Pro
+title: THỨC ĂN VI SINH Aquaforest NP PRO
 slug: aquaforest-np-pro
 category: hoa-chat
 short_description: NP Pro là thức ăn dành cho vi sinh dạng lỏng giúp kiểm soát
