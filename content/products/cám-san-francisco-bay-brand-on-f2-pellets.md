@@ -1,5 +1,5 @@
 ---
-title: CÁM San Francisco Bay Brand ON F2 Pellets
+title: CÁM San Francisco Bay Brand ON F2 PELLETS
 slug: san francisco bay brand-on f2-pellets
 category: hoa-chat
 short_description: ON F2 Pellets là thức ăn dạng viên, chìm chậm, đặc chế dành
