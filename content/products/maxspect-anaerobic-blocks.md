@@ -25,7 +25,7 @@ date: 2026-06-11T14:45:00.000Z
 ---
 * **Maxspect Nano-Tech Bio-Block** sử dụng công nghệ độc quyền để tạo hình các hạt gốm trơ thành hình khối dễ sử dụng.
 * Công nghệ xử lý nước thải sinh học ổn định bằng bộ lọc sục khí sinh học **(W-BAF)** giúp Bio-Block dễ dàng xử lí hiệu quả Amoni-Nitrogen (NH4-N) và Nitrat-Nitrogen (NO3-N)
-* Tỷ lệ diện tích cắt ngang bề mặt và diện tích lọc cực cao. Mỗi viên Bio Block có diện tích bề mặt lên đến **1.080m² (11.635ft²)** để hình thành hệ vi sinh, giúp kiểm soát hiệu quả chất lượng và độ ổn định của cột nước.
+* Tỷ lệ diện tích cắt ngang bề mặt và diện tích lọc cực cao. Mỗi viên Bio Block có diện tích bề mặt lên đến **1.080m² (11.635ft²)** để hình thành hệ vi sinh, giúp kiểm soát hiệu quả chất lượng và độ ổn định của cột nước. Chỉ 1 viên Bio-Block có thể thay thế cho 10 kg đá sống.
 * Các hạt sinh học tạo điều kiện thuận lợi cho sự phát triển của các quần thể vi khuẩn dưới dạng màng sinh học nano tổng hợp, cho phép nhiều loài vi khuẩn và nấm phát triển trên diện tích bề mặt lớn của chúng, chẳng hạn như vi khuẩn nitrat hóa (bao gồm các loài thuộc chi Nitrosomonas, Nitrosococcus, Nitrobacter và Nitrococcus), nấm men, vi khuẩn quang hợp, v.v.
 * Các hạt sinh học được sản xuất cẩn thận để đảm bảo chất lượng, cấu trúc xốp được thiết kế tốt tạo ra điều kiện sống và môi trường lý tưởng cho các quần thể vi khuẩn, nhưng sẽ không bị phân hủy bởi các quần thể vi khuẩn phát triển bên trong chúng.
 * Đặt Bio Block  trực tiếp vào bể lọc hoặc khu vực có dòng chảy mạnh.
