@@ -78,3 +78,5 @@ Khi sử dụng hệ Balling Light:
 **Lưu ý:**
 
 * Nên đo KH thường xuyên trong giai đoạn đầu để xác định mức tiêu thụ thực tế trước khi cài đặt bơm định lượng tự động.
+* Mức tăng an toàn thường khoảng 0,5–1 dKH/ngày.
+* Tăng quá nhanh có thể khiến san hô bị stress, cháy đầu (tip burn) hoặc giảm màu.
