@@ -1,5 +1,5 @@
 ---
-title: THỨC ĂN SAN HÔ Polyp Lap Reef Roids
+title: THỨC ĂN SAN HÔ Polyp Lap REEF ROIDS
 slug: polyp lab-reef-roids
 category: hoa-chat
 short_description: Thức ăn dành cho san hô, được tạo thành từ hỗn hợp các loài
