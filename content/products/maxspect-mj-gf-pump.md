@@ -7,8 +7,8 @@ image: /images/uploads/screenshot-2026-06-10-at-14.50.24.png
 gallery:
   - /images/uploads/screenshot-2026-06-10-at-14.50.33.png
   - /images/uploads/screenshot-2026-06-10-at-14.50.38.png
-price: 0
-sale_price: null
+price: 3250000
+sale_price: 2950000
 unit: cái
 specs:
   - key: Model
