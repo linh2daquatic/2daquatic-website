@@ -6,7 +6,7 @@ short_description: Hợp chất bổ sung độ kiềm (KH) dạng bột siêu t
 image: /images/uploads/screenshot-2026-06-16-at-16.57.26.png
 gallery:
   - /images/uploads/screenshot-2026-06-16-at-16.57.36.png
-price: 824999
+price: 824997
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
