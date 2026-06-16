@@ -47,3 +47,29 @@ Khi sử dụng Balling Light:
 **Cách nhau khoảng 10 phút giữa các lần châm.**
 
 **Tránh châm trực tiếp canxi và carbonate (KH) cùng lúc hoặc cùng một vị trí vì có thể gây kết tủa canxi cacbonat.**
+
+**Liều lượng**
+
+* Không có liều cố định cho mọi bể.
+* Cần tính toán dựa trên:
+
+\- Thể tích nước thực tế.
+
+\-  Mức CA hiện tại.
+
+\- Mức CA mục tiêu.
+
+\- Mức tiêu thụ CA hằng ngày của bể.\
+**Để đạt hiệu quả tối ưu thường sử dụng đồng thời:**
+
+* Fauna Marin Balling Calcium Mix
+* Fauna Marin Balling Magnesium Mix
+* Fauna Marin Balling Trace 1,2,3
+* Nên sử dụng thiết bị châm chất tự động 
+
+**Mục tiêu là duy trì ổn định:**
+
+* KH (Alkalinity): 7-9 dKH
+* Ca (Canxi): 380-450 ppm
+* Mg (Magiê): 1200-1350 ppm
+* Các nguyên tố vi lượng
