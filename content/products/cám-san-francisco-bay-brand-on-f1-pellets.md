@@ -1,5 +1,5 @@
 ---
-title: CÁM San Francisco Bay Brand ON F1 Pellets
+title: CÁM San Francisco Bay Brand ON F1 PELLETS
 slug: san francisco bay brand-on f1-pellets
 category: hoa-chat
 short_description: ON F1 Pellets là thức ăn dạng viên, chìm chậm, đặc chế dành
