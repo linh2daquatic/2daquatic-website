@@ -13,7 +13,8 @@ specs:
   - key: Model
     value: Maxspect Nano -Tech bio - Block
   - key: Công Dụng
-    value: "Xử lí các chất độc trong bể "
+    value: Phân hủy các chất độc hại trong nước, ổn định hệ vi sinh và cải thiện
+      chất lượng nước.
   - key: Kích Cỡ
     value: 10 x10 x 2.5 cm
   - key: Quy Cách Đóng Gói
