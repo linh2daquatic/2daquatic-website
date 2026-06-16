@@ -464,7 +464,7 @@ try {
       '.sp-hero-stock{font-size:13px;opacity:.75;margin-bottom:0}\n'+
       '.sp-body{max-width:1100px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}\n'+
       '@media(max-width:700px){.sp-body{grid-template-columns:1fr;padding:24px 16px 60px}}\n'+
-      '.sp-img-box{border-radius:16px;overflow:hidden;background:#0e1e2c;display:flex;align-items:center;justify-content:center;min-height:280px}\n'+
+      '.sp-img-box{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e5dc;display:flex;align-items:center;justify-content:center;min-height:280px;padding:20px;box-sizing:border-box}\n'+
       '.sp-img-box img{width:100%;max-height:420px;object-fit:contain;display:block}\n'+
       '.sp-img-placeholder{font-size:64px;padding:40px}\n'+
       '.sp-info h2{font-family:Fraunces,serif;font-size:18px;color:#0a1628;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid rgba(22,160,133,.2)}\n'+
