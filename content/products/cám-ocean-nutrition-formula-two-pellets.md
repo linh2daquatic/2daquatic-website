@@ -1,5 +1,5 @@
 ---
-title: CÁM Ocean Nutrition Formula Two Pellets
+title: CÁM Ocean Nutrition FORMULA TWO PELLETS
 slug: ocean nutrition-formula-two-pellets
 category: hoa-chat
 short_description: Dòng cám cao cấp dành cho cá biển
