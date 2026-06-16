@@ -5,7 +5,7 @@ category: hoa-chat
 short_description: "Hỗn hợp tảo phù du chuyên dành cho san hô mềm, gorgonia và
   san hô không quang hợp "
 image: /images/uploads/screenshot-2026-06-15-at-17.54.34.png
-price: 649996
+price: 650000
 unit: Chai
 specs:
   - key: "Tên Sản Phẩm "
