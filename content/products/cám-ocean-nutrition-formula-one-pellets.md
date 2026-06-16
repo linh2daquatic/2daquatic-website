@@ -1,5 +1,5 @@
 ---
-title: CÁM Ocean Nutrition Formula One Pellets
+title: CÁM Ocean Nutrition FORMULA ONE PELLETS
 slug: ocean nutrition-formula-one-pellets
 category: hoa-chat
 short_description: "Dòng cám cao cấp dành cho cá biển "
