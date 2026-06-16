@@ -1,5 +1,5 @@
 ---
-title: VI SINH LÀM SẠCH Brightwell Bacter Clean
+title: VI SINH LÀM SẠCH Brightwell MICROBACTER CLEAN
 slug: brightwell-microbackter-clean
 category: hoa-chat
 short_description: Brightwell Microbacter Clean là hỗn hợp vi sinh vật và enzyme
