@@ -1,5 +1,5 @@
 ---
-title: KEO DÁN SAN HÔ Maxspect Coral Glue (5g / 50g)
+title: KEO DÁN SAN HÔ Maxspect CORAL GLUE(5g / 50g)
 slug: maxspect-coral-glue
 category: phu-kien
 short_description: Keo dán san hô chuyên dụng, gốc cyanoacrylate đặc, an toàn
