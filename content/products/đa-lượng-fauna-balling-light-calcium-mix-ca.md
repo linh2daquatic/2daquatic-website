@@ -4,7 +4,9 @@ slug: fauna-ballinglight-ca
 category: hoa-chat
 short_description: Hợp chất bổ sung CA dạng bột siêu tinh khiết hỗ trợ quá trình
   hình thành bộ xương san hô cứng.
-image: /images/uploads/screenshot-2026-06-16-at-17.54.06.png
+image: /images/uploads/screenshot-2026-06-16-at-18.38.31.png
+gallery:
+  - /images/uploads/screenshot-2026-06-16-at-18.38.40.png
 price: 825000
 unit: Lọ
 specs:
@@ -73,3 +75,8 @@ Khi sử dụng Balling Light:
 * Ca (Canxi): 380-450 ppm
 * Mg (Magiê): 1200-1350 ppm
 * Các nguyên tố vi lượng
+
+**Lưu ý**
+
+* Mức tăng an toàn thường khoảng 20–30 ppm/ngày.
+* Tăng quá nhanh có thể gây mất cân bằng với KH và Mg.
