@@ -10,6 +10,7 @@ gallery:
   - /images/uploads/screenshot-2026-06-11-at-10.13.45.png
   - /images/uploads/screenshot-2026-06-11-at-10.13.58.png
 price: 10500000
+sale_price: 9800000
 unit: cái
 specs:
   - key: Model
