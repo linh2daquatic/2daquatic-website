@@ -36,7 +36,7 @@ date: 2026-06-16T17:00:00.000Z
 * Giúp san hô sử dụng canxi hiệu quả để phát triển bộ xương.
 * Hỗ trợ ổn định pH và các thông số hóa học quan trọng trong bể.
 * Phù hợp cho hệ thống châm tự động bằng bơm định lượng (dosing pump).
-*  Giá trị độ kiềm lý tưởng là  6.5 – 8 dHK
+* Giá trị độ kiềm lý tưởng là  6.5 – 8 dHK
 
 **Thứ tự châm hóa chất**
 
@@ -66,6 +66,7 @@ Khi sử dụng hệ Balling Light:
 * Fauna Marin Balling Calcium Mix
 * Fauna Marin Balling Magnesium Mix
 * Fauna Marin Balling Trace 1,2,3
+* Nên sử dụng thiết bị châm chất tự động 
 
 **Mục tiêu là duy trì ổn định:**
 
