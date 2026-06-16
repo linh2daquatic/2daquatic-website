@@ -1,5 +1,5 @@
 ---
-title: THAN HOẠT TÍNH Maxspect Nano-Tech Clear-Cube
+title: THAN HOẠT TÍNH Maxspect NANO TECH-CLEAR-CUBE
 slug: maxspect-clear-cube
 category: phu-kien
 short_description: "Vật liệu lọc nước cao cấp gốc Tourmaline giúp phân hủy chất
