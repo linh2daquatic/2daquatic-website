@@ -22,7 +22,7 @@ specs:
     value: An toàn 100 % Cho cá, san hô, sinh vật
   - key: "Trọng Lượng "
     value: 5g / 50g
-in_stock: true
+in_stock: false
 featured: false
 warranty: ""
 date: 2026-06-14T13:25:00.000Z
