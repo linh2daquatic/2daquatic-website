@@ -23,7 +23,7 @@ specs:
     value: 1065 g
   - key: "Phù Hợp Với Bể "
     value: 45-70 cm
-in_stock: true
+in_stock: false
 featured: false
 warranty: "12 Tháng "
 date: 2026-06-13T14:24:00.000Z
