@@ -2,8 +2,7 @@
 title: THỨC ĂN VI SINH Aquaforest NP PRO
 slug: aquaforest-np-pro
 category: hoa-chat
-short_description: NP Pro là thức ăn dành cho vi sinh dạng lỏng giúp kiểm soát
-  hiệu quả NO3 VÀ PO4 trong bể cá cảnh và san hô
+short_description: "Thức ăn cho vi sinh dạng lỏng giúp kiểm soát NO3, PO4 "
 image: /images/uploads/screenshot-2026-06-15-at-13.10.53.png
 price: 0
 unit: Lọ
