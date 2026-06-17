@@ -40,3 +40,22 @@ Fish Only 	1.022	               30 ppt	355 g / 10 L nước
 San hô LPS	1.025	               33 ppt	390 g / 10 L nước 
 
 San hô SPS	1.026	               35 ppt	 415 g / 10 L nước
+
+**Thông số nước theo độ mặn (Salinity)**
+
+**Độ mặn	KH (dKH)	Canxi (Ca mg/L)	Magie (Mg mg/L)	Kali (K mg/L)**
+
+30 ppt	6.4 – 7.3	             359 – 375	           1120 – 1190           310 – 330
+
+33 ppt	7.3 – 7.6	             380 – 410	           1230– 1300           340 – 360
+
+35 ppt	7.7 – 8.4	            415– 440                1310 – 1380           380 – 400
+
+**Bảo quản:**
+
+* Bảo quản muối ở nơi khô ráo, thoáng mát và tránh ánh sáng trực tiếp để đảm bảo chất lượng sản phẩm.
+* Sau khi hòa tan, nên sử dụng nước muối trong vòng tối đa 3 ngày để đạt hiệu quả tốt nhất.
+* Tránh hiện tượng bay hơi vì có thể làm thay đổi các thông số nước; nếu chưa sử dụng ngay, nên bảo quản dung dịch trong hộp kín.
+* Trong trường hợp lưu trữ nước muối đã pha trong vài ngày, cần kiểm tra lại độ mặn trước khi đưa vào bể để đảm bảo an toàn cho sinh vật.
+
+Các sản phẩm của Aquaforest được sản xuất tại EU dưới sự giám sát nghiêm ngặt của phòng thí nghiệm để đáp ứng các tiêu chuẩn chất lượng cao nhất. Mỗi sản phẩm được chế biến từ các nguyên liệu thô được lựa chọn cẩn thận với tỷ lệ đã được chứng minh là tạo ra thành phần ổn định
