@@ -2,8 +2,7 @@
 title: THỨC ĂN VI SINH Brightwell REEF BIO FUEL
 slug: brightwell-reef-bio-fuel
 category: hoa-chat
-short_description: Brightwell Reef Bio Fuel là nguồn bổ sung carbon hữu cơ tự
-  nhiên, an toàn cho bể cá biển và san hô.
+short_description: Nguồn bổ sung carbon hữu cơ tự nhiên cho bể cá biển và san hô.
 image: /images/uploads/screenshot-2026-06-15-at-10.38.28.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-10.31.54.png
