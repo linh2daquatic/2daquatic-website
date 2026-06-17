@@ -22,8 +22,8 @@ specs:
     value: 1613 g
   - key: "Phù Hợp Bể "
     value: 60-80 cm
-in_stock: true
-featured: true
+in_stock: false
+featured: false
 warranty: 12 tháng
 date: 2026-06-14T14:06:00.000Z
 ---
