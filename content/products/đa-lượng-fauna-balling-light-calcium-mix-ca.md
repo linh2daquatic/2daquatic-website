@@ -2,8 +2,7 @@
 title: ĐA LƯỢNG Fauna BALLING LIGHT CALCIUM MIX (CA)
 slug: fauna-ballinglight-ca
 category: hoa-chat
-short_description: Hợp chất bổ sung CA dạng bột siêu tinh khiết hỗ trợ quá trình
-  hình thành bộ xương san hô cứng.
+short_description: "Hợp chất bổ sung CA dạng bột siêu tinh khiết "
 image: /images/uploads/screenshot-2026-06-16-at-18.38.31.png
 gallery:
   - /images/uploads/screenshot-2026-06-16-at-18.38.40.png
