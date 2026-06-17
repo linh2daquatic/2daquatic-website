@@ -2,8 +2,7 @@
 title: VI SINH LÀM SẠCH Brightwell MICROBACTER CLEAN
 slug: brightwell-microbackter-clean
 category: hoa-chat
-short_description: " Hỗn hợp vi sinh vật và enzyme làm sạch bề mặt đá sống và
-  nhiều vật liệu khác."
+short_description: "Hỗn hợp vi sinh vật+enzyme làm sạch bề mặt đá sống vật liệu khác "
 image: /images/uploads/screenshot-2026-06-15-at-10.59.23.png
 price: 0
 unit: Chai
