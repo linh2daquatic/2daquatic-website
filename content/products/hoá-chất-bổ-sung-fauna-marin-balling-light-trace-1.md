@@ -4,7 +4,10 @@ slug: fauna-marin-trace1
 category: hoa-chat
 short_description: |
   Bổ sung các nguyên tố vi lượng vào dung dịch muối châm
-image: /images/uploads/screenshot-2026-06-16-at-20.30.23.png
+image: /images/uploads/screenshot-2026-06-17-at-11.45.17.png
+gallery:
+  - /images/uploads/screenshot-2026-06-17-at-11.47.26.png
+  - /images/uploads/screenshot-2026-06-17-at-11.46.34.png
 price: 725000
 sale_price: 0
 unit: Lọ
