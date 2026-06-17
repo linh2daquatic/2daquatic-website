@@ -29,32 +29,29 @@ date: 2026-06-16T20:30:00.000Z
 
  **Thành phần:**
 
-**Balling Trace 1:** Kali, Strontium, Boron, Selenium, Rubidium, Vanadi, Flourine
-
-**Balling Trace 2:** Sắt, Mangan, Đồng, Niken, Kẽm, Crôm
-
-**Balling Trace 3:** Kali, Fluorine, I ốt, Brôm, chất cân bằng
+* **Balling Trace 1:** Kali, Strontium, Boron, Selenium, Rubidium, Vanadi, Flourine
+* **Balling Trace 2:** Sắt, Mangan, Đồng, Niken, Kẽm, Crôm
+* **Balling Trace 3:** Kali, Fluorine, I ốt, Brôm, chất cân bằng
 
  **Hướng dẫn sử dụng:**
 
 * Lắc đều trước khi sử dụng và châm vào đúng thùng đựng hóa chất phù hợp (Ca, Mg, kH). Vui lòng xem xét các khuyến nghị về liều lượng và tham khảo hướng dẫn sử dụng Phương pháp Balling Light!
-*  Các sản phẩm này không phù hợp để châm trực tiếp vào hồ! Để châm trực tiếp
+* Các sản phẩm này không phù hợp để châm trực tiếp vào hồ.
 
 **Đối với hệ thống Balling Light:**
 
  **THÙNG CHỨA 1:**
 
 * Trộn 2 kg CALCIUM-MIX với 4 lít nước RO, sau đó đổ đầy tới 5 lít bằng nước RO.
-* Thêm 25 ml  Trace 1  Màu kim loại + Hiệu ứng tăng trưởng và 25 ml  Trace 2  Hiệu ứng màu chuyển hóa kim loại.
+* Thêm **25 ml Trace 1**  Màu kim loại + Hiệu ứng tăng trưởng và **25 ml Trace 2**  Hiệu ứng màu chuyển hóa kim loại.
 
- **THÙNG CHỨA 2:**
-
+  **THÙNG CHỨA 2:**
 * Trộn 2 kg MAGNESIUM-MIX với 4 lít nước RO, sau đó đổ đầy tới 5 lít bằng nước RO.
 
 **THÙNG CHỨA 3 :**
 
 * Trộn 500g CARBONATE-MIX với 4 lít nước RO, sau đó đổ đầy tới 5 lít bằng nước RO.
-* Thêm 25ml  Tinh thể Trace 3  Metal Health Fluorescent Effect.
+* Thêm **25ml Trace 3**  Metal Health Fluorescent Effect.
 
 **Lưu ý:** Giữ sản phẩm tránh xa trẻ em. Không hít bụi và tránh tiếp xúc với da và mắt. Có thể gây kích ứng mắt nghiêm trọng nếu tiếp xúc trực tiếp.
 
