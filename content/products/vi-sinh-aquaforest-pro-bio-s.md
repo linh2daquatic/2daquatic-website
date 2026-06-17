@@ -2,8 +2,7 @@
 title: VI SINH Aquaforest PRO BIO S
 slug: aquaforest-pro-bio s
 category: hoa-chat
-short_description: Aquaforest Pro Bio S là vi sinh probiotic đậm đặc giúp làm
-  sạch nước và tối ưu môi trường cho bể cá biển.
+short_description: Vi sinh probiotic đậm đặc làm sạch nước, tối ưu môi trường cho bể cá biển.
 image: /images/uploads/screenshot-2026-06-15-at-13.10.06.png
 price: 0
 unit: cái
