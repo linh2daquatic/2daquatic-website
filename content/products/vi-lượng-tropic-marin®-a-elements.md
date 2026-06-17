@@ -2,7 +2,8 @@
 title: VI LƯỢNG Tropic Marin® A- ELEMENTS
 slug: tropic-marin-A-elements
 category: hoa-chat
-short_description: Vi lượng anion thiết yếu thúc đẩy sự phát triển và lên màu tự nhiên của san hô.
+short_description: Nguyên tố vi lượng anion thiết yếu thúc đẩy sự phát triển và
+  lên màu tự nhiên của san hô.
 image: /images/uploads/screenshot-2026-06-17-at-13.19.12.png
 price: 0
 unit: Lọ
@@ -36,7 +37,7 @@ date: 2026-06-17T13:29:00.000Z
 **Liều dùng :**
 
 * Nên sử dụng **Tropic Marin® K+ Elements** (các nguyên tố vi lượng thiết yếu dạng catatonic) và **Tropic Marin® A- Elements** (các nguyên tố vi lượng thiết yếu dạng anion) để đảm bảo cung cấp đầy đủ các nguyên tố vi lượng.
-* Thêm **1 ml** dung dịch nguyên tố vi lượng (mỗi loại) vào mỗi **100 lít nước** bể cá **mỗi ngày**. Dung dịch nguyên tố vi lượng không được tiếp xúc trực tiếp với cá.
+* Thêm **1 ml** dung dịch nguyên tố vi lượng **(mỗi loại)** vào mỗi **100 lít nước** bể cá **mỗi ngày**. Dung dịch nguyên tố vi lượng không được tiếp xúc trực tiếp với cá.
 * Liều lượng có thể tăng gấp đôi nếu san hô hấp thụ một lượng lớn các nguyên tố vi lượng (liều lượng tối đa).
 * Lắc đều trước khi sử dụng.
 * Vì Tropic Marin® K+ Elements và Tropic Marin® A- Elements ở dạng lỏng nên chúng cũng có thể được tự động thêm vào nước bể cá bằng bơm ống mềm.
