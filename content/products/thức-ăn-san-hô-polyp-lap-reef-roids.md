@@ -2,8 +2,7 @@
 title: THỨC ĂN SAN HÔ Polyp Lap REEF ROIDS
 slug: polyp lab-reef-roids
 category: hoa-chat
-short_description: Thức ăn dành cho san hô, được tạo thành từ hỗn hợp các loài
-  sinh vật phù du biển tự nhiên, bao gồm một loài động vật phù du (zooplankton)
+short_description: Thức ăn dành cho san hô từ hỗn hợp các loài sinh vật phù du(zooplankton)
 image: /images/uploads/screenshot-2026-06-15-at-16.32.59.png
 price: 600000
 unit: Túi
