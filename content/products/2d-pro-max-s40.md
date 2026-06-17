@@ -2,7 +2,7 @@
 title: 2D PRO MAX S40
 slug: 2D-PROMAX-S40
 category: be-ca-promax
-short_description: "- Bể lọc vách thiết kế nhỏ gọn, thẩm mỹ & tối ưu chi phí."
+short_description: Bể lọc vách thiết kế nhỏ gọn, thẩm mỹ & tối ưu chi phí.
 image: /images/uploads/img_8724.jpg
 price: 1500000
 unit: cái
