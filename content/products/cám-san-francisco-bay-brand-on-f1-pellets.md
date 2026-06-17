@@ -2,8 +2,7 @@
 title: CÁM San Francisco Bay Brand ON F1 PELLETS
 slug: san francisco bay brand-on f1-pellets
 category: hoa-chat
-short_description: ON F1 Pellets là thức ăn dạng viên, chìm chậm, đặc chế dành
-  cho cá biển ăn thịt và ăn tạp.
+short_description: Thức ăn dạng viên, chìm chậm dành cho cá biển ăn thịt và ăn tạp.
 image: /images/uploads/screenshot-2026-06-15-at-15.09.08.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-15.09.31.png
