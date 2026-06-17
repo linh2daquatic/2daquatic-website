@@ -5,7 +5,8 @@ category: hoa-chat
 short_description: |
   Bổ sung các nguyên tố vi lượng vào dung dịch muối châm
 image: /images/uploads/screenshot-2026-06-16-at-20.30.23.png
-price: 724996
+price: 725000
+sale_price: 0
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
