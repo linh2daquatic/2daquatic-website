@@ -27,8 +27,8 @@ specs:
     value: 2400 L/H
   - key: Lượng Khí Nạp
     value: 1500 L/H
-in_stock: true
-featured: true
+in_stock: false
+featured: false
 warranty: 12 tháng
 date: 2026-06-14T10:53:00.000Z
 ---
