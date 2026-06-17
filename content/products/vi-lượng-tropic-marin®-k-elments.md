@@ -1,6 +1,6 @@
 ---
-title: VI LƯỢNG Tropic Marin® K+ ELMENTS
-slug: tropicmarin-k+-elêmnts
+title: VI LƯỢNG Tropic Marin® K+ ELEMENTS
+slug: tropic-marin-k+-elements
 category: hoa-chat
 short_description: Nguyên tố vi lượng thiết yếu thúc đẩy sự phát triển và lên
   màu tự nhiên của san hô.
