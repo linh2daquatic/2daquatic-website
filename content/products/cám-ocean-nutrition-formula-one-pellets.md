@@ -6,7 +6,7 @@ short_description: "Dòng cám cao cấp dành cho cá biển "
 image: /images/uploads/screenshot-2026-06-15-at-15.43.52.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-15.44.06.png
-price: 339999
+price: 340000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
