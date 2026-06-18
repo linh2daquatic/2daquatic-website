@@ -3,10 +3,8 @@ title: ỐNG NHÒM ĐO MẶN VASTOCEAN
 slug: ống-nhòm-đo -mặn-vastocean
 category: phu-kien
 short_description: Thiết bị quang học kiểm tra độ mặn và tỷ trọng nước biển.
-image: /images/uploads/screenshot-2026-06-18-at-10.08.09.png
-gallery:
-  - /images/uploads/screenshot-2026-06-18-at-09.56.46.png
-  - /images/uploads/screenshot-2026-06-18-at-09.54.54.png
+image: /images/uploads/screenshot-2026-06-18-at-11.05.33.png
+gallery: []
 price: 4800000
 unit: Cái
 specs:
