@@ -36,6 +36,12 @@ date: 2026-06-18T10:58:00.000Z
 * Hướng Dẫn Bảo Quản
 * Lọ nước hiệu chỉnh 
 
+**Cách sử dụng cơ bản**
+
+* Hiệu chuẩn: Nhỏ 2-3 giọt nước RO hoặc nước cất lên lăng kính. Nhìn qua ống ngắm và dùng tua vít xoay chốt để vạch chia độ chỉ về mức 0 (hoặc 1.000 đối với SG).
+* Đo thông số: Lau khô lăng kính, nhỏ 2-3 giọt nước từ bể cá lên. Đậy nắp đậy nhẹ nhàng để nước trải đều, tránh bọt khí.
+* Đọc kết quả: Hướng ống kính về phía ánh sáng và đọc chỉ số trên thang đo.
+
 **Bảo quản:**
 
 * Sử dụng nhẹ nhàng để đảm bảo độ chính xác của thiết bị.
