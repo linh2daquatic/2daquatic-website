@@ -15,6 +15,8 @@ specs:
     value: Giải pháp kiểm soát nồng độ CA nhanh chóng, tiện lợi.
   - key: Thông Số Tiêu Chuẩn
     value: 380-450 ppm
+  - key: "Hình Thức Test "
+    value: Test bằng tay
 in_stock: true
 featured: false
 warranty: ""
