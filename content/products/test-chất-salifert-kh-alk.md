@@ -13,6 +13,8 @@ specs:
     value: Test Salifert KH/ALK
   - key: "Công Dụng "
     value: "Kiểm soát nhanh và chính xác KH trong bể "
+  - key: "Thông Sô Tiêu Chuẩn "
+    value: 7-9 dKH
   - key: Hình Thức Test
     value: Test bằng tay
 in_stock: true
@@ -31,11 +33,11 @@ date: 2026-06-18T14:51:00.000Z
 
 **Quy Cách Đóng Gói:**
 
-* 1 chai thuốc thử KH-Ind 
-* 1 chai thuốc thử KH
-* 1 xi-lanh lớn (5ml)
-* 1 xi-lanh nhỏ (1ml) kèm đầu kim nhựa
-*  1 ống nghiệm nhựa 
+* 1 lọ thuốc thử KH-Ind 
+* lọ  thuốc thử KH
+* 1 xi-lanh lớn (5ml lấy mẫu thử)
+* 1 xi-lanh nhỏ (1ml lấy thuốc thử) kèm đầu kim nhựa
+* 1 ống nghiệm nhựa 
 * 1 bảng quy đổi kết quả chuẩn từ nhà sản xuất
 
 **Hướng Dẫn Sử Dụng**
@@ -45,5 +47,6 @@ date: 2026-06-18T14:51:00.000Z
 * Hút 1 ml dung dịch KH vào xi-lanh nhỏ **(mép dưới vòng đen ở vạch 1.00ml, Việc xuất hiện một khoảng bọt khí nhỏ dưới vòng đen piston là hoàn toàn bình thường).**
 * Nhỏ từng giọt vào ống nghiệm, vừa nhỏ vừa lắc đến khi nước đổi sang màu Hồng
 * Đọc chỉ số còn lại trên xi-lanh và tra bảng đi kèm để ra kết quả dKH.
+* Thông số KH tiêu chuẩn: 7-9 dKH
 
 **Lưu ý an toàn từ nhà sản xuất:** Thuốc thử KH-Ind có chứa chất nhuộm màu đậm. Cần tránh làm đổ ra quần áo, thảm vải vì vết bẩn rất khó giặt sạch. Bảo quản sản phẩm tránh xa tầm tay trẻ em.
