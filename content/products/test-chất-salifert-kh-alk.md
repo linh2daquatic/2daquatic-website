@@ -15,14 +15,16 @@ specs:
     value: "Kiểm soát nhanh và chính xác KH trong bể "
   - key: "Thông Sô Tiêu Chuẩn "
     value: 7-9 dKH
+  - key: Số Lượng Kit Test
+    value: 100-200
   - key: Hình Thức Test
-    value: Test bằng tay
+    value: "Test thủ công "
 in_stock: true
 featured: false
 warranty: ""
 date: 2026-06-18T14:51:00.000Z
 ---
-**Độ kiềm (Alkalinity - KH)** đóng vai trò nền tảng trong việc duy trì độ **pH** ổn định và thúc đẩy sự phát triển của sinh vật, đặc biệt là quá trình hình thành xương của san hô. **Bộ Test KH/ALK Salifert (xuất xứ Hà Lan)**  là một trong những giải pháp kiểm tra nước được cộng đồng cá cảnh biển và thủy sinh tin dùng nhờ độ chính xác vượt trội.
+**Độ kiềm (Alkalinity - KH)** đóng vai trò nền tảng trong việc duy trì độ **pH** ổn định và thúc đẩy sự phát triển của sinh vật, đặc biệt là quá trình hình thành xương của san hô. **Bộ Test Salifert KH/ALK (xuất xứ Hà Lan)**  là một trong những giải pháp kiểm tra nước được cộng đồng cá cảnh biển và thủy sinh tin dùng nhờ độ chính xác vượt trội.
 
 **Ưu Điểm Nổi Bật:**
 
