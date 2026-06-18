@@ -24,7 +24,7 @@ featured: false
 warranty: ""
 date: 2026-06-18T16:59:00.000Z
 ---
-**Magie** là một trong ba yếu tố vi lượng quan trọng nhất **(cùng với Canxi và Kh)** giúp san hô xây dựng cấu trúc xương vững chắc và phát triển khỏe mạnh. Việc thiếu hụt Magie sẽ khiến san hô khó hấp thụ Canxi, dẫn đến tình trạng còi cọc và suy giảm sức sống. **Bộ Test Magnesium Salifert** (xuất xứ Hà Lan)  là một trong những giải pháp kiểm tra nước được cộng đồng cá cảnh biển và thủy sinh tin dùng nhờ độ chính xác vượt trội.
+**Magie** là một trong ba yếu tố vi lượng quan trọng nhất **(cùng với Canxi và Kh)** giúp san hô xây dựng cấu trúc xương vững chắc và phát triển khỏe mạnh. Việc thiếu hụt Magie sẽ khiến san hô khó hấp thụ Canxi, dẫn đến tình trạng còi cọc và suy giảm sức sống. **Bộ Test Salifert Magnesium (xuất xứ Hà Lan)**  là một trong những giải pháp kiểm tra nước được cộng đồng cá cảnh biển và thủy sinh tin dùng nhờ độ chính xác vượt trội.
 
 **Quy Cách Đóng Gói:**
 
@@ -42,4 +42,4 @@ date: 2026-06-18T16:59:00.000Z
 * Hút 1 ml dung dịch MG-2 vào xi-lanh nhỏ **(mép dưới vòng đen ở vạch 1.00ml, Việc xuất hiện một khoảng bọt khí nhỏ dưới vòng đen piston là hoàn toàn bình thường).**
 * Nhỏ từng giọt vào ống nghiệm, vừa nhỏ vừa lắc đến khi nước đổi sang màu Xanh
 * Đọc chỉ số còn lại trên xi-lanh và tra bảng đi kèm để ra kết quả MG
-* Thông số MG tiêu chuẩn: 1200-1350 ppm
+* Thông số MG tiêu chuẩn: **1200-1350 ppm**
