@@ -24,7 +24,7 @@ featured: false
 warranty: ""
 date: 2026-06-18T16:22:00.000Z
 ---
-**Canxi (Ca)** là yếu tố cốt lõi quyết định sự phát triển của san hô SPS, LPS và các loại tảo có lợi trong bể cá cảnh biển.  **Test Salifert  CA (của Hà Lan)** được thiết kế chuyên dụng để kiểm tra hàm lượng Canxi trong nước mặn với độ sai số cực thấp, là lựa chọn hàng đầu của các đồng ngư trên toàn thế giới.
+**Canxi (Ca)** là yếu tố cốt lõi quyết định sự phát triển của san hô SPS, LPS và các loại tảo có lợi trong bể cá cảnh biển.  **Test Salifert  CA (xuất xứ Hà Lan)** được thiết kế chuyên dụng để kiểm tra hàm lượng Canxi trong nước mặn với độ sai số cực thấp, là lựa chọn hàng đầu của các đồng ngư trên toàn thế giới.
 
 **Ưu Điểm Nổi Bật:**
 
