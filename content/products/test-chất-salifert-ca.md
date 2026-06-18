@@ -15,14 +15,16 @@ specs:
     value: Giải pháp kiểm soát nồng độ CA nhanh chóng, tiện lợi.
   - key: Thông Số Tiêu Chuẩn
     value: 380-450 ppm
+  - key: "Số Lượng Kit Test "
+    value: 50-100
   - key: "Hình Thức Test "
-    value: Test bằng tay
+    value: "Test thủ công "
 in_stock: true
 featured: false
 warranty: ""
 date: 2026-06-18T16:22:00.000Z
 ---
-**Nồng độ Canxi (Ca)** là yếu tố cốt lõi quyết định sự phát triển của san hô SPS, LPS và các loại tảo có lợi trong bể cá cảnh biển.  **Test Salifert  CA** được thiết kế chuyên dụng để kiểm tra hàm lượng Canxi trong nước mặn với độ sai số cực thấp, là lựa chọn hàng đầu của các đồng ngư trên toàn thế giới.
+**Canxi (Ca)** là yếu tố cốt lõi quyết định sự phát triển của san hô SPS, LPS và các loại tảo có lợi trong bể cá cảnh biển.  **Test Salifert  CA (của Hà Lan)** được thiết kế chuyên dụng để kiểm tra hàm lượng Canxi trong nước mặn với độ sai số cực thấp, là lựa chọn hàng đầu của các đồng ngư trên toàn thế giới.
 
 **Ưu Điểm Nổi Bật:**
 
@@ -36,7 +38,7 @@ date: 2026-06-18T16:22:00.000Z
 * 1 lọ bột CA-1
 * 1 lọ thuốc thử CA-2
 * 1 thìa định lượng
-* 1 xi-lanh lớn (5ml lấy mẫu thử)
+* 1 xi-lanh lớn (2ml lấy mẫu thử)
 * 1 xi-lanh nhỏ (1ml lấy thuốc thử) kèm đầu kim nhựa
 * 1 ống nghiệm nhựa 
 * 1 bảng quy đổi kết quả chuẩn từ nhà sản xuất
