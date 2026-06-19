@@ -1,12 +1,13 @@
 ---
-title: THỨC ĂN VI SINH Brightwell REEF BIO FUEL (250 ML)
+title: THỨC ĂN VI SINH Brightwell REEF BIO FUEL (500 ML)
 slug: brightwell-reef-bio-fuel
 category: hoa-chat
 short_description: Nguồn bổ sung carbon hữu cơ tự nhiên cho bể cá biển và san hô.
 image: /images/uploads/screenshot-2026-06-15-at-10.38.28.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-10.31.54.png
-price: 350000
+price: 600000
+sale_price: 0
 unit: Chai
 specs:
   - key: "Tên Sản Phẩm "
@@ -15,7 +16,7 @@ specs:
     value: Nước tinh khiết, hỗn hợp độc quyền các nguồn carbon hữu cơ đạt tiêu chuẩn
       thuốc thử ACS.
   - key: "Dung Tích "
-    value: "250 ml "
+    value: "500 ml "
 in_stock: true
 featured: false
 warranty: ""
