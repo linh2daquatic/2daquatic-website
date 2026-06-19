@@ -32,7 +32,7 @@ featured: false
 warranty: 12 Tháng
 date: 2026-06-19T15:55:00.000Z
 ---
-**Maxspect Jump MJ-DC 8K** là dòng bơm nước thông minh thế hệ mới, sử dụng công nghệ dòng điện một chiều (DC) siêu tiết kiệm điện và vận hành êm ái tuyệt đối. Sản phẩm là lựa chọn hàng đầu cho hệ thống lọc tràn dưới của bể cá biển (Reef tank), bể thủy sinh và các hồ cá nước ngọt cao cấp có thể tích từ 200 - 600 lít.
+**Maxspect Jump MJ-DC 8K** là dòng bơm nước thông minh thế hệ mới, sử dụng công nghệ dòng điện một chiều (DC) siêu tiết kiệm điện và vận hành êm ái tuyệt đối. Sản phẩm là lựa chọn hàng đầu cho hệ thống lọc tràn dưới của bể cá biển (Reef tank), bể thủy sinh và các hồ cá nước ngọt cao cấp 
 
 **Ưu Điểm Nổi Bật:**
 
@@ -40,18 +40,13 @@ date: 2026-06-19T15:55:00.000Z
 * Hoạt động êm ái nhờ công nghệ sóng sin.
 * Các phụ kiện tương thích với các kích thước ống tiêu chuẩn.
 * Bộ điều khiển bơm gồm:
+*  2 chế độ xung
 
-\- 2 chế độ xung
+ + CHẾ ĐỘ XUNG 1: Phạm vi từ 0,6 đến 4,4 giây
 
-\    + CHẾ ĐỘ XUNG 1: Phạm vi từ 0,6 đến 4,4 giây
+ + CHẾ ĐỘ XUNG 2: Tần số dao động từ 3 đến 22 giây
 
-\    + CHẾ ĐỘ XUNG 2: Tần số dao động từ 3 đến 22 giây
-
-\- 20 cài đặt tốc độ dòng chảy
-
-\- 3 chế độ cho ăn với thời gian khác nhau (10, 20 hoặc 30 phút)
-
-*  Thiết kế lấy cảm hứng từ hiệu suất được mô phỏng theo động cơ phản lực
+* 20 cài đặt tốc độ dòng chảy
+* 3 chế độ cho ăn với thời gian khác nhau (10, 20 hoặc 30 phút)
+* Thiết kế lấy cảm hứng từ hiệu suất được mô phỏng theo động cơ phản lực
 * Lớp phủ bên ngoài bằng cao su, mịn giúp máy bơm dễ bám hơn trong quá trình vệ sinh và bảo dưỡng
-
-\
