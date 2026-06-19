@@ -1,12 +1,12 @@
 ---
-title: VẬT LIỆU LỌC Maxspect NANO-TECH BIO-SPHERE
+title: VẬT LIỆU LỌC Maxspect NANO-TECH BIO-SPHERE (1 KG)
 slug: maxspect-Bio-sphere
 category: phu-kien
 short_description: Sứ lọc sinh học cao cấp cho bể cá biển
 image: /images/uploads/screenshot-2026-06-11-at-13.21.20.png
 gallery:
   - /images/uploads/screenshot-2026-06-11-at-13.21.41.png
-price: 0
+price: 400000
 unit: Hộp
 specs:
   - key: Model
@@ -17,7 +17,7 @@ specs:
   - value: ~ 3.5 cm
     key: Kích Thước
   - key: Quy Cách Đóng Gói
-    value: "Hộp 1 kg : 40-44 viên  ;   Hộp 2 Kg : 80-88 viên "
+    value: "Hộp 1 kg : 40-44 viên  "
 in_stock: true
 featured: false
 warranty: ""
