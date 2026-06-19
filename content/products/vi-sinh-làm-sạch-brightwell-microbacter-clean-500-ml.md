@@ -4,7 +4,7 @@ slug: brightwell-microbackter-clean
 category: hoa-chat
 short_description: "Hỗn hợp vi sinh vật+enzyme làm sạch bề mặt đá sống, vật liệu khác "
 image: /images/uploads/screenshot-2026-06-15-at-10.59.23.png
-price: 700000
+price: 650000
 sale_price: 0
 unit: Chai
 specs:
