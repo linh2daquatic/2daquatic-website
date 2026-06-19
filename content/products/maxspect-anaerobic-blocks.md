@@ -6,7 +6,7 @@ short_description: Sứ lọc sinh học cao cấp cho bể cá biển
 image: /images/uploads/screenshot-2026-06-11-at-13.21.52.png
 gallery:
   - /images/uploads/screenshot-2026-06-11-at-14.39.12.png
-price: 0
+price: 400000
 sale_price: null
 unit: hộp
 specs:
