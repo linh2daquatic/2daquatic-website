@@ -6,7 +6,7 @@ short_description: Muối chuyên dụng cho bể cá biển và san hô đặc 
 image: /images/uploads/screenshot-2026-06-17-at-18.13.06.png
 gallery:
   - /images/uploads/screenshot-2026-06-17-at-18.13.20.png
-price: 0
+price: 42500000
 unit: Túi
 specs:
   - key: "Tên Sản Phẩm "
