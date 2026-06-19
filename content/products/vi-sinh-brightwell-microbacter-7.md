@@ -1,5 +1,5 @@
 ---
-title: VI SINH Brightwell MICROBACTER 7
+title: VI SINH Brightwell MICROBACTER 7 (250 ML)
 slug: brightwell-microbacter7
 category: hoa-chat
 short_description: Brightwell Microbacter 7 là Vi sinh đậm đặc cực tốt cho bể cá
@@ -7,7 +7,7 @@ short_description: Brightwell Microbacter 7 là Vi sinh đậm đặc cực tố
 image: /images/uploads/screenshot-2026-06-15-at-10.03.42.png
 gallery:
   - /images/uploads/screenshot-2026-06-15-at-10.03.02.png
-price: 0
+price: 350000
 unit: Chai
 specs:
   - key: "Tên Sản Phẩm "
@@ -16,7 +16,7 @@ specs:
     value: Nước tinh khiết, hỗn hợp độc quyền các enzyme tự nhiên và vi sinh vật có
       lợi, không gây bệnh.
   - key: "Dung Tích "
-    value: 250 ml / 500 ml
+    value: "250 ml "
 in_stock: true
 featured: false
 warranty: ""
@@ -42,7 +42,7 @@ date: 2026-06-15T10:08:00.000Z
 
 **Nền tảng kỹ thuật**
 
-\    Nồng độ các chất hữu cơ hòa tan và dạng hạt trong bất kỳ môi trường nước nào đều có thể ảnh hưởng đáng kể đến vẻ ngoài tổng thể cũng như sức khỏe của các sinh vật sống trong hệ thống đó. Môi trường có hàm lượng dinh dưỡng tương đối thấp thường có đặc điểm là nước trong, không có mùi khó chịu và không có tảo vi sinh ,vi khuẩn lam. Điều này là kết quả của việc thiếu chất thải chứa nitơ, phốt pho và carbon. Các bể cá có hàm lượng dinh dưỡng tương đối cao lại có đặc điểm ngược lại so với những điều đã đề cập ở trên và thường không được ưa chuộng vì vẻ ngoài của hệ sinh thái cũng như khó khăn trong việc duy trì sức khỏe cho các sinh vật trong bể cá.
+ Nồng độ các chất hữu cơ hòa tan và dạng hạt trong bất kỳ môi trường nước nào đều có thể ảnh hưởng đáng kể đến vẻ ngoài tổng thể cũng như sức khỏe của các sinh vật sống trong hệ thống đó. Môi trường có hàm lượng dinh dưỡng tương đối thấp thường có đặc điểm là nước trong, không có mùi khó chịu và không có tảo vi sinh ,vi khuẩn lam. Điều này là kết quả của việc thiếu chất thải chứa nitơ, phốt pho và carbon. Các bể cá có hàm lượng dinh dưỡng tương đối cao lại có đặc điểm ngược lại so với những điều đã đề cập ở trên và thường không được ưa chuộng vì vẻ ngoài của hệ sinh thái cũng như khó khăn trong việc duy trì sức khỏe cho các sinh vật trong bể cá.
 
 **Brightwell Aquatics MicrōBacter7** là một phức hợp chọn lọc gồm các vi sinh vật và enzyme cực kỳ hiệu quả, giúp nhanh chóng làm giảm nồng độ nitơ hữu cơ, amoniac, nitrit, nitrat, phốt phát và carbon hữu cơ trong tất cả các hệ sinh thái nước mặn và nước ngọt, dẫn đến chất lượng nước được cải thiện đáng kể; chất lượng nước tốt hơn thường dẫn đến các sinh vật trong bể cá khỏe mạnh hơn.
 
