@@ -1,10 +1,10 @@
 ---
-title: THỨC ĂN VI SINH Aquaforest NP PRO
+title: THỨC ĂN VI SINH Aquaforest NP PRO (10ml)
 slug: aquaforest-np-pro
 category: hoa-chat
 short_description: "Thức ăn cho vi sinh dạng lỏng giúp kiểm soát NO3, PO4 "
 image: /images/uploads/screenshot-2026-06-15-at-13.10.53.png
-price: 0
+price: 280000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
@@ -12,7 +12,7 @@ specs:
   - key: "Thành Phần "
     value: Các polymer lỏng có khả năng phân hủy sinh học
   - key: "Dung Tích "
-    value: 10 ml / 50 ml
+    value: "10 ml "
 in_stock: true
 featured: false
 warranty: ""
