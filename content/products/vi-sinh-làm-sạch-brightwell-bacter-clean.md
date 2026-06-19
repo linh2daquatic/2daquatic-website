@@ -1,10 +1,11 @@
 ---
-title: VI SINH LÀM SẠCH Brightwell MICROBACTER CLEAN
+title: VI SINH LÀM SẠCH Brightwell MICROBACTER CLEAN (250 ML)
 slug: brightwell-microbackter-clean
 category: hoa-chat
 short_description: "Hỗn hợp vi sinh vật+enzyme làm sạch bề mặt đá sống, vật liệu khác "
 image: /images/uploads/screenshot-2026-06-15-at-10.59.23.png
-price: 0
+price: 350000
+sale_price: 0
 unit: Chai
 specs:
   - key: "Tên Sản Phẩm "
@@ -13,7 +14,7 @@ specs:
       có lợi, không gây bệnh.
     key: "Thành Phần "
   - key: Dung Tích
-    value: 250 ml / 500 ml
+    value: 250 ml
 in_stock: true
 featured: true
 warranty: ""
