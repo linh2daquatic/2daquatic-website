@@ -40,13 +40,11 @@ date: 2026-06-19T15:55:00.000Z
 * Hoạt động êm ái nhờ công nghệ sóng sin.
 * Các phụ kiện tương thích với các kích thước ống tiêu chuẩn.
 * Bộ điều khiển bơm gồm:
-*  2 chế độ xung
-
- + CHẾ ĐỘ XUNG 1: Phạm vi từ 0,6 đến 4,4 giây
-
- + CHẾ ĐỘ XUNG 2: Tần số dao động từ 3 đến 22 giây
-
+* 2 chế độ xung
+* CHẾ ĐỘ XUNG 1: Phạm vi từ 0,6 đến 4,4 giây
+* CHẾ ĐỘ XUNG 2: Tần số dao động từ 3 đến 22 giây
 * 20 cài đặt tốc độ dòng chảy
 * 3 chế độ cho ăn với thời gian khác nhau (10, 20 hoặc 30 phút)
 * Thiết kế lấy cảm hứng từ hiệu suất được mô phỏng theo động cơ phản lực
 * Lớp phủ bên ngoài bằng cao su, mịn giúp máy bơm dễ bám hơn trong quá trình vệ sinh và bảo dưỡng
+* Màn hình kỹ thuật số LED
