@@ -1,6 +1,6 @@
 ---
 title: Maxspect TrueReef Filter Lens (iPhone)- SUNSET BOULEVARD
-slug: maxspect-truereef-lens
+slug: c
 category: phu-kien
 short_description: Kính lọc màu gắn iPhone, xem và chụp ảnh san hô dưới đèn reef
   màu xanh cho thấy màu sắc tự nhiên thật sự.
@@ -12,14 +12,12 @@ price: 950000
 sale_price: 850000
 unit: Cái
 specs:
-  - key: Loại
-    value: Kính lọc màu vàng
-  - key: Gắn
-    value: Trực tiếp iPhone
-  - key: Tác dụng
-    value: Xem màu san hô tự nhiên dưới đèn xanh
-  - key: Tiện ích
-    value: Chụp ảnh san hô đẹp
+  - key: Tên Sản Phẩm
+    value: Lens Maxspect Sunset Boulevard
+  - key: Cách Sử Dụng
+    value: Gắn Trực tiếp iPhone
+  - key: Công dụng
+    value: "Lọc ánh sáng xanh, giúp san hô lên màu rực rỡ "
 in_stock: true
 featured: false
 warranty: ""
