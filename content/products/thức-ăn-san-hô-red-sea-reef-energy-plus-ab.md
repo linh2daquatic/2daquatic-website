@@ -1,10 +1,10 @@
 ---
-title: THỨC ĂN SAN HÔ Red Sea REEF ENERGY PLUS AB+
+title: THỨC ĂN SAN HÔ Red Sea REEF ENERGY PLUS AB+ 250 ML
 slug: " red-sea-reef-energy-plus-ab+"
 category: hoa-chat
 short_description: Siêu Thực Phẩm Toàn Diện Cho San Hô
 image: /images/uploads/screenshot-2026-06-17-at-19.09.46.png
-price: 0
+price: 500000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
@@ -14,7 +14,7 @@ specs:
       cho sức sống, sự phát triển và màu sắc của các loại san hô mềm, LPS, SPS
       và cả san hô không quang hợp NPS.
   - key: "Dung Tích "
-    value: 250 ml / 500 ml / 1000 ml
+    value: "250 ml "
 in_stock: true
 featured: false
 warranty: ""
