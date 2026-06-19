@@ -1,11 +1,11 @@
 ---
-title: VI SINH  Aquaforest Bio S
+title: VI SINH  Aquaforest Bio S (10 ML)
 slug: aquaforest-bios
 category: hoa-chat
 short_description: Vi sinh thiết lập và duy trì hệ vi sinh ổn định cho hồ cá,
   đặc biệt là hồ cá biển.
 image: /images/uploads/screenshot-2026-06-15-at-11.44.14.png
-price: 0
+price: 280000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
@@ -13,7 +13,7 @@ specs:
   - key: "Thành Phần "
     value: Chủng vi khuẩn Nitrospirae và Nitrobacteraceae & Vi sinh vật hoại sinh
   - key: "Dung Tích "
-    value: 10 ml / 50 ml
+    value: "10 ml "
 in_stock: true
 featured: false
 warranty: ""
