@@ -5,7 +5,7 @@ category: phu-kien
 short_description: Thiết bị quang học kiểm tra độ mặn và tỷ trọng nước biển.
 image: /images/uploads/screenshot-2026-06-18-at-11.05.33.png
 gallery: []
-price: 4800000
+price: 479996
 unit: Cái
 specs:
   - key: "Tên Sản Phẩm "
