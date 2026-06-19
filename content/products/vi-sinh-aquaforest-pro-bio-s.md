@@ -1,18 +1,18 @@
 ---
-title: VI SINH Aquaforest PRO BIO S
+title: VI SINH Aquaforest PRO BIO S (10 ML)
 slug: aquaforest-pro-bio s
 category: hoa-chat
 short_description: Vi sinh probiotic đậm đặc làm sạch nước, tối ưu môi trường cho bể cá biển.
 image: /images/uploads/screenshot-2026-06-15-at-13.10.06.png
-price: 0
-unit: cái
+price: 280000
+unit: Lọ
 specs:
   - key: Tên Sản Phẩm
     value: Aquaforest Pro Bio S
   - key: "Thành Phần "
     value: Các chủng vi khuẩn probiotic
   - key: "Dung Tích "
-    value: 10 ml / 50 ml
+    value: "10 ml "
 in_stock: true
 featured: false
 warranty: ""
