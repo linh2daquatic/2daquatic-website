@@ -1,11 +1,11 @@
 ---
-title: VI LƯỢNG Tropic Marin® A- ELEMENTS
+title: VI LƯỢNG Tropic Marin® A- ELEMENTS (200 ML)
 slug: tropic-marin-A-elements
 category: hoa-chat
 short_description: Nguyên tố vi lượng anion thiết yếu thúc đẩy sự phát triển và
   lên màu tự nhiên của san hô.
 image: /images/uploads/screenshot-2026-06-17-at-13.19.12.png
-price: 0
+price: 420000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
@@ -13,7 +13,7 @@ specs:
   - key: "Công Dụng "
     value: Thúc đẩy sự phát triển và lên màu tự nhiên của san hô.
   - key: Dung Tích
-    value: 200 ml / 1000 ml
+    value: "200 ml "
 in_stock: true
 featured: false
 warranty: ""
