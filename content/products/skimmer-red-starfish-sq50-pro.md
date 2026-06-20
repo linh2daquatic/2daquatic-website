@@ -13,8 +13,8 @@ specs:
     value: Red Starfish SQ 50 Pro
   - key: Phù hợp bể
     value: 40-70 L
-  - key: Công Suất
-    value: 15W
+  - key: Công Suất Bơm
+    value: 5W
   - key: "Mực Nước "
     value: 16-18 cm
   - key: Chiều Cao
