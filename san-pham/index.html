@@ -700,9 +700,6 @@
     CATORDER.forEach(function(c){
       html += '<button class="pf-chip" data-cat="'+esc(c)+'">'+esc(CAT[c]||c)+'</button>';
     });
-    Object.keys(present).forEach(function(c){
-      if(CATORDER.indexOf(c)===-1) html += '<button class="pf-chip" data-cat="'+esc(c)+'">'+esc(CAT[c]||c)+'</button>';
-    });
     filters.innerHTML = html;
     filters.querySelectorAll(".pf-chip").forEach(function(b){
       b.addEventListener("click", function(){

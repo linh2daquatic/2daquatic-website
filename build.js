@@ -168,7 +168,12 @@ try {
         try {
           const raw = fs.readFileSync(path.join(PRODUCTS_DIR, f), 'utf8');
           const p = parseProduct(raw);
-          if (p && p.title) { products.push(p); }
+          if (p && p.title) {
+            // Tự chuyển mã danh mục cũ -> mã mới (16 danh mục)
+            var CAT_ALIAS = {"be-ca-promax":"be-ca-bien","be-ca-infinity":"be-ca-bien","be-ca-custom":"be-ca-bien","thiet-bi-bom":"bom","thiet-bi-loc":"skimmer","dung-cu-san-ho":"phu-kien"};
+            if (p.category && CAT_ALIAS[p.category]) p.category = CAT_ALIAS[p.category];
+            products.push(p);
+          }
         } catch (e) { console.warn('  (bo qua san pham loi: ' + f + ')'); }
       });
   }
