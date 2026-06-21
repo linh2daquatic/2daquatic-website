@@ -1,5 +1,5 @@
 ---
-title: BỘT DÁN SAN HÔ Maxspect CORAL PUTTY
+title: KEO 2 THÀNH PHẦN DÁN SAN HÔ Maxspect CORAL PUTTY
 slug: maxspect-coralputty
 category: phu-kien
 short_description: Keo 2 thành phần gốc Silicone cao cấp chuyên dành cho bể cá cảnh biển
