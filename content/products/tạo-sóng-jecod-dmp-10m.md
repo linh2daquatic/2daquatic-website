@@ -2,7 +2,7 @@
 title: TẠO SÓNG Jecod DMP-10M
 slug: jecod-dmp-10m
 category: thiet-bi-loc
-short_description: "Tạo sóng thông minh thế hệ mới áp dụng thiết kế không dây "
+short_description: Tạo sóng thông minh thế hệ mới áp dụng thiết kế đi dây nguồn bên ngoài bể
 image: /images/uploads/screenshot-2026-06-20-at-16.49.45.png
 gallery:
   - /images/uploads/screenshot-2026-06-20-at-16.41.49.png
