@@ -15,6 +15,8 @@ specs:
     value: 10W
   - key: "Lưu Lượng Nước "
     value: 5000 L/H
+  - key: Phù Hợp Bể
+    value: Từ 60 cm trở xuống
 in_stock: true
 featured: false
 warranty: ""
