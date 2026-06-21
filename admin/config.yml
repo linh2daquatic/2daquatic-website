@@ -148,18 +148,22 @@ collections:
         name: 'category'
         widget: 'select'
         options:
-          - { label: 'Bể cá - ProMax', value: 'be-ca-promax' }
-          - { label: 'Bể cá - Infinity', value: 'be-ca-infinity' }
-          - { label: 'Bể cá - Custom', value: 'be-ca-custom' }
-          - { label: 'Lọc & Skimmer', value: 'thiet-bi-loc' }
-          - { label: 'Đèn LED', value: 'thiet-bi-den' }
-          - { label: 'Bơm & Wavemaker', value: 'thiet-bi-bom' }
-          - { label: 'Vật liệu lọc', value: 'vat-lieu-loc' }
-          - { label: 'Dụng cụ san hô', value: 'dung-cu-san-ho' }
-          - { label: 'Reef Balance', value: 'hoa-chat' }
-          - { label: 'Cá biển', value: 'sinh-vat-ca' }
           - { label: 'San hô', value: 'sinh-vat-san-ho' }
-          - { label: 'Phụ kiện khác', value: 'phu-kien' }
+          - { label: 'Cá', value: 'sinh-vat-ca' }
+          - { label: 'Phụ kiện', value: 'phu-kien' }
+          - { label: 'Bể cá biển', value: 'be-ca-bien' }
+          - { label: 'Muối', value: 'muoi' }
+          - { label: 'Bơm', value: 'bom' }
+          - { label: 'Đèn', value: 'thiet-bi-den' }
+          - { label: 'Chân tủ', value: 'chan-tu' }
+          - { label: 'Skimmer', value: 'skimmer' }
+          - { label: 'Tạo sóng', value: 'tao-song' }
+          - { label: 'Vật liệu lọc', value: 'vat-lieu-loc' }
+          - { label: 'Hoá chất', value: 'hoa-chat' }
+          - { label: 'Thức ăn sinh vật', value: 'thuc-an' }
+          - { label: 'Layout', value: 'layout' }
+          - { label: 'Dịch vụ', value: 'dich-vu' }
+          - { label: 'Thiết bị tự động', value: 'thiet-bi-tu-dong' }
       - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
       - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}
       - {label: 'Ảnh chính', name: 'image', widget: 'image'}

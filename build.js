@@ -11,7 +11,7 @@ const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 
 // ===== TÊN DANH MỤC (nguồn duy nhất, sửa được qua CMS) =====
-var CAT_DEFAULTS = {"be-ca-promax":"Bể cá - ProMax","be-ca-infinity":"Bể cá - Infinity","be-ca-custom":"Bể cá - Custom","thiet-bi-loc":"Lọc & Skimmer","thiet-bi-den":"Đèn LED","thiet-bi-bom":"Bơm & Wavemaker","vat-lieu-loc":"Vật liệu lọc","dung-cu-san-ho":"Dụng cụ san hô","hoa-chat":"Reef Balance","sinh-vat-ca":"Cá biển","sinh-vat-san-ho":"San hô","phu-kien":"Phụ kiện khác"};
+var CAT_DEFAULTS = {"sinh-vat-san-ho":"San hô","sinh-vat-ca":"Cá","phu-kien":"Phụ kiện","be-ca-bien":"Bể cá biển","muoi":"Muối","bom":"Bơm","thiet-bi-den":"Đèn","chan-tu":"Chân tủ","skimmer":"Skimmer","tao-song":"Tạo sóng","vat-lieu-loc":"Vật liệu lọc","hoa-chat":"Hoá chất","thuc-an":"Thức ăn sinh vật","layout":"Layout","dich-vu":"Dịch vụ","thiet-bi-tu-dong":"Thiết bị tự động"};
 var CATLABELS = Object.assign({}, CAT_DEFAULTS);
 try {
   var _catCfgPath = path.join(ROOT, 'content', 'settings', 'categories.json');
@@ -701,7 +701,10 @@ try {
   if (fs.existsSync(spCatPath)) {
     var spCatHtml = fs.readFileSync(spCatPath, 'utf8');
     var catJson = JSON.stringify(CATLABELS);
-    var spCatNew = spCatHtml.replace(/var CAT = \{[\s\S]*?\};/, 'var CAT = ' + catJson + ';');
+    var orderJson = JSON.stringify(Object.keys(CATLABELS));
+    var spCatNew = spCatHtml
+      .replace(/var CAT = \{[\s\S]*?\};/, 'var CAT = ' + catJson + ';')
+      .replace(/var CATORDER = \[[\s\S]*?\];/, 'var CATORDER = ' + orderJson + ';');
     if (spCatNew !== spCatHtml) {
       fs.writeFileSync(spCatPath, spCatNew, 'utf8');
       console.log('  \u2713 san-pham: injected ten danh muc (filter)');

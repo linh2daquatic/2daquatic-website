@@ -653,6 +653,7 @@
     "hoa-chat": "Reef Balance",
     "sinh-vat-ca": "Cá biển", "sinh-vat-san-ho": "San hô", "phu-kien": "Phụ kiện khác"
   };
+  var CATORDER = ["be-ca-promax","be-ca-infinity","be-ca-custom","thiet-bi-loc","thiet-bi-den","thiet-bi-bom","vat-lieu-loc","dung-cu-san-ho","hoa-chat","sinh-vat-ca","sinh-vat-san-ho","phu-kien"];
   var grid = document.getElementById("pf-grid");
   var filters = document.getElementById("pf-filters");
   var empty = document.getElementById("pf-empty");
@@ -694,10 +695,13 @@
   }
 
   function renderFilters(){
-    var cats = {}; all.forEach(function(p){ if(p.category) cats[p.category]=1; });
+    var present = {}; all.forEach(function(p){ if(p.category) present[p.category]=1; });
     var html = '<button class="pf-chip active" data-cat="all">Tất cả</button>';
-    Object.keys(cats).forEach(function(c){
+    CATORDER.forEach(function(c){
       html += '<button class="pf-chip" data-cat="'+esc(c)+'">'+esc(CAT[c]||c)+'</button>';
+    });
+    Object.keys(present).forEach(function(c){
+      if(CATORDER.indexOf(c)===-1) html += '<button class="pf-chip" data-cat="'+esc(c)+'">'+esc(CAT[c]||c)+'</button>';
     });
     filters.innerHTML = html;
     filters.querySelectorAll(".pf-chip").forEach(function(b){
@@ -757,6 +761,11 @@
     .then(function(r){ return r.ok ? r.json() : []; })
     .then(function(data){
       all = Array.isArray(data) ? data : [];
+      all.sort(function(a,b){
+        var ai=CATORDER.indexOf(a.category); if(ai<0)ai=999;
+        var bi=CATORDER.indexOf(b.category); if(bi<0)bi=999;
+        return ai-bi;
+      });
       if(!all.length){ empty.textContent = "Sản phẩm đang được cập nhật. Vui lòng liên hệ Zalo/Facebook để được tư vấn."; return; }
       empty.style.display = "none";
       renderFilters(); render();
