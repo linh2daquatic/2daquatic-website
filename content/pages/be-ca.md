@@ -16,6 +16,7 @@ promax_spec2_label: Lọc
 promax_spec2_value: All-in-1
 promax_spec3_label: Bảo hành
 promax_spec3_value: 5 năm
+promax_image: /images/uploads/642474f1-d7f3-429c-81fa-19cd4bbf7fa4.png
 infinity_eyebrow: 2D Infinity S Series
 infinity_headline1: Bể flagship
 infinity_headline2: lọc tràn dưới
@@ -29,6 +30,7 @@ infinity_spec2_label: Lọc
 infinity_spec2_value: Sump tủ
 infinity_spec3_label: Bảo hành
 infinity_spec3_value: 5 năm
+infinity_image: /images/uploads/2a3d74f6-b237-4ae9-8d06-2136587b116a.png
 custom_eyebrow: Custom Design
 custom_headline1: Thiết kế theo yêu cầu,
 custom_headline2: độc bản
