@@ -506,6 +506,19 @@
     .slide-imgfull .slide-bg picture img { object-fit:contain !important; }
     .slide-imgfull .slide-overlay { display:none !important; }
     .slide-imgfull .slide-content-wrap { display:none !important; }
+    /* ===== MOBILE: lớp phủ dọc cho đồng đều ánh sáng mọi slide ===== */
+    @media (max-width: 820px) {
+      .slide-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(10,22,40,0.82) 0%,
+          rgba(10,22,40,0.62) 22%,
+          rgba(10,22,40,0.28) 42%,
+          rgba(10,22,40,0.12) 60%,
+          rgba(10,22,40,0.30) 100%
+        ) !important;
+      }
+    }
 .slide-3-has-photo .slide-bg {
   background-size: cover !important;
   background-position: center center !important;
