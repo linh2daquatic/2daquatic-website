@@ -1,0 +1,16 @@
+{
+  "labels": [
+    {"code": "be-ca-promax", "label": "Bể cá - ProMax"},
+    {"code": "be-ca-infinity", "label": "Bể cá - Infinity"},
+    {"code": "be-ca-custom", "label": "Bể cá - Custom"},
+    {"code": "thiet-bi-loc", "label": "Lọc & Skimmer"},
+    {"code": "thiet-bi-den", "label": "Đèn LED"},
+    {"code": "thiet-bi-bom", "label": "Bơm & Wavemaker"},
+    {"code": "vat-lieu-loc", "label": "Vật liệu lọc"},
+    {"code": "dung-cu-san-ho", "label": "Dụng cụ san hô"},
+    {"code": "hoa-chat", "label": "Reef Balance"},
+    {"code": "sinh-vat-ca", "label": "Cá biển"},
+    {"code": "sinh-vat-san-ho", "label": "San hô"},
+    {"code": "phu-kien", "label": "Phụ kiện khác"}
+  ]
+}

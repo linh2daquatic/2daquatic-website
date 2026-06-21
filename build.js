@@ -10,6 +10,19 @@ const path = require('path');
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 
+// ===== TÊN DANH MỤC (nguồn duy nhất, sửa được qua CMS) =====
+var CAT_DEFAULTS = {"be-ca-promax":"Bể cá - ProMax","be-ca-infinity":"Bể cá - Infinity","be-ca-custom":"Bể cá - Custom","thiet-bi-loc":"Lọc & Skimmer","thiet-bi-den":"Đèn LED","thiet-bi-bom":"Bơm & Wavemaker","vat-lieu-loc":"Vật liệu lọc","dung-cu-san-ho":"Dụng cụ san hô","hoa-chat":"Reef Balance","sinh-vat-ca":"Cá biển","sinh-vat-san-ho":"San hô","phu-kien":"Phụ kiện khác"};
+var CATLABELS = Object.assign({}, CAT_DEFAULTS);
+try {
+  var _catCfgPath = path.join(ROOT, 'content', 'settings', 'categories.json');
+  if (fs.existsSync(_catCfgPath)) {
+    var _catCfg = JSON.parse(fs.readFileSync(_catCfgPath, 'utf8'));
+    if (_catCfg && Array.isArray(_catCfg.labels)) {
+      _catCfg.labels.forEach(function(it){ if (it && it.code && it.label) CATLABELS[it.code] = it.label; });
+    }
+  }
+} catch(e){ console.warn('  (Bo qua tai ten danh muc: ' + e.message + ')'); }
+
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -404,7 +417,7 @@ try {
   function vndFmt(n){ return n ? Number(n).toLocaleString('vi-VN')+'đ' : 'Liên hệ'; }
 
   function productPage(p) {
-    var PCAT = {"be-ca-promax": "Bể cá - ProMax", "be-ca-infinity": "Bể cá - Infinity", "be-ca-custom": "Bể cá - Custom", "thiet-bi-loc": "Lọc & Skimmer", "thiet-bi-den": "Đèn LED", "thiet-bi-bom": "Bơm & Wavemaker", "vat-lieu-loc": "Vật liệu lọc", "dung-cu-san-ho": "Dụng cụ san hô", "hoa-chat": "Reef Balance", "sinh-vat-ca": "Cá biển", "sinh-vat-san-ho": "San hô", "phu-kien": "Phụ kiện khác"};
+    var PCAT = CATLABELS;
     var url = 'https://2daquatic.com/san-pham/' + p.slug + '/';
     var title = p.title || 'Sản phẩm';
     var catLabel = PCAT[p.category] || p.category || '';
@@ -681,6 +694,20 @@ try {
     }
   }
 } catch(e){console.warn('  (be-ca CMS inject error: '+e.message+')');}
+
+// ===== INJECT TÊN DANH MỤC vào bộ lọc trang san-pham =====
+try {
+  var spCatPath = path.join(DIST, 'san-pham', 'index.html');
+  if (fs.existsSync(spCatPath)) {
+    var spCatHtml = fs.readFileSync(spCatPath, 'utf8');
+    var catJson = JSON.stringify(CATLABELS);
+    var spCatNew = spCatHtml.replace(/var CAT = \{[\s\S]*?\};/, 'var CAT = ' + catJson + ';');
+    if (spCatNew !== spCatHtml) {
+      fs.writeFileSync(spCatPath, spCatNew, 'utf8');
+      console.log('  \u2713 san-pham: injected ten danh muc (filter)');
+    }
+  }
+} catch(e){ console.warn('  (san-pham cat inject error: ' + e.message + ')'); }
 
 
 

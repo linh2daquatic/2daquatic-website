@@ -86,6 +86,20 @@ collections:
               - {label: 'Link CTA — Chữ', name: 'link_text', widget: 'string', required: false, hint: 'VD: Xem ngay (để trống nếu không cần)'}
               - {label: 'Link CTA — URL', name: 'link_href', widget: 'string', required: false, hint: 'VD: /be-ca'}
 
+      - name: 'category_labels'
+        label: '🏷️ Tên danh mục (hiển thị trên web)'
+        file: 'content/settings/categories.json'
+        description: 'Sửa tên danh mục mà KHÁCH HÀNG thấy ở bộ lọc trang Sản phẩm. Chỉ sửa cột "Tên hiển thị", giữ nguyên "Mã".'
+        fields:
+          - label: 'Danh sách danh mục'
+            name: 'labels'
+            widget: 'list'
+            label_singular: 'Danh mục'
+            summary: '{{fields.label}}  ⟵  {{fields.code}}'
+            fields:
+              - {label: 'Mã (KHÔNG sửa)', name: 'code', widget: 'string', hint: 'Mã kỹ thuật — phải khớp danh mục sản phẩm, đừng đổi'}
+              - {label: 'Tên hiển thị', name: 'label', widget: 'string', hint: 'Tên khách thấy trên web — sửa thoải mái'}
+
   # ========== 2. DANH MỤC SẢN PHẨM ==========
   - name: 'categories'
     label: '📁 Danh mục sản phẩm'
@@ -137,11 +151,14 @@ collections:
           - { label: 'Bể cá - ProMax', value: 'be-ca-promax' }
           - { label: 'Bể cá - Infinity', value: 'be-ca-infinity' }
           - { label: 'Bể cá - Custom', value: 'be-ca-custom' }
-          - { label: 'Thiết bị - Lọc & Skimmer', value: 'thiet-bi-loc' }
-          - { label: 'Thiết bị - Đèn LED', value: 'thiet-bi-den' }
-          - { label: 'Hóa chất - Reef Balance', value: 'hoa-chat' }
-          - { label: 'Sinh vật - Cá biển', value: 'sinh-vat-ca' }
-          - { label: 'Sinh vật - San hô', value: 'sinh-vat-san-ho' }
+          - { label: 'Lọc & Skimmer', value: 'thiet-bi-loc' }
+          - { label: 'Đèn LED', value: 'thiet-bi-den' }
+          - { label: 'Bơm & Wavemaker', value: 'thiet-bi-bom' }
+          - { label: 'Vật liệu lọc', value: 'vat-lieu-loc' }
+          - { label: 'Dụng cụ san hô', value: 'dung-cu-san-ho' }
+          - { label: 'Reef Balance', value: 'hoa-chat' }
+          - { label: 'Cá biển', value: 'sinh-vat-ca' }
+          - { label: 'San hô', value: 'sinh-vat-san-ho' }
           - { label: 'Phụ kiện khác', value: 'phu-kien' }
       - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
       - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}
