@@ -329,6 +329,7 @@ collections:
           - {label: '🔵 ProMax | Spec 2 Giá trị', name: promax_spec2_value, widget: string}
           - {label: '🔵 ProMax | Spec 3 Nhãn', name: promax_spec3_label, widget: string}
           - {label: '🔵 ProMax | Spec 3 Giá trị', name: promax_spec3_value, widget: string}
+          - {label: '🔵 ProMax | Ảnh bể (2000×1200)', name: promax_image, widget: image, required: false, hint: 'Ảnh bể ProMax hiển thị trên trang Bể cá'}
           - {label: '🟢 Infinity | Nhãn dòng', name: infinity_eyebrow, widget: string}
           - {label: '🟢 Infinity | Tiêu đề (thường)', name: infinity_headline1, widget: string}
           - {label: '🟢 Infinity | Tiêu đề (nghiêng)', name: infinity_headline2, widget: string}
@@ -340,6 +341,7 @@ collections:
           - {label: '🟢 Infinity | Spec 2 Giá trị', name: infinity_spec2_value, widget: string}
           - {label: '🟢 Infinity | Spec 3 Nhãn', name: infinity_spec3_label, widget: string}
           - {label: '🟢 Infinity | Spec 3 Giá trị', name: infinity_spec3_value, widget: string}
+          - {label: '🟢 Infinity | Ảnh bể (2000×1200)', name: infinity_image, widget: image, required: false, hint: 'Ảnh bể Infinity hiển thị trên trang Bể cá'}
           - {label: '✏️ Custom | Nhãn dòng', name: custom_eyebrow, widget: string}
           - {label: '✏️ Custom | Tiêu đề (thường)', name: custom_headline1, widget: string}
           - {label: '✏️ Custom | Tiêu đề (nghiêng)', name: custom_headline2, widget: string}

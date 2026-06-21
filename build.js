@@ -360,7 +360,9 @@ try {
       '  <img src="/images/logo-light.png" alt="2D Aquatic" width="120" style="margin-bottom:16px;height:auto">\n' +
       '  <p style="color:rgba(255,255,255,0.7);margin-bottom:8px">Bể cá biển cao cấp tại Hà Nội</p>\n' +
       '  <p style="color:rgba(255,255,255,0.5);font-size:14px">305 Nguyễn Văn Cừ, Bồ Đề, Long Biên · Hotline: <a href="tel:0975112334" style="color:#00d4b8">0975.112.334</a></p>\n' +
-      '</footer>\n</body>\n</html>\n';
+      '</footer>\n'+
+      '<script>(function(){var ts=document.querySelectorAll(".sp-thumb");var m=document.getElementById("sp-main-img");ts.forEach(function(t){t.addEventListener("click",function(){if(m)m.src=this.getAttribute("data-full");ts.forEach(function(x){x.classList.remove("active")});this.classList.add("active")})})})();<\/script>\n'+
+      '</body>\n</html>\n';
   }
 
   var ARTICLES_DIR = path.join(ROOT, 'content', 'articles');
@@ -409,6 +411,12 @@ try {
     var desc = (p.short_description || p.body || title).replace(/\s+/g,' ').trim().slice(0,160);
     var img = (p.image && p.image !== '') ? p.image : '';
     var imgAbs = img ? (img.indexOf('http')===0 ? img : ('https://2daquatic.com'+img)) : 'https://2daquatic.com/images/og-image.jpg';
+    var galleryArr = [];
+    if (img) galleryArr.push(img);
+    if (p.gallery && p.gallery.length) { p.gallery.forEach(function(g){ if (g && galleryArr.indexOf(g) === -1) galleryArr.push(g); }); }
+    var galleryHtml = (galleryArr.length > 1)
+      ? '    <div class="sp-gallery">' + galleryArr.map(function(g,idx){ return '<img class="sp-thumb'+(idx===0?' active':'')+'" src="'+escH(g)+'" alt="" data-full="'+escH(g)+'" loading="lazy">'; }).join('') + '</div>\n'
+      : '';
     var priceNum = p.price || 0;
     var salePriceNum = p.sale_price;
     var mainPrice = salePriceNum ? salePriceNum : priceNum;
@@ -467,6 +475,10 @@ try {
       '.sp-img-box{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e5dc;display:flex;align-items:center;justify-content:center;min-height:280px;padding:20px;box-sizing:border-box}\n'+
       '.sp-img-box img{width:100%;max-height:420px;object-fit:contain;display:block}\n'+
       '.sp-img-placeholder{font-size:64px;padding:40px}\n'+
+      '.sp-gallery{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}\n'+
+      '.sp-thumb{width:72px;height:72px;object-fit:contain;background:#fff;border:1px solid #e8e5dc;border-radius:10px;padding:6px;box-sizing:border-box;cursor:pointer;transition:border-color .15s}\n'+
+      '.sp-thumb:hover{border-color:#16a085}\n'+
+      '.sp-thumb.active{border-color:#16a085;border-width:2px}\n'+
       '.sp-info h2{font-family:Fraunces,serif;font-size:18px;color:#0a1628;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid rgba(22,160,133,.2)}\n'+
       '.sp-cta{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}\n'+
       '.sp-btn{padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px}\n'+
@@ -497,7 +509,7 @@ try {
       // MAIN BODY
       '<div class="sp-body">\n'+
       '  <div>\n'+
-      (img ? '    <div class="sp-img-box"><img src="'+escH(img)+'" alt="'+escH(title)+'" loading="eager"></div>\n'
+      (img ? '    <div class="sp-img-box"><img id="sp-main-img" src="'+escH(img)+'" alt="'+escH(title)+'" loading="eager"></div>\n' + galleryHtml
            : '    <div class="sp-img-box"><div class="sp-img-placeholder">🪸</div></div>\n')+
       '  </div>\n'+
       '  <div class="sp-info">\n'+
@@ -663,6 +675,7 @@ try {
       var becaHtml=fs.readFileSync(becaHtmlPath,'utf8');
       becaHtml=becaHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,key){var v=becaData[key];return tag+(v!=null?escB2(v):m.replace(tag,''));});
       becaHtml=becaHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em>\.<\/h2>/g,function(m,attrs,h1k,emk){return '<h2'+attrs+'>'+escB2(becaData[h1k]||'')+' <em>'+escB2(becaData[emk]||'')+'</em>.</h2>';});
+      becaHtml=becaHtml.replace(/<img([^>]*)>/g,function(m,attrs){var km=attrs.match(/data-cms-imgsrc="([^"]+)"/);if(!km)return m;var v=becaData[km[1]];if(!v)return m;return '<img'+attrs.replace(/src="[^"]*"/,'src="'+v+'"')+'>';});
       fs.writeFileSync(becaHtmlPath,becaHtml,'utf8');
       console.log('  \u2713 be-ca: injected CMS content (ProMax / Infinity / Custom)');
     }
