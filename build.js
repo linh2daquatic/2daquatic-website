@@ -156,6 +156,8 @@ try {
       ? (parseInt(String(data.sale_price).replace(/[^\d]/g, ''), 10) || null) : null;
     data.in_stock = String(data.in_stock).trim() !== 'false';
     data.featured = String(data.featured).trim() === 'true';
+    if (!Array.isArray(data.gallery)) data.gallery = [];
+    if (!Array.isArray(data.specs)) data.specs = [];
     return data;
   }
 
@@ -431,7 +433,7 @@ try {
     var imgAbs = img ? (img.indexOf('http')===0 ? img : ('https://2daquatic.com'+img)) : 'https://2daquatic.com/images/og-image.jpg';
     var galleryArr = [];
     if (img) galleryArr.push(img);
-    if (p.gallery && p.gallery.length) { p.gallery.forEach(function(g){ if (g && galleryArr.indexOf(g) === -1) galleryArr.push(g); }); }
+    if (Array.isArray(p.gallery) && p.gallery.length) { p.gallery.forEach(function(g){ if (g && galleryArr.indexOf(g) === -1) galleryArr.push(g); }); }
     var galleryHtml = (galleryArr.length > 1)
       ? '    <div class="sp-gallery">' + galleryArr.map(function(g,idx){ return '<img class="sp-thumb'+(idx===0?' active':'')+'" src="'+escH(g)+'" alt="" data-full="'+escH(g)+'" loading="lazy">'; }).join('') + '</div>\n'
       : '';

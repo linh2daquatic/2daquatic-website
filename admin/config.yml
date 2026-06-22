@@ -141,6 +141,57 @@ collections:
       - label: 'Còn hàng'
         field: in_stock
         pattern: true
+      - label: 'DM · San hô'
+        field: category
+        pattern: 'sinh-vat-san-ho'
+      - label: 'DM · Cá'
+        field: category
+        pattern: 'sinh-vat-ca'
+      - label: 'DM · Phụ kiện'
+        field: category
+        pattern: 'phu-kien'
+      - label: 'DM · Bể cá biển'
+        field: category
+        pattern: 'be-ca-bien'
+      - label: 'DM · Muối'
+        field: category
+        pattern: 'muoi'
+      - label: 'DM · Bơm'
+        field: category
+        pattern: 'bom'
+      - label: 'DM · Đèn'
+        field: category
+        pattern: 'thiet-bi-den'
+      - label: 'DM · Chân tủ'
+        field: category
+        pattern: 'chan-tu'
+      - label: 'DM · Skimmer'
+        field: category
+        pattern: 'skimmer'
+      - label: 'DM · Tạo sóng'
+        field: category
+        pattern: 'tao-song'
+      - label: 'DM · Vật liệu lọc'
+        field: category
+        pattern: 'vat-lieu-loc'
+      - label: 'DM · Hoá chất'
+        field: category
+        pattern: 'hoa-chat'
+      - label: 'DM · Thức ăn sinh vật'
+        field: category
+        pattern: 'thuc-an'
+      - label: 'DM · Layout'
+        field: category
+        pattern: 'layout'
+      - label: 'DM · Dịch vụ'
+        field: category
+        pattern: 'dich-vu'
+      - label: 'DM · Thiết bị tự động'
+        field: category
+        pattern: 'thiet-bi-tu-dong'
+    view_groups:
+      - label: 'Theo danh mục'
+        field: category
     fields:
       - {label: 'Tên sản phẩm', name: 'title', widget: 'string', hint: 'VD: 2D ProMax S60'}
       - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: 2d-promax-s60'}
