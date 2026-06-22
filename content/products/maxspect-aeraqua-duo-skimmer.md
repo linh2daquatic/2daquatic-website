@@ -1,7 +1,7 @@
 ---
 title: SKIMMER Maxspect Aeraqua Duo AD 600
 slug: maxspect-aeraqua-duo-skimmer-600
-category: thiet-bi-loc
+category: skimmer
 short_description: "Dòng skimmer cao cấp nhỏ gọn nhưng mạnh mẽ dành cho bể cá biển "
 image: /images/uploads/screenshot-2026-06-14-at-10.24.42.png
 gallery:
