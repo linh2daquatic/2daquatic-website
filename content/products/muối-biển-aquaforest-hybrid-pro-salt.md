@@ -1,7 +1,7 @@
 ---
 title: MUỐI BIỂN Aquaforest HYBRID PRO SALT
 slug: "aquaforest-hybrid-pro-salt "
-category: hoa-chat
+category: muoi
 short_description: Muối tinh khiết  bổ sung men vi sinh  được sản xuất trong phòng thí nghiệm.
 image: /images/uploads/screenshot-2026-06-17-at-16.48.36.png
 price: 2350000
