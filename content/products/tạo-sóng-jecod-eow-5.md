@@ -18,7 +18,7 @@ specs:
 in_stock: false
 featured: false
 warranty: ""
-date: 2026-06-22T11:16:00.000Z
+date: 2026-06-22T11:18:00.000Z
 ---
 **Jecod EOW-5** là dòng máy tạo sóng hiện đại được thiết kế dành cho bể nano cá biển và san hô. Với công nghệ động cơ sóng sin (Sine Wave Technology), khả năng điều khiển thông minh qua ứng dụng và thiết kế nhỏ gọn, EOW-5 mang đến dòng chảy tự nhiên giúp cá và san hô phát triển khỏe mạnh trong môi trường ổn định.
 
