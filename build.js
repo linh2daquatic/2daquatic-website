@@ -479,17 +479,17 @@ try {
       '<link rel="stylesheet" href="/css/main.v2.css">\n'+
       '<style>\n'+
       'body{margin:0;background:#fafaf7;color:#2a3340;font-family:Inter,sans-serif}\n'+
-      '.sp-hero{background:linear-gradient(135deg,#0a1628,#103a4a);color:#fff;padding:40px 0 36px}\n'+
+      '.sp-hero{background:#fafaf7;color:#2a3340;padding:24px 0 18px;border-bottom:1px solid #ece9df}\n'+
       '.sp-hero-inner{max-width:1100px;margin:0 auto;padding:0 24px}\n'+
-      '.sp-back{display:inline-flex;align-items:center;gap:6px;color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:12px;opacity:.85}\n'+
+      '.sp-back{display:inline-flex;align-items:center;gap:6px;color:#16a085;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:12px;opacity:.9}\n'+
       '.sp-back:hover{opacity:1}\n'+
-      '.sp-crumb{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px}\n'+
-      '.sp-crumb a{color:rgba(255,255,255,.6);text-decoration:none}\n'+
-      '.sp-crumb a:hover{color:#00d4b8}\n'+
-      '.sp-hero-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#00d4b8;margin-bottom:8px}\n'+
-      '.sp-hero-title{font-family:Fraunces,serif;font-size:clamp(24px,4vw,40px);font-weight:700;margin:0 0 16px;line-height:1.2}\n'+
+      '.sp-crumb{font-size:12px;color:#9c9a8f;margin-bottom:14px}\n'+
+      '.sp-crumb a{color:#8a887d;text-decoration:none}\n'+
+      '.sp-crumb a:hover{color:#16a085}\n'+
+      '.sp-hero-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#16a085;margin-bottom:8px}\n'+
+      '.sp-hero-title{font-family:Fraunces,serif;font-size:clamp(24px,4vw,38px);font-weight:700;margin:0 0 14px;line-height:1.2;color:#0a1628}\n'+
       '.sp-hero-price{margin:0 0 10px}\n'+
-      '.sp-hero-stock{font-size:13px;opacity:.75;margin-bottom:0}\n'+
+      '.sp-hero-stock{font-size:13px;color:#5f6b62;margin-bottom:0}\n'+
       '.sp-body{max-width:1100px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}\n'+
       '@media(max-width:700px){.sp-body{grid-template-columns:1fr;padding:24px 16px 60px}}\n'+
       '.sp-img-box{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e5dc;display:flex;align-items:center;justify-content:center;min-height:280px;padding:20px;box-sizing:border-box}\n'+
