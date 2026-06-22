@@ -1,7 +1,7 @@
 ---
 title: TẠO SÓNG Maxspect MJ-GF 308
 slug: maxspect-mj-gf-308-pump
-category: phu-kien
+category: tao-song
 short_description: Giải pháp tạo dòng chảy tuần hoàn tiên tiến cho bể cá biển
 image: /images/uploads/screenshot-2026-06-10-at-14.50.24.png
 gallery:
