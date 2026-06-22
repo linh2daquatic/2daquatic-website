@@ -1,7 +1,7 @@
 ---
 title: TẠO SÓNG Jecod DMP-20M
 slug: jecod-dmp-20m
-category: thiet-bi-loc
+category: tao-song
 short_description: Tạo sóng thông minh thế hệ mới áp dụng thiết kế đi dây nguồn bên ngoài bể
 image: /images/uploads/screenshot-2026-06-20-at-16.49.45.png
 gallery:
