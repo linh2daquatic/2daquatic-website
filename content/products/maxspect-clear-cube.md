@@ -1,7 +1,7 @@
 ---
 title: THAN HOẠT TÍNH Maxspect NANO TECH-CLEAR-CUBE
 slug: maxspect-clear-cube
-category: phu-kien
+category: vat-lieu-loc
 short_description: "Vật liệu lọc nước cao cấp gốc Tourmaline giúp phân hủy chất
   hữu cơ hòa tan (DOM) và làm trong nước bể cá "
 image: /images/uploads/screenshot-2026-06-14-at-11.16.40.png
