@@ -588,6 +588,36 @@
   .hero-nav-arrows { display: none; }
   .slide-dots { display: none; }
 }
+
+/* ===== Nút "Xem tất cả" trong section Danh mục ===== */
+.categories .cat-view-all {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(0,212,184,.55);
+  background: rgba(0,212,184,.08);
+  color: #00d4b8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: .2px;
+  transition: background .25s, border-color .25s, color .25s, transform .15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.categories .cat-view-all svg { transition: transform .25s; }
+.categories .cat-view-all:hover {
+  background: #00d4b8;
+  border-color: #00d4b8;
+  color: #0a1628;
+  transform: translateY(-1px);
+}
+.categories .cat-view-all:hover svg { transform: translateX(4px); }
+.categories .cat-view-all:active { transform: translateY(0); }
 </style>
 </head>
 <body>
