@@ -1,7 +1,7 @@
 ---
 title: SKIMMER Red Starfish SQ90-PLUS
 slug: redstar-sq90-plus
-category: thiet-bi-loc
+category: skimmer
 short_description: Skimmer chuyên dụng dành cho bể cá biển mini và bể nano
 image: /images/uploads/screenshot-2026-06-20-at-16.14.05.png
 gallery: []
