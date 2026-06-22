@@ -1,7 +1,8 @@
 ---
 title: 2D Infinity S60
 slug: 2d-infinity-s60
-category: be-ca-infinity
+category: be-ca-bien
+order: 1
 short_description: "Giải pháp hoàn hảo cho hệ sinh thái biển chuyên nghiệp và bền vững. "
 image: /images/uploads/img_8724.jpg
 price: 9300000
