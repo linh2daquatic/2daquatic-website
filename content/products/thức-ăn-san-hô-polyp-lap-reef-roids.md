@@ -1,7 +1,7 @@
 ---
 title: THỨC ĂN SAN HÔ Polyp Lap REEF ROIDS
 slug: polyp lab-reef-roids
-category: hoa-chat
+category: thuc-an
 short_description: Thức ăn dành cho san hô từ hỗn hợp các loài sinh vật phù du(zooplankton)
 image: /images/uploads/screenshot-2026-06-15-at-16.32.59.png
 price: 600000
