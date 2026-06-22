@@ -1,7 +1,7 @@
 ---
 title: MUỐI BIỂN  Aquaforest REEF SALT
 slug: "aquaforest-reef-salt "
-category: hoa-chat
+category: muoi
 short_description: Muối chuyên dụng cho cả bể san hô hỗn hợp và bể san hô cứng (SPS)
 image: /images/uploads/screenshot-2026-06-17-at-16.09.21.png
 price: 2050000
