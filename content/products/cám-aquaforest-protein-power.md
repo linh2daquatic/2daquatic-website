@@ -1,10 +1,10 @@
 ---
 title: CÁM Aquaforest PROTEIN POWER
 slug: aquaforest-protein-power
-category: hoa-chat
+category: thuc-an
 short_description: "AF Protein Power là cám hạt mềm, hàm lượng protein cao. "
 image: /images/uploads/screenshot-2026-06-15-at-14.18.20.png
-price: 239999
+price: 240000
 unit: Lọ
 specs:
   - key: "Tên Sản Phẩm "
