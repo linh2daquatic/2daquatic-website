@@ -546,7 +546,9 @@ try {
       '  <img src="/images/logo-light.png" alt="2D Aquatic" width="120" style="margin-bottom:16px;height:auto">\n'+
       '  <p style="color:rgba(255,255,255,.7);margin-bottom:8px">Bể cá biển cao cấp tại Hà Nội</p>\n'+
       '  <p style="color:rgba(255,255,255,.5);font-size:14px">305 Nguyễn Văn Cừ, Bồ Đề, Long Biên · <a href="tel:0975112334" style="color:#00d4b8">0975.112.334</a></p>\n'+
-      '</footer>\n</body>\n</html>\n';
+      '</footer>\n'+
+      '<script>(function(){var ts=document.querySelectorAll(".sp-thumb");var m=document.getElementById("sp-main-img");ts.forEach(function(t){t.addEventListener("click",function(){if(m)m.src=this.getAttribute("data-full");ts.forEach(function(x){x.classList.remove("active")});this.classList.add("active")})})})();<\/script>\n'+
+      '</body>\n</html>\n';
   }
 
     // Generate product detail pages & update sitemap
