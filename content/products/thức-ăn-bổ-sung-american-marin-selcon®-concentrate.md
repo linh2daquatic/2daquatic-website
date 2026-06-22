@@ -1,7 +1,7 @@
 ---
 title: THỨC ĂN BỔ SUNG  American marin SELCON® CONCENTRATE
 slug: american-marin-selcon®-concentrate
-category: hoa-chat
+category: thuc-an
 short_description: "Thực phẩm bổ sung vitamin và axit béo cao cấp dành có sinh vật biển "
 image: /images/uploads/screenshot-2026-06-17-at-18.35.13.png
 price: 650000
