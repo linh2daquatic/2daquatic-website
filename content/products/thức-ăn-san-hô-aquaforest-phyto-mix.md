@@ -1,7 +1,7 @@
 ---
 title: THỨC ĂN SAN HÔ Aquaforest PHYTO MIX
 slug: aquaforest-phytomix
-category: hoa-chat
+category: thuc-an
 short_description: Hỗn hợp tảo phù du chuyên dành cho san hô mềm, gorgonia và san hô NPS
 image: /images/uploads/screenshot-2026-06-15-at-17.54.34.png
 price: 650000
