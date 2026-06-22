@@ -1,7 +1,7 @@
 ---
 title: "SKIMMER Maxspect MJ-SK 2400 "
 slug: maxspect-sk-gen2-skimmer-2400
-category: thiet-bi-loc
+category: skimmer
 short_description: "Skimmer trang bị bánh xe kép và cửa nạp kép, phao chống tràn. "
 image: /images/uploads/screenshot-2026-06-05-at-14.09.35.png
 gallery:
