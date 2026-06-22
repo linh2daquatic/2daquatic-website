@@ -1,7 +1,7 @@
 ---
 title: BƠM Maxspect Jump MJ-DC12k
 slug: maxspect-mj-dc12k
-category: thiet-bi-loc
+category: bom
 short_description: Dòng bơm nước thông minh thế hệ mới, sử dụng công nghệ dòng điện một chiều (DC)
 image: /images/uploads/screenshot-2026-06-19-at-15.37.13.png
 gallery:
