@@ -1,7 +1,7 @@
 ---
 title: MUỐI BIỂN Tropic Marin® SYN-BIOTIC
 slug: "tropic-marin-syn-biotic "
-category: hoa-chat
+category: muoi
 short_description: Muối biển tinh khiết bổ sung vi khuẩn probiotic và prebiotic.
 image: /images/uploads/screenshot-2026-06-17-at-15.42.01.png
 price: 3250000
