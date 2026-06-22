@@ -1,7 +1,7 @@
 ---
 title: SKIMMER Red Starfish SQ50-PRO
 slug: redstar-sq50-pro
-category: thiet-bi-loc
+category: skimmer
 short_description: Skimmer chuyên dụng dành cho bể cá biển mini và bể nano
 image: /images/uploads/screenshot-2026-06-20-at-15.24.37.png
 gallery: []
