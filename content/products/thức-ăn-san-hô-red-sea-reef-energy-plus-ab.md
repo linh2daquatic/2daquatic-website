@@ -1,7 +1,7 @@
 ---
 title: THỨC ĂN SAN HÔ Red Sea REEF ENERGY PLUS AB+ (250 ML)
 slug: " red-sea-reef-energy-plus-ab+"
-category: hoa-chat
+category: thuc-an
 short_description: Siêu Thực Phẩm Toàn Diện Cho San Hô
 image: /images/uploads/screenshot-2026-06-17-at-19.09.46.png
 price: 500000
