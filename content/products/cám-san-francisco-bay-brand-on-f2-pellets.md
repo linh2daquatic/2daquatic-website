@@ -1,7 +1,7 @@
 ---
 title: CÁM San Francisco Bay Brand ON F2 PELLETS
 slug: san francisco bay brand-on f2-pellets
-category: hoa-chat
+category: thuc-an
 short_description: Thức ăn dạng viên, chìm chậm dành cho cá biển ăn thịt và ăn tạp.
 image: /images/uploads/screenshot-2026-06-15-at-15.21.42.png
 gallery:
