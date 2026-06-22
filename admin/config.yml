@@ -204,6 +204,7 @@ collections:
         display_fields: ['labels.*.label']
         search_fields: ['labels.*.label']
         hint: 'Danh sách tự lấy từ "🏷️ Tên danh mục (hiển thị trên web)". Sửa danh mục ở đó là dropdown này tự cập nhật — không cần sửa code.'
+      - {label: '⭐ Thứ tự ưu tiên hiển thị', name: 'order', widget: 'number', value_type: 'int', required: false, hint: 'Để TRỐNG = xếp tự động. Điền 1, 2, 3... cho sản phẩm muốn hiện ĐẦU trang Tất cả sản phẩm (số nhỏ hiện trước).'}
       - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
       - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}
       - {label: 'Ảnh chính', name: 'image', widget: 'image'}

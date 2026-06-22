@@ -158,6 +158,8 @@ try {
     data.featured = String(data.featured).trim() === 'true';
     if (!Array.isArray(data.gallery)) data.gallery = [];
     if (!Array.isArray(data.specs)) data.specs = [];
+    var _ord = parseInt(String(data.order == null ? '' : data.order).replace(/[^\d-]/g, ''), 10);
+    data.order = isNaN(_ord) ? null : _ord;
     return data;
   }
 
@@ -180,6 +182,8 @@ try {
       });
   }
   products.sort(function (a, b) {
+    var ao = (a.order == null) ? Infinity : a.order, bo = (b.order == null) ? Infinity : b.order;
+    if (ao !== bo) return ao - bo;
     return ((b.featured ? 1 : 0) - (a.featured ? 1 : 0))
       || String(b.date || '').localeCompare(String(a.date || ''));
   });

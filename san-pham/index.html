@@ -642,6 +642,8 @@
     .then(function(data){
       all = Array.isArray(data) ? data : [];
       all.sort(function(a,b){
+        var ao=(a.order==null)?Infinity:a.order, bo=(b.order==null)?Infinity:b.order;
+        if(ao!==bo) return ao-bo;
         var ai=CATORDER.indexOf(a.category); if(ai<0)ai=999;
         var bi=CATORDER.indexOf(b.category); if(bi<0)bi=999;
         return ai-bi;
