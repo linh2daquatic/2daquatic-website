@@ -146,24 +146,13 @@ collections:
       - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: 2d-promax-s60'}
       - label: 'Danh mục'
         name: 'category'
-        widget: 'select'
-        options:
-          - { label: 'San hô', value: 'sinh-vat-san-ho' }
-          - { label: 'Cá', value: 'sinh-vat-ca' }
-          - { label: 'Phụ kiện', value: 'phu-kien' }
-          - { label: 'Bể cá biển', value: 'be-ca-bien' }
-          - { label: 'Muối', value: 'muoi' }
-          - { label: 'Bơm', value: 'bom' }
-          - { label: 'Đèn', value: 'thiet-bi-den' }
-          - { label: 'Chân tủ', value: 'chan-tu' }
-          - { label: 'Skimmer', value: 'skimmer' }
-          - { label: 'Tạo sóng', value: 'tao-song' }
-          - { label: 'Vật liệu lọc', value: 'vat-lieu-loc' }
-          - { label: 'Hoá chất', value: 'hoa-chat' }
-          - { label: 'Thức ăn sinh vật', value: 'thuc-an' }
-          - { label: 'Layout', value: 'layout' }
-          - { label: 'Dịch vụ', value: 'dich-vu' }
-          - { label: 'Thiết bị tự động', value: 'thiet-bi-tu-dong' }
+        widget: 'relation'
+        collection: 'settings'
+        file: 'category_labels'
+        value_field: 'labels.*.code'
+        display_fields: ['labels.*.label']
+        search_fields: ['labels.*.label']
+        hint: 'Danh sách tự lấy từ "🏷️ Tên danh mục (hiển thị trên web)". Sửa danh mục ở đó là dropdown này tự cập nhật — không cần sửa code.'
       - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
       - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}
       - {label: 'Ảnh chính', name: 'image', widget: 'image'}
