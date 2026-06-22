@@ -1,7 +1,8 @@
 ---
 title: 2D ProMax S60
 slug: 2d-promax-s60
-category: be-ca-promax
+category: be-ca-bien
+order: 2
 short_description: "- Bể lọc vách thiết kế nhỏ gọn, thẩm mỹ & tối ưu chi phí."
 image: /images/slide1-desktop.jpg
 gallery:
