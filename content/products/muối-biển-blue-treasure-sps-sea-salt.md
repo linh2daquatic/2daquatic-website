@@ -1,7 +1,7 @@
 ---
 title: MUỐI BIỂN BLUE TREASURE SPS SEA SALT 6.7 KG
 slug: blue-treasure-sps-reef-sea-salt
-category: hoa-chat
+category: muoi
 short_description: Muối chuyên dụng cho bể cá biển và san hô đặc biệt là SPS
 image: /images/uploads/screenshot-2026-06-17-at-18.13.06.png
 gallery:
