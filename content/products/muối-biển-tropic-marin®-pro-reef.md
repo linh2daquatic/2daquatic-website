@@ -1,7 +1,7 @@
 ---
 title: MUỐI BIỂN Tropic Marin® PRO-REEF
 slug: "tropic-marin-pro-reef  "
-category: hoa-chat
+category: muoi
 short_description: Muối biển tinh khiết dùng trong dược phẩm cho bể cá cảnh san hô.
 image: /images/uploads/screenshot-2026-06-17-at-15.20.35.png
 price: 2950000
