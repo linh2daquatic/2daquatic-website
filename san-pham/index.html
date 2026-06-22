@@ -596,11 +596,26 @@
 </div>
 
 <style>
-  .pf-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 28px}
-  .pf-chip{border:1px solid rgba(255,255,255,.18);background:transparent;color:inherit;
-    padding:7px 16px;border-radius:999px;font-size:14px;cursor:pointer;transition:.2s;font-family:inherit}
-  .pf-chip:hover{border-color:var(--reef,#16a085)}
-  .pf-chip.active{background:var(--reef,#16a085);border-color:var(--reef,#16a085);color:#04201a;font-weight:600}
+  /* ===== Ẩn giới thiệu, đưa 16 danh mục lên trên ===== */
+  #san-pham{padding-top:92px}
+  #san-pham .section-eyebrow{display:none}
+  #san-pham .section-lead{display:none}
+  #san-pham .section-title{font-size:28px;line-height:1.25;margin:0 0 22px}
+  /* ===== Bộ lọc 16 danh mục — pill IN HOA rõ ràng ===== */
+  .pf-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 30px}
+  .pf-chip{border:1.5px solid #d6d2c4;background:#fff;color:#2b2a26;
+    padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:600;cursor:pointer;
+    transition:.18s;font-family:inherit;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.05);
+    text-transform:uppercase;letter-spacing:.4px}
+  .pf-chip:hover{border-color:var(--reef,#16a085);color:var(--reef,#16a085);transform:translateY(-1px)}
+  .pf-chip.active{background:var(--reef,#16a085);border-color:var(--reef,#16a085);color:#fff;
+    box-shadow:0 4px 14px rgba(22,160,133,.30)}
+  @media(max-width:640px){
+    #san-pham{padding-top:72px}
+    #san-pham .section-title{font-size:22px;margin:0 0 16px}
+    .pf-filters{gap:8px}
+    .pf-chip{font-size:12px;padding:8px 13px;letter-spacing:.2px}
+  }
   .pf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
   .pf-card{display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.1);
     border-radius:16px;overflow:hidden;background:rgba(255,255,255,.03);cursor:pointer;transition:.25s}
@@ -645,15 +660,8 @@
 (function () {
   var ZALO = "https://zalo.me/0975112334";
   var FB = "https://www.facebook.com/2DAquatic/";
-  var CAT = {
-    "be-ca-promax": "Bể cá - ProMax", "be-ca-infinity": "Bể cá - Infinity",
-    "be-ca-custom": "Bể cá - Custom", "thiet-bi-loc": "Lọc & Skimmer",
-    "thiet-bi-den": "Đèn LED", "thiet-bi-bom": "Bơm & Wavemaker",
-    "vat-lieu-loc": "Vật liệu lọc", "dung-cu-san-ho": "Dụng cụ san hô",
-    "hoa-chat": "Reef Balance",
-    "sinh-vat-ca": "Cá biển", "sinh-vat-san-ho": "San hô", "phu-kien": "Phụ kiện khác"
-  };
-  var CATORDER = ["be-ca-promax","be-ca-infinity","be-ca-custom","thiet-bi-loc","thiet-bi-den","thiet-bi-bom","vat-lieu-loc","dung-cu-san-ho","hoa-chat","sinh-vat-ca","sinh-vat-san-ho","phu-kien"];
+  var CAT = {"sinh-vat-san-ho":"San hô","sinh-vat-ca":"Cá","phu-kien":"Phụ kiện","be-ca-bien":"Bể cá biển","muoi":"Muối","bom":"Bơm","thiet-bi-den":"Đèn","chan-tu":"Chân tủ","skimmer":"Skimmer","tao-song":"Tạo sóng","vat-lieu-loc":"Vật liệu lọc","hoa-chat":"Hoá chất","thuc-an":"Thức ăn sinh vật","layout":"Layout","dich-vu":"Dịch vụ","thiet-bi-tu-dong":"Thiết bị tự động"};
+  var CATORDER = ["sinh-vat-san-ho","sinh-vat-ca","phu-kien","be-ca-bien","muoi","bom","thiet-bi-den","chan-tu","skimmer","tao-song","vat-lieu-loc","hoa-chat","thuc-an","layout","dich-vu","thiet-bi-tu-dong"];
   var grid = document.getElementById("pf-grid");
   var filters = document.getElementById("pf-filters");
   var empty = document.getElementById("pf-empty");
