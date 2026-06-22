@@ -487,9 +487,10 @@ try {
       '.sp-crumb a{color:#8a887d;text-decoration:none}\n'+
       '.sp-crumb a:hover{color:#16a085}\n'+
       '.sp-hero-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#16a085;margin-bottom:8px}\n'+
-      '.sp-hero-title{font-family:Fraunces,serif;font-size:clamp(24px,4vw,38px);font-weight:700;margin:0 0 14px;line-height:1.2;color:#0a1628}\n'+
-      '.sp-hero-price{margin:0 0 10px}\n'+
-      '.sp-hero-stock{font-size:13px;color:#5f6b62;margin-bottom:0}\n'+
+      '.sp-hero-title{font-family:Fraunces,serif;font-size:clamp(22px,3.2vw,30px);font-weight:700;margin:0 0 12px;line-height:1.25;color:#0a1628}\n'+
+      '.sp-hero-price{margin:0}\n'+
+      '.sp-hero-stock{font-size:13px;color:#5f6b62;margin:0}\n'+
+      '.sp-hero-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}\n'+
       '.sp-body{max-width:1100px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}\n'+
       '@media(max-width:700px){.sp-body{grid-template-columns:1fr;padding:24px 16px 60px}}\n'+
       '.sp-img-box{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e5dc;display:flex;align-items:center;justify-content:center;min-height:280px;padding:20px;box-sizing:border-box}\n'+
@@ -508,7 +509,7 @@ try {
       '</head>\n<body>\n'+
       // STICKY NAV (no back link in nav)
       '<header class="nav-wrap" style="position:sticky;top:0;background:rgba(10,22,40,0.97);backdrop-filter:blur(10px);z-index:100">\n'+
-      '  <nav style="max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n'+
+      '  <nav style="position:static;background:transparent;backdrop-filter:none;border:none;max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n'+
       '    <a href="/" style="text-decoration:none"><img src="/images/logo-light.png" alt="2D Aquatic" height="42" style="height:42px;width:auto"></a>\n'+
       '    <div style="display:flex;gap:20px;align-items:center">\n'+
       '      <a href="/be-ca/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Bể cá</a>\n'+
@@ -523,8 +524,10 @@ try {
       '    <div class="sp-crumb"><a href="/">Trang chủ</a> / <a href="/san-pham/">Sản phẩm</a> / '+escH(title)+'</div>\n'+
       '    <div class="sp-hero-cat">'+escH(catLabel)+'</div>\n'+
       '    <h1 class="sp-hero-title">'+escH(title)+'</h1>\n'+
-      '    <div class="sp-hero-price">'+priceHtml+'</div>\n'+
-      '    <div class="sp-hero-stock">'+(p.in_stock?'✅ Còn hàng':'⏳ Tạm hết hàng')+(p.warranty?' &nbsp;·&nbsp; 🛡️ Bảo hành: '+escH(p.warranty):'')+'</div>\n'+
+      '    <div class="sp-hero-meta">\n'+
+      '      <div class="sp-hero-price">'+priceHtml+'</div>\n'+
+      '      <div class="sp-hero-stock">'+(p.in_stock?'✅ Còn hàng':'⏳ Tạm hết hàng')+(p.warranty?' &nbsp;·&nbsp; 🛡️ Bảo hành: '+escH(p.warranty):'')+'</div>\n'+
+      '    </div>\n'+
       '  </div>\n</section>\n'+
       // MAIN BODY
       '<div class="sp-body">\n'+
