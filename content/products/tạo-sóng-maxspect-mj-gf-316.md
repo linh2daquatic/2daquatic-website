@@ -11,7 +11,7 @@ price: 3650000
 sale_price: 3200000
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: MJ-GF316
   - key: Kích Thước
     value: 30,8 x 8 x 4,3 cm
