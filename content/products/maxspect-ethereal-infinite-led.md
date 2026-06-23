@@ -12,7 +12,7 @@ price: 0
 sale_price: null
 unit: Cái
 specs:
-  - key: Model
+  - key: Tên Sản Phẩm
     value: Maxspect Ethereal Infinite LED E8-150
   - key: "Công Suất "
     value: 150W
