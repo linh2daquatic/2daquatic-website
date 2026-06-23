@@ -1,7 +1,7 @@
 ---
 title: VẬT LIỆU LỌC Maxspect NANO-TECH BIO-SPHERE (1 KG)
 slug: maxspect-Bio-sphere
-category: phu-kien
+category: vat-lieu-loc
 short_description: Sứ lọc sinh học cao cấp cho bể cá biển
 image: /images/uploads/screenshot-2026-06-11-at-13.21.20.png
 gallery:
