@@ -15,7 +15,7 @@ specs:
     value: 9000 L/H
   - key: Phù Hợp Với Bể
     value: 60-100 cm
-in_stock: false
+in_stock: true
 featured: false
 warranty: ""
 date: 2026-06-22T13:19:00.000Z
