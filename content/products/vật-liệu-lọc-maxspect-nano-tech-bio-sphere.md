@@ -9,12 +9,12 @@ gallery:
 price: 400000
 unit: Hộp
 specs:
-  - key: Model
+  - key: Tên Sản Phẩm
     value: Maxspect Nano-Tech Bio- Sphere
   - value: Phân hủy các chất độc hại trong nước, ổn định hệ vi sinh và cải thiện
       chất lượng nước.
     key: "Công Dụng "
-  - value: ~ 3.5 cm
+  - value: "~ 3.5 cm 1 viên "
     key: Kích Thước
   - key: Quy Cách Đóng Gói
     value: "Hộp 1 kg : 40-44 viên  "
