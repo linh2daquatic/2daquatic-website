@@ -12,7 +12,7 @@ price: 0
 sale_price: 0
 unit: "Tuýp "
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: "Maxspect Coral Glue "
   - key: "Công Dụng "
     value: Gắn frag san hô, đá, frag plug
