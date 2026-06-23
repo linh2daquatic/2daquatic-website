@@ -11,7 +11,7 @@ price: 4950000
 sale_price: 4300000
 unit: cái
 specs:
-  - key: "Model "
+  - key: "Tên Sản Phẩm "
     value: Maxspect MJ - L290
   - key: "Số Lượng Bóng Led "
     value: "48 Bóng "
