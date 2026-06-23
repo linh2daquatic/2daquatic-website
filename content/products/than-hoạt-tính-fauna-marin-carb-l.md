@@ -1,7 +1,7 @@
 ---
 title: THAN HOẠT TÍNH Fauna Marin CARB L
 slug: faunamarin-carbl
-category: hoa-chat
+category: vat-lieu-loc
 short_description: Than hoạt tính tinh khiết xử lý nước
 image: /images/uploads/screenshot-2026-06-16-at-15.33.24.png
 gallery:
