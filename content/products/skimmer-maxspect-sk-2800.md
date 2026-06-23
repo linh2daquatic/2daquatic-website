@@ -11,7 +11,7 @@ price: 12500000
 sale_price: 12000000
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect Jump Skimmer SK 2800
   - key: Phù Hợp Bể
     value: 900-2700 L
