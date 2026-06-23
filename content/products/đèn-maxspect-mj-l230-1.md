@@ -11,7 +11,7 @@ price: 1950000
 sale_price: 1850000
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect MJ-L230
   - key: "Công Suất "
     value: 30W
@@ -27,7 +27,7 @@ specs:
     value: 845 g
 in_stock: true
 featured: false
-warranty: 5 năm
+warranty: ""
 date: 2026-06-11T18:15:00.000Z
 ---
 * Thiết kế: Thân đèn làm bằng nhôm nguyên khối siêu mỏng với lớp hoàn thiện nhám mờ sang trọng, tản nhiệt hiệu quả mà không cần quạt gió, giúp vận hành cực kỳ êm ái.
