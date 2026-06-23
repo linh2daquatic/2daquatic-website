@@ -13,7 +13,7 @@ specs:
   - key: Công Suất
     value: 28W
   - key: Lưu Lượng Nước
-    value: "3500"
+    value: 3500 L/H
   - key: "Cột Nước Tối Đa "
     value: 3.5 m
   - key: Phù Hợp Bể
