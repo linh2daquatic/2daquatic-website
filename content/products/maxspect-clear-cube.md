@@ -12,7 +12,7 @@ price: 0
 sale_price: null
 unit: hộp
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect Nano Tech-Clear-Cube
   - key: Công Dụng
     value: Cải thiện chất lượng nước
