@@ -11,7 +11,7 @@ price: 3250000
 sale_price: 2950000
 unit: cái
 specs:
-  - key: Model
+  - key: Tên Sản Phẩm
     value: "MJ-GF308 "
   - key: Kích Thước
     value: 22,3 x 7,2 x 3,8 cm
