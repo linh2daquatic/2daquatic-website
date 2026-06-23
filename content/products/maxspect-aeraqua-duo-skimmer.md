@@ -11,7 +11,7 @@ price: 0
 sale_price: null
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect Aeraqua Duo AD 600
   - key: Phù Hợp Bể
     value: 700-2100 L
