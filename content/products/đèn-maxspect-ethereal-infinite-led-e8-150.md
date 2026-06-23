@@ -10,7 +10,7 @@ gallery:
 price: 0
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect Ethereal Infinite LED E8-150
   - key: "Công Suất "
     value: 230W
