@@ -11,7 +11,7 @@ price: 5500000
 sale_price: 5000000
 unit: cái
 specs:
-  - key: Model
+  - key: Tên Sản Phẩm
     value: Maxspec Jump Skimmer SK 2200
   - key: Phù hợp bể
     value: 135–600L
