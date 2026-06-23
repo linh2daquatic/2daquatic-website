@@ -1,7 +1,7 @@
 ---
 title: THAN HOẠT TÍNH Red Sea REEF SPECT CARBON
 slug: redsea-reefspect-carbon
-category: hoa-chat
+category: vat-lieu-loc
 short_description: Vật liệu cao cấp loại bỏ nhanh chóng các chất ô nhiễm hữu cơ
 image: /images/uploads/screenshot-2026-06-16-at-11.43.11.png
 gallery:
