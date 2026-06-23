@@ -11,7 +11,7 @@ price: 3950000
 sale_price: 3200000
 unit: cái
 specs:
-  - key: Model
+  - key: "Tên Sản Phẩm "
     value: Maxspect MJ-L260
   - key: Số Lượng Bóng Led
     value: "36 Bóng "
