@@ -1440,8 +1440,18 @@
         if (tagEl && slideData.tagline) tagEl.textContent = slideData.tagline;
 
         // 5. Update images — CHỈ đổi khi khác ảnh đang hiển thị (tránh nháy ảnh cũ)
-        // Ảnh slide đã được build.js bake sẵn vào <img src> + preload (luôn đúng theo CMS).
-        // KHÔNG đổi ảnh ở client để tránh hiện tượng nháy ảnh cũ khi mới load.
+        var img = slideEl.querySelector('.slide-bg img');
+        var source = slideEl.querySelector('.slide-bg source');
+        if (img && slideData.image_desktop) {
+          var curImg = (img.getAttribute('src') || '').split('/').pop().split('?')[0];
+          var newImg = slideData.image_desktop.split('/').pop().split('?')[0];
+          if (curImg !== newImg) img.src = slideData.image_desktop;
+        }
+        if (source && slideData.image_mobile) {
+          var curSrc = (source.getAttribute('srcset') || '').split('/').pop().split('?')[0];
+          var newSrc = slideData.image_mobile.split('/').pop().split('?')[0];
+          if (curSrc !== newSrc) source.srcset = slideData.image_mobile;
+        }
 
         // 6. Update CTA
         var ctaEl = slideEl.querySelector('.slide-cta');

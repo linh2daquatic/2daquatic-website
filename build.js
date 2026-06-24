@@ -648,7 +648,7 @@ try {
       if(!km) return m;
       var v=homeData[km[1]];
       if(!v) return m;
-      return '<img'+attrs.replace(/src="[^"]*"/,'src="'+v+'"')+'>';
+      return '<img'+attrs.replace(/\ssrc="[^"]*"/,' src="'+v+'"')+'>';
     });
     // Slide source srcset (data-cms-srcset="key") — order-independent
     homeHtml=homeHtml.replace(/<source([^>]*)>/g,function(m,attrs){
@@ -656,8 +656,11 @@ try {
       if(!km) return m;
       var v=homeData[km[1]];
       if(!v) return m;
-      return '<source'+attrs.replace(/srcset="[^"]*"/,'srcset="'+v+'"')+'>';
+      return '<source'+attrs.replace(/\ssrcset="[^"]*"/,' srcset="'+v+'"')+'>';
     });
+    // Preload ảnh hero (slide 1): cập nhật theo CMS để preload đúng ảnh, tránh tải ảnh cũ
+    if(homeData['slide1_img_desktop']) homeHtml=homeHtml.replace('href="/images/slide1-desktop.jpg"','href="'+homeData['slide1_img_desktop']+'"');
+    if(homeData['slide1_img_mobile'])  homeHtml=homeHtml.replace('href="/images/slide1-mobile.jpg"','href="'+homeData['slide1_img_mobile']+'"');
     // Slide 3 image: CSS injection (SVG is 7500+ chars, regex unreliable)
     var s3img=homeData['slide3_img_desktop'];
     if(s3img){
