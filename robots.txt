@@ -44,3 +44,4 @@ Disallow: /
 
 # Sitemap location
 Sitemap: https://2daquatic.com/sitemap.xml
+
