@@ -1,6 +1,6 @@
 ---
-title: BƠM Ou Gecai TX-1000
-slug: OU-GECAI-TX-1000
+title: BƠM TX-1000
+slug: BOM-TX-1000
 category: bom
 short_description: "Bơm chìm mini phổ biến dành cho bể lọc vách "
 image: /images/uploads/screenshot-2026-06-23-at-15.17.05.png
