@@ -1,28 +1,32 @@
 ---
-title: "San Hô Búa (Hammer Coral)"
+title: San Hô Búa (Hammer Coral)
 slug: san-ho-bua-hammer
 category: sinh-vat-san-ho
-short_description: "San Hô Búa với đầu tua hình chiếc búa/chữ T phấp phới, là LPS được yêu thích vì màu đẹp và chuyển động mềm mại."
-image: ""
-gallery: []
+short_description: San Hô Búa với đầu tua hình chiếc búa/chữ T phấp phới, là LPS
+  được yêu thích vì màu đẹp và chuyển động mềm mại.
+image: /images/uploads/screenshot-2026-06-25-at-18.19.48.png
+gallery:
+  - /images/uploads/screenshot-2026-06-25-at-18.20.34.png
+  - /images/uploads/screenshot-2026-06-25-at-18.20.24.png
+  - /images/uploads/screenshot-2026-06-25-at-18.19.59.png
 price: 0
 sale_price: ""
-unit: "Con"
+unit: Con
 specs:
-  - key: "Tên khoa học"
-    value: "Euphyllia ancora"
-  - key: "Phân loại"
-    value: "LPS"
-  - key: "Độ khó nuôi"
-    value: "Trung bình"
-  - key: "Nhiệt độ"
-    value: "24–26°C"
-  - key: "Ánh sáng"
-    value: "Trung bình"
-  - key: "Dòng chảy"
-    value: "Trung bình (nhẹ–vừa)"
-  - key: "Vị trí đặt"
-    value: "Đá giữa, cách loài khác"
+  - key: Tên khoa học
+    value: Euphyllia ancora
+  - key: Phân loại
+    value: LPS
+  - key: Độ khó nuôi
+    value: Trung bình
+  - key: Nhiệt độ
+    value: 24–26°C
+  - key: Ánh sáng
+    value: Trung bình
+  - key: Dòng chảy
+    value: Trung bình (nhẹ–vừa)
+  - key: Vị trí đặt
+    value: Đá giữa, cách loài khác
 in_stock: true
 featured: false
 warranty: ""
