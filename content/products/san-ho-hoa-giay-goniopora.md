@@ -1,28 +1,30 @@
 ---
-title: "San Hô Hoa Giấy (Goniopora / Flowerpot)"
-slug: san-ho-hoa-giay-goniopora
+title: San Hô Sọ (Goniopora / Flowerpot)
+slug: san-ho-so-goniopora
 category: sinh-vat-san-ho
 short_description: "Goniopora bung hàng trăm polyp dài như một chậu hoa lay động "
-image: ""
-gallery: []
+image: /images/uploads/screenshot-2026-06-25-at-14.08.28.png
+gallery:
+  - /images/uploads/screenshot-2026-06-25-at-14.09.11.png
+  - /images/uploads/screenshot-2026-06-25-at-14.09.21.png
 price: 0
 sale_price: ""
-unit: "Con"
+unit: Con
 specs:
-  - key: "Tên khoa học"
-    value: "Goniopora sp."
-  - key: "Phân loại"
-    value: "LPS"
-  - key: "Độ khó nuôi"
-    value: "Khó"
-  - key: "Nhiệt độ"
-    value: "24–26°C"
-  - key: "Ánh sáng"
-    value: "Trung bình"
-  - key: "Dòng chảy"
-    value: "Trung bình"
-  - key: "Vị trí đặt"
-    value: "Đá/nền giữa"
+  - key: Tên khoa học
+    value: Goniopora sp.
+  - key: Phân loại
+    value: LPS
+  - key: Độ khó nuôi
+    value: Khó
+  - key: Nhiệt độ
+    value: 24–26°C
+  - key: Ánh sáng
+    value: Trung bình
+  - key: Dòng chảy
+    value: Trung bình
+  - key: Vị trí đặt
+    value: Đá/nền giữa
 in_stock: true
 featured: false
 warranty: ""
