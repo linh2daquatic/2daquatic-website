@@ -1,28 +1,30 @@
 ---
-title: "San Hô Duncan (Duncan Coral)"
+title: San Hô Duncan (Duncan Coral)
 slug: san-ho-duncan
 category: sinh-vat-san-ho
-short_description: "San Hô Duncan có polyp dài như bông hoa cúc xanh–cam, háu ăn và lớn nhanh, dễ chăm."
-image: ""
-gallery: []
+short_description: San Hô Duncan có polyp dài như bông hoa cúc xanh–cam, háu ăn
+  và lớn nhanh, dễ chăm.
+image: /images/uploads/screenshot-2026-06-25-at-11.23.35.png
+gallery:
+  - /images/uploads/screenshot-2026-06-25-at-11.24.02.png
 price: 0
 sale_price: ""
-unit: "Con"
+unit: Con
 specs:
-  - key: "Tên khoa học"
-    value: "Duncanopsammia axifuga"
-  - key: "Phân loại"
-    value: "LPS"
-  - key: "Độ khó nuôi"
-    value: "Dễ"
-  - key: "Nhiệt độ"
-    value: "24–26°C"
-  - key: "Ánh sáng"
-    value: "Trung bình"
-  - key: "Dòng chảy"
-    value: "Trung bình"
-  - key: "Vị trí đặt"
-    value: "Đá giữa"
+  - key: Tên khoa học
+    value: Duncanopsammia axifuga
+  - key: Phân loại
+    value: LPS
+  - key: Độ khó nuôi
+    value: Dễ
+  - key: Nhiệt độ
+    value: 24–26°C
+  - key: Ánh sáng
+    value: Trung bình
+  - key: Dòng chảy
+    value: Trung bình
+  - key: Vị trí đặt
+    value: Tầng thấp - trung bình
 in_stock: true
 featured: false
 warranty: ""
