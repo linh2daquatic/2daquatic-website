@@ -1335,8 +1335,8 @@
       z-index: 2;
     }
     .hamburger span { width: 18px; }
-    /* Logo absolutely centered — never shifted by side elements */
-    .logo {
+    /* Logo absolutely centered — never shifted by side elements (CHỈ logo trong nav) */
+    nav .logo {
       order: 2;
       position: absolute;
       left: 50%;

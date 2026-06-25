@@ -21,9 +21,9 @@
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-# ===== CSS - Cache 1 ngày =====
+# ===== CSS - Luôn revalidate (đổi CSS là hiện ngay sau deploy) =====
 /css/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
 
 /js/*
