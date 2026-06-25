@@ -4,7 +4,7 @@ slug: 2d-infinity-s60
 category: be-ca-bien
 order: 1
 short_description: "Giải pháp hoàn hảo cho hệ sinh thái biển chuyên nghiệp và bền vững. "
-image: /images/uploads/img_8724.jpg
+image: /images/uploads/2a3d74f6-b237-4ae9-8d06-2136587b116a.png
 price: 9300000
 unit: Bể, sump, chân tủ, hệ thống ống SANKING
 specs:
