@@ -1350,6 +1350,14 @@
       pointer-events: auto;
       z-index: 1;
     }
+    /* Fix: logo footer KHÔNG bị rule căn giữa logo nav kéo ra giữa trang (mobile) */
+    .foot-brand .logo {
+      position: static;
+      transform: none;
+      left: auto;
+      top: auto;
+      order: 0;
+    }
     .logo img {
       height: 28px;
       max-height: 28px;
