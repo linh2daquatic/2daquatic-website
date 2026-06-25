@@ -2,6 +2,7 @@
 title: San Hô Duncan (Duncan Coral)
 slug: san-ho-duncan
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: San Hô Duncan có polyp dài như bông hoa cúc xanh–cam, háu ăn
   và lớn nhanh, dễ chăm.
 image: /images/uploads/screenshot-2026-06-25-at-11.23.35.png

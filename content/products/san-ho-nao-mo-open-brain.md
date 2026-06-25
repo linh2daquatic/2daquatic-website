@@ -2,6 +2,7 @@
 title: "San Hô Não Mở (Open Brain)"
 slug: san-ho-nao-mo-open-brain
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "San Hô Não Mở mềm mại nhiều nếp gấp, màu sắc loang lổ rực rỡ, thường đặt trên nền cát."
 image: ""
 gallery: []

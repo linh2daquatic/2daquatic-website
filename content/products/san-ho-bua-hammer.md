@@ -2,6 +2,7 @@
 title: San Hô Búa (Hammer Coral)
 slug: san-ho-bua-hammer
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: San Hô Búa với đầu tua hình chiếc búa/chữ T phấp phới, là LPS
   được yêu thích vì màu đẹp và chuyển động mềm mại.
 image: /images/uploads/screenshot-2026-06-25-at-18.19.48.png

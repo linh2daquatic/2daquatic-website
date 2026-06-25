@@ -2,6 +2,7 @@
 title: "San Hô Sủi Bọt (Frogspawn)"
 slug: san-ho-sui-bot-frogspawn
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "Frogspawn có đầu tua phân nhánh tròn như chùm trứng ếch/bọt nước, lung linh dưới đèn xanh."
 image: ""
 gallery: []

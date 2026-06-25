@@ -2,6 +2,7 @@
 title: "San Hô Tay Múa (Pulsing Xenia)"
 slug: san-ho-tay-mua-pulsing-xenia
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "Xenia nổi tiếng với động tác 'co bóp' nhịp nhàng của chùm polyp như những bàn tay vẫy."
 image: ""
 gallery: []

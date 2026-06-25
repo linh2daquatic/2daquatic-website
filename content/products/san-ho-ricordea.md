@@ -2,6 +2,7 @@
 title: "San Hô Ricordea (Ricordea)"
 slug: san-ho-ricordea
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "Ricordea phủ những hạt tròn óng ánh như ngọc, màu neon rực rỡ "
 image: ""
 gallery: []

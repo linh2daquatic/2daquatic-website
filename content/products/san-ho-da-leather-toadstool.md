@@ -2,6 +2,7 @@
 title: "San Hô Da (Leather/Toadstool)"
 slug: san-ho-da-leather-toadstool
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "San Hô Da hình chiếc nấm/ô lớn với bề mặt phủ polyp mịn, khỏe và dễ chăm."
 image: ""
 gallery: []

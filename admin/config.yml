@@ -204,6 +204,16 @@ collections:
         display_fields: ['labels.*.label']
         search_fields: ['labels.*.label']
         hint: 'Danh sách tự lấy từ "🏷️ Tên danh mục (hiển thị trên web)". Sửa danh mục ở đó là dropdown này tự cập nhật — không cần sửa code.'
+      - label: '🪸 Dòng san hô (chỉ dùng cho danh mục San hô)'
+        name: 'coral_line'
+        widget: 'select'
+        required: false
+        options:
+          - { label: 'Soft — san hô mềm', value: 'soft' }
+          - { label: 'LPS', value: 'lps' }
+          - { label: 'SPS', value: 'sps' }
+          - { label: 'NPS', value: 'nps' }
+        hint: 'Chỉ chọn cho sản phẩm thuộc danh mục San hô (Soft/LPS/SPS/NPS) để hiện bộ lọc phụ. Sản phẩm khác để trống.'
       - {label: '⭐ Thứ tự ưu tiên hiển thị', name: 'order', widget: 'number', value_type: 'int', required: false, hint: 'Để TRỐNG = xếp tự động. Điền 1, 2, 3... cho sản phẩm muốn hiện ĐẦU trang Tất cả sản phẩm (số nhỏ hiện trước).'}
       - {label: 'Mô tả ngắn (1-2 câu)', name: 'short_description', widget: 'text'}
       - {label: 'Mô tả đầy đủ', name: 'body', widget: 'markdown', hint: 'Có thể dùng định dạng đậm/nghiêng/list'}

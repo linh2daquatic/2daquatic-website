@@ -2,6 +2,7 @@
 title: "San Hô Montipora (SPS)"
 slug: san-ho-montipora
 category: sinh-vat-san-ho
+coral_line: sps
 short_description: "Montipora là SPS dễ vào nhất, có dạng đĩa, phiến hoặc bò lan với màu cam/xanh/tím bắt mắt."
 image: ""
 gallery: []

@@ -2,6 +2,7 @@
 title: "San Hô Kèn (Trumpet / Candy Cane)"
 slug: san-ho-ken-trumpet-candy-cane
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "San Hô Kèn gồm các 'đầu' tròn trên cuống như kẹo mút, dễ nuôi và nhân nhánh nhanh."
 image: ""
 gallery: []

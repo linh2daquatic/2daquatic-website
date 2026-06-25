@@ -2,6 +2,7 @@
 title: San Hô Trứng Mực (Bubble Coral)
 slug: san-ho-trung-muc-bubble
 category: sinh-vat-san-ho
+coral_line: lps
 order: ""
 short_description: "San Hô Trứng Mực phồng lên những túi nước tròn căng mọng ban ngày "
 image: /images/uploads/screenshot-2026-06-25-at-15.38.38.png

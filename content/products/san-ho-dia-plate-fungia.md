@@ -2,6 +2,7 @@
 title: San Hô Đĩa Bay (Plate Coral)
 slug: san-ho-dia-bay-plate-fungia
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: San Hô Đĩa Bay tròn dẹt sống đơn lẻ trên nền, nhiều màu, thậm
   chí **tự di chuyển** chậm trên cát.
 image: /images/uploads/screenshot-2026-06-25-at-18.14.55.png

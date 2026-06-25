@@ -2,6 +2,7 @@
 title: "San Hô Tổ Chim (Birdsnest)"
 slug: san-ho-to-chim-birdsnest
 category: sinh-vat-san-ho
+coral_line: sps
 short_description: "Birdsnest có cành nhỏ mảnh đan như tổ chim, màu hồng/xanh, mọc nhanh tạo bụi san hô đẹp."
 image: ""
 gallery: []

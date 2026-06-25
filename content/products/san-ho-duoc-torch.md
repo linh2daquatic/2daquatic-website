@@ -2,6 +2,7 @@
 title: San Hô Diêm (Torch Coral)
 slug: san-ho-diem-torch
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: San Hô Diêm có tua dài thẳng với đầu sáng như ngọn đuốc, đung
   đưa cực kỳ cuốn hút.
 image: /images/uploads/screenshot-2026-06-25-at-11.18.18.png

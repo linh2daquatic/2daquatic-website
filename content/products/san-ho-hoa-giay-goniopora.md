@@ -2,6 +2,7 @@
 title: San Hô Sọ (Goniopora / Flowerpot)
 slug: san-ho-so-goniopora
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "Goniopora bung hàng trăm polyp dài như một chậu hoa lay động "
 image: /images/uploads/screenshot-2026-06-25-at-14.08.28.png
 gallery:

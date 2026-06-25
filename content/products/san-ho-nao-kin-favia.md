@@ -2,6 +2,7 @@
 title: "San Hô Não Kín (Favia)"
 slug: san-ho-nao-kin-favia
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "Favia là khối san hô não đặc với polyp tròn xếp sát, viền màu tương phản nổi bật dưới đèn."
 image: ""
 gallery: []

@@ -2,6 +2,7 @@
 title: "San Hô Nấm (Mushroom Coral)"
 slug: san-ho-nam-mushroom
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "San Hô Nấm tròn dẹt như chiếc dù, nhiều màu, cực dễ nuôi và chịu được nước chưa hoàn hảo."
 image: ""
 gallery: []

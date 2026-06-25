@@ -456,6 +456,7 @@
     <p class="section-lead">Thiết bị, phụ kiện và sinh vật cho bể cá biển &amp; bể san hô — đèn LED reef, skimmer, hóa chất Reef Balance, cá biển, san hô. Bấm vào từng sản phẩm để xem chi tiết, hoặc liên hệ Zalo/Facebook để được tư vấn và báo giá.</p>
 
     <div id="pf-filters" class="pf-filters" aria-label="Lọc theo danh mục"></div>
+    <div id="pf-subfilters" class="pf-subfilters" aria-label="Lọc theo dòng san hô"></div>
     <div id="pf-grid" class="pf-grid"></div>
     <p id="pf-empty" class="pf-empty">Đang tải sản phẩm…</p>
   </div>
@@ -478,6 +479,12 @@
   #san-pham .section-title{font-size:28px;line-height:1.25;margin:0 0 22px}
   /* ===== Bộ lọc 16 danh mục — pill IN HOA rõ ràng ===== */
   .pf-filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 30px}
+  .pf-subfilters{display:none;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center;background:#eef7f4;border:1px solid #cfe8e1;border-radius:12px;padding:10px 16px;margin:-12px auto 30px;max-width:560px}
+  .pf-subfilters.show{display:flex}
+  .pf-sublabel{font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--reef,#16a085)}
+  .pf-subchip{border:1px solid #bfe0d7;background:#fff;color:#46685f;font-size:12px;font-weight:600;padding:5px 14px;border-radius:999px;cursor:pointer;transition:all .15s}
+  .pf-subchip:hover{border-color:var(--reef,#16a085);color:var(--reef,#16a085)}
+  .pf-subchip.active{background:var(--reef,#16a085);border-color:var(--reef,#16a085);color:#fff}
   .pf-chip{border:1.5px solid #d6d2c4;background:#fff;color:#2b2a26;
     padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:600;cursor:pointer;
     transition:.18s;font-family:inherit;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,.05);
@@ -542,11 +549,11 @@
   var empty = document.getElementById("pf-empty");
   var modal = document.getElementById("pf-modal");
   var modalBody = modal.querySelector(".pf-modal-body");
-  var all = [], current = "all";
+  var all = [], current = "all", coralLine = "all";
 
   function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
-  function vnd(n){ if(!n && n!==0) return ""; return Number(n).toLocaleString("vi-VN")+"đ"; }
+  function vnd(n){ if(!n) return "Liên hệ"; return Number(n).toLocaleString("vi-VN")+"đ"; }
   function mdLite(t){
     if(!t) return "";
     return esc(t)
@@ -572,8 +579,31 @@
       '</div></article>';
   }
 
+  var CORAL_CAT = "sinh-vat-san-ho";
+  var CORAL_LINES = [["soft","Soft"],["lps","LPS"],["sps","SPS"],["nps","NPS"]];
+  var subfilters = document.getElementById("pf-subfilters");
+  function renderSubfilters(){
+    if(current !== CORAL_CAT){ subfilters.classList.remove("show"); subfilters.innerHTML = ""; return; }
+    var present = {};
+    all.forEach(function(p){ if(p.category===CORAL_CAT && p.coral_line) present[p.coral_line] = 1; });
+    var html = '<span class="pf-sublabel">DÒNG SAN HÔ:</span>'+
+               '<button class="pf-subchip'+(coralLine==="all"?" active":"")+'" data-line="all">Tất cả</button>';
+    CORAL_LINES.forEach(function(pair){
+      if(present[pair[0]]) html += '<button class="pf-subchip'+(coralLine===pair[0]?" active":"")+'" data-line="'+pair[0]+'">'+pair[1]+'</button>';
+    });
+    subfilters.innerHTML = html;
+    subfilters.classList.add("show");
+    subfilters.querySelectorAll(".pf-subchip").forEach(function(b){
+      b.addEventListener("click", function(){
+        subfilters.querySelectorAll(".pf-subchip").forEach(function(x){x.classList.remove("active");});
+        b.classList.add("active"); coralLine = b.getAttribute("data-line"); render();
+      });
+    });
+  }
+
   function render(){
     var list = current==="all" ? all : all.filter(function(p){return p.category===current;});
+    if(current===CORAL_CAT && coralLine!=="all") list = list.filter(function(p){return (p.coral_line||"")===coralLine;});
     grid.innerHTML = list.map(card).join("");
   }
 
@@ -587,7 +617,7 @@
     filters.querySelectorAll(".pf-chip").forEach(function(b){
       b.addEventListener("click", function(){
         filters.querySelectorAll(".pf-chip").forEach(function(x){x.classList.remove("active");});
-        b.classList.add("active"); current = b.getAttribute("data-cat"); render();
+        b.classList.add("active"); current = b.getAttribute("data-cat"); coralLine = "all"; renderSubfilters(); render();
       });
     });
   }
@@ -650,7 +680,7 @@
       });
       if(!all.length){ empty.textContent = "Sản phẩm đang được cập nhật. Vui lòng liên hệ Zalo/Facebook để được tư vấn."; return; }
       empty.style.display = "none";
-      renderFilters(); render();
+      renderFilters(); renderSubfilters(); render();
     })
     .catch(function(){ empty.textContent = "Sản phẩm đang được cập nhật. Vui lòng liên hệ Zalo/Facebook."; });
 })();

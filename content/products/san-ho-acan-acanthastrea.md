@@ -2,6 +2,7 @@
 title: San Hô Acan ( Acanthastrea )
 slug: san-ho-acan-acanthastrea
 category: sinh-vat-san-ho
+coral_line: lps
 short_description: "Acan là LPS thịt dày với màu sắc rực rỡ bậc nhất "
 image: /images/uploads/screenshot-2026-06-25-at-18.09.14.png
 gallery:

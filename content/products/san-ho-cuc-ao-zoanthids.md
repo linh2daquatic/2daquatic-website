@@ -2,6 +2,7 @@
 title: "San Hô Cúc Áo (Zoanthids)"
 slug: san-ho-cuc-ao-zoanthids
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "San Hô Cúc Áo gồm hàng trăm polyp tròn nhiều màu rực rỡ, dễ nuôi và lan nhanh "
 image: ""
 gallery: []

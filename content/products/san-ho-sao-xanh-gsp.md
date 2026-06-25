@@ -2,6 +2,7 @@
 title: "San Hô Sao Xanh (Green Star Polyps)"
 slug: san-ho-sao-xanh-gsp
 category: sinh-vat-san-ho
+coral_line: soft
 short_description: "GSP là thảm polyp xanh neon nổi trên nền tím, lan cực nhanh tạo mảng cỏ rực rỡ."
 image: ""
 gallery: []
