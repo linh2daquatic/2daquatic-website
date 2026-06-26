@@ -1,0 +1,618 @@
+<style>
+  .cb-hero{background:linear-gradient(160deg,#0a1628 0%,#0d2340 60%,#0e2c4a 100%);color:#fff;padding:54px 0 46px;border-bottom:3px solid var(--reef,#00a896)}
+  .cb-wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .cb-eyebrow{color:var(--reef,#00a896);font-weight:700;letter-spacing:1.5px;font-size:12px;text-transform:uppercase;margin:0 0 12px}
+  .cb-h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 16px}
+  .cb-h1 em{font-style:italic;color:var(--reef,#00d4b8)}
+  .cb-lead{font-size:17px;line-height:1.7;color:#cdd7e0;max-width:760px;margin:0}
+  .cb-sec{padding:46px 0}
+  .cb-sec.alt{background:var(--paper,#fafaf7)}
+  .cb-h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,3.4vw,30px);color:var(--ink,#0a1628);margin:0 0 14px}
+  .cb-p{font-size:15.5px;line-height:1.75;color:#3a4654;max-width:820px;margin:0 0 14px}
+  .cb-sublabel{font-weight:700;color:var(--reef,#00a896);font-size:13px;letter-spacing:.5px;margin:22px 0 10px;text-transform:uppercase}
+  .cb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:12px;margin:6px 0 8px}
+  .cb-item{display:block;background:#fff;border:1px solid #e6e3d9;border-radius:12px;padding:14px 16px;text-decoration:none;transition:all .15s}
+  .cb-item:hover{border-color:var(--reef,#00a896);box-shadow:0 6px 18px rgba(0,168,150,.12);transform:translateY(-2px)}
+  .cb-item b{display:block;color:var(--ink,#0a1628);font-size:14.5px;font-weight:600;line-height:1.3;margin-bottom:4px}
+  .cb-item span{display:block;color:#6b7682;font-size:12.5px;line-height:1.45}
+  .cb-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--reef,#00a896);letter-spacing:.5px;margin-bottom:6px}
+  .cb-chips{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 4px}
+  .cb-chip{background:#eef7f4;border:1px solid #cfe8e1;color:#2a6b5f;border-radius:999px;padding:7px 15px;font-size:13px;font-weight:600}
+  .cb-faq{max-width:840px;margin:8px 0 0}
+  .cb-faq details{background:#fff;border:1px solid #e6e3d9;border-radius:12px;margin-bottom:10px;overflow:hidden}
+  .cb-faq summary{cursor:pointer;padding:16px 18px;font-weight:600;color:var(--ink,#0a1628);font-size:15px;list-style:none;position:relative}
+  .cb-faq summary::-webkit-details-marker{display:none}
+  .cb-faq summary::after{content:'+';position:absolute;right:18px;top:14px;font-size:20px;color:var(--reef,#00a896);font-weight:700}
+  .cb-faq details[open] summary::after{content:'−'}
+  .cb-faq .cb-ans{padding:0 18px 16px;color:#3a4654;font-size:14.5px;line-height:1.7}
+  .cb-nap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:10px 0}
+  .cb-nap div{background:#fff;border:1px solid #e6e3d9;border-radius:12px;padding:16px 18px}
+  .cb-nap strong{display:block;color:var(--reef,#00a896);font-size:12px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+  .cb-nap p{margin:0;color:var(--ink,#0a1628);font-size:14.5px;line-height:1.5}
+  .cb-btns{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 4px}
+  .cb-btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;transition:all .15s}
+  .cb-btn.primary{background:var(--reef,#00a896);color:#fff}
+  .cb-btn.primary:hover{background:#018579}
+  .cb-btn.ghost{border:1.5px solid #d6d3c8;color:var(--ink,#0a1628)}
+  .cb-btn.ghost:hover{border-color:var(--reef,#00a896);color:var(--reef,#00a896)}
+  .cb-cross{background:#eef7f4;border:1px solid #cfe8e1;border-radius:14px;padding:20px 22px;margin:8px 0}
+  .cb-cross a{color:var(--reef,#00a896);font-weight:700;text-decoration:none}
+  .cb-cross a:hover{text-decoration:underline}
+</style>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1628">
+
+<!-- Primary Meta Tags -->
+<title>Cá Cảnh Biển: Các Loại, Cách Chọn & Chăm Sóc | 2D Aquatic</title>
+<meta name="keywords" content="thiết bị bể cá biển, đèn LED reef, skimmer, máy bơm bể cá, hóa chất bể reef, cá biển, san hô, đá sống, live rock, muối biển, Hydra, Radion, AI Prime">
+<meta name="description" content="Tổng hợp các loại cá cảnh biển và san hô phổ biến cho người chơi reef: đặc điểm, độ khó, thông số nước, cách chăm. 40+ loài cá biển & san hô SPS/LPS/Soft. Tư vấn bởi 2D Aquatic.">
+<meta name="author" content="Công ty TNHH 2D Aquatic">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="geo.region" content="VN-HN">
+<meta name="geo.placename" content="Long Biên, Hà Nội">
+<meta name="geo.position" content="21.0414;105.8783">
+<meta name="ICBM" content="21.0414, 105.8783">
+<meta name="author" content="2D Aquatic">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://2daquatic.com/ca-canh-bien/">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="vi-VN" href="https://2daquatic.com/san-pham">
+<link rel="alternate" hreflang="x-default" href="https://2daquatic.com/san-pham">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://2daquatic.com/ca-canh-bien/">
+<meta property="og:title" content="Cá Cảnh Biển: Các Loại, Cách Chọn & Chăm Sóc | 2D Aquatic">
+<meta property="og:description" content="Tổng hợp các loại cá cảnh biển và san hô phổ biến cho người chơi reef: đặc điểm, độ khó, thông số nước, cách chăm. 40+ loài cá biển & san hô SPS/LPS/Soft. Tư vấn bởi 2D Aquatic.">
+<meta property="og:image" content="https://2daquatic.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2D Aquatic - Bể cá biển cao cấp tại Hà Nội">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="2D Aquatic">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cá cảnh biển: các loại & cách chăm | 2D Aquatic">
+<meta name="twitter:description" content="Thư viện 40+ loài cá biển & san hô phổ biến kèm hướng dẫn chăm sóc.">
+<meta name="twitter:image" content="https://2daquatic.com/images/og-image.jpg">
+<meta name="twitter:image:alt" content="2D Aquatic - Bể cá biển cao cấp tại Hà Nội">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- DNS Prefetch & Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/css/main.v2.css">
+<link rel="stylesheet" href="/css/seo-additions.v2.css">
+
+<!-- Schema.org: Organization -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"CollectionPage",
+  "name":"Cá cảnh biển: các loại, cách chọn & chăm sóc",
+  "description":"Thư viện các loài cá cảnh biển và san hô phổ biến kèm hướng dẫn chăm sóc.",
+  "url":"https://2daquatic.com/ca-canh-bien/",
+  "isPartOf":{"@type":"WebSite","name":"2D Aquatic","url":"https://2daquatic.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://2daquatic.com/"},
+    {"@type":"ListItem","position":2,"name":"Cá cảnh biển","item":"https://2daquatic.com/ca-canh-bien/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"ItemList",
+  "name":"Các loại cá cảnh biển & san hô phổ biến",
+  "numberOfItems":40,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Cá Bã Trầu Hoàng Gia (Royal Gramma)","url":"https://2daquatic.com/san-pham/ca-ba-trau-royal-gramma/"},
+    {"@type":"ListItem","position":2,"name":"Cá Bác Sĩ (Cleaner Wrasse)","url":"https://2daquatic.com/san-pham/ca-bac-si-cleaner-wrasse/"},
+    {"@type":"ListItem","position":3,"name":"Cá Bống Bay Banggai (Banggai Cardinalfish)","url":"https://2daquatic.com/san-pham/ca-bong-bay-banggai-cardinal/"},
+    {"@type":"ListItem","position":4,"name":"Cá Bống Cát Kim Cương (Diamond Goby)","url":"https://2daquatic.com/san-pham/ca-bong-cat-kim-cuong-diamond-goby/"},
+    {"@type":"ListItem","position":5,"name":"Cá Bống Lửa (Firefish)","url":"https://2daquatic.com/san-pham/ca-bong-lua-firefish/"},
+    {"@type":"ListItem","position":6,"name":"Cá Bống Tỳ Bà (Mandarin Dragonet)","url":"https://2daquatic.com/san-pham/ca-bong-ty-ba-mandarin/"},
+    {"@type":"ListItem","position":7,"name":"Cá Bống Vàng Canh Gác (Yellow Watchman Goby)","url":"https://2daquatic.com/san-pham/ca-bong-vang-watchman-goby/"},
+    {"@type":"ListItem","position":8,"name":"Cá Đuôi Gai Bột (Powder Blue Tang)","url":"https://2daquatic.com/san-pham/ca-duoi-gai-bot-powder-blue/"},
+    {"@type":"ListItem","position":9,"name":"Cá Đuôi Gai Vàng (Yellow Tang)","url":"https://2daquatic.com/san-pham/ca-duoi-gai-vang-yellow-tang/"},
+    {"@type":"ListItem","position":10,"name":"Cá Đuôi Gai Xanh (Blue Tang)","url":"https://2daquatic.com/san-pham/ca-duoi-gai-xanh-blue-tang/"},
+    {"@type":"ListItem","position":11,"name":"Cá Hề Nemo (Ocellaris Clownfish)","url":"https://2daquatic.com/san-pham/ca-he-nemo-ocellaris/"},
+    {"@type":"ListItem","position":12,"name":"Cá Hề Yên Ngựa (Maroon Clownfish)","url":"https://2daquatic.com/san-pham/ca-he-yen-ngua-maroon/"},
+    {"@type":"ListItem","position":13,"name":"Cá Mao Tiên (Volitans Lionfish)","url":"https://2daquatic.com/san-pham/ca-mao-tien-lionfish/"},
+    {"@type":"ListItem","position":14,"name":"Cá Mó Lửa (Flame Hawkfish)","url":"https://2daquatic.com/san-pham/ca-mo-flame-hawkfish/"},
+    {"@type":"ListItem","position":15,"name":"Cá Nàng Đào (Lyretail Anthias)","url":"https://2daquatic.com/san-pham/ca-nang-dao-lyretail-anthias/"},
+    {"@type":"ListItem","position":16,"name":"Cá Sáu Sọc (Sixline Wrasse)","url":"https://2daquatic.com/san-pham/ca-sau-soc-sixline-wrasse/"},
+    {"@type":"ListItem","position":17,"name":"Cá Thần Tiên Coral Beauty","url":"https://2daquatic.com/san-pham/ca-than-tien-coral-beauty/"},
+    {"@type":"ListItem","position":18,"name":"Cá Thần Tiên Lửa (Flame Angelfish)","url":"https://2daquatic.com/san-pham/ca-than-tien-lua-flame-angel/"},
+    {"@type":"ListItem","position":19,"name":"Cá Thia Domino (Three-stripe Damsel)","url":"https://2daquatic.com/san-pham/ca-thia-domino-three-stripe-damsel/"},
+    {"@type":"ListItem","position":20,"name":"Cá Thia Xanh Lá (Green Chromis)","url":"https://2daquatic.com/san-pham/ca-thia-xanh-green-chromis/"},
+    {"@type":"ListItem","position":21,"name":"San Hô Acan ( Acanthastrea )","url":"https://2daquatic.com/san-pham/san-ho-acan-acanthastrea/"},
+    {"@type":"ListItem","position":22,"name":"San Hô Acropora (SPS)","url":"https://2daquatic.com/san-pham/san-ho-acropora/"},
+    {"@type":"ListItem","position":23,"name":"San Hô Trứng Mực (Bubble Coral)","url":"https://2daquatic.com/san-pham/san-ho-trung-muc-bubble/"},
+    {"@type":"ListItem","position":24,"name":"San Hô Búa (Hammer Coral)","url":"https://2daquatic.com/san-pham/san-ho-bua-hammer/"},
+    {"@type":"ListItem","position":25,"name":"San Hô Cúc Áo (Zoanthids)","url":"https://2daquatic.com/san-pham/san-ho-cuc-ao-zoanthids/"},
+    {"@type":"ListItem","position":26,"name":"San Hô Da (Leather/Toadstool)","url":"https://2daquatic.com/san-pham/san-ho-da-leather-toadstool/"},
+    {"@type":"ListItem","position":27,"name":"San Hô Đĩa Bay (Plate Coral)","url":"https://2daquatic.com/san-pham/san-ho-dia-bay-plate-fungia/"},
+    {"@type":"ListItem","position":28,"name":"San Hô Duncan (Duncan Coral)","url":"https://2daquatic.com/san-pham/san-ho-duncan/"},
+    {"@type":"ListItem","position":29,"name":"San Hô Diêm (Torch Coral)","url":"https://2daquatic.com/san-pham/san-ho-diem-torch/"},
+    {"@type":"ListItem","position":30,"name":"San Hô Sọ (Goniopora / Flowerpot)","url":"https://2daquatic.com/san-pham/san-ho-so-goniopora/"},
+    {"@type":"ListItem","position":31,"name":"San Hô Kèn (Trumpet / Candy Cane)","url":"https://2daquatic.com/san-pham/san-ho-ken-trumpet-candy-cane/"},
+    {"@type":"ListItem","position":32,"name":"San Hô Montipora (SPS)","url":"https://2daquatic.com/san-pham/san-ho-montipora/"},
+    {"@type":"ListItem","position":33,"name":"San Hô Nấm (Mushroom Coral)","url":"https://2daquatic.com/san-pham/san-ho-nam-mushroom/"},
+    {"@type":"ListItem","position":34,"name":"San Hô Não Kín (Favia)","url":"https://2daquatic.com/san-pham/san-ho-nao-kin-favia/"},
+    {"@type":"ListItem","position":35,"name":"San Hô Não Mở (Open Brain)","url":"https://2daquatic.com/san-pham/san-ho-nao-mo-open-brain/"},
+    {"@type":"ListItem","position":36,"name":"San Hô Ricordea (Ricordea)","url":"https://2daquatic.com/san-pham/san-ho-ricordea/"},
+    {"@type":"ListItem","position":37,"name":"San Hô Sao Xanh (Green Star Polyps)","url":"https://2daquatic.com/san-pham/san-ho-sao-xanh-gsp/"},
+    {"@type":"ListItem","position":38,"name":"San Hô Sủi Bọt (Frogspawn)","url":"https://2daquatic.com/san-pham/san-ho-sui-bot-frogspawn/"},
+    {"@type":"ListItem","position":39,"name":"San Hô Tay Múa (Pulsing Xenia)","url":"https://2daquatic.com/san-pham/san-ho-tay-mua-pulsing-xenia/"},
+    {"@type":"ListItem","position":40,"name":"San Hô Tổ Chim (Birdsnest)","url":"https://2daquatic.com/san-pham/san-ho-to-chim-birdsnest/"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo" aria-label="2D Aquatic">
+      <img class="logo-light" src="/images/logo-light.png" srcset="/images/logo-light.png 1x, /images/logo-light@2x.png 2x" alt="2D Aquatic - Bể cá biển cao cấp" width="184" height="80">
+      <img class="logo-dark" src="/images/logo-dark.png" srcset="/images/logo-dark.png 1x, /images/logo-dark@2x.png 2x" alt="2D Aquatic - Bể cá biển cao cấp" width="184" height="80">
+    </a>
+    <ul class="nav-links">
+      <!-- BỂ CÁ -->
+      <li>
+        <a href="/be-ca">Bể cá</a>
+        <div class="dropdown cols-3">
+          <div class="dropdown-inner">
+            <a href="/san-pham" class="dropdown-item">
+              <div class="dropdown-thumb">
+                <!-- Tank with side filter (ProMax) -->
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="25" width="160" height="90" rx="3" fill="rgba(10,74,110,0.5)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                  <rect x="140" y="30" width="35" height="80" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.3)"/>
+                  <line x1="140" y1="30" x2="140" y2="110" stroke="rgba(255,255,255,0.5)"/>
+                  <rect x="20" y="115" width="160" height="12" rx="2" fill="rgba(0,0,0,0.4)"/>
+                  <ellipse cx="60" cy="100" rx="16" ry="6" fill="rgba(212,197,168,0.5)"/>
+                  <ellipse cx="105" cy="98" rx="20" ry="8" fill="rgba(212,197,168,0.5)"/>
+                  <circle cx="65" cy="92" r="4" fill="#ff6b4a"/>
+                  <circle cx="105" cy="90" r="3" fill="#9b59b6"/>
+                  <ellipse cx="80" cy="65" rx="10" ry="5" fill="#ff7e3d"/>
+                  <ellipse cx="115" cy="55" rx="9" ry="4" fill="#1e90ff"/>
+                  <circle cx="156" cy="55" r="2" fill="rgba(0,212,184,0.8)"/>
+                  <circle cx="156" cy="70" r="2" fill="rgba(0,212,184,0.6)"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">2D ProMax</div>
+              <div class="dropdown-desc">Bể cao cấp lọc vách 300L–800L</div>
+            </a>
+            <a href="/san-pham" class="dropdown-item coral">
+              <div class="dropdown-thumb">
+                <!-- Tank with sump cabinet (Infinity) -->
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="20" width="160" height="70" rx="2" fill="rgba(10,74,110,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                  <rect x="160" y="22" width="18" height="22" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.3)"/>
+                  <ellipse cx="55" cy="78" rx="20" ry="6" fill="rgba(212,197,168,0.5)"/>
+                  <ellipse cx="135" cy="78" rx="22" ry="7" fill="rgba(212,197,168,0.5)"/>
+                  <circle cx="60" cy="72" r="3" fill="#ff6b4a"/>
+                  <ellipse cx="100" cy="55" rx="9" ry="4" fill="#ff7e3d"/>
+                  <ellipse cx="125" cy="45" rx="8" ry="3.5" fill="#1e90ff"/>
+                  <!-- Cabinet -->
+                  <rect x="20" y="92" width="160" height="35" rx="2" fill="rgba(20,30,50,0.85)" stroke="rgba(255,255,255,0.3)"/>
+                  <line x1="100" y1="92" x2="100" y2="127" stroke="rgba(255,255,255,0.2)"/>
+                  <!-- Sump compartments visible -->
+                  <rect x="32" y="100" width="135" height="20" rx="1" fill="rgba(10,74,110,0.4)" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 2"/>
+                  <line x1="60" y1="100" x2="60" y2="120" stroke="rgba(255,255,255,0.3)"/>
+                  <line x1="95" y1="100" x2="95" y2="120" stroke="rgba(255,255,255,0.3)"/>
+                  <line x1="130" y1="100" x2="130" y2="120" stroke="rgba(255,255,255,0.3)"/>
+                  <circle cx="145" cy="110" r="4" fill="rgba(0,212,184,0.6)"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">2D Infinity</div>
+              <div class="dropdown-desc">Bể flagship lọc tràn dưới 500L+</div>
+            </a>
+            <a href="/san-pham" class="dropdown-item purple">
+              <div class="dropdown-thumb">
+                <!-- Nano cube -->
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="65" y="40" width="70" height="70" rx="3" fill="rgba(10,74,110,0.4)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                  <rect x="65" y="40" width="70" height="8" fill="rgba(0,212,184,0.3)"/>
+                  <rect x="65" y="110" width="70" height="8" rx="2" fill="rgba(0,0,0,0.4)"/>
+                  <ellipse cx="100" cy="100" rx="22" ry="6" fill="rgba(212,197,168,0.6)"/>
+                  <circle cx="90" cy="92" r="4" fill="#ff6b4a"/>
+                  <circle cx="110" cy="92" r="3" fill="#00a896"/>
+                  <ellipse cx="100" cy="70" rx="8" ry="4" fill="#ff7e3d"/>
+                  <circle cx="100" cy="50" r="1.5" fill="rgba(255,255,255,0.7)"/>
+                  <circle cx="95" cy="55" r="1.5" fill="rgba(255,255,255,0.5)"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">Nano Cube</div>
+              <div class="dropdown-desc">Bể nano 30L–60L cho người mới</div>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- SẢN PHẨM -->
+      <li class="no-dropdown">
+        <a href="/san-pham">Sản phẩm</a>
+      </li>
+
+      <!-- DỊCH VỤ -->
+      <li>
+        <a href="/dich-vu">Dịch vụ</a>
+        <div class="dropdown cols-3">
+          <div class="dropdown-inner">
+            <a href="/san-pham" class="dropdown-item">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="40" y="30" width="120" height="80" rx="4" fill="rgba(0,212,184,0.15)" stroke="rgba(0,212,184,0.5)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <rect x="55" y="50" width="40" height="40" rx="2" fill="rgba(0,212,184,0.3)"/>
+                  <rect x="105" y="50" width="40" height="20" rx="2" fill="rgba(0,212,184,0.3)"/>
+                  <rect x="105" y="78" width="40" height="12" rx="2" fill="rgba(0,212,184,0.3)"/>
+                  <path d="M 70 65 L 75 70 L 85 60" stroke="#00d4b8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="125" y="64" text-anchor="middle" font-family="Inter" font-size="9" font-weight="600" fill="#00d4b8">A→Z</text>
+                </svg>
+              </div>
+              <div class="dropdown-name">Setup trọn gói</div>
+              <div class="dropdown-desc">Thiết kế, lắp đặt, vận hành</div>
+            </a>
+            <a href="/san-pham" class="dropdown-item coral">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="70" r="42" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-dasharray="6 4"/>
+                  <circle cx="100" cy="70" r="32" fill="rgba(255,255,255,0.15)"/>
+                  <path d="M 100 50 L 100 70 L 115 80" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <circle cx="100" cy="70" r="3" fill="#fff"/>
+                  <circle cx="100" cy="28" r="3" fill="#fff"/>
+                  <circle cx="100" cy="112" r="3" fill="#fff"/>
+                  <circle cx="58" cy="70" r="3" fill="#fff"/>
+                  <circle cx="142" cy="70" r="3" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">Bảo trì định kỳ</div>
+              <div class="dropdown-desc">Vệ sinh, thay nước, kiểm tra</div>
+            </a>
+            <a href="/san-pham" class="dropdown-item purple">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="75" cy="55" r="22" fill="rgba(255,255,255,0.95)"/>
+                  <circle cx="75" cy="48" r="6" fill="#9b59b6"/>
+                  <path d="M 60 70 Q 75 60 90 70 L 90 80 L 60 80 Z" fill="#9b59b6"/>
+                  <rect x="105" y="38" width="60" height="50" rx="6" fill="rgba(255,255,255,0.95)"/>
+                  <line x1="115" y1="48" x2="155" y2="48" stroke="#9b59b6" stroke-width="2"/>
+                  <line x1="115" y1="58" x2="150" y2="58" stroke="rgba(155,89,182,0.5)" stroke-width="1.5"/>
+                  <line x1="115" y1="68" x2="155" y2="68" stroke="rgba(155,89,182,0.5)" stroke-width="1.5"/>
+                  <line x1="115" y1="78" x2="140" y2="78" stroke="rgba(155,89,182,0.5)" stroke-width="1.5"/>
+                  <path d="M 92 75 L 105 70 L 100 78 Z" fill="rgba(255,255,255,0.95)"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">Tư vấn 1:1</div>
+              <div class="dropdown-desc">Chuyên gia tư vấn miễn phí</div>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- HỖ TRỢ -->
+      <li>
+        <a href="/ho-tro">Hỗ trợ</a>
+        <div class="dropdown cols-3">
+          <div class="dropdown-inner">
+            <a href="/blog/" class="dropdown-item">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="50" y="30" width="100" height="80" rx="4" fill="rgba(255,255,255,0.95)"/>
+                  <line x1="65" y1="48" x2="135" y2="48" stroke="#00a896" stroke-width="2.5"/>
+                  <line x1="65" y1="62" x2="120" y2="62" stroke="rgba(10,22,40,0.4)" stroke-width="1.5"/>
+                  <line x1="65" y1="72" x2="135" y2="72" stroke="rgba(10,22,40,0.4)" stroke-width="1.5"/>
+                  <line x1="65" y1="82" x2="115" y2="82" stroke="rgba(10,22,40,0.4)" stroke-width="1.5"/>
+                  <line x1="65" y1="92" x2="125" y2="92" stroke="rgba(10,22,40,0.4)" stroke-width="1.5"/>
+                  <rect x="55" y="35" width="6" height="70" fill="#00a896"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">Hướng dẫn setup</div>
+              <div class="dropdown-desc">Cẩm nang chơi cá biển</div>
+            </a>
+            <a href="/ho-tro#faq" class="dropdown-item coral">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="70" r="40" fill="rgba(255,255,255,0.95)"/>
+                  <text x="100" y="88" text-anchor="middle" font-family="Inter" font-size="48" font-weight="800" fill="#ff6b4a">?</text>
+                </svg>
+              </div>
+              <div class="dropdown-name">FAQ</div>
+              <div class="dropdown-desc">Câu hỏi thường gặp</div>
+            </a>
+            <a href="/ho-tro#bao-hanh" class="dropdown-item purple">
+              <div class="dropdown-thumb">
+                <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 100 30 L 65 45 L 65 75 Q 65 100 100 115 Q 135 100 135 75 L 135 45 Z" fill="rgba(255,255,255,0.95)" stroke="#9b59b6" stroke-width="2"/>
+                  <path d="M 85 73 L 95 83 L 115 60" stroke="#9b59b6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </div>
+              <div class="dropdown-name">Bảo hành</div>
+              <div class="dropdown-desc">Bảo hành 24 tháng</div>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- BLOG -->
+      <li class="no-dropdown"><a href="/blog">Cẩm nang</a></li>
+      <!-- LIÊN HỆ - không có dropdown -->
+      <li class="no-dropdown"><a href="/lien-he">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="tel:0975112334" class="nav-phone">📞 0975.112.334</a>
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </button>
+      <!-- Shop link: Facebook 2D Aquatic -->
+      <a href="/san-pham/" class="store-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l1.5-5h15L21 9M3 9v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9M3 9h18M9 13h6"/></svg>
+        Cửa hàng
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+
+</nav>
+
+<main class="page-main">
+<section class="cb-hero">
+  <div class="cb-wrap">
+    <p class="cb-eyebrow">2D Aquatic · Thư viện sinh vật</p>
+    <h1 class="cb-h1">Cá cảnh biển: các loại, <em>cách chọn & chăm sóc</em></h1>
+    <p class="cb-lead">Cá cảnh biển (cá nước mặn) là thế giới sinh vật rực rỡ của bể reef — từ cá hề, cá đuôi gai đến san hô SPS/LPS/Soft. Dưới đây là tổng hợp các loài phổ biến nhất kèm đặc điểm, độ khó và thông số nước, giúp bạn chọn đúng loài phù hợp với bể của mình.</p>
+  </div>
+</section>
+
+<section class="cb-sec">
+  <div class="cb-wrap">
+    <h2 class="cb-h2">Cá cảnh biển gồm những nhóm nào?</h2>
+    <p class="cb-p">Một bể cá cảnh biển thường gồm hai nhóm chính: <strong>cá biển</strong> (tạo sức sống, chuyển động) và <strong>san hô</strong> (tạo cảnh quan, màu sắc). Người mới thường bắt đầu với các loài cá khỏe, dễ nuôi như cá hề, cá bống, và san hô mềm/LPS dễ chăm; khi đã vững tay mới tiến tới san hô SPS đòi hỏi ánh sáng và dòng chảy mạnh, thông số nước ổn định.</p>
+    <p class="cb-p">Thông số nước lý tưởng cho hầu hết cá cảnh biển và san hô: <strong>nhiệt độ 24–26°C · độ mặn 1.024–1.026 · pH 8.1–8.4 · KH 8–12 dKH</strong>.</p>
+  </div>
+</section>
+
+<section class="cb-sec alt">
+  <div class="cb-wrap">
+    <h2 class="cb-h2">Các loại cá cảnh biển phổ biến</h2>
+    <p class="cb-p">20 loài cá biển được ưa chuộng trong bể reef. Bấm vào từng loài để xem chi tiết tập tính, cách chăm và khả năng nuôi chung.</p>
+    <div class="cb-grid"><a class="cb-item" href="/san-pham/ca-ba-trau-royal-gramma/"><b>Cá Bã Trầu Hoàng Gia (Royal Gramma)</b><span>Royal Gramma nửa thân tím nửa thân vàng rực rỡ, hiền lành và rất khỏe</span></a><a class="cb-item" href="/san-pham/ca-bac-si-cleaner-wrasse/"><b>Cá Bác Sĩ (Cleaner Wrasse)</b><span>Cá Bác Sĩ chuyên 'dọn' ký sinh trùng và da chết cho các cá khác</span></a><a class="cb-item" href="/san-pham/ca-bong-bay-banggai-cardinal/"><b>Cá Bống Bay Banggai (Banggai Cardinalfish)</b><span>Banggai bạc–đen điểm chấm trắng, dáng bơi chậm rãi quý phái, dễ nhân giống trong bể.</span></a><a class="cb-item" href="/san-pham/ca-bong-cat-kim-cuong-diamond-goby/"><b>Cá Bống Cát Kim Cương (Diamond Goby)</b><span>Cá Bống Cát Kim Cương trắng điểm cam, chuyên 'sàng' cát nền giữ nền sạch và thông thoáng.</span></a><a class="cb-item" href="/san-pham/ca-bong-lua-firefish/"><b>Cá Bống Lửa (Firefish)</b><span>Cá Bống Lửa thân trắng chuyển cam đỏ, vây lưng dựng cao linh hoạt</span></a><a class="cb-item" href="/san-pham/ca-bong-ty-ba-mandarin/"><b>Cá Bống Tỳ Bà (Mandarin Dragonet)</b><span>Cá Bống Tỳ Bà có hoa văn xanh–cam như tranh vẽ, đẹp bậc nhất nhưng khó về dinh dưỡng.</span></a><a class="cb-item" href="/san-pham/ca-bong-vang-watchman-goby/"><b>Cá Bống Vàng Canh Gác (Yellow Watchman Goby)</b><span>Cá Bống Vàng nổi tiếng nhờ tập tính cộng sinh thú vị với tôm súng (pistol shrimp).</span></a><a class="cb-item" href="/san-pham/ca-duoi-gai-bot-powder-blue/"><b>Cá Đuôi Gai Bột (Powder Blue Tang)</b><span>Cá Đuôi Gai Bột có thân xanh phấn, mặt đen, viền vây vàng</span></a><a class="cb-item" href="/san-pham/ca-duoi-gai-vang-yellow-tang/"><b>Cá Đuôi Gai Vàng (Yellow Tang)</b><span>Cá Đuôi Gai Vàng màu vàng chanh rực rỡ, là loài dọn rêu tảo xuất sắc và rất được yêu thích.</span></a><a class="cb-item" href="/san-pham/ca-duoi-gai-xanh-blue-tang/"><b>Cá Đuôi Gai Xanh (Blue Tang)</b><span>Cá Đuôi Gai Xanh (nhân vật Dory) nổi bật với màu xanh dương rực rỡ, là loài cá đuôi gai được ưa chuộng nhất.</span></a><a class="cb-item" href="/san-pham/ca-he-nemo-ocellaris/"><b>Cá Hề Nemo (Ocellaris Clownfish)</b><span>Cá Hề Nemo là loài cá biển phổ biến và dễ nuôi nhất, lựa chọn lý tưởng cho người mới bắt đầu chơi bể cá biển.</span></a><a class="cb-item" href="/san-pham/ca-he-yen-ngua-maroon/"><b>Cá Hề Yên Ngựa (Maroon Clownfish)</b><span>Cá Hề Yên Ngựa có màu đỏ thẫm với sọc trắng, kích thước lớn và tính cách mạnh mẽ hơn cá hề thường.</span></a><a class="cb-item" href="/san-pham/ca-mao-tien-lionfish/"><b>Cá Mao Tiên (Volitans Lionfish)</b><span>Cá Mao Tiên với vây xòe như chiếc quạt lông là loài săn mồi uy nghi, ấn tượng.</span></a><a class="cb-item" href="/san-pham/ca-mo-flame-hawkfish/"><b>Cá Mó Lửa (Flame Hawkfish)</b><span>Cá Mó Lửa đỏ rực hay đậu trên đỉnh đá quan sát</span></a><a class="cb-item" href="/san-pham/ca-nang-dao-lyretail-anthias/"><b>Cá Nàng Đào (Lyretail Anthias)</b><span>Cá Nàng Đào cam hồng bơi lượn thành đàn giữa dòng nước</span></a><a class="cb-item" href="/san-pham/ca-sau-soc-sixline-wrasse/"><b>Cá Sáu Sọc (Sixline Wrasse)</b><span>Cá Sáu Sọc nhỏ, nhanh, thân tím sọc cam</span></a><a class="cb-item" href="/san-pham/ca-than-tien-coral-beauty/"><b>Cá Thần Tiên Coral Beauty</b><span>Coral Beauty xanh tím ánh cam, là một trong những dòng thần tiên lùn dễ nuôi và bền màu nhất.</span></a><a class="cb-item" href="/san-pham/ca-than-tien-lua-flame-angel/"><b>Cá Thần Tiên Lửa (Flame Angelfish)</b><span>Cá Thần Tiên Lửa màu cam đỏ rực với sọc đen, là dòng thần tiên lùn được săn đón.</span></a><a class="cb-item" href="/san-pham/ca-thia-domino-three-stripe-damsel/"><b>Cá Thia Domino (Three-stripe Damsel)</b><span>Cá Thia Domino sọc trắng đen tương phản, cực khỏe nhưng tính khí ngày càng mạnh.</span></a><a class="cb-item" href="/san-pham/ca-thia-xanh-green-chromis/"><b>Cá Thia Xanh Lá (Green Chromis)</b><span>Cá Thia Xanh ánh kim bơi thành đàn lấp lánh giữa tầng nước</span></a></div>
+  </div>
+</section>
+
+<section class="cb-sec">
+  <div class="cb-wrap">
+    <h2 class="cb-h2">Các loại san hô phổ biến</h2>
+    <p class="cb-p">20 loại san hô chia theo 3 dòng chính — Soft (mềm, dễ nhất), LPS (polyp lớn) và SPS (cành, cao cấp).</p>
+    <div class="cb-sublabel">San hô mềm (Soft)</div><div class="cb-grid"><a class="cb-item" href="/san-pham/san-ho-cuc-ao-zoanthids/"><span class="cb-tag">SOFT</span><b>San Hô Cúc Áo (Zoanthids)</b><span>San Hô Cúc Áo gồm hàng trăm polyp tròn nhiều màu rực rỡ, dễ nuôi và lan nhanh</span></a><a class="cb-item" href="/san-pham/san-ho-da-leather-toadstool/"><span class="cb-tag">SOFT</span><b>San Hô Da (Leather/Toadstool)</b><span>San Hô Da hình chiếc nấm/ô lớn với bề mặt phủ polyp mịn, khỏe và dễ chăm.</span></a><a class="cb-item" href="/san-pham/san-ho-nam-mushroom/"><span class="cb-tag">SOFT</span><b>San Hô Nấm (Mushroom Coral)</b><span>San Hô Nấm tròn dẹt như chiếc dù, nhiều màu, cực dễ nuôi và chịu được nước chưa hoàn hảo.</span></a><a class="cb-item" href="/san-pham/san-ho-ricordea/"><span class="cb-tag">SOFT</span><b>San Hô Ricordea (Ricordea)</b><span>Ricordea phủ những hạt tròn óng ánh như ngọc, màu neon rực rỡ</span></a><a class="cb-item" href="/san-pham/san-ho-sao-xanh-gsp/"><span class="cb-tag">SOFT</span><b>San Hô Sao Xanh (Green Star Polyps)</b><span>GSP là thảm polyp xanh neon nổi trên nền tím, lan cực nhanh tạo mảng cỏ rực rỡ.</span></a><a class="cb-item" href="/san-pham/san-ho-tay-mua-pulsing-xenia/"><span class="cb-tag">SOFT</span><b>San Hô Tay Múa (Pulsing Xenia)</b><span>Xenia nổi tiếng với động tác 'co bóp' nhịp nhàng của chùm polyp như những bàn tay vẫy.</span></a></div><div class="cb-sublabel">San hô LPS</div><div class="cb-grid"><a class="cb-item" href="/san-pham/san-ho-acan-acanthastrea/"><span class="cb-tag">LPS</span><b>San Hô Acan ( Acanthastrea )</b><span>Acan là LPS thịt dày với màu sắc rực rỡ bậc nhất</span></a><a class="cb-item" href="/san-pham/san-ho-trung-muc-bubble/"><span class="cb-tag">LPS</span><b>San Hô Trứng Mực (Bubble Coral)</b><span>San Hô Trứng Mực phồng lên những túi nước tròn căng mọng ban ngày</span></a><a class="cb-item" href="/san-pham/san-ho-bua-hammer/"><span class="cb-tag">LPS</span><b>San Hô Búa (Hammer Coral)</b><span>San Hô Búa với đầu tua hình chiếc búa/chữ T phấp phới, là LPS được yêu thích vì màu đẹp và chuyển động mềm mại.</span></a><a class="cb-item" href="/san-pham/san-ho-dia-bay-plate-fungia/"><span class="cb-tag">LPS</span><b>San Hô Đĩa Bay (Plate Coral)</b><span>San Hô Đĩa Bay tròn dẹt sống đơn lẻ trên nền, nhiều màu, thậm chí **tự di chuyển** chậm trên cát.</span></a><a class="cb-item" href="/san-pham/san-ho-duncan/"><span class="cb-tag">LPS</span><b>San Hô Duncan (Duncan Coral)</b><span>San Hô Duncan có polyp dài như bông hoa cúc xanh–cam, háu ăn và lớn nhanh, dễ chăm.</span></a><a class="cb-item" href="/san-pham/san-ho-diem-torch/"><span class="cb-tag">LPS</span><b>San Hô Diêm (Torch Coral)</b><span>San Hô Diêm có tua dài thẳng với đầu sáng như ngọn đuốc, đung đưa cực kỳ cuốn hút.</span></a><a class="cb-item" href="/san-pham/san-ho-so-goniopora/"><span class="cb-tag">LPS</span><b>San Hô Sọ (Goniopora / Flowerpot)</b><span>Goniopora bung hàng trăm polyp dài như một chậu hoa lay động</span></a><a class="cb-item" href="/san-pham/san-ho-ken-trumpet-candy-cane/"><span class="cb-tag">LPS</span><b>San Hô Kèn (Trumpet / Candy Cane)</b><span>San Hô Kèn gồm các 'đầu' tròn trên cuống như kẹo mút, dễ nuôi và nhân nhánh nhanh.</span></a><a class="cb-item" href="/san-pham/san-ho-nao-kin-favia/"><span class="cb-tag">LPS</span><b>San Hô Não Kín (Favia)</b><span>Favia là khối san hô não đặc với polyp tròn xếp sát, viền màu tương phản nổi bật dưới đèn.</span></a><a class="cb-item" href="/san-pham/san-ho-nao-mo-open-brain/"><span class="cb-tag">LPS</span><b>San Hô Não Mở (Open Brain)</b><span>San Hô Não Mở mềm mại nhiều nếp gấp, màu sắc loang lổ rực rỡ, thường đặt trên nền cát.</span></a><a class="cb-item" href="/san-pham/san-ho-sui-bot-frogspawn/"><span class="cb-tag">LPS</span><b>San Hô Sủi Bọt (Frogspawn)</b><span>Frogspawn có đầu tua phân nhánh tròn như chùm trứng ếch/bọt nước, lung linh dưới đèn xanh.</span></a></div><div class="cb-sublabel">San hô SPS</div><div class="cb-grid"><a class="cb-item" href="/san-pham/san-ho-acropora/"><span class="cb-tag">SPS</span><b>San Hô Acropora (SPS)</b><span>Acropora là 'vua' của san hô cứng SPS với cành phân nhánh và màu sắc kim loại</span></a><a class="cb-item" href="/san-pham/san-ho-montipora/"><span class="cb-tag">SPS</span><b>San Hô Montipora (SPS)</b><span>Montipora là SPS dễ vào nhất, có dạng đĩa, phiến hoặc bò lan với màu cam/xanh/tím bắt mắt.</span></a><a class="cb-item" href="/san-pham/san-ho-to-chim-birdsnest/"><span class="cb-tag">SPS</span><b>San Hô Tổ Chim (Birdsnest)</b><span>Birdsnest có cành nhỏ mảnh đan như tổ chim, màu hồng/xanh, mọc nhanh tạo bụi san hô đẹp.</span></a></div>
+  </div>
+</section>
+
+<section class="cb-sec alt">
+  <div class="cb-wrap">
+    <h2 class="cb-h2">Chọn cá cảnh biển cho người mới</h2>
+    <p class="cb-p">Nếu mới bắt đầu, hãy ưu tiên loài khỏe và dễ thích nghi: <strong>cá hề Nemo, cá bống vàng, cá bã trầu, cá thia xanh</strong> về cá; và <strong>san hô cúc áo (zoanthids), nấm, san hô da, Duncan</strong> về san hô. Tránh các loài nhạy cảm (cá đuôi gai bột, cá bống tỳ bà) hoặc đòi hỏi cao (san hô SPS Acropora) cho tới khi bể đã ổn định.</p>
+    <div class="cb-cross">
+      <p style="margin:0;color:#2a4a44;font-size:15px">📍 Bạn ở Hà Nội và muốn mua cá cảnh biển khỏe, đã thuần? Xem ngay <a href="/ca-canh-bien-ha-noi/">Cá cảnh biển Hà Nội — 2D Aquatic tại Long Biên →</a></p>
+    </div>
+  </div>
+</section>
+<section class="cta-band">
+  <h2>Cần tư vấn <em style="font-style:italic;color:var(--reef)">thiết bị phù hợp</em>?</h2>
+  <p>Liên hệ Zalo hoặc Facebook để nhận báo giá chi tiết và tư vấn miễn phí từ chuyên gia 2D Aquatic.</p>
+  <div class="cta-buttons">
+    <a href="https://zalo.me/0975112334" target="_blank" rel="noopener" class="btn-cta primary">Chat Zalo</a>
+    <a href="https://www.facebook.com/2DAquatic/" target="_blank" rel="noopener" class="btn-cta ghost">Inbox Facebook</a>
+  </div>
+</section>
+
+
+</main>
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="/" class="logo" aria-label="2D Aquatic">
+      <img class="logo-light" src="/images/logo-light.png" srcset="/images/logo-light.png 1x, /images/logo-light@2x.png 2x" alt="2D Aquatic - Bể cá biển cao cấp" width="184" height="80">
+      <img class="logo-dark" src="/images/logo-dark.png" srcset="/images/logo-dark.png 1x, /images/logo-dark@2x.png 2x" alt="2D Aquatic - Bể cá biển cao cấp" width="184" height="80">
+    </a>
+      <p>Hệ sinh thái bể cá biển cao cấp tại Hà Nội. Cung cấp thiết bị, hóa chất, sinh vật và dịch vụ tư vấn chuyên nghiệp cho cộng đồng chơi cá biển Việt Nam.</p>
+      <div class="foot-social">
+        <a href="https://www.facebook.com/2DAquatic/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://zalo.me/0975112334" target="_blank" rel="noopener" aria-label="Zalo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.49 10.272c-.766 0-1.354.587-1.354 1.353a1.36 1.36 0 0 0 1.354 1.354c.766 0 1.354-.588 1.354-1.354 0-.766-.61-1.353-1.354-1.353zm6.027 0c-.766 0-1.354.587-1.354 1.353a1.36 1.36 0 0 0 1.354 1.354c.766 0 1.354-.588 1.354-1.354 0-.766-.61-1.353-1.354-1.353zm-3.013-7.025C8.27 3.247 2.524 8.092 2.524 14.04c0 3.34 1.799 6.34 4.674 8.292l-1.044 2.96c-.103.293.207.574.49.418L9.61 23.85a13.84 13.84 0 0 0 5.893 1.246c7.234 0 12.98-4.844 12.98-10.793 0-5.948-5.747-10.792-12.98-10.792zM7.41 16.95H5.026v.001a.5.5 0 0 1-.5-.5v-5.844a.5.5 0 0 1 1 0v5.343H7.41a.5.5 0 0 1 0 1zm2.62-.5a.5.5 0 1 1-1 0v-5.343a.5.5 0 0 1 1 0v5.343zm6.025-.001a.5.5 0 0 1-1 0v-.27c-.394.27-.842.428-1.314.428a2.36 2.36 0 0 1-2.354-2.354 2.36 2.36 0 0 1 2.354-2.353c.473 0 .92.157 1.314.428v-.27a.5.5 0 0 1 1 0v4.391zm6.027 0a.5.5 0 0 1-1 0v-.27c-.394.27-.842.428-1.314.428a2.36 2.36 0 0 1-2.354-2.354 2.36 2.36 0 0 1 2.354-2.353c.473 0 .92.157 1.314.428v-.27a.5.5 0 0 1 1 0v4.391z"/></svg>
+        </a>
+        <a href="tel:0975112334" aria-label="Phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Công ty TNHH 2D Aquatic</h4>
+      <ul>
+        <li><a href="/lien-he">Về chúng tôi</a></li>
+        <li><a href="/lien-he">Tuyển dụng</a></li>
+        <li><a href="/lien-he">Hợp tác</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Liên hệ</h4>
+      <ul>
+        <li><a href="tel:0975112334">0975.112.334</a></li>
+        <li><a href="tel:0866112334">0866.112.334</a></li>
+        <li class="foot-address">305 Nguyễn Văn Cừ,<br>Bồ Đề, Hà Nội</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© 2026 2D Aquatic. All rights reserved.</div>
+    <div>Designed with 🌊 in Hà Nội</div>
+  </div>
+</footer>
+
+<script>
+  // ===== HERO CAROUSEL =====
+  const slides = document.querySelectorAll('.slide');
+  const tabs = document.querySelectorAll('.slide-tab');
+  const SLIDE_DURATION = 6000; // 6 seconds per slide
+
+  let currentIdx = 0;
+  let autoplayTimer = null;
+  let isPaused = false;
+
+  function goToSlide(idx) {
+    slides[currentIdx].classList.remove('active');
+    tabs[currentIdx].classList.remove('active');
+
+    currentIdx = (idx + slides.length) % slides.length;
+
+    slides[currentIdx].classList.add('active');
+    tabs[currentIdx].classList.add('active');
+  }
+
+  function nextSlide() { goToSlide(currentIdx + 1); }
+
+  function startAutoplay() {
+    clearInterval(autoplayTimer);
+    autoplayTimer = setInterval(() => {
+      if (!isPaused) nextSlide();
+    }, SLIDE_DURATION);
+  }
+
+  function pauseAutoplay() { isPaused = true; }
+  function resumeAutoplay() { isPaused = false; }
+
+  // Event listeners - click tab
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      goToSlide(i);
+      startAutoplay();
+    });
+  });
+
+  // Pause on hover
+  const heroEl = document.getElementById('hero');
+  heroEl.addEventListener('mouseenter', pauseAutoplay);
+  heroEl.addEventListener('mouseleave', resumeAutoplay);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { goToSlide(currentIdx - 1); startAutoplay(); }
+    if (e.key === 'ArrowRight') { nextSlide(); startAutoplay(); }
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  heroEl.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
+  heroEl.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goToSlide(currentIdx - 1); else nextSlide();
+      startAutoplay();
+    }
+  });
+
+  // Pause autoplay when tab is hidden (saves performance)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pauseAutoplay();
+    else resumeAutoplay();
+  });
+
+  // Start
+  startAutoplay();
+
+  // ===== NAV SCROLL BEHAVIOR =====
+  const navEl = document.querySelector('nav');
+  function updateNav() {
+    if (window.scrollY > 50) {
+      navEl.classList.add('scrolled');
+    } else {
+      navEl.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ===== HAMBURGER MOBILE MENU =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('open');
+    hamburger.classList.toggle('open', isOpen);
+    mobileMenu.classList.toggle('open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Toggle submenu sections
+  document.querySelectorAll('.mobile-menu-title[data-toggle]').forEach(title => {
+    title.addEventListener('click', () => {
+      title.parentElement.classList.toggle('expanded');
+    });
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.mobile-submenu a, .mobile-contact a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    });
+  });
+  document.querySelector('.mobile-menu-section a[href="#contact"]')?.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  });
+
+  // Close menu on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820 && mobileMenu.classList.contains('open')) {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+
+</body>
+</html>
