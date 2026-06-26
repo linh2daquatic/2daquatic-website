@@ -3,7 +3,7 @@ title: BƠM Atman-306S
 slug: atman-306s
 category: bom
 short_description: "Bơm chìm mini thế hệ mới dành cho bể lọc vách "
-image: /images/uploads/bom-ho-ca-atman-306s-1.jpg
+image: /images/uploads/screenshot-2026-06-24-at-10.08.57.png
 price: 300000
 sale_price: ""
 unit: Cái
