@@ -74,6 +74,7 @@ ROOT_FILES.forEach(file => {
 
 const FOLDERS = [
   'admin', 'be-ca', 'san-pham', 'dich-vu', 'ho-tro', 'lien-he',
+  'ca-canh-bien', 'ca-canh-bien-ha-noi',
   'blog', 'be-thuc-te', 'cam-on', 'css', 'images', 'content', 'functions', 'bao-gia'
 ];
 
