@@ -2,8 +2,7 @@
 title: CÁ BỐNG HOÀNG GIA (ROYAL GRAMMA BASSLET)- KẺ THỐNG TRỊ CÁC KHE ĐÁ
 slug: ca-bong-hoang-gia-royal-gramma
 category: sinh-vat-ca
-short_description: Royal Gramma "Viên ngọc" rực rỡ của đại dương với sắc tím
-  sáng mix vàng cam độc đáo.
+short_description: 'Royal Gramma "Viên ngọc" rực rỡ của đại dương '
 image: /images/uploads/lg-72329-royal-gramma-basslet-1-.webp
 gallery:
   - /images/uploads/29e0403b5de1dcbf85f0.jpg
