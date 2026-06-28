@@ -1,5 +1,5 @@
 ---
-title: Cá Hồng Y Banggai (Banggai Cardinalfish)
+title: CÁ HỒNG Y BANGGAI (BANGGAI CARDINAFISH)-  NÉT ĐẸP YÊN BÌNH CỦA ĐẠI DƯƠNG
 slug: ca-hong-y-banggai-cardinal
 category: sinh-vat-ca
 short_description: Cá Banggai loài cá hiền lành với hình dáng và màu sắc độc đáo
