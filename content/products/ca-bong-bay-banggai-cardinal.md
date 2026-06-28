@@ -2,8 +2,7 @@
 title: Cá Hồng Y Banggai (Banggai Cardinalfish)
 slug: ca-hong-y-banggai-cardinal
 category: sinh-vat-ca
-short_description: Cá Banggai gây ấn tượng với thân bạc ánh kim kết hợp các sọc
-  đen nổi bật và bộ vây dài thanh thoát chấm bi trắng.
+short_description: Cá Banggai loài cá hiền lành với hình dáng và màu sắc độc đáo
 image: /images/uploads/images.jpeg
 gallery: []
 price: 0
