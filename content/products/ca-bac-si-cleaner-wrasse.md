@@ -54,19 +54,16 @@ Trong tự nhiên, cá mó bác sĩ thiết lập các "trạm làm sạch" trê
 
 * Nhiệt độ 24–26°C 
 * Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
-*  KH 8–12 dKH
+* pH 8.1–8.4 
+* KH 8–12 dKH
 
-Hướng Dẫn Chăm Sóc:
+**Hướng Dẫn Chăm Sóc:**
 
-Nên nuôi ở bể có dung tích tối thiểu là 85L trở lên
+* Nên nuôi ở bể có dung tích tối thiểu là 85L trở lên
+* Thức ăn ban đầu là kí sinh trùng và da chết, chất nhầy của cá. Tuy nhiên để nuôi thành công lâu dài thì bạn nên bổ sung thêm artermia, mysis đông lạnh hoặc thức ăn dạng viên nhỏ chất lượng cao kết hợp bổ sung dầu tỏi để đảm bảo cung cấp đầy đủ chất dinh dưỡng mà chúng cần.
+* Nên nuôi trong bể có nhiều cá to, vì với tập tính rỉa chất nhầy và da chết trên cá khác sẽ dễ làm cá nhỏ stress
+* Cá bác sĩ có tính lãnh thổ với các cá thể cùng loài nên tuỳ theo kích thước bể mà bạn chỉ nên nuôi từ 1-2 con cá trong một bể.
 
-Thức ăn ban đầu là kí sinh trùng và da chết, chất nhầy của cá. Tuy nhiên để nuôi thành công lâu dài thì bạn nên bổ sung thêm artermia, mysis đông lạnh hoặc thức ăn dạng viên nhỏ chất lượng cao kết hợp bổ sung dầu tỏi để đảm bảo cung cấp đầy đủ chất dinh dưỡng mà chúng cần.
+**Kết Luận:**
 
-Nên nuôi trong bể có nhiều cá to, vì với tập tính rỉa chất nhầy và da chết trên cá khác sẽ dễ làm cá nhỏ stress
-
-Cá bác sĩ có tính lãnh thổ với các cá thể cùng loài nên tuỳ theo kích thước bể mà bạn chỉ nên nuôi từ 1-2 con cá trong một bể.
-
-Kết Luận:
-
-Cá mó bác sĩ không chỉ mang vẻ đẹp độc đáo mà còn mang lại nhiều lợi ích cho hệ sinh thái, rất đáng để thêm vào bể. Tuy nhiên bạn cần hiểu rõ tập tính để có thể nuôi thành công.
+Cá mó bác sĩ không chỉ mang vẻ đẹp độc đáo mà còn mang lại nhiều lợi ích cho hệ sinh thái, rất đáng để thêm vào bể. Tuy nhiên bạn cần hiểu rõ tập tính của chúng để có thể nuôi thành công.
