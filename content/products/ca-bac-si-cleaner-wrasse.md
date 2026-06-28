@@ -1,6 +1,6 @@
 ---
-title: "CÁ BÁC SĨ (LABROIDES DIMIDIATUS)- CHUYÊN GIA LÀM SẠCH KÍ SINH TRÙNG
-  TRONG BỂ CÁ BIỂN "
+title: 'CÁ BÁC SĨ (LABROIDES DIMIDIATUS)- "CHUYÊN GIA" LÀM SẠCH KÍ SINH TRÙNG
+  TRONG BỂ CÁ BIỂN '
 slug: ca-bac-si-cleaner-wrasse
 category: sinh-vat-ca
 short_description: "Cá Bác Sĩ chuyên 'dọn' ký sinh trùng và da chết cho các cá khác "
