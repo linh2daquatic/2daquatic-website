@@ -2,7 +2,7 @@
 title: CÁ HỒNG Y BANGGAI (BANGGAI CARDINAFISH)-  NÉT ĐẸP YÊN BÌNH CỦA ĐẠI DƯƠNG
 slug: ca-hong-y-banggai-cardinal
 category: sinh-vat-ca
-short_description: Cá Banggai loài cá hiền lành với hình dáng và màu sắc độc đáo
+short_description: Cá Banggai- Nét đẹp yên bình của đại dương
 image: /images/uploads/images.jpeg
 gallery: []
 price: 0
