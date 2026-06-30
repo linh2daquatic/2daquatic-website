@@ -10,6 +10,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: "Cá Mó Bác Sĩ "
   - key: Tên khoa học
     value: Labroides dimidiatus
   - key: Độ khó nuôi
