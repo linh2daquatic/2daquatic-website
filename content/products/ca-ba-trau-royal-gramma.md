@@ -1,8 +1,8 @@
 ---
-title: CÁ BỐNG HOÀNG GIA (ROYAL GRAMMA BASSLET)- KẺ THỐNG TRỊ CÁC KHE ĐÁ
+title: CÁ BỐNG HOÀNG GIA (ROYAL GRAMMA BASSLET)
 slug: ca-bong-hoang-gia-royal-gramma
 category: sinh-vat-ca
-short_description: 'Royal Gramma "Viên ngọc" rực rỡ của đại dương '
+short_description: 'Cá Bống Hoàng Gia (Royal Gramma) "Viên ngọc" rực rỡ giữa lòng đại dương '
 image: /images/uploads/lg-72329-royal-gramma-basslet-1-.webp
 gallery:
   - /images/uploads/29e0403b5de1dcbf85f0.jpg
