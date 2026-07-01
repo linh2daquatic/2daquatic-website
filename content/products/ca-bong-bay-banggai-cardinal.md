@@ -3,7 +3,7 @@ title: CÁ HỒNG Y BANGGAI (BANGGAI CARDINAFISH)
 slug: ca-hong-y-banggai-cardinal
 category: sinh-vat-ca
 short_description: Cá Banggai- Nét đẹp yên bình của đại dương
-image: /images/uploads/images.jpeg
+image: /images/uploads/ca-son-banggaikauderns-cardinal-fish.jpg
 gallery: []
 price: 0
 sale_price: ""
