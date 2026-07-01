@@ -18,7 +18,7 @@ specs:
     value: Tùy chỉnh linh hoạt từ 1 đến 24 lần/ngày thông qua ứng dụng.
   - key: Kết nối
     value: Hỗ trợ đồng thời Bluetooth, WiFi (2.4GHz) và Cloud điều khiển từ xa
-in_stock: true
+in_stock: false
 featured: false
 warranty: ""
 date: 2026-06-30T20:05:00.000Z
