@@ -3,7 +3,7 @@ title: CÁ BỐNG CÁT KIM CƯƠNG (DIAMOND GOBY)
 slug: ca-bong-cat-kim-cuong-diamond-goby
 category: sinh-vat-ca
 short_description: "Cá Bống Cát Kim Cương-Chuyên gia làm sạch nền cát "
-image: /images/uploads/pngtree-maiden-gobyvalenciennea-puellaris-algae-eater-substrate-nature-photo-image_21054056.jpg
+image: /images/uploads/z8000094549033_f48207b38852f61e5fa0bab17fc233bd.jpg
 gallery: []
 price: 0
 sale_price: ""
