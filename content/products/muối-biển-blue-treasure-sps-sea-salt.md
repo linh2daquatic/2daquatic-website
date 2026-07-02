@@ -20,6 +20,11 @@ in_stock: true
 featured: false
 warranty: ""
 date: 2026-06-17T18:26:00.000Z
+seo:
+  meta_title: Muối Biển Blue Treasure - Giải Pháp Nước Biển Nhân Tạo Chất Lượng
+  meta_description: Blue Treasure là dòng muối biển nhân tạo chất lượng cao, hòa
+    tan nhanh, thông số ổn định, phù hợp cho hồ cá biển, bể reef và người chơi
+    thủy sinh biển.
 ---
  **Blue Treasure SPS Sea Salt** là dòng muối biển nhân tạo phân khúc chuyên nghiệp, được nghiên cứu và phát triển đặc biệt cho các bể cá biển rạn san hô, đặc biệt đáp ứng hoàn hảo nhu cầu khắt khe của các dòng san hô cứng polyp nhỏ (SPS). Với công thức cải tiến giàu khoáng chất bám sát môi trường tự nhiên, sản phẩm giúp SPS lên màu rực rỡ, nuôi dưỡng các mô và thúc đẩy quá trình xây dựng khung xương vững chắc
 
