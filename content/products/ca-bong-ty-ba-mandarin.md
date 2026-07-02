@@ -11,6 +11,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: Cá Bống Trạng Nguyên
   - key: Tên khoa học
     value: Synchiropus splendidus
   - key: Độ khó nuôi
@@ -23,8 +25,6 @@ specs:
     value: Hiền
   - key: Bể tối thiểu
     value: 100 L
-  - key: Loài Cá
-    value: Cá Bống Trạng Nguyên
   - key: An Toàn Cho San Hô
     value: Nuôi được trong bể san hô
 in_stock: true
