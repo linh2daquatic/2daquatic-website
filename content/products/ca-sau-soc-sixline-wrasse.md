@@ -2,7 +2,8 @@
 title: CÁ MÓ SIXLINE (SIXLINE WRASSE)
 slug: ca-sixline-wrasse
 category: sinh-vat-ca
-short_description: "Cá Sáu Sọc nhỏ, nhanh, thân tím sọc cam "
+short_description: Cá Mó Sixline- "Trợ thủ đắc lực" giúp kiểm soát kí sinh trùng
+  có hại trong bể san hô.
 image: /images/uploads/lg_76307_six_line_wrasse.jpg
 gallery:
   - /images/uploads/gettyimages-147048222-e5894a8994ab4618a4d2f88ad7364d31.jpg
