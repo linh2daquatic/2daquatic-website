@@ -20,7 +20,7 @@ specs:
   - key: Thức ăn
     value: Ăn tạp ( rong, taot, artermia, cám dạng viên,..)
   - key: Tính cách
-    value: Bán hiền
+    value: Bán hiền có tính lãnh thổ với cùng loài
   - key: Bể tối thiểu
     value: 150 L
   - key: An Toàn Cho San Hô
