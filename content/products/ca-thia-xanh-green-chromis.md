@@ -2,7 +2,7 @@
 title: CÁ THIA LÁ MẠ (BLUE GREEN CHROMIS)
 slug: ca-thia-la-ma-blue-green-chromis
 category: sinh-vat-ca
-short_description: "Cá Thia Xanh ánh kim bơi thành đàn lấp lánh giữa tầng nước "
+short_description: Cá Thia Lá Mạ - dải lụa xanh lấp lánh dưới ánh mặt trời
 image: /images/uploads/z8000714405340_3c8842d6e021de4aee3a81a998b7e400.jpg
 gallery: []
 price: 0
@@ -35,7 +35,7 @@ seo:
     Chi tiết về thông số nước và cách nuôi một đàn cá khỏe mạnh, bơi đẹp trong
     bể.
 ---
-**Cá thia lá mạ (Blue Green Chromis )** được mệnh danh là "vũ công xanh" của đại dương nhờ sắc ngọc bích ánh kim lộng lẫy. Bắt nguồn từ các rạn san hô Ấn Độ Dương – Thái Bình Dương, loài cá này là lựa chọn quốc dân cho mọi bể cá biển. Chúng sở hữu đặc tính "Reef-safe" tuyệt đối, hoàn toàn hòa hợp với san hô. Với giá thành rẻ cùng sức sống mãnh liệt tính cách hiền lành nhất trong dòng thia, thia lá mạ chính là nét chấm phá hoàn hảo mang cả làn gió biển sống động vào không gian sống của bạn.
+**Cá thia lá mạ (Blue Green Chromis )** nổi bật giữa lòng đại dương nhờ sắc ngọc bích ánh kim lộng lẫy. Bắt nguồn từ các rạn san hô Ấn Độ Dương – Thái Bình Dương, loài cá này là lựa chọn quốc dân cho mọi bể cá biển. Chúng sở hữu đặc tính "Reef-safe" tuyệt đối, hoàn toàn hòa hợp với san hô. Với giá thành rẻ cùng sức sống mãnh liệt tính cách hiền lành nhất trong dòng thia, thia lá mạ chính là nét chấm phá hoàn hảo mang cả làn gió biển sống động vào không gian sống của bạn.
 
 **Đặc Điểm:**
 
@@ -57,9 +57,9 @@ seo:
 **Thông số nước lý tưởng:** 
 
 * Nhiệt độ 24–26°C 
-*  Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
-*  KH 8–12 dKH
+* Độ mặn 1.024–1.026 (≈35 ppt) 
+* pH 8.1–8.4 
+* KH 8–12 dKH
 
 **Hướng Dẫn Chăm Sóc:**
 
