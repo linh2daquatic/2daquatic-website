@@ -9,6 +9,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: Cá Nẻ Điện
   - key: Tên khoa học
     value: Acanthurus leucosternon
   - key: Độ khó nuôi
@@ -21,6 +23,8 @@ specs:
     value: Hiền lành nhưng có tính lãnh thổ cao với cùng loài.
   - key: Bể tối thiểu
     value: 450 L
+  - key: An Toàn Cho San Hô
+    value: Nuôi được trong bể san hô
 in_stock: true
 featured: false
 warranty: ""
