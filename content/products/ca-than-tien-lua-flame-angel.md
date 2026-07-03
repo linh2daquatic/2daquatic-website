@@ -9,6 +9,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: Cá Thiên Thần Lửa
   - key: Tên khoa học
     value: Centropyge loricula
   - key: Độ khó nuôi
@@ -21,8 +23,6 @@ specs:
     value: Bán hiền, có tính lãnh thổ với cùng loài
   - key: Bể tối thiểu
     value: 150 L
-  - key: Loài Cá
-    value: Cá Thiên Thần Lửa
   - key: An Toàn Cho San Hô
     value: Có thể nuôi trong bể san hô nhưng cần cho ăn đầy đủ và quan sát thêm
 in_stock: false
