@@ -3,7 +3,7 @@ title: CÁ TANG VÀNG (YELLOW TANG)
 slug: ca-tang-vang-yellow-tang
 category: sinh-vat-ca
 short_description: Cá Tang Vàng- Mặt trời nhỏ chiếu sáng nơi đại dương sâu thẳm
-image: /images/uploads/z8003568393900_a1229252113f3f5e34a534970a67a12a.jpg
+image: /images/uploads/z8003976824333_d851fe069785eba519581740ea10c97c.jpg
 gallery: []
 price: 0
 sale_price: ""
