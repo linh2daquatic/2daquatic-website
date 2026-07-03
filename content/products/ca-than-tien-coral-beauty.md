@@ -9,6 +9,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: Cá Thiên Thần Sim Tím
   - key: Tên khoa học
     value: Centropyge bispinosa
   - key: Độ khó nuôi
@@ -21,10 +23,8 @@ specs:
     value: Bán hiền
   - key: Bể tối thiểu
     value: 150 L
-  - key: Loài Cá
-    value: Cá Thiên Thần Sim Tím
   - key: An Toàn Cho San Hô
-    value: Cần cân nhắc và quan sát thêm
+    value: Có thể nuôi trong bể san hô nhưng cần cho ăn đầy đủ và quan sát thêm
 in_stock: false
 featured: false
 warranty: ""
