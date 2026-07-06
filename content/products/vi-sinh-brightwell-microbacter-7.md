@@ -1,6 +1,6 @@
 ---
 title: VI SINH Brightwell MICROBACTER 7 (250 ML)
-slug: brightwell-microbacter7
+slug: brightwell-microbacter-7-250ml
 category: hoa-chat
 short_description: Brightwell Microbacter 7 là Vi sinh đậm đặc cực tốt cho bể cá
   biển, có thể dùng dosing để châm.

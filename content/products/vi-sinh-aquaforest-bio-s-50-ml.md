@@ -1,6 +1,6 @@
 ---
 title: VI SINH  Aquaforest Bio S (50 ML)
-slug: aquaforest-bios
+slug: aquaforest-bio-s-50ml
 category: hoa-chat
 short_description: Vi sinh thiết lập và duy trì hệ vi sinh ổn định cho hồ cá,
   đặc biệt là hồ cá biển.

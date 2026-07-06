@@ -47,5 +47,19 @@
 /thank-you     /cam-on      301
 /thanks        /cam-on      301
 
+# === San pham: slug cu bi trung (2 bien the cung 1 slug) -> tro ve 1 ban ro rang ===
+# (sua ngay 07/07/2026 - xem CHANGELOG)
+/san-pham/brightwell-microbackter-clean       /san-pham/brightwell-microbacter-clean-250ml/   301
+/san-pham/red-sea-reef-energy-plus-ab+        /san-pham/red-sea-reef-energy-plus-ab-250ml/    301
+/san-pham/blue-treasure-sps-reef-sea-salt     /san-pham/blue-treasure-sps-sea-salt-3-35kg/    301
+/san-pham/tropic-marin-A-elements             /san-pham/tropic-marin-a-elements-200ml/        301
+/san-pham/tropic-marin-k+-elements            /san-pham/tropic-marin-k-elements-200ml/        301
+/san-pham/maxspect-Bio-sphere                 /san-pham/maxspect-bio-sphere-1kg/              301
+/san-pham/aquaforest-np-pro                   /san-pham/aquaforest-np-pro-10ml/               301
+/san-pham/aquaforest-pro-bio%20s              /san-pham/aquaforest-pro-bio-s-10ml/            301
+/san-pham/aquaforest-bios                     /san-pham/aquaforest-bio-s-10ml/                301
+/san-pham/brightwell-reef-bio-fuel            /san-pham/brightwell-reef-bio-fuel-250ml/       301
+/san-pham/brightwell-microbacter7             /san-pham/brightwell-microbacter-7-250ml/       301
+
 # === Fallback 404 ===
 /*             /404.html    404
