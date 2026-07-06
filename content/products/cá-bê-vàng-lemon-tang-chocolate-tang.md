@@ -30,10 +30,10 @@ featured: false
 warranty: ""
 date: 2026-06-23T09:00:00.000Z
 seo:
-  meta_title: "Cá Nẻ Xanh (Cá Dory): Đặc Điểm, Cách Nuôi & Chăm Sóc A-Z"
-  meta_description: Hướng dẫn cách nuôi cá Nẻ Xanh (Blue Tang) chuẩn kỹ thuật.
-    Khám phá đặc điểm ngoại hình, tập tính và chế độ ăn giúp cá Dory luôn rực
-    rỡ, khỏe mạnh.
+  meta_title: "Cá Bê Vàng (Lemon Tang): Đặc Điểm, Cách Nuôi & Chế Độ Ăn Chuẩn"
+  meta_description: Khám phá cá Bê Vàng (Lemon Tang) - loài cá cảnh biển dọn tảo
+    cực tốt với sắc vàng rực rỡ. Hướng dẫn chi tiết cách thiết lập bể nuôi và
+    chế độ ăn giúp cá lên màu chuẩn.
 ---
 Cá Bê Vàng (Lemon Tang) luôn là lựa chọn hàng đầu cho các tín đồ mê thủy sinh biển. Sở hữu sắc vàng rực rỡ cùng đặc tính thân thiện, loài cá này mang lại năng lượng tích cực cho hệ sinh thái đại dương thu nhỏ của bạn.
 
@@ -68,7 +68,7 @@ Cá Bê Vàng (Lemon Tang) luôn là lựa chọn hàng đầu cho các tín đ�
 
 * Nên nuôi trong bể có thể tích tối thiểu 150 L.
 * Bố trí nhiều đá tạo hang hốc để cá trú ẩn giảm stress.
-* Cá Bê Vàng thuọc dòng Tang nên dễ bị kí sinh trùng và bệnh đường ruột. Do đó ngoài việc bố trí hang hốc thì bạn nên cung cấp đầy đủ đa dạng các loại thức ăn đặc biệt là rong, tảo. Ngoài ra bổ sung thêm dầu tỏi và vitamin để cá tăng sức đề kháng.
+* Cá Bê Vàng thuộc dòng Tang nên dễ bị kí sinh trùng và bệnh đường ruột. Do đó ngoài việc bố trí hang hốc thì bạn nên cung cấp đầy đủ đa dạng các loại thức ăn đặc biệt là rong, tảo. Ngoài ra bổ sung thêm dầu tỏi và vitamin để cá tăng sức đề kháng.
 * Nếu muốn thả nhiều con cá dòng Tang thì bạn cần kiên nhẫn ghép cặp.
 
 **Kết Luận:**
