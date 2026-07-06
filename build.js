@@ -196,7 +196,6 @@ try {
 }
 
 
-
 // ===== AUTO-GENERATE BLOG from CMS (content/articles) =====
 // Tao articles-index.json cho trang /blog/ va sinh trang HTML chi tiet cho moi bai.
 // Toan bo bao trong try/catch: loi -> build van chay, chi thieu bai blog.
@@ -578,6 +577,49 @@ try {
     console.log('  \u2713 product pages: '+madeP+' trang (/san-pham/<slug>/)');
   }
 } catch(e){ console.warn('  (product pages error: '+e.message+')'); }
+
+
+// ===== SSR GRID cho /san-pham/ (fix: trang chi co "Dang tai san pham..." khi khong co JS) =====
+// Cac trang chi tiet /san-pham/<slug>/ da duoc sinh o block phia tren. Con thieu: chinh
+// trang /san-pham/ van rong khi chua chay JS (crawler/tool fetch thay "Dang tai san pham...").
+// Fix: nhung san the that (voi the <a href> that) vao ngay trong HTML luc build.
+try {
+  var ssrEsc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var ssrVnd = function (n) { return n ? Number(n).toLocaleString('vi-VN') + 'đ' : 'Liên hệ'; };
+  var ssrJsonPath = path.join(DIST, 'products.json');
+  var ssrIndexPath = path.join(DIST, 'san-pham', 'index.html');
+  if (fs.existsSync(ssrJsonPath) && fs.existsSync(ssrIndexPath)) {
+    var ssrProducts = JSON.parse(fs.readFileSync(ssrJsonPath, 'utf8'));
+    if (Array.isArray(ssrProducts) && ssrProducts.length) {
+      var ssrCard = function (p) {
+        var imgTag = p.image
+          ? '<img class="pf-thumb" src="' + ssrEsc(p.image) + '" alt="' + ssrEsc(p.title) + '" loading="lazy">'
+          : '<div class="pf-thumb-ph">Ảnh đang cập nhật</div>';
+        var priceHtml = p.sale_price
+          ? '<span class="pf-price">' + ssrVnd(p.sale_price) + '</span><span class="pf-price-old">' + ssrVnd(p.price) + '</span>'
+          : '<span class="pf-price">' + ssrVnd(p.price) + '</span>';
+        var oosHtml = p.in_stock ? '' : '<span class="pf-oos">Tạm hết hàng</span>';
+        return '<a class="pf-card" href="/san-pham/' + encodeURIComponent(p.slug) + '/" data-slug="' + ssrEsc(p.slug) + '" style="text-decoration:none;color:inherit">' + imgTag +
+          '<div class="pf-info">' +
+          '<span class="pf-cat">' + ssrEsc(CATLABELS[p.category] || p.category || 'Sản phẩm') + '</span>' +
+          '<h3 class="pf-name">' + ssrEsc(p.title) + '</h3>' +
+          '<p class="pf-desc">' + ssrEsc(p.short_description || '') + '</p>' +
+          '<div class="pf-price-row">' + priceHtml + oosHtml + '</div>' +
+          '</div></a>';
+      };
+      var ssrHtml = fs.readFileSync(ssrIndexPath, 'utf8');
+      var ssrHtmlNew = ssrHtml
+        .replace('<div id="pf-grid" class="pf-grid"></div>', '<div id="pf-grid" class="pf-grid">' + ssrProducts.map(ssrCard).join('') + '</div>')
+        .replace('<p id="pf-empty" class="pf-empty">Đang tải sản phẩm…</p>', '<p id="pf-empty" class="pf-empty" style="display:none"></p>');
+      if (ssrHtmlNew !== ssrHtml) {
+        fs.writeFileSync(ssrIndexPath, ssrHtmlNew, 'utf8');
+        console.log('  \u2713 san-pham/index.html: SSR ' + ssrProducts.length + ' san pham vao grid (het phu thuoc 100% JS)');
+      } else {
+        console.warn('  (san-pham SSR: khong khop placeholder trong san-pham/index.html - kiem tra markup)');
+      }
+    }
+  }
+} catch (e) { console.warn('  (san-pham SSR grid error: ' + e.message + ')'); }
 
 
 // ===== INJECT HOMEPAGE CONTENT FROM CMS (slides + showcase) =====
