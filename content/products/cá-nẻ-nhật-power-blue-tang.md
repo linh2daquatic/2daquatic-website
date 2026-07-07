@@ -32,7 +32,7 @@ date: 2026-06-23T09:00:00.000Z
 seo:
   meta_title: "Cá Nẻ Nhật (Powder Blue Tang): Khám phá vẻ đẹp và phương pháp nuôi "
   meta_description: Hướng dẫn chi tiết cách nuôi cá Nẻ Nhật (Powder Blue Tang)
-    khỏe mạnh. Khám phá đặc điểm ngoại hình, chế độ ăn mchuẩn thông số nước giúp
+    khỏe mạnh. Khám phá đặc điểm ngoại hình, chế độ ăn chuẩn thông số nước giúp
     cá lên màu rực rỡ.
 ---
 Sở hữu sắc xanh lơ huyền ảo cùng dáng bơi kiêu kỳ, **cá Nẻ Nhật** luôn là niềm khao khát của mọi đồng ngư mê rạn san hô. Dù mang vẻ đẹp quyến rũ độc bản, đây lại là loài cá "đỏng đảnh" đòi hỏi kỹ thuật chăm sóc khắt khe từ người nuôi. Chúng thuộc họ cá Đuôi Gai (Acanthuridae), có nguồn gốc từ các vùng rạn san hô nông cạn, nước trong và nhiều dòng chảy thuộc khu vực Ấn Độ Dương. 
