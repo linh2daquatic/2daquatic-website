@@ -35,8 +35,6 @@ seo:
     mục khi trưởng thành. Hướng dẫn cách nuôi, chế độ ăn và thông số bể cá cảnh
     biển chuẩn nhất.
 ---
-
-
 **Cá Nẻ Bút (Orangeshoulder Tang)** là một trong những loài cá cảnh biển độc đáo thuộc họ cá Đuôi Gai (Acanthuridae), nổi tiếng với khả năng biến đổi màu sắc ngoạn mục theo độ tuổi. Loài cá này thường sống tại các rạn san hô lớn ở khu vực Ấn Độ Dương - Thái Bình Dương. Cá Nẻ Bút rất được săn đón nhờ ngoại hình bắt mắt và đặc tính chăm chỉ dọn dẹp tảo hại cho bể.
 
 **Đặc Điểm:** Điểm đặc sắc nhất của cá Nẻ Bút chính là màn "lột xác" diện mạo khi bước sang tuổi trưởng thành:
@@ -67,8 +65,8 @@ seo:
 
 * Nên nuôi trong bể có thể tích tối thiểu 250 L.
 * Bố trí nhiều đá tạo hang hốc để cá trú ẩn giảm stress.
-* Cá Nẻ Bút thuộc dòng Tang nên dễ bị kí sinh trùng và bệnh đường ruột. Do đó ngoài việc bố trí hang hốc thì bạn nên cung cấp đầy đủ đa dạng các loại thức ăn đặc biệt là rong, tảo. Ngoài ra bổ sung thêm dầu tỏi và vitamin để cá tăng sức đề kháng.
-* Nếu muốn thả nhiều con cá dòng Tang thì bạn cần kiên nhẫn ghép cặp.
+* Ngoài việc bố trí hang hốc thì bạn nên cung cấp đầy đủ đa dạng các loại thức ăn đặc biệt là rong, tảo. Ngoài ra bổ sung thêm dầu tỏi và vitamin để cá tăng sức đề kháng.
+* Nếu muốn thả nhiều con cá cùng dòng thì bạn cần kiên nhẫn ghép cặp.
 
 **Kết Luận:**
 
