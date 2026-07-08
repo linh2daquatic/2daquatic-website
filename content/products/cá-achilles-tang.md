@@ -2,8 +2,7 @@
 title: "CÁ ACHILLES TANG "
 slug: "  ca-achilles-tang"
 category: sinh-vat-ca
-short_description: Cá Achilles Tang- Viên ngọc trai đen quý báu mà thiên nhiên
-  ban tặng cho đại dương
+short_description: Cá Achilles Tang- Viên ngọc trai đen quý báu giữa lòng đại dương
 image: /images/uploads/z8019737566770_6629246be620988419285910d1e2e677.jpg
 gallery: []
 price: 0
