@@ -2,7 +2,7 @@
 title: CÁ UNICORN TANG (BLUESPINE UNICORN TANG)
 slug: ca-unicorn-tang-bluespine-unicorn-tang
 category: sinh-vat-ca
-short_description: Cá Bê Nâu Đuôi Vàng- Dũng sĩ diệt rêu tảo cần mẫn nhất rạn san hô
+short_description: Cá Unicorn Tang- chú Kỳ Lân xinh đẹp của đại dương
 image: /images/uploads/z8019737581990_e275120f2a2fd8b0202ae825e7e47d21.jpg
 gallery: []
 price: 0
