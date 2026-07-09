@@ -126,6 +126,11 @@ try {
               return im ? stripQuotes(im[1]) : stripQuotes(l.replace(/^\s*-\s*/, ''));
             })
             .filter(Boolean);
+        } else if (key === 'old_slugs') {
+          data.old_slugs = block
+            .filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) { return stripQuotes(l.replace(/^\s*-\s*/, '')); })
+            .filter(Boolean);
         } else if (key === 'specs') {
           const specs = [];
           let cur = null;
@@ -295,6 +300,9 @@ try {
         while (i < fmLines.length && (/^\s+\S/.test(fmLines[i]) || fmLines[i].trim() === '')) { block.push(fmLines[i]); i++; }
         if (key === 'tags') {
           data.tags = block.filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) { return bStripQuotes(l.trim().replace(/^-\s*/, '')); }).filter(Boolean);
+        } else if (key === 'old_slugs') {
+          data.old_slugs = block.filter(function (l) { return l.trim().indexOf('-') === 0; })
             .map(function (l) { return bStripQuotes(l.trim().replace(/^-\s*/, '')); }).filter(Boolean);
         }
         continue;
@@ -812,6 +820,51 @@ try {
   fs.writeFileSync(path.join(DIST,'sitemap.xml'), smXml, 'utf8');
   console.log('  \u2713 sitemap.xml (' + smEntries.length + ' URLs)');
 } catch(e) { console.warn('  (sitemap error: '+e.message+')'); }
+
+// ===== TỰ ĐỘNG SINH REDIRECT TỪ FIELD "old_slugs" TRONG CMS =====
+// Khi đổi Slug (URL) của 1 sản phẩm/bài viết, điền slug CŨ vào field
+// "old_slugs" (list) trong CMS -> build sẽ tự thêm redirect 301 vào
+// _redirects, không cần Linh tự tay sửa file _redirects nữa.
+try {
+  var AR_LINES = [];
+  var pjRedir = path.join(DIST, 'products.json');
+  if (fs.existsSync(pjRedir)) {
+    JSON.parse(fs.readFileSync(pjRedir, 'utf8')).forEach(function (pr) {
+      if (pr.slug && Array.isArray(pr.old_slugs)) {
+        pr.old_slugs.forEach(function (old) {
+          old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
+          if (!old || old === pr.slug) return;
+          AR_LINES.push('/san-pham/' + old + '/    /san-pham/' + pr.slug + '/    301!');
+          AR_LINES.push('/san-pham/' + old + '    /san-pham/' + pr.slug + '/    301!');
+        });
+      }
+    });
+  }
+  var ajRedir = path.join(DIST, 'content', 'articles-index.json');
+  if (fs.existsSync(ajRedir)) {
+    JSON.parse(fs.readFileSync(ajRedir, 'utf8')).forEach(function (a) {
+      if (a.slug && Array.isArray(a.old_slugs)) {
+        a.old_slugs.forEach(function (old) {
+          old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
+          if (!old || old === a.slug) return;
+          AR_LINES.push('/blog/' + old + '/    /blog/' + a.slug + '/    301!');
+          AR_LINES.push('/blog/' + old + '    /blog/' + a.slug + '/    301!');
+        });
+      }
+    });
+  }
+  if (AR_LINES.length) {
+    var redirPath = path.join(DIST, '_redirects');
+    var redirContent = fs.existsSync(redirPath) ? fs.readFileSync(redirPath, 'utf8') : '';
+    var AR_MARKER = '# === Fallback 404 ===';
+    var AR_BLOCK = '\n# === Auto-generated tu field "old_slugs" (build.js) ===\n' + AR_LINES.join('\n') + '\n\n';
+    redirContent = redirContent.indexOf(AR_MARKER) !== -1
+      ? redirContent.replace(AR_MARKER, AR_BLOCK + AR_MARKER)
+      : redirContent + AR_BLOCK;
+    fs.writeFileSync(redirPath, redirContent, 'utf8');
+    console.log('  \u2713 _redirects: tu dong them ' + AR_LINES.length + ' dong tu old_slugs');
+  }
+} catch (e) { console.warn('  (auto-redirect tu old_slugs error: ' + e.message + ')'); }
 
 
 console.log('');
