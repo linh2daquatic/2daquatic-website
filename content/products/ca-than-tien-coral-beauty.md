@@ -34,13 +34,13 @@ seo:
   meta_description: Hướng dẫn về cách chọn thức ăn, thông số nước và bố trí hang
     đá lý tưởng khi nuôi dòng cá thiên thần lùn sim tím cực đẹp này.
 ---
-Cá thiên thần sim tím (Coral Beauty) là báu vật nhỏ bé được thiên nhiên ban tặng cho các rạn san hô Ấn Độ Dương - Thái Bình Dương. Thuộc nhóm cá thiên thần lùn, loài cá này không chỉ thu hút bởi vẻ đẹp quý phái mà còn bởi bản tính kiên cường, dẻo dai với môi trường sống. 
+**Cá thiên thần sim tím (Coral Beauty)** là báu vật nhỏ bé được thiên nhiên ban tặng cho các rạn san hô Ấn Độ Dương - Thái Bình Dương. Thuộc nhóm cá thiên thần lùn, loài cá này không chỉ thu hút bởi vẻ đẹp quý phái mà còn bởi bản tính kiên cường, dẻo dai với môi trường sống. 
 
 **Đặc Điểm:**
 
 * Thân và đầu cá có màu xanh tím đậm quý phái. Nổi bật ở phần trung tâm thân là các dải màu cam vàng ánh kim óng ánh, tạo nên sự đối lập màu sắc vô cùng mạnh mẽ.T
 * Khi còn nhỏ, cá có nhiều mảng màu cam sáng. Khi trưởng thành, sắc xanh tím sẽ lan rộng và đậm hơn, nhưng vẫn giữ lại vùng cam đặc trưng.
-*  Là dòng thiên thần lùn nên chúng chỉ đạt kích thước tối đa khoảng 10 cm khi nuôi trong môi trường nhân tạo, giúp tiết kiệm không gian bể nuôi.
+* Là dòng thiên thần lùn nên chúng chỉ đạt kích thước tối đa khoảng 10 cm khi nuôi trong môi trường nhân tạo, giúp tiết kiệm không gian bể nuôi.
 
 **Tập tính:**
 
@@ -59,7 +59,7 @@ Cá thiên thần sim tím (Coral Beauty) là báu vật nhỏ bé được thi�
 
 * Nhiệt độ 24–26°C 
 * Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
+* pH 8.1–8.4 
 * KH 8–12 dKH
 
 **Hướng Dẫn Chăm Sóc:**
