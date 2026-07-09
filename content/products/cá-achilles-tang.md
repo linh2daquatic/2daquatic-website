@@ -1,5 +1,5 @@
 ---
-title: "CÁ SOHAL TANG "
+title: "CÁ ACHILLES TANG "
 slug: "  ca-achilles-tang"
 category: sinh-vat-ca
 short_description: Cá Achilles Tang- Viên ngọc trai đen quý báu giữa lòng đại dương
