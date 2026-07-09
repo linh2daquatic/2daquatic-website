@@ -4,8 +4,7 @@ slug: ca-he-cam-orange-skunk
 category: sinh-vat-ca
 short_description: "Cá Hề Cam-Vẻ đẹp độc lạ rực rỡ hút mọi ánh nhìn "
 image: /images/uploads/z8019737515888_ba0649c38040269cecf354b75e3b971a.jpg
-gallery:
-  - /images/uploads/image3-1603964625-524-width600height400.jpg
+gallery: []
 price: 0
 sale_price: ""
 unit: Con
@@ -53,7 +52,7 @@ seo:
 * Ít bơi xa nơi cư trú.
 * Có khả năng thích nghi tốt với môi trường bể nuôi.
 
-![](/images/uploads/1.1.webp)
+![sdfgstdrỵ](/images/uploads/1.1.webp)
 
 **Chế Độ Ăn: Ăn Tạp**
 
