@@ -11,6 +11,8 @@ price: 0
 sale_price: ""
 unit: Con
 specs:
+  - key: Loài Cá
+    value: Cá Diều Hâu Lửa (Mặt Ngáo)
   - key: Tên khoa học
     value: Neocirrhites armatus
   - key: Độ khó nuôi
@@ -23,8 +25,6 @@ specs:
     value: Bán hung
   - key: Bể tối thiểu
     value: 100 L
-  - key: Loài Cá
-    value: Cá Diều Hâu Lửa (Mặt Ngáo)
   - key: An Toàn Cho San Hô
     value: Nuôi được trong bể san hô
 in_stock: true
