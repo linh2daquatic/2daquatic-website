@@ -195,6 +195,11 @@ collections:
     fields:
       - {label: 'Tên sản phẩm', name: 'title', widget: 'string', hint: 'VD: 2D ProMax S60'}
       - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: 2d-promax-s60'}
+      - label: '🔗 Slug cũ (nếu vừa đổi Slug ở trên)'
+        name: 'old_slugs'
+        widget: 'list'
+        required: false
+        hint: 'QUAN TRỌNG: nếu đổi Slug (URL) ở trên, điền slug CŨ vào đây trước khi lưu. Hệ thống sẽ tự tạo redirect 301, tránh Google báo lỗi 404 như trước đây. Không cần dấu / ở đầu/cuối, VD: blue-treasure-sps-reef-sea-salt'
       - label: 'Danh mục'
         name: 'category'
         widget: 'relation'
@@ -270,6 +275,11 @@ collections:
     fields:
       - {label: 'Tiêu đề bài viết', name: 'title', widget: 'string'}
       - {label: 'Slug (URL)', name: 'slug', widget: 'string', hint: 'VD: huong-dan-setup-be-ca-bien'}
+      - label: '🔗 Slug cũ (nếu vừa đổi Slug ở trên)'
+        name: 'old_slugs'
+        widget: 'list'
+        required: false
+        hint: 'QUAN TRỌNG: nếu đổi Slug (URL) ở trên, điền slug CŨ vào đây trước khi lưu. Hệ thống sẽ tự tạo redirect 301, tránh Google báo lỗi 404 như trước đây.'
       - {label: 'Tác giả', name: 'author', widget: 'string', default: 'Đội ngũ 2D Aquatic'}
       - {label: 'Ngày đăng', name: 'date', widget: 'datetime'}
       - {label: 'Ảnh đại diện', name: 'cover', widget: 'image'}
