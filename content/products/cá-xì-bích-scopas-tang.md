@@ -50,7 +50,7 @@ seo:
 * Cá Tang Tím có tập tính bán hiếu chiến và tính lãnh thổ rất cao. Chúng đặc biệt hung dữ với những con cá cùng loài hoặc những loài có hình dáng tương tự
 * Chúng bơi lội liên tục, rất năng động và thích khám phá các hang hốc vào ban ngày.
 
- **Chế Độ Ăn: Thực vật**
+**Chế Độ Ăn: Thực vật**
 
 * Các loại thực vật biển, tảo biển, rong biển, đặc biệt là lá rong biển khô (Nori).
 * Thức ăn dạng viên chất lượng cao dành cho cá biển, thức ăn dạng vảy (flakes).
@@ -67,7 +67,7 @@ seo:
 
 * Nên nuôi trong bể có thể tích tối thiểu 480 L. Luồng mạnh và có chiều dài
 * Bố trí nhiều đá tạo hang hốc để cá trú ẩn giảm stress.
-*  Loài cá này rất nhạy cảm với bệnh đốm trắng (Ich/Velvet). Khi mới mua về, bắt buộc phải cách ly ít nhất 30 ngày trước khi thả vào bể chính.
+* Loài cá này rất nhạy cảm với bệnh đốm trắng (Ich/Velvet). Khi mới mua về, bắt buộc phải cách ly ít nhất 30 ngày trước khi thả vào bể chính.
 * Ngoài việc bố trí hang hốc thì bạn nên cung cấp đầy đủ đa dạng các loại thức ăn đặc biệt là rong, tảo. Ngoài ra bổ sung thêm dầu tỏi và vitamin để cá tăng sức đề kháng. 
 
 **Kết Luận:**
