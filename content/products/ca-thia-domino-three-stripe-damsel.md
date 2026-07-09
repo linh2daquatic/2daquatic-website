@@ -59,9 +59,9 @@ seo:
 **Thông số nước lý tưởng:** 
 
 * Nhiệt độ 24–26°C 
-*  Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
-*  KH 8–12 dKH
+* Độ mặn 1.024–1.026 (≈35 ppt) 
+* pH 8.1–8.4 
+* KH 8–12 dKH
 
 **Hướng Dẫn Chăm Sóc:**
 
@@ -71,4 +71,4 @@ seo:
 
 **Kết Luận:**
 
-Cá Rô Đá (Three-stripe Damsel) là một mảnh ghép hoàn hảo cho những ai muốn sở hữu một chú cá biển khỏe mạnh, ít bệnh tật và có giá thành phải chăng. Điểm trừ duy nhất của loài cá này là tính cách hung dữ khi trưởng thành. Tuy nhiên, nếu bạn biết cách bố trí bể nuôi hợp lý và chọn bạn cùng bể phù hợp, cá thia ba sọc chắc chắn sẽ làm nổi bật không gian thủy sinh của bạn.
+**Cá Rô Đá (Three-stripe Damsel)** là một mảnh ghép hoàn hảo cho những ai muốn sở hữu một chú cá biển khỏe mạnh, ít bệnh tật và có giá thành phải chăng. Điểm trừ duy nhất của loài cá này là tính cách hung dữ khi trưởng thành. Tuy nhiên, nếu bạn biết cách bố trí bể nuôi hợp lý và chọn bạn cùng bể phù hợp, cá thia ba sọc chắc chắn sẽ làm nổi bật không gian thủy sinh của bạn.
