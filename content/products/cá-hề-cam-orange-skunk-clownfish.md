@@ -53,6 +53,8 @@ seo:
 * Ít bơi xa nơi cư trú.
 * Có khả năng thích nghi tốt với môi trường bể nuôi.
 
+![](/images/uploads/1.1.webp)
+
 **Chế Độ Ăn: Ăn Tạp**
 
 * Tảo biển.
