@@ -43,7 +43,7 @@ seo:
 * Thân hình dạng đĩa dẹt đặc trưng của họ cá Tang với kích thước trưởng thành tối đa khoảng 20 – 21 cm.
 * Màu sắc chủ đạo trên cơ thể có màu nâu đen hoặc nâu ánh xanh độc đáo.
 * Điểm nhấn là trên mặt có một đốm trắng sáng hoặc vệt trắng lớn xuất hiện rõ nét trên má, kéo dài từ dưới mắt đến tận môi.
-*  Vây ngực, vây hậu môn và vây lưng có màu nâu sẫm, viền ngoài bo sọc xanh lam ánh điện rực rỡ. Riêng vây lưng được tô điểm thêm một sọc màu cam bắt mắt.
+* Vây ngực, vây hậu môn và vây lưng có màu nâu sẫm, viền ngoài bo sọc xanh lam ánh điện rực rỡ. Riêng vây lưng được tô điểm thêm một sọc màu cam bắt mắt.
 * Đuôi màu xanh dương kết hợp một thanh dọc màu vàng. Một dải màu vàng chạy dọc cơ thể sát các vây tạo thành hình xương đòn rất lạ mắt.
 * Giống như các loài cá đuôi gai khác, chúng có hai chiếc gai sắc nhọn (như dao mổ) nằm ẩn ở gốc đuôi để tự vệ và thiết lập thứ bậc lãnh thổ.
 
@@ -51,9 +51,9 @@ seo:
 
 * Cá Nẻ Điện là loài cá hoạt động rất tích cực và bơi lội liên tục suốt cả ngày. 
 * Về tính khí, chúng khá hiền hòa với các loài cá khác trong hệ sinh thái bể, đồng thời hoàn toàn an toàn, thân thiện với các rạn san hô (Reef Safe).
-*  Tuy nhiên, cá Nẻ Điện có tính lãnh thổ rất cao và khá hung hăng với các cá thể cùng họ Tang. Nếu nuôi chung với các con cá Tang có hình dáng tương đồng, chúng sẵn sàng giương gai đuôi để tấn công tranh giành địa bàn.
+* Tuy nhiên, cá Nẻ Điện có tính lãnh thổ rất cao và khá hung hăng với các cá thể cùng họ Tang. Nếu nuôi chung với các con cá Tang có hình dáng tương đồng, chúng sẵn sàng giương gai đuôi để tấn công tranh giành địa bàn.
 
-Chế Độ Ăn: Ăn Rong
+**Chế Độ Ăn: Ăn Rong**
 
 * Các loại thực vật biển, tảo biển, rong biển, đặc biệt là lá rong biển khô (Nori).
 * Thức ăn dạng viên chất lượng cao dành cho cá biển, thức ăn dạng vảy (flakes).
@@ -61,10 +61,10 @@ Chế Độ Ăn: Ăn Rong
 
 **Thông số nước lý tưởng:**
 
-*  Nhiệt độ 24–26°C 
-*  Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
-*  KH 8–12 dKH
+* Nhiệt độ 24–26°C 
+* Độ mặn 1.024–1.026 (≈35 ppt) 
+* pH 8.1–8.4 
+* KH 8–12 dKH
 
 **Hướng Dẫn Chăm Sóc:**
 
