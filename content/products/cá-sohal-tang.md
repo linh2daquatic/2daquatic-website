@@ -39,7 +39,7 @@ seo:
 
 **Đặc Điểm:**
 
-*  Thân cá có màu xám trắng đến hơi xanh, phủ đầy các đường sọc ngang màu đen hoặc xanh đậm chạy song song trông giống như vằn ngựa.
+* Thân cá có màu xám trắng đến hơi xanh, phủ đầy các đường sọc ngang màu đen hoặc xanh đậm chạy song song trông giống như vằn ngựa.
 * Toàn bộ phần vây lưng, vây hậu môn và vây đuôi có màu đen tuyền, được bao bọc bởi một đường viền màu xanh lơ (electric blue) phát sáng rất đẹp mắt.
 * Điểm nhấn là vệt màu cam rực rỡ ngay phía sau nắp mang và một đốm cam ở gốc đuôi.
 * Tại vị trí đốm cam ở cuống đuôi có ẩn chứa một chiếc gai xương (gọi là scalpel) rất sắc bén. Đây là vũ khí tự vệ và tấn công cực kỳ nguy hiểm của chúng.
@@ -47,8 +47,8 @@ seo:
 
 **Tập Tính:**
 
-*  Sohal Tang bơi cực kỳ nhanh, năng động và cần một lượng oxy rất lớn trong nước.
-*  Chúng nổi tiếng với tính cách rất hung dữ và có tính lãnh thổ cực cao. Khi trưởng thành, chúng sẽ thống trị toàn bộ bể nuôi và sẵn sàng tấn công, thậm chí tiêu diệt những con cá Tang khác hoặc những loài cá có hình dáng, màu sắc tương đồng.
+* Sohal Tang bơi cực kỳ nhanh, năng động và cần một lượng oxy rất lớn trong nước.
+* Chúng nổi tiếng với tính cách rất hung dữ và có tính lãnh thổ cực cao. Khi trưởng thành, chúng sẽ thống trị toàn bộ bể nuôi và sẵn sàng tấn công, thậm chí tiêu diệt những con cá Tang khác hoặc những loài cá có hình dáng, màu sắc tương đồng, đặc biệt là cá Bá Tước (Clown Tang)
 
 **Chế Độ Ăn: Thiên về ăn thực vật**
 
