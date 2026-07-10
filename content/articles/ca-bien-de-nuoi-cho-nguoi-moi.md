@@ -13,7 +13,7 @@ tags:
 published: true
 featured: false
 ---
-Khi mới chơi cá biển, chọn đúng loài cá dễ nuôi cho lần đầu sẽ quyết định bạn có "trụ lại" với thú chơi này hay không. Dưới đây là **10 loài cá biển dễ nuôi nhất** mà chúng tôi luôn khuyên người mới, dựa trên độ khỏe, khả năng thích nghi và độ thân thiện.
+Khi mới chơi cá biển, chọn đúng loài cá dễ nuôi cho lần đầu sẽ quyết định bạn có "trụ lại" với thú chơi này hay không. Dưới đây là **10 loài cá biển dễ nuôi nhất** mà chúng tôi luôn khuyên người mới, dựa trên độ khỏe, khả năng thích nghi và độ thân thiện. Nếu chưa rõ nên bắt đầu từ đâu, có thể tham khảo thêm [các loài cá cảnh biển phổ biến tại Hà Nội](/ca-canh-bien-ha-noi/) trước khi chọn.
 
 ## Tiêu chí "dễ nuôi" là gì?
 
