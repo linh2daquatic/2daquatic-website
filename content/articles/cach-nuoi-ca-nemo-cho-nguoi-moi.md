@@ -13,7 +13,7 @@ tags:
 published: true
 featured: true
 ---
-Cá Nemo — hay còn gọi là **cá hề** — là loài cá biển được nhiều người mới chọn nuôi đầu tiên, và điều đó hoàn toàn có lý do. Đây là một trong những loài cá biển dễ nuôi, khỏe và thân thiện nhất. Bài viết này sẽ hướng dẫn bạn cách nuôi cá Nemo từ lúc chọn cá đến khi cá ổn định trong bể.
+Cá Nemo — hay còn gọi là **cá hề** — là loài cá biển được nhiều người mới chọn nuôi đầu tiên, và điều đó hoàn toàn có lý do. Đây là một trong những loài cá biển dễ nuôi, khỏe và thân thiện nhất. Bài viết này sẽ hướng dẫn bạn cách nuôi cá Nemo từ lúc chọn cá đến khi cá ổn định trong bể. Xem thêm [các loại cá cảnh biển khác tại Hà Nội](/ca-canh-bien-ha-noi/) đang có sẵn tại 2D Aquatic.
 
 ## Vì sao cá Nemo phù hợp cho người mới?
 
