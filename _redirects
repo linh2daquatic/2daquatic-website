@@ -1,51 +1,43 @@
 # Cloudflare Pages _redirects for 2daquatic.com
 # Last updated: 2026-05-15
 
-# === Trailing slash → no slash (canonical) ===
-/be-ca/      /be-ca      301
-/san-pham/   /san-pham   301
-/dich-vu/    /dich-vu    301
-/ho-tro/     /ho-tro     301
-/lien-he/    /lien-he    301
-/blog/       /blog       301
-/cam-on/     /cam-on     301
+# === .html → clean URLs (khong dung "canonical no-slash" vi xung dot
+#     voi hanh vi mac dinh cua Cloudflare Pages -> gay redirect loop) ===
 /admin/      /admin/index.html 200
-
-# === .html → clean URLs ===
-/be-ca/index.html     /be-ca       301
-/san-pham/index.html  /san-pham    301
-/dich-vu/index.html   /dich-vu     301
-/ho-tro/index.html    /ho-tro      301
-/lien-he/index.html   /lien-he     301
-/blog/index.html      /blog        301
-/cam-on/index.html    /cam-on      301
+/be-ca/index.html     /be-ca/       301
+/san-pham/index.html  /san-pham/    301
+/dich-vu/index.html   /dich-vu/     301
+/ho-tro/index.html    /ho-tro/      301
+/lien-he/index.html   /lien-he/     301
+/blog/index.html      /blog/        301
+/cam-on/index.html    /cam-on/      301
 /index.html           /            301
 
 # === Tiếng Anh → tiếng Việt (URLs cũ nếu có) ===
-/aquarium      /be-ca       301
-/aquariums     /be-ca       301
-/products      /san-pham    301
-/services      /dich-vu     301
-/support       /ho-tro      301
+/aquarium      /be-ca/       301
+/aquariums     /be-ca/       301
+/products      /san-pham/    301
+/services      /dich-vu/     301
+/support       /ho-tro/      301
 /faq           /ho-tro#faq  301
-/contact       /lien-he     301
-/about         /lien-he     301
+/contact       /lien-he/     301
+/about         /lien-he/     301
 
 # === Common typos ===
-/be_ca         /be-ca       301
-/san_pham      /san-pham    301
-/dich_vu       /dich-vu     301
-/ho_tro        /ho-tro      301
-/lien_he       /lien-he     301
-/beca          /be-ca       301
-/sanpham       /san-pham    301
-/dichvu        /dich-vu     301
-/hotro         /ho-tro      301
-/lienhe        /lien-he     301
+/be_ca         /be-ca/       301
+/san_pham      /san-pham/    301
+/dich_vu       /dich-vu/     301
+/ho_tro        /ho-tro/      301
+/lien_he       /lien-he/     301
+/beca          /be-ca/       301
+/sanpham       /san-pham/    301
+/dichvu        /dich-vu/     301
+/hotro         /ho-tro/      301
+/lienhe        /lien-he/     301
 
 # === Forms ===
-/thank-you     /cam-on      301
-/thanks        /cam-on      301
+/thank-you     /cam-on/      301
+/thanks        /cam-on/      301
 
 # === San pham: slug cu bi trung (2 bien the cung 1 slug) -> tro ve 1 ban ro rang ===
 # (sua ngay 07/07/2026 - xem CHANGELOG)
@@ -82,14 +74,14 @@
 
 # --- Trang tĩnh gốc (.html) — có trang thay thế rõ ràng ---
 /gioi-thieu.html         /                     301
-/san-pham.html           /san-pham             301
-/dich-vu.html            /dich-vu              301
-/lien-he.html            /lien-he              301
-/cham-soc-bao-tri.html   /dich-vu              301
-/xay-dung-be-ca.html     /dich-vu              301
-/thiet-ke-layout.html    /dich-vu              301
-/setup-tron-goi.html     /dich-vu              301
-/chia-se-kien-thuc.html  /blog                 301
+/san-pham.html           /san-pham/             301
+/dich-vu.html            /dich-vu/              301
+/lien-he.html            /lien-he/              301
+/cham-soc-bao-tri.html   /dich-vu/              301
+/xay-dung-be-ca.html     /dich-vu/              301
+/thiet-ke-layout.html    /dich-vu/              301
+/setup-tron-goi.html     /dich-vu/              301
+/chia-se-kien-thuc.html  /blog/                 301
 
 # --- Sản phẩm cũ có bản thay thế xác nhận được trong content/products ---
 /test-calcium-salifert.html          /san-pham/salifert-ca/           301
@@ -98,75 +90,75 @@
 /maxspect-nano-tech-clear-cube.html  /san-pham/maxspect-clear-cube/   301
 
 # --- Bài viết chủ đề cũ -> hub Blog ---
-/bao-lau-thi-can-thay-nuoc-trong-ho-thuy-sinh.html      /blog    301
-/cac-nguyen-nhan-gay-duc-ho-thuy-sinh-ca-canh.html      /blog    301
-/cac-thong-so-nuoc-danh-cho-be-ca-nuoc-man.html         /blog    301
-/cach-diet-reu-tao-trong-ho-thuy-sinh.html              /blog    301
-/cach-lam-trong-nuoc-be-ca-canh.html                    /blog    301
-/chu-trinh-nito-nitrogen-cycle.html                     /blog    301
-/hai-quy-la-gi-sinh-san-dinh-duong-di-chuyen.html       /blog    301
-/no3-trong-be-ca-nuoc-man-va-cach-xu-ly.html            /blog    301
-/san-ho-lps-cho-nguoi-moi-choi-ho-ca-canh-bien.html     /blog    301
-/tim-hieu-ve-benh-dom-trang-o-ca-canh.html              /blog    301
-/tong-quan-ve-be-ca-nuoc-man.html                       /blog    301
+/bao-lau-thi-can-thay-nuoc-trong-ho-thuy-sinh.html      /blog/    301
+/cac-nguyen-nhan-gay-duc-ho-thuy-sinh-ca-canh.html      /blog/    301
+/cac-thong-so-nuoc-danh-cho-be-ca-nuoc-man.html         /blog/    301
+/cach-diet-reu-tao-trong-ho-thuy-sinh.html              /blog/    301
+/cach-lam-trong-nuoc-be-ca-canh.html                    /blog/    301
+/chu-trinh-nito-nitrogen-cycle.html                     /blog/    301
+/hai-quy-la-gi-sinh-san-dinh-duong-di-chuyen.html       /blog/    301
+/no3-trong-be-ca-nuoc-man-va-cach-xu-ly.html            /blog/    301
+/san-ho-lps-cho-nguoi-moi-choi-ho-ca-canh-bien.html     /blog/    301
+/tim-hieu-ve-benh-dom-trang-o-ca-canh.html              /blog/    301
+/tong-quan-ve-be-ca-nuoc-man.html                       /blog/    301
 
 # --- Trang "set bể" cũ -> trang Bể cá ---
-/set-be-120cm.html          /be-ca    301
-/set-be-150cm.html          /be-ca    301
-/set-be-60283.html          /be-ca    301
-/set-be-90.html              /be-ca    301
-/set-be-thiet-ke-san.html    /be-ca    301
+/set-be-120cm.html          /be-ca/    301
+/set-be-150cm.html          /be-ca/    301
+/set-be-60283.html          /be-ca/    301
+/set-be-90.html              /be-ca/    301
+/set-be-thiet-ke-san.html    /be-ca/    301
 
 # --- Sản phẩm/thiết bị cũ đã ngừng bán/đổi tên, không rõ bản thay thế -> hub Sản phẩm ---
-/acropower-amino-acid-formula-for-coral-250ml.html      /san-pham    301
-/af-phytomix-250ml-aquaforest.html                      /san-pham    301
-/af-powerelixir-1000ml-aquaforest.html                  /san-pham    301
-/af-powerelixir-aqua-forest.html                        /san-pham    301
-/af-probios-10-ml-aquaforestC06.html                    /san-pham    301
-/af-protein-aquaforest.html                             /san-pham    301
-/balling-light-fauna-trace-1-250ml.html                 /san-pham    301
-/balling-light-fauna-trace-2-250ml.html                 /san-pham    301
-/balling-light-fauna-trace-3-250ml.html                 /san-pham    301
-/binh-bu-nuoc-mt02-2l-redstarfish.html                  /san-pham    301
-/binh-bu-nuoc-mt04-4l-redstarfish.html                  /san-pham    301
-/bo-test-nuoc.html                                      /san-pham    301
-/bo-titan-lam-mat-9000hp.html                           /san-pham    301
-/bom-atmant-303s.html                                   /san-pham    301
-/bom-ep3500.html                                        /san-pham    301
-/but-do-man.html                                        /san-pham    301
-/ca-san-ho.html                                         /san-pham    301
-/calcium-aquaforest-850g.html                           /san-pham    301
-/cao-reu-tunze-fake.html                                /san-pham    301
-/carbon-than-hoat-tinh-aquaforest-1000ml.html           /san-pham    301
-/cat-ati-9kg.html                                       /san-pham    301
-/coral-dip-rx.html                                      /san-pham    301
-/den-inled-x120.html                                    /san-pham    301
-/dosing-jebao-dp-3-4.html                               /san-pham    301
-/formula-two-flakes-thuc-an-la-cho-ca-canh-bien-34g-ocean-nutrition.html  /san-pham    301
-/he-thong-bom.html                                      /san-pham    301
-/he-thong-lam-mat-be-ca.html                             /san-pham    301
-/jecod-af-250b.html                                     /san-pham    301
-/kh-buffer-aquaforest.html                               /san-pham    301
-/kim-maxspect.html                                       /san-pham    301
-/maxspect-mj165blue.html                                 /san-pham    301
-/min-s-100ml.html                                        /san-pham    301
-/muoi-da-layout-cat-nen.html                             /san-pham    301
-/muoi-redsea-tim-7kg.html                                /san-pham    301
-/muoi-tropic-pro-reef-25kg.html                          /san-pham    301
-/np-pro-50-ml-aquaforestFE8.html                         /san-pham    301
-/ong-cho-san-ho-an.html                                  /san-pham    301
-/phu-kien-khac.html                                      /san-pham    301
-/skimmer-ae-301.html                                     /san-pham    301
-/skimmer-ae-401.html                                     /san-pham    301
-/skimmer-seahog-dc-80.html                               /san-pham    301
-/skimmer-sk800.html                                      /san-pham    301
-/skimmer-sq70D79.html                                    /san-pham    301
-/tao-song.html                                           /san-pham    301
-/test-flatworm-exit-salifert.html                        /san-pham    301
-/test-redsea-3in1.html                                   /san-pham    301
-/thuc-an-ca-san-ho.html                                  /san-pham    301
-/vi-sinh-hoa-chat.html                                   /san-pham    301
-/vi-sinh-song-prodibio-bio-digest.html                   /san-pham    301
+/acropower-amino-acid-formula-for-coral-250ml.html      /san-pham/    301
+/af-phytomix-250ml-aquaforest.html                      /san-pham/    301
+/af-powerelixir-1000ml-aquaforest.html                  /san-pham/    301
+/af-powerelixir-aqua-forest.html                        /san-pham/    301
+/af-probios-10-ml-aquaforestC06.html                    /san-pham/    301
+/af-protein-aquaforest.html                             /san-pham/    301
+/balling-light-fauna-trace-1-250ml.html                 /san-pham/    301
+/balling-light-fauna-trace-2-250ml.html                 /san-pham/    301
+/balling-light-fauna-trace-3-250ml.html                 /san-pham/    301
+/binh-bu-nuoc-mt02-2l-redstarfish.html                  /san-pham/    301
+/binh-bu-nuoc-mt04-4l-redstarfish.html                  /san-pham/    301
+/bo-test-nuoc.html                                      /san-pham/    301
+/bo-titan-lam-mat-9000hp.html                           /san-pham/    301
+/bom-atmant-303s.html                                   /san-pham/    301
+/bom-ep3500.html                                        /san-pham/    301
+/but-do-man.html                                        /san-pham/    301
+/ca-san-ho.html                                         /san-pham/    301
+/calcium-aquaforest-850g.html                           /san-pham/    301
+/cao-reu-tunze-fake.html                                /san-pham/    301
+/carbon-than-hoat-tinh-aquaforest-1000ml.html           /san-pham/    301
+/cat-ati-9kg.html                                       /san-pham/    301
+/coral-dip-rx.html                                      /san-pham/    301
+/den-inled-x120.html                                    /san-pham/    301
+/dosing-jebao-dp-3-4.html                               /san-pham/    301
+/formula-two-flakes-thuc-an-la-cho-ca-canh-bien-34g-ocean-nutrition.html  /san-pham/    301
+/he-thong-bom.html                                      /san-pham/    301
+/he-thong-lam-mat-be-ca.html                             /san-pham/    301
+/jecod-af-250b.html                                     /san-pham/    301
+/kh-buffer-aquaforest.html                               /san-pham/    301
+/kim-maxspect.html                                       /san-pham/    301
+/maxspect-mj165blue.html                                 /san-pham/    301
+/min-s-100ml.html                                        /san-pham/    301
+/muoi-da-layout-cat-nen.html                             /san-pham/    301
+/muoi-redsea-tim-7kg.html                                /san-pham/    301
+/muoi-tropic-pro-reef-25kg.html                          /san-pham/    301
+/np-pro-50-ml-aquaforestFE8.html                         /san-pham/    301
+/ong-cho-san-ho-an.html                                  /san-pham/    301
+/phu-kien-khac.html                                      /san-pham/    301
+/skimmer-ae-301.html                                     /san-pham/    301
+/skimmer-ae-401.html                                     /san-pham/    301
+/skimmer-seahog-dc-80.html                               /san-pham/    301
+/skimmer-sk800.html                                      /san-pham/    301
+/skimmer-sq70D79.html                                    /san-pham/    301
+/tao-song.html                                           /san-pham/    301
+/test-flatworm-exit-salifert.html                        /san-pham/    301
+/test-redsea-3in1.html                                   /san-pham/    301
+/thuc-an-ca-san-ho.html                                  /san-pham/    301
+/vi-sinh-hoa-chat.html                                   /san-pham/    301
+/vi-sinh-song-prodibio-bio-digest.html                   /san-pham/    301
 
 # === Fallback 404 ===
 /*             /404.html    404
