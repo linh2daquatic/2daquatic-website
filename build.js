@@ -834,8 +834,8 @@ try {
         pr.old_slugs.forEach(function (old) {
           old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
           if (!old || old === pr.slug) return;
-          AR_LINES.push('/san-pham/' + old + '/    /san-pham/' + pr.slug + '/    301!');
-          AR_LINES.push('/san-pham/' + old + '    /san-pham/' + pr.slug + '/    301!');
+          AR_LINES.push('/san-pham/' + old + '/    /san-pham/' + pr.slug + '/    301');
+          AR_LINES.push('/san-pham/' + old + '    /san-pham/' + pr.slug + '/    301');
         });
       }
     });
@@ -847,8 +847,8 @@ try {
         a.old_slugs.forEach(function (old) {
           old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
           if (!old || old === a.slug) return;
-          AR_LINES.push('/blog/' + old + '/    /blog/' + a.slug + '/    301!');
-          AR_LINES.push('/blog/' + old + '    /blog/' + a.slug + '/    301!');
+          AR_LINES.push('/blog/' + old + '/    /blog/' + a.slug + '/    301');
+          AR_LINES.push('/blog/' + old + '    /blog/' + a.slug + '/    301');
         });
       }
     });
