@@ -11,7 +11,7 @@ published: true
 featured: true
 ---
 
-Một trong những câu hỏi đầu tiên khách mới hỏi mình là: *"Thả cá gì trước?"*. Không phải mọi loại cá biển đều thân thiện với người mới — một số loài cần điều kiện đặc biệt, dễ bệnh, hoặc hung hãn với các loài khác.
+Một trong những câu hỏi đầu tiên khách mới hỏi mình là: *"Thả cá gì trước?"*. Không phải mọi loại cá biển đều thân thiện với người mới — một số loài cần điều kiện đặc biệt, dễ bệnh, hoặc hung hãn với các loài khác. Xem thêm [các loài cá cảnh biển đang có tại 2D Aquatic](/ca-canh-bien-ha-noi/) nếu bạn muốn tham khảo trước khi chọn.
 
 Dưới đây là 10 loại cá biển mình hay gợi ý cho khách mới tại 2D Aquatic, dựa trên tiêu chí: **dễ nuôi, bền, ăn tốt, hòa hợp với san hô**.
 
