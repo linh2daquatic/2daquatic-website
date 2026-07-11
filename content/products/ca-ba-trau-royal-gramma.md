@@ -19,7 +19,7 @@ specs:
   - key: Kích thước trưởng thành
     value: ≈8 cm
   - key: Thức ăn
-    value: Ăn Tạp (động vật phù du, artermia, cám viên cao cấp,..)
+    value: Ăn Thịt (động vật phù du, artermia, cám viên cao cấp,..)
   - key: Tính cách
     value: Hiền, giữ hang
   - key: Bể tối thiểu
@@ -47,7 +47,7 @@ date: 2026-06-28T16:51:00.000Z
 * Khi bị đe dọa sẽ há miệng rất rộng để cảnh cáo đối thủ.
 * Có thói quen bơi ngược dưới các gờ đá hoặc trần hang, đây là hành vi hoàn toàn bình thường.
 
-**Chế Độ Ăn: Ăn Tạp**
+**Chế Độ Ăn: Ăn Thịt**
 
 * Động vật phù du.
 * Giáp xác nhỏ.
@@ -59,8 +59,8 @@ date: 2026-06-28T16:51:00.000Z
 **Thông số nước lý tưởng:** 
 
 * Nhiệt độ 24–26°C 
-*  Độ mặn 1.024–1.026 (≈35 ppt) 
-*  pH 8.1–8.4 
+* Độ mặn 1.024–1.026 (≈35 ppt) 
+* pH 8.1–8.4 
 * KH 8–12 dKH
 
 **Hướng Dẫn Chăm Sóc:**
