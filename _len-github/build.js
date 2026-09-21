@@ -1,0 +1,875 @@
+#!/usr/bin/env node
+/**
+ * Build Script for 2D Aquatic - Outputs to dist/
+ * Copies all static files including _headers and _redirects for Netlify
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = __dirname;
+const DIST = path.join(ROOT, 'dist');
+
+// ===== TÊN DANH MỤC (nguồn duy nhất, sửa được qua CMS) =====
+var CAT_DEFAULTS = {"sinh-vat-san-ho":"San hô","sinh-vat-ca":"Cá","phu-kien":"Phụ kiện","be-ca-bien":"Bể cá biển","muoi":"Muối","bom":"Bơm","thiet-bi-den":"Đèn","chan-tu":"Chân tủ","skimmer":"Skimmer","tao-song":"Tạo sóng","vat-lieu-loc":"Vật liệu lọc","hoa-chat":"Hoá chất","thuc-an":"Thức ăn sinh vật","layout":"Layout","dich-vu":"Dịch vụ","thiet-bi-tu-dong":"Thiết bị tự động"};
+var CATLABELS = Object.assign({}, CAT_DEFAULTS);
+try {
+  var _catCfgPath = path.join(ROOT, 'content', 'settings', 'categories.json');
+  if (fs.existsSync(_catCfgPath)) {
+    var _catCfg = JSON.parse(fs.readFileSync(_catCfgPath, 'utf8'));
+    if (_catCfg && Array.isArray(_catCfg.labels)) {
+      _catCfg.labels.forEach(function(it){ if (it && it.code && it.label) CATLABELS[it.code] = it.label; });
+    }
+  }
+} catch(e){ console.warn('  (Bo qua tai ten danh muc: ' + e.message + ')'); }
+
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+function copyFile(src, dest) {
+  ensureDir(path.dirname(dest));
+  fs.copyFileSync(src, dest);
+}
+
+function copyDir(src, dest) {
+  ensureDir(dest);
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+console.log('🧹 Cleaning dist/...');
+if (fs.existsSync(DIST)) {
+  fs.rmSync(DIST, { recursive: true });
+}
+ensureDir(DIST);
+
+console.log('📂 Copying files to dist/...');
+
+const ROOT_FILES = [
+  'index.html', '404.html',
+  'apple-touch-icon.png', 'favicon-16.png', 'favicon-32.png',
+  'favicon.ico', 'icon-192.png', 'icon-512.png',
+  'site.webmanifest', 'robots.txt', 'sitemap.xml',
+  '_headers', '_redirects'
+];
+
+ROOT_FILES.forEach(file => {
+  const src = path.join(ROOT, file);
+  if (fs.existsSync(src)) {
+    copyFile(src, path.join(DIST, file));
+    console.log(`  ✓ ${file}`);
+  }
+});
+
+const FOLDERS = [
+  'admin', 'be-ca', 'san-pham', 'dich-vu', 'ho-tro', 'lien-he',
+  'ca-canh-bien', 'ca-canh-bien-ha-noi',
+  'blog', 'be-thuc-te', 'cam-on', 'css', 'images', 'content', 'functions'
+];
+
+FOLDERS.forEach(folder => {
+  const src = path.join(ROOT, folder);
+  if (fs.existsSync(src)) {
+    copyDir(src, path.join(DIST, folder));
+    console.log(`  ✓ ${folder}/`);
+  }
+});
+
+
+// ===== AUTO-GENERATE products.json FROM CMS (content/products) =====
+// Toan bo bao trong try/catch: neu loi, build VAN chay binh thuong (chi thieu san pham).
+try {
+  function stripQuotes(v) {
+    v = (v || '').trim();
+    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+      v = v.slice(1, -1);
+    }
+    return v;
+  }
+
+  function parseProduct(raw) {
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    if (!m) return null;
+    const lines = m[1].split(/\r?\n/);
+    const body = (m[2] || '').trim();
+    const data = { body: body };
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+      const mm = line.match(/^([a-zA-Z0-9_]+):(.*)$/);
+      if (!mm) { i++; continue; }
+      const key = mm[1];
+      const rest = mm[2];
+      if (rest.trim() === '') {
+        // block (list hoac nested map) -> gom cac dong thut le
+        const block = [];
+        i++;
+        while (i < lines.length && (/^\s+\S/.test(lines[i]) || lines[i].trim() === '')) {
+          block.push(lines[i]); i++;
+        }
+        if (key === 'gallery') {
+          data.gallery = block
+            .filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) {
+              const im = l.match(/image:\s*(.*)$/);
+              return im ? stripQuotes(im[1]) : stripQuotes(l.replace(/^\s*-\s*/, ''));
+            })
+            .filter(Boolean);
+        } else if (key === 'old_slugs') {
+          data.old_slugs = block
+            .filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) { return stripQuotes(l.replace(/^\s*-\s*/, '')); })
+            .filter(Boolean);
+        } else if (key === 'specs') {
+          const specs = [];
+          let cur = null;
+          block.forEach(function (l) {
+            const t = l.trim();
+            if (!t) return;
+            if (t.indexOf('-') === 0) {
+              if (cur) specs.push(cur);
+              cur = {};
+              const km = t.replace(/^-\s*/, '').match(/^(\w+):\s*(.*)$/);
+              if (km) cur[km[1]] = stripQuotes(km[2]);
+            } else {
+              const km = t.match(/^(\w+):\s*(.*)$/);
+              if (km && cur) cur[km[1]] = stripQuotes(km[2]);
+            }
+          });
+          if (cur) specs.push(cur);
+          data.specs = specs;
+        }
+        // cac block khac (vd: seo) -> bo qua
+        continue;
+      }
+      data[key] = stripQuotes(rest);
+      i++;
+    }
+    // ep kieu
+    if (data.price !== undefined) data.price = parseInt(String(data.price).replace(/[^\d]/g, ''), 10) || 0;
+    data.sale_price = (data.sale_price !== undefined && String(data.sale_price).trim() !== '')
+      ? (parseInt(String(data.sale_price).replace(/[^\d]/g, ''), 10) || null) : null;
+    data.in_stock = String(data.in_stock).trim() !== 'false';
+    data.featured = String(data.featured).trim() === 'true';
+    if (!Array.isArray(data.gallery)) data.gallery = [];
+    if (!Array.isArray(data.specs)) data.specs = [];
+    var _ord = parseInt(String(data.order == null ? '' : data.order).replace(/[^\d-]/g, ''), 10);
+    data.order = isNaN(_ord) ? null : _ord;
+    return data;
+  }
+
+  const PRODUCTS_DIR = path.join(ROOT, 'content', 'products');
+  const products = [];
+  if (fs.existsSync(PRODUCTS_DIR)) {
+    fs.readdirSync(PRODUCTS_DIR)
+      .filter(function (f) { return f.endsWith('.md'); })
+      .forEach(function (f) {
+        try {
+          const raw = fs.readFileSync(path.join(PRODUCTS_DIR, f), 'utf8');
+          const p = parseProduct(raw);
+          if (p && p.title) {
+            // Tự chuyển mã danh mục cũ -> mã mới (16 danh mục)
+            var CAT_ALIAS = {"be-ca-promax":"be-ca-bien","be-ca-infinity":"be-ca-bien","be-ca-custom":"be-ca-bien","thiet-bi-bom":"bom","thiet-bi-loc":"skimmer","dung-cu-san-ho":"phu-kien"};
+            if (p.category && CAT_ALIAS[p.category]) p.category = CAT_ALIAS[p.category];
+            products.push(p);
+          }
+        } catch (e) { console.warn('  (bo qua san pham loi: ' + f + ')'); }
+      });
+  }
+  products.sort(function (a, b) {
+    var ao = (a.order == null) ? Infinity : a.order, bo = (b.order == null) ? Infinity : b.order;
+    if (ao !== bo) return ao - bo;
+    return ((b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+      || String(b.date || '').localeCompare(String(a.date || ''));
+  });
+  fs.writeFileSync(path.join(DIST, 'products.json'), JSON.stringify(products, null, 2), 'utf8');
+  console.log('  \u2713 products.json (' + products.length + ' san pham)');
+} catch (e) {
+  console.warn('  (Bo qua tao products.json: ' + e.message + ')');
+  try { fs.writeFileSync(path.join(DIST, 'products.json'), '[]', 'utf8'); } catch (_) {}
+}
+
+
+// ===== AUTO-GENERATE BLOG from CMS (content/articles) =====
+// Tao articles-index.json cho trang /blog/ va sinh trang HTML chi tiet cho moi bai.
+// Toan bo bao trong try/catch: loi -> build van chay, chi thieu bai blog.
+try {
+  var ARTICLE_CSS = ".article-hero {\n  padding: 60px 24px 40px;\n  text-align: center;\n  background: linear-gradient(135deg, #f5f3ec 0%, #fafaf7 100%);\n}\n.article-hero .breadcrumb {\n  font-size: 13px;\n  color: var(--muted);\n  margin-bottom: 16px;\n}\n.article-hero .breadcrumb a { color: var(--muted); text-decoration: none; }\n.article-hero .breadcrumb a:hover { color: var(--reef); }\n.article-hero h1 {\n  font-family: var(--display);\n  font-size: clamp(28px, 5vw, 48px);\n  font-weight: 600;\n  margin-bottom: 16px;\n  max-width: 800px;\n  margin-left: auto;\n  margin-right: auto;\n  line-height: 1.2;\n}\n.article-hero .lead {\n  font-size: 18px;\n  color: var(--muted);\n  max-width: 700px;\n  margin: 0 auto 24px;\n  line-height: 1.6;\n}\n.article-meta-bar {\n  display: flex;\n  justify-content: center;\n  gap: 16px;\n  font-size: 14px;\n  color: var(--muted);\n  margin-bottom: 32px;\n  flex-wrap: wrap;\n}\n.article-content {\n  max-width: 760px;\n  margin: 0 auto;\n  padding: 60px 24px;\n  font-size: 17px;\n  line-height: 1.8;\n  color: #2a3340;\n}\n.article-content > p:first-of-type::first-letter {\n  font-family: var(--display);\n  font-size: 64px;\n  font-weight: 600;\n  float: left;\n  line-height: 1;\n  padding: 4px 12px 0 0;\n  color: var(--reef);\n}\n.article-content h2 {\n  font-family: var(--display);\n  font-size: 32px;\n  font-weight: 600;\n  margin: 56px 0 20px;\n  color: var(--ink);\n  scroll-margin-top: 80px;\n}\n.article-content h3 {\n  font-family: var(--display);\n  font-size: 22px;\n  font-weight: 600;\n  margin: 36px 0 14px;\n  color: var(--ink);\n}\n.article-content p { margin-bottom: 22px; }\n.article-content ul, .article-content ol {\n  margin: 0 0 22px 0;\n  padding-left: 28px;\n}\n.article-content li { margin-bottom: 10px; }\n.article-content strong { color: var(--ink); font-weight: 600; }\n.article-content em { color: var(--reef); font-style: italic; }\n.article-content a { color: var(--reef); font-weight: 500; }\n.article-content blockquote {\n  border-left: 4px solid var(--reef);\n  padding: 16px 0 16px 24px;\n  margin: 28px 0;\n  font-style: italic;\n  color: #475467;\n  background: #f8fafb;\n  border-radius: 0 8px 8px 0;\n}\n.callout-box {\n  background: linear-gradient(135deg, #eafffa 0%, #f0fffd 100%);\n  border-left: 4px solid var(--reef);\n  padding: 20px 24px;\n  border-radius: 8px;\n  margin: 28px 0;\n}\n.callout-box.warning {\n  background: linear-gradient(135deg, #fff8ec 0%, #fffbf3 100%);\n  border-left-color: #f0a020;\n}\n.callout-box.danger {\n  background: linear-gradient(135deg, #fff0f0 0%, #fff5f5 100%);\n  border-left-color: #e53e3e;\n}\n.callout-box strong { display: block; margin-bottom: 8px; font-size: 15px; }\n\n.price-table {\n  width: 100%;\n  border-collapse: collapse;\n  margin: 24px 0;\n  font-size: 15px;\n  background: white;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0 1px 3px rgba(0,0,0,0.08);\n}\n.price-table th {\n  background: var(--ink);\n  color: white;\n  padding: 14px 12px;\n  text-align: left;\n  font-weight: 600;\n}\n.price-table td {\n  padding: 12px;\n  border-bottom: 1px solid #e5e7eb;\n}\n.price-table tr:last-child td { border-bottom: none; }\n.price-table tr.total td {\n  background: #f5f3ec;\n  font-weight: 600;\n  color: var(--ink);\n}\n\n.toc {\n  background: #f8fafb;\n  border: 1px solid #e5e7eb;\n  border-radius: 10px;\n  padding: 20px 24px;\n  margin: 24px 0 40px;\n}\n.toc-title {\n  font-family: var(--display);\n  font-weight: 600;\n  font-size: 18px;\n  margin-bottom: 12px;\n  color: var(--ink);\n}\n.toc ol { margin: 0; padding-left: 20px; }\n.toc li { margin-bottom: 6px; font-size: 15px; }\n.toc a { color: #475467; text-decoration: none; }\n.toc a:hover { color: var(--reef); }\n\n.cta-inline {\n  background: linear-gradient(135deg, #0a1628 0%, #1a2940 100%);\n  color: white;\n  padding: 32px 28px;\n  border-radius: 14px;\n  margin: 36px 0;\n  text-align: center;\n}\n.cta-inline h3 {\n  color: white !important;\n  margin-top: 0 !important;\n  margin-bottom: 8px !important;\n}\n.cta-inline p {\n  color: rgba(255,255,255,0.85);\n  margin-bottom: 20px;\n}\n.cta-inline .btn-row {\n  display: flex;\n  gap: 12px;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n.cta-inline a {\n  display: inline-block;\n  padding: 12px 24px;\n  border-radius: 999px;\n  font-weight: 600;\n  text-decoration: none;\n  font-size: 15px;\n}\n.cta-inline .btn-primary {\n  background: var(--reef);\n  color: white !important;\n}\n.cta-inline .btn-secondary {\n  background: rgba(255,255,255,0.15);\n  color: white !important;\n  border: 1px solid rgba(255,255,255,0.3);\n}\n\n.related-posts {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 40px 24px 80px;\n}\n.related-posts h2 {\n  font-family: var(--display);\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 24px;\n  text-align: center;\n}\n.related-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));\n  gap: 20px;\n}\n.related-card {\n  padding: 24px;\n  background: #f8fafb;\n  border-radius: 12px;\n  text-decoration: none;\n  color: inherit;\n  border: 1px solid #e5e7eb;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n.related-card:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 8px 20px rgba(0,0,0,0.08);\n}\n.related-card .tag {\n  font-size: 12px;\n  color: var(--reef);\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n  margin-bottom: 8px;\n}\n.related-card h3 {\n  font-family: var(--display);\n  font-size: 18px;\n  font-weight: 600;\n  margin-bottom: 8px;\n  line-height: 1.3;\n}\n.related-card p {\n  font-size: 14px;\n  color: var(--muted);\n  margin: 0;\n  line-height: 1.5;\n}\n\n@media (max-width: 640px) {\n  .nav-wrap nav { padding: 10px 14px !important; }\n  .nav-wrap nav > a img { height: 34px !important; }\n  .nav-wrap nav > div { gap: 12px !important; }\n  .nav-wrap nav a { font-size: 13px !important; white-space: nowrap !important; }\n  .nav-wrap nav > div > a:last-child { padding: 7px 14px !important; }\n  .article-hero { padding: 28px 20px 32px !important; }\n  .article-hero .breadcrumb { font-size: 12px; margin-bottom: 14px; line-height: 1.5; word-break: break-word; }\n  .article-content { padding: 36px 20px; font-size: 16px; }\n  .article-content h2 { font-size: 26px; margin: 40px 0 16px; }\n  .article-content h3 { font-size: 19px; }\n}\n@media (max-width: 380px) {\n  .nav-wrap nav > div { gap: 10px !important; }\n  .nav-wrap nav a { font-size: 12px !important; }\n  .nav-wrap nav > a img { height: 30px !important; }\n}\n";
+  function bStripQuotes(v) {
+    v = (v || '').trim();
+    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+    return v;
+  }
+  function bEscapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function bEscapeAttr(s) { return bEscapeHtml(s); }
+
+  // ---- Mini Markdown -> HTML (du dung cho CMS: heading, bold, italic, link, img, list, quote, hr, code) ----
+  function mdToHtml(md) {
+    if (!md) return '';
+    md = md.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    var lines = md.split('\n');
+    var out = [];
+    var i = 0;
+    function inline(t) {
+      // escape first, then apply inline md (so user text is safe)
+      t = bEscapeHtml(t);
+      // images ![alt](src)
+      t = t.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1" loading="lazy" style="max-width:100%;border-radius:10px;margin:12px 0">');
+      // links [text](href)
+      t = t.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+      // bold **x**
+      t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      // italic *x*
+      t = t.replace(/(^|[^*])\*([^*]+)\*(?!\*)/g, '$1<em>$2</em>');
+      // inline code `x`
+      t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+      return t;
+    }
+    while (i < lines.length) {
+      var line = lines[i];
+      var t = line.trim();
+      if (t === '') { i++; continue; }
+      // hr
+      if (/^(-{3,}|\*{3,}|_{3,})$/.test(t)) { out.push('<hr>'); i++; continue; }
+      // heading ###### .. #
+      var hm = t.match(/^(#{1,6})\s+(.*)$/);
+      if (hm) { var lv = hm[1].length; out.push('<h' + lv + '>' + inline(hm[2]) + '</h' + lv + '>'); i++; continue; }
+      // blockquote
+      if (/^>\s?/.test(t)) {
+        var bq = [];
+        while (i < lines.length && /^>\s?/.test(lines[i].trim())) { bq.push(lines[i].trim().replace(/^>\s?/, '')); i++; }
+        out.push('<blockquote>' + inline(bq.join(' ')) + '</blockquote>');
+        continue;
+      }
+      // unordered list
+      if (/^[-*+]\s+/.test(t)) {
+        var ul = [];
+        while (i < lines.length && /^[-*+]\s+/.test(lines[i].trim())) { ul.push('<li>' + inline(lines[i].trim().replace(/^[-*+]\s+/, '')) + '</li>'); i++; }
+        out.push('<ul>' + ul.join('') + '</ul>');
+        continue;
+      }
+      // ordered list
+      if (/^\d+\.\s+/.test(t)) {
+        var ol = [];
+        while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) { ol.push('<li>' + inline(lines[i].trim().replace(/^\d+\.\s+/, '')) + '</li>'); i++; }
+        out.push('<ol>' + ol.join('') + '</ol>');
+        continue;
+      }
+      // paragraph (gather consecutive non-empty, non-special lines)
+      var para = [];
+      while (i < lines.length) {
+        var pt = lines[i].trim();
+        if (pt === '' || /^(#{1,6})\s/.test(pt) || /^[-*+]\s/.test(pt) || /^\d+\.\s/.test(pt) || /^>\s?/.test(pt) || /^(-{3,}|\*{3,}|_{3,})$/.test(pt)) break;
+        para.push(pt); i++;
+      }
+      out.push('<p>' + inline(para.join(' ')) + '</p>');
+    }
+    return out.join('\n');
+  }
+
+  function parseArticle(raw) {
+    var m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+    if (!m) return null;
+    var fmLines = m[1].split(/\r?\n/);
+    var body = (m[2] || '').trim();
+    var data = { body: body };
+    var i = 0;
+    while (i < fmLines.length) {
+      var line = fmLines[i];
+      var mm = line.match(/^([a-zA-Z0-9_]+):(.*)$/);
+      if (!mm) { i++; continue; }
+      var key = mm[1], rest = mm[2];
+      if (rest.trim() === '') {
+        // block: collect indented lines (tags list etc.)
+        var block = []; i++;
+        while (i < fmLines.length && (/^\s+\S/.test(fmLines[i]) || fmLines[i].trim() === '')) { block.push(fmLines[i]); i++; }
+        if (key === 'tags') {
+          data.tags = block.filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) { return bStripQuotes(l.trim().replace(/^-\s*/, '')); }).filter(Boolean);
+        } else if (key === 'old_slugs') {
+          data.old_slugs = block.filter(function (l) { return l.trim().indexOf('-') === 0; })
+            .map(function (l) { return bStripQuotes(l.trim().replace(/^-\s*/, '')); }).filter(Boolean);
+        }
+        continue;
+      }
+      data[key] = bStripQuotes(rest);
+      i++;
+    }
+    data.published = String(data.published).trim() !== 'false';
+    data.featured = String(data.featured).trim() === 'true';
+    return data;
+  }
+
+  function articlePage(a) {
+    var url = 'https://2daquatic.com/blog/' + a.slug + '/';
+    var title = a.title || 'Bài viết';
+    var desc = (a.excerpt || a.title || '').replace(/\s+/g, ' ').trim();
+    var cover = a.cover || '/images/og-image.jpg';
+    var coverAbs = cover.indexOf('http') === 0 ? cover : ('https://2daquatic.com' + cover);
+    var catLabel = { 'huong-dan': 'Hướng dẫn nuôi cá', 'setup': 'Kinh nghiệm setup', 'bao-tri': 'Bảo trì bể cá', 'san-pham-moi': 'Sản phẩm mới' }[a.category] || 'Bài viết';
+    var dateISO = a.date ? new Date(a.date).toISOString() : new Date().toISOString();
+    var dateVN = a.date ? new Date(a.date).toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit' }) : '';
+    var words = (a.body || '').split(/\s+/).length;
+    var readMin = Math.max(2, Math.round(words / 200));
+    var bodyHtml = mdToHtml(a.body);
+    var schema = {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": title, "description": desc, "image": coverAbs,
+      "datePublished": dateISO, "dateModified": dateISO,
+      "author": { "@type": "Organization", "name": a.author || "2D Aquatic" },
+      "publisher": { "@type": "Organization", "name": "2D Aquatic", "logo": { "@type": "ImageObject", "url": "https://2daquatic.com/images/logo-light.png" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": url }
+    };
+    return '<!DOCTYPE html>\n<html lang="vi">\n<head>\n' +
+      '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<meta name="theme-color" content="#0a1628">\n' +
+      '<title>' + bEscapeHtml(title) + ' | 2D Aquatic</title>\n' +
+      '<meta name="description" content="' + bEscapeAttr(desc) + '">\n' +
+      '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n' +
+      '<meta name="author" content="' + bEscapeAttr(a.author || '2D Aquatic') + '">\n' +
+      '<meta name="geo.region" content="VN-HN">\n<meta name="geo.placename" content="Hà Nội">\n' +
+      '<link rel="canonical" href="' + url + '">\n' +
+      '<meta property="og:type" content="article">\n<meta property="og:url" content="' + url + '">\n' +
+      '<meta property="og:title" content="' + bEscapeAttr(title) + '">\n' +
+      '<meta property="og:description" content="' + bEscapeAttr(desc) + '">\n' +
+      '<meta property="og:image" content="' + bEscapeAttr(coverAbs) + '">\n' +
+      '<meta property="og:locale" content="vi_VN">\n<meta property="og:site_name" content="2D Aquatic">\n' +
+      '<meta property="article:published_time" content="' + dateISO + '">\n' +
+      '<meta name="twitter:card" content="summary_large_image">\n' +
+      '<meta name="twitter:title" content="' + bEscapeAttr(title) + '">\n' +
+      '<meta name="twitter:description" content="' + bEscapeAttr(desc) + '">\n' +
+      '<meta name="twitter:image" content="' + bEscapeAttr(coverAbs) + '">\n' +
+      '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n' +
+      '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
+      '<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">\n' +
+      '<link rel="stylesheet" href="/css/main.v2.css">\n' +
+      '<style>' + ARTICLE_CSS + '</style>\n' +
+      '<script type="application/ld+json">' + JSON.stringify(schema) + '</scr' + 'ipt>\n' +
+      '<script type="application/ld+json">' + JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang ch\u1ee7","item":"https://2daquatic.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://2daquatic.com/blog/"},{"@type":"ListItem","position":3,"name":title,"item":url}]}) + '</scr' + 'ipt>\n' +
+      '</head>\n<body>\n' +
+      '<header class="nav-wrap" style="position:sticky;top:0;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);z-index:100">\n' +
+      '  <nav style="max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n' +
+      '    <a href="/" style="display:flex;align-items:center;text-decoration:none"><img src="/images/logo-light.png" alt="2D Aquatic" width="120" height="52" style="height:42px;width:auto"></a>\n' +
+      '    <div style="display:flex;gap:24px;align-items:center">\n' +
+      '      <a href="/be-ca/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Bể cá</a>\n' +
+      '      <a href="/san-pham/" style="color:white;text-decoration:none;font-size:14px;font-weight:500">Sản phẩm</a>\n' +
+      '      <a href="/blog/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Cẩm nang</a>\n' +
+      '      <a href="/lien-he/" style="background:#00d4b8;color:white;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600">Liên hệ</a>\n' +
+      '    </div>\n  </nav>\n</header>\n' +
+      '<section class="article-hero">\n' +
+      '  <div class="breadcrumb"><a href="/">Trang chủ</a> / <a href="/blog/">Cẩm nang</a> / <span>' + bEscapeHtml(title) + '</span></div>\n' +
+      '  <h1>' + bEscapeHtml(title) + '</h1>\n' +
+      (desc ? '  <p class="lead">' + bEscapeHtml(desc) + '</p>\n' : '') +
+      '  <div class="article-meta-bar">' +
+      (dateVN ? '<span>📅 ' + dateVN + '</span><span>·</span>' : '') +
+      '<span>👤 ' + bEscapeHtml(a.author || 'Đội ngũ 2D Aquatic') + '</span><span>·</span>' +
+      '<span>⏱️ ' + readMin + ' phút đọc</span><span>·</span><span>🏷️ ' + bEscapeHtml(catLabel) + '</span></div>\n' +
+      '</section>\n' +
+      '<article class="article-content">\n' +
+      (a.cover ? '<img src="' + bEscapeAttr(a.cover) + '" alt="' + bEscapeAttr(title) + '" style="width:100%;border-radius:14px;margin-bottom:24px" loading="lazy">\n' : '') +
+      bodyHtml + '\n' +
+      '<div style="margin-top:40px;padding:24px;background:rgba(0,212,184,0.08);border-radius:14px;text-align:center">\n' +
+      '  <p style="margin-bottom:14px;font-weight:600">Cần tư vấn setup bể cá biển? Liên hệ 2D Aquatic ngay.</p>\n' +
+      '  <a href="https://zalo.me/0975112334" target="_blank" rel="noopener" style="display:inline-block;background:#00d4b8;color:white;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600;margin:4px">Nhắn Zalo</a>\n' +
+      '  <a href="/san-pham/" style="display:inline-block;border:1px solid #0a1628;color:#0a1628;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:600;margin:4px">Xem sản phẩm</a>\n' +
+      '</div>\n' +
+      '</article>\n' +
+      '<footer style="background:#0a1628;color:white;padding:48px 24px;text-align:center;margin-top:40px">\n' +
+      '  <img src="/images/logo-light.png" alt="2D Aquatic" width="120" style="margin-bottom:16px;height:auto">\n' +
+      '  <p style="color:rgba(255,255,255,0.7);margin-bottom:8px">Bể cá biển cao cấp tại Hà Nội</p>\n' +
+      '  <p style="color:rgba(255,255,255,0.5);font-size:14px">305 Nguyễn Văn Cừ, Bồ Đề, Long Biên · Hotline: <a href="tel:0975112334" style="color:#00d4b8">0975.112.334</a></p>\n' +
+      '  <p style="color:rgba(255,255,255,0.4);font-size:13px;margin-top:8px"><a href="/ca-canh-bien-ha-noi/" style="color:rgba(255,255,255,0.5)">Cá cảnh biển tại Hà Nội</a></p>\n' +
+      '</footer>\n'+
+      '<script>(function(){var ts=document.querySelectorAll(".sp-thumb");var m=document.getElementById("sp-main-img");ts.forEach(function(t){t.addEventListener("click",function(){if(m)m.src=this.getAttribute("data-full");ts.forEach(function(x){x.classList.remove("active")});this.classList.add("active")})})})();<\/script>\n'+
+      '</body>\n</html>\n';
+  }
+
+  var ARTICLES_DIR = path.join(ROOT, 'content', 'articles');
+  var articles = [];
+  if (fs.existsSync(ARTICLES_DIR)) {
+    fs.readdirSync(ARTICLES_DIR).filter(function (f) { return f.endsWith('.md'); }).forEach(function (f) {
+      try {
+        var raw = fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf8');
+        var a = parseArticle(raw);
+        if (a && a.title && a.slug) articles.push(a);
+      } catch (e) { console.warn('  (bo qua bai loi: ' + f + ')'); }
+    });
+  }
+  // index.json for /blog/ listing (metadata only)
+  var index = articles.filter(function (a) { return a.published !== false; }).map(function (a) {
+    return { slug: a.slug, title: a.title, date: a.date, category: a.category, cover: a.cover, excerpt: a.excerpt, author: a.author, published: a.published, featured: a.featured };
+  });
+  fs.writeFileSync(path.join(DIST, 'content', 'articles-index.json'), JSON.stringify(index, null, 2), 'utf8');
+  // per-post detail pages -> dist/blog/<slug>/index.html
+  var made = 0;
+  articles.filter(function (a) { return a.published !== false; }).forEach(function (a) {
+    try {
+      var dir = path.join(DIST, 'blog', a.slug);
+      fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'index.html'), articlePage(a), 'utf8');
+      made++;
+    } catch (e) { console.warn('  (loi sinh trang bai: ' + a.slug + ')'); }
+  });
+  console.log('  \u2713 blog: ' + index.length + ' bai (articles-index.json + ' + made + ' trang chi tiet)');
+} catch (e) {
+  console.warn('  (Bo qua tao blog: ' + e.message + ')');
+  try { fs.writeFileSync(path.join(DIST, 'content', 'articles-index.json'), '[]', 'utf8'); } catch (_) {}
+}
+
+
+// ===== AUTO-GENERATE PRODUCT DETAIL PAGES (/san-pham/<slug>/) =====
+try {
+  function escH(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function vndFmt(n){ return n ? Number(n).toLocaleString('vi-VN')+'đ' : 'Liên hệ'; }
+
+  function productPage(p) {
+    var PCAT = CATLABELS;
+    var url = 'https://2daquatic.com/san-pham/' + p.slug + '/';
+    var title = p.title || 'Sản phẩm';
+    var catLabel = PCAT[p.category] || p.category || '';
+    var desc = (p.short_description || p.body || title).replace(/\s+/g,' ').trim().slice(0,160);
+    var img = (p.image && p.image !== '') ? p.image : '';
+    var imgAbs = img ? (img.indexOf('http')===0 ? img : ('https://2daquatic.com'+img)) : 'https://2daquatic.com/images/og-image.jpg';
+    var galleryArr = [];
+    if (img) galleryArr.push(img);
+    if (Array.isArray(p.gallery) && p.gallery.length) { p.gallery.forEach(function(g){ if (g && galleryArr.indexOf(g) === -1) galleryArr.push(g); }); }
+    var galleryHtml = (galleryArr.length > 1)
+      ? '    <div class="sp-gallery">' + galleryArr.map(function(g,idx){ return '<img class="sp-thumb'+(idx===0?' active':'')+'" src="'+escH(g)+'" alt="" data-full="'+escH(g)+'" loading="lazy">'; }).join('') + '</div>\n'
+      : '';
+    var priceNum = p.price || 0;
+    var salePriceNum = p.sale_price;
+    var mainPrice = salePriceNum ? salePriceNum : priceNum;
+    var priceHtml = priceNum > 0
+      ? (salePriceNum
+          ? '<span style="color:#00d4b8;font-size:32px;font-weight:800">' + mainPrice.toLocaleString('vi-VN') + 'đ</span> <span style="text-decoration:line-through;opacity:.45;font-size:18px">' + priceNum.toLocaleString('vi-VN') + 'đ</span>'
+          : '<span style="color:#00d4b8;font-size:32px;font-weight:800">' + priceNum.toLocaleString('vi-VN') + 'đ</span>')
+      : '<span style="color:#00d4b8;font-size:24px;font-weight:700">Liên hệ để báo giá</span>';
+    var specsHtml = (p.specs && p.specs.length)
+      ? '<table style="width:100%;border-collapse:collapse;font-size:15px;margin:0">' +
+        p.specs.map(function(s){
+          return '<tr><td style="padding:9px 14px;border-bottom:1px solid rgba(0,0,0,.07);color:#666;width:44%;font-size:14px">'+escH(s.key)+'</td>'+
+                 '<td style="padding:9px 14px;border-bottom:1px solid rgba(0,0,0,.07);font-weight:600;color:#0a1628">'+escH(s.value)+'</td></tr>';
+        }).join('') + '</table>' : '';
+    var bodyHtml = (p.body||p.short_description||'').split('\n').map(function(ln){
+      var tx=ln.trim(); if(!tx) return '';
+      var mx=tx.match(/^(#{1,3})\s+(.*)/);
+      if(mx){var lv=mx[1].length+1;return '<h'+lv+' style="color:#0a1628;margin:18px 0 6px;font-family:Fraunces,serif">'+escH(mx[2])+'</h'+lv+'>';}
+      tx=tx.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*]+)\*/g,'$1<em>$2</em>');
+      if(tx.match(/^[-*]\s/)){return '<li style="margin:4px 0 4px 20px;color:#444">'+tx.replace(/^[-*]\s/,'')+'</li>';}
+      return '<p style="margin:10px 0;line-height:1.75;color:#444">'+tx+'</p>';
+    }).join('');
+    var schema=JSON.stringify({"@context":"https://schema.org","@type":"Product","name":title,"description":desc,"image":imgAbs,"url":url,"brand":{"@type":"Brand","name":"2D Aquatic"},"offers":{"@type":"Offer","price":mainPrice||0,"priceCurrency":"VND","availability":p.in_stock?"https://schema.org/InStock":"https://schema.org/OutOfStock","url":url}});
+    var breadcrumb=JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://2daquatic.com/"},{"@type":"ListItem","position":2,"name":"Sản phẩm","item":"https://2daquatic.com/san-pham/"},{"@type":"ListItem","position":3,"name":title,"item":url}]});
+    return '<!DOCTYPE html>\n<html lang="vi">\n<head>\n'+
+      '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
+      '<title>'+escH(title)+' | 2D Aquatic</title>\n'+
+      '<meta name="description" content="'+escH(desc)+'">\n'+
+      '<link rel="canonical" href="'+url+'">\n'+
+      '<meta property="og:type" content="product"><meta property="og:url" content="'+url+'">\n'+
+      '<meta property="og:title" content="'+escH(title)+'">\n'+
+      '<meta property="og:description" content="'+escH(desc)+'">\n'+
+      '<meta property="og:image" content="'+escH(imgAbs)+'">\n'+
+      '<meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="2D Aquatic">\n'+
+      '<script type="application/ld+json">'+schema+'<\/script>\n'+
+      '<script type="application/ld+json">'+breadcrumb+'<\/script>\n'+
+      '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n'+
+      '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'+
+      '<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">\n'+
+      '<link rel="stylesheet" href="/css/main.v2.css">\n'+
+      '<style>\n'+
+      'body{margin:0;background:#fafaf7;color:#2a3340;font-family:Inter,sans-serif}\n'+
+      '.sp-hero{background:#fafaf7;color:#2a3340;padding:24px 0 18px;border-bottom:1px solid #ece9df}\n'+
+      '.sp-hero-inner{max-width:1100px;margin:0 auto;padding:0 24px}\n'+
+      '.sp-back{display:inline-flex;align-items:center;gap:6px;color:#16a085;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:12px;opacity:.9}\n'+
+      '.sp-back:hover{opacity:1}\n'+
+      '.sp-crumb{font-size:12px;color:#9c9a8f;margin-bottom:14px}\n'+
+      '.sp-crumb a{color:#8a887d;text-decoration:none}\n'+
+      '.sp-crumb a:hover{color:#16a085}\n'+
+      '.sp-hero-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#16a085;margin-bottom:8px}\n'+
+      '.sp-hero-title{font-family:Fraunces,serif;font-size:clamp(22px,3.2vw,30px);font-weight:700;margin:0 0 12px;line-height:1.25;color:#0a1628}\n'+
+      '.sp-hero-price{margin:0}\n'+
+      '.sp-hero-stock{font-size:13px;color:#5f6b62;margin:0}\n'+
+      '.sp-hero-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}\n'+
+      '.sp-body{max-width:1100px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}\n'+
+      '@media(max-width:700px){.sp-body{grid-template-columns:1fr;padding:24px 16px 60px}}\n'+
+      '.sp-img-box{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e5dc;display:flex;align-items:center;justify-content:center;min-height:280px;padding:20px;box-sizing:border-box}\n'+
+      '.sp-img-box img{width:100%;max-height:420px;object-fit:contain;display:block}\n'+
+      '.sp-img-placeholder{font-size:64px;padding:40px}\n'+
+      '.sp-gallery{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}\n'+
+      '.sp-thumb{width:72px;height:72px;object-fit:contain;background:#fff;border:1px solid #e8e5dc;border-radius:10px;padding:6px;box-sizing:border-box;cursor:pointer;transition:border-color .15s}\n'+
+      '.sp-thumb:hover{border-color:#16a085}\n'+
+      '.sp-thumb.active{border-color:#16a085;border-width:2px}\n'+
+      '.sp-info h2{font-family:Fraunces,serif;font-size:18px;color:#0a1628;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid rgba(22,160,133,.2)}\n'+
+      '.sp-cta{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}\n'+
+      '.sp-btn{padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px}\n'+
+      '.sp-btn-z{background:#00d4b8;color:#fff}\n'+
+      '.sp-btn-fb{border:2px solid rgba(10,22,40,.2);color:#0a1628}\n'+
+      '</style>\n'+
+      '</head>\n<body>\n'+
+      // STICKY NAV (no back link in nav)
+      '<header class="nav-wrap" style="position:sticky;top:0;background:rgba(10,22,40,0.97);backdrop-filter:blur(10px);z-index:100">\n'+
+      '  <nav style="position:static;background:transparent;backdrop-filter:none;border:none;max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between">\n'+
+      '    <a href="/" style="text-decoration:none"><img src="/images/logo-light.png" alt="2D Aquatic" height="42" style="height:42px;width:auto"></a>\n'+
+      '    <div style="display:flex;gap:20px;align-items:center">\n'+
+      '      <a href="/be-ca/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Bể cá</a>\n'+
+      '      <a href="/san-pham/" style="color:#00d4b8;text-decoration:none;font-size:14px;font-weight:600">Sản phẩm</a>\n'+
+      '      <a href="/blog/" style="color:rgba(255,255,255,.8);text-decoration:none;font-size:14px">Cẩm nang</a>\n'+
+      '      <a href="/lien-he/" style="background:#00d4b8;color:#fff;padding:8px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600">Liên hệ</a>\n'+
+      '    </div>\n  </nav>\n</header>\n'+
+      // HERO SECTION (dark, below nav)
+      '<section class="sp-hero">\n'+
+      '  <div class="sp-hero-inner">\n'+
+      '    <a href="/san-pham/" class="sp-back">← Tất cả sản phẩm</a>\n'+
+      '    <div class="sp-crumb"><a href="/">Trang chủ</a> / <a href="/san-pham/">Sản phẩm</a> / '+escH(title)+'</div>\n'+
+      '    <div class="sp-hero-cat">'+escH(catLabel)+'</div>\n'+
+      '    <h1 class="sp-hero-title">'+escH(title)+'</h1>\n'+
+      '    <div class="sp-hero-meta">\n'+
+      '      <div class="sp-hero-price">'+priceHtml+'</div>\n'+
+      '      <div class="sp-hero-stock">'+(p.in_stock?'✅ Còn hàng':'⏳ Tạm hết hàng')+(p.warranty?' &nbsp;·&nbsp; 🛡️ Bảo hành: '+escH(p.warranty):'')+'</div>\n'+
+      '    </div>\n'+
+      '  </div>\n</section>\n'+
+      // MAIN BODY
+      '<div class="sp-body">\n'+
+      '  <div>\n'+
+      (img ? '    <div class="sp-img-box"><img id="sp-main-img" src="'+escH(img)+'" alt="'+escH(title)+'" loading="eager"></div>\n' + galleryHtml
+           : '    <div class="sp-img-box"><div class="sp-img-placeholder">🪸</div></div>\n')+
+      '  </div>\n'+
+      '  <div class="sp-info">\n'+
+      '    <p style="font-size:16px;line-height:1.7;color:#555;margin:0 0 20px">'+escH(p.short_description||'')+'</p>\n'+
+      '    <div class="sp-cta">\n'+
+      '      <a class="sp-btn sp-btn-z" href="https://zalo.me/0975112334" target="_blank" rel="noopener">📞 Nhắn Zalo</a>\n'+
+      '      <a class="sp-btn sp-btn-fb" href="https://www.facebook.com/2DAquatic/" target="_blank" rel="noopener">Facebook</a>\n'+
+      '    </div>\n'+
+      (specsHtml ? '    <h2>Thông số kỹ thuật</h2>\n    <div style="border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden">'+specsHtml+'</div>\n' : '')+
+      (bodyHtml ? '    <h2>Mô tả sản phẩm</h2>\n    <div>'+bodyHtml+'</div>\n' : '')+
+      '  </div>\n'+
+      '</div>\n'+
+      '<footer style="background:#0a1628;color:white;padding:48px 24px;text-align:center;margin-top:0">\n'+
+      '  <img src="/images/logo-light.png" alt="2D Aquatic" width="120" style="margin-bottom:16px;height:auto">\n'+
+      '  <p style="color:rgba(255,255,255,.7);margin-bottom:8px">Bể cá biển cao cấp tại Hà Nội</p>\n'+
+      '  <p style="color:rgba(255,255,255,.5);font-size:14px">305 Nguyễn Văn Cừ, Bồ Đề, Long Biên · <a href="tel:0975112334" style="color:#00d4b8">0975.112.334</a></p>\n'+
+      '  <p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:8px"><a href="/ca-canh-bien-ha-noi/" style="color:rgba(255,255,255,.5)">Cá cảnh biển tại Hà Nội</a></p>\n'+
+      '</footer>\n'+
+      '<script>(function(){var ts=document.querySelectorAll(".sp-thumb");var m=document.getElementById("sp-main-img");ts.forEach(function(t){t.addEventListener("click",function(){if(m)m.src=this.getAttribute("data-full");ts.forEach(function(x){x.classList.remove("active")});this.classList.add("active")})})})();<\/script>\n'+
+      '</body>\n</html>\n';
+  }
+
+    // Generate product detail pages & update sitemap
+  var prodDir = path.join(DIST,'content','products-data');
+  if(!fs.existsSync(prodDir)) prodDir=path.join(DIST,'content');
+  var prodJsonPath=path.join(DIST,'products.json');
+  if(fs.existsSync(prodJsonPath)){
+    var allProds=JSON.parse(fs.readFileSync(prodJsonPath,'utf8'));
+    var madeP=0;
+    allProds.forEach(function(p){
+      if(!p.slug) return;
+      try{
+        var dir=path.join(DIST,'san-pham',p.slug);
+        fs.mkdirSync(dir,{recursive:true});
+        fs.writeFileSync(path.join(dir,'index.html'),productPage(p),'utf8');
+        madeP++;
+      }catch(e){console.warn('  (loi trang san pham: '+p.slug+')');}
+    });
+    console.log('  \u2713 product pages: '+madeP+' trang (/san-pham/<slug>/)');
+  }
+} catch(e){ console.warn('  (product pages error: '+e.message+')'); }
+
+
+// ===== SSR GRID cho /san-pham/ (fix: trang chi co "Dang tai san pham..." khi khong co JS) =====
+// Cac trang chi tiet /san-pham/<slug>/ da duoc sinh o block phia tren. Con thieu: chinh
+// trang /san-pham/ van rong khi chua chay JS (crawler/tool fetch thay "Dang tai san pham...").
+// Fix: nhung san the that (voi the <a href> that) vao ngay trong HTML luc build.
+try {
+  var ssrEsc = function (s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var ssrVnd = function (n) { return n ? Number(n).toLocaleString('vi-VN') + 'đ' : 'Liên hệ'; };
+  var ssrJsonPath = path.join(DIST, 'products.json');
+  var ssrIndexPath = path.join(DIST, 'san-pham', 'index.html');
+  if (fs.existsSync(ssrJsonPath) && fs.existsSync(ssrIndexPath)) {
+    var ssrProducts = JSON.parse(fs.readFileSync(ssrJsonPath, 'utf8'));
+    if (Array.isArray(ssrProducts) && ssrProducts.length) {
+      var ssrCard = function (p) {
+        var imgTag = p.image
+          ? '<img class="pf-thumb" src="' + ssrEsc(p.image) + '" alt="' + ssrEsc(p.title) + '" loading="lazy">'
+          : '<div class="pf-thumb-ph">Ảnh đang cập nhật</div>';
+        var priceHtml = p.sale_price
+          ? '<span class="pf-price">' + ssrVnd(p.sale_price) + '</span><span class="pf-price-old">' + ssrVnd(p.price) + '</span>'
+          : '<span class="pf-price">' + ssrVnd(p.price) + '</span>';
+        var oosHtml = p.in_stock ? '' : '<span class="pf-oos">Tạm hết hàng</span>';
+        return '<a class="pf-card" href="/san-pham/' + encodeURIComponent(p.slug) + '/" data-slug="' + ssrEsc(p.slug) + '" style="text-decoration:none;color:inherit">' + imgTag +
+          '<div class="pf-info">' +
+          '<span class="pf-cat">' + ssrEsc(CATLABELS[p.category] || p.category || 'Sản phẩm') + '</span>' +
+          '<h3 class="pf-name">' + ssrEsc(p.title) + '</h3>' +
+          '<p class="pf-desc">' + ssrEsc(p.short_description || '') + '</p>' +
+          '<div class="pf-price-row">' + priceHtml + oosHtml + '</div>' +
+          '</div></a>';
+      };
+      var ssrHtml = fs.readFileSync(ssrIndexPath, 'utf8');
+      var ssrHtmlNew = ssrHtml
+        .replace('<div id="pf-grid" class="pf-grid"></div>', '<div id="pf-grid" class="pf-grid">' + ssrProducts.map(ssrCard).join('') + '</div>')
+        .replace('<p id="pf-empty" class="pf-empty">Đang tải sản phẩm…</p>', '<p id="pf-empty" class="pf-empty" style="display:none"></p>');
+      if (ssrHtmlNew !== ssrHtml) {
+        fs.writeFileSync(ssrIndexPath, ssrHtmlNew, 'utf8');
+        console.log('  \u2713 san-pham/index.html: SSR ' + ssrProducts.length + ' san pham vao grid (het phu thuoc 100% JS)');
+      } else {
+        console.warn('  (san-pham SSR: khong khop placeholder trong san-pham/index.html - kiem tra markup)');
+      }
+    }
+  }
+} catch (e) { console.warn('  (san-pham SSR grid error: ' + e.message + ')'); }
+
+
+// ===== INJECT HOMEPAGE CONTENT FROM CMS (slides + showcase) =====
+try {
+  // Read from settings/homepage.json (primary) or pages/home.md (fallback)
+  var homeData = {};
+  var homeJsonPath = path.join(ROOT,'content','settings','homepage.json');
+  var homeMdPath2  = path.join(ROOT,'content','pages','home.md');
+
+  if(fs.existsSync(homeJsonPath)){
+    var homeJson = JSON.parse(fs.readFileSync(homeJsonPath,'utf8'));
+    // Map slides array to flat keys
+    (homeJson.slides||[]).forEach(function(s,i){
+      var n=i+1;
+      homeData['slide'+n+'_badge']       = s.badge||'';
+      homeData['slide'+n+'_headline1']   = s.title||'';
+      homeData['slide'+n+'_headline2']   = s.title_em||'';
+      homeData['slide'+n+'_tagline']     = s.tagline||'';
+      homeData['slide'+n+'_desc']        = s.description||'';
+      homeData['slide'+n+'_img_desktop'] = s.image_desktop||'';
+      homeData['slide'+n+'_img_mobile']  = s.image_mobile||'';
+      homeData['slide'+n+'_cta_text']    = s.cta_text||'';
+      homeData['slide'+n+'_cta_href']    = s.cta_link||'';
+    });
+    // Map showcase array to flat keys (simplified: tag, title, image, link)
+    var scDefaults=[
+      '/images/tank-1.jpg','/images/tank-2.jpg',
+      '/images/tank-3.jpg','/images/tank-4.jpg'
+    ];
+    (homeJson.showcase||[]).forEach(function(c,i){
+      var n=i+1;
+      homeData['showcase'+n+'_tag']        = c.tag||'';
+      homeData['showcase'+n+'_title']      = c.title||'';
+      homeData['showcase'+n+'_img']        = c.image||scDefaults[i]||'';
+      homeData['showcase'+n+'_link_text']  = c.link_text||'';
+      homeData['showcase'+n+'_link_href']  = c.link_href||'';
+      // Backward compat: also set _title1 for data-cms="showcase1_title"
+      homeData['showcase'+n+'_title1']     = c.title||'';
+    });
+  } else if(fs.existsSync(homeMdPath2)){
+    // Fallback: flat YAML
+    var hmRaw=fs.readFileSync(homeMdPath2,'utf8');
+    var hmFm=hmRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if(hmFm){
+      hmFm[1].split(/\r?\n/).forEach(function(l){
+        var m=l.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*"?(.*?)"?\s*$/);
+        if(m&&!l.startsWith(' ')) homeData[m[1]]=m[2].replace(/^["']|["']$/g,'');
+      });
+    }
+  }
+
+  var homeHtmlPath=path.join(DIST,'index.html');
+  if(fs.existsSync(homeHtmlPath)&&Object.keys(homeData).length>0){
+    var homeHtml=fs.readFileSync(homeHtmlPath,'utf8');
+    function esc3(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+    // Text content replacements (data-cms="key")
+    homeHtml=homeHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,k){
+      var v=homeData[k];return tag+(v!=null?esc3(v):m.replace(tag,''));
+    });
+    // H2 slide headings (data-cms-h1 + data-cms-em)
+    homeHtml=homeHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em><\/h2>/g,function(m,attrs,h1k,emk){
+      return '<h2'+attrs+'>'+esc3(homeData[h1k]||'')+' <em>'+esc3(homeData[emk]||'')+'</em></h2>';
+    });
+    // Showcase H3 titles — now handled by data-cms="showcaseN_title" (simple text)
+    // Slide img src (data-cms-imgsrc="key") — order-independent
+    homeHtml=homeHtml.replace(/<img([^>]*)>/g,function(m,attrs){
+      var km=attrs.match(/data-cms-imgsrc="([^"]+)"/);
+      if(!km) return m;
+      var v=homeData[km[1]];
+      if(!v) return m;
+      return '<img'+attrs.replace(/\ssrc="[^"]*"/,' src="'+v+'"')+'>';
+    });
+    // Slide source srcset (data-cms-srcset="key") — order-independent
+    homeHtml=homeHtml.replace(/<source([^>]*)>/g,function(m,attrs){
+      var km=attrs.match(/data-cms-srcset="([^"]+)"/);
+      if(!km) return m;
+      var v=homeData[km[1]];
+      if(!v) return m;
+      return '<source'+attrs.replace(/\ssrcset="[^"]*"/,' srcset="'+v+'"')+'>';
+    });
+    // Preload ảnh hero (slide 1): cập nhật theo CMS để preload đúng ảnh, tránh tải ảnh cũ
+    if(homeData['slide1_img_desktop']) homeHtml=homeHtml.replace('href="/images/slide1-desktop.jpg"','href="'+homeData['slide1_img_desktop']+'"');
+    if(homeData['slide1_img_mobile'])  homeHtml=homeHtml.replace('href="/images/slide1-mobile.jpg"','href="'+homeData['slide1_img_mobile']+'"');
+    // Slide 3 image: CSS injection (SVG is 7500+ chars, regex unreliable)
+    var s3img=homeData['slide3_img_desktop'];
+    if(s3img){
+      var s3mobile=homeData['slide3_img_mobile']?'@media(max-width:820px){.slide-3 .slide-bg{background-image:url("'+homeData['slide3_img_mobile']+'")}}'  :'';
+      var s3css='<style>.slide-3.active.slide-3-has-photo .slide-bg svg,.slide-3.slide-3-has-photo .slide-bg svg{opacity:0!important}.slide-3 .slide-bg{background:url("'+s3img+'") center/cover no-repeat!important}'+s3mobile+'</style>';
+      // Add class to slide-3 div to activate CSS
+      homeHtml=homeHtml.replace('class="slide slide-3"','class="slide slide-3 slide-3-has-photo"');
+      homeHtml=homeHtml.replace('</head>',s3css+'</head>');
+    }
+
+    fs.writeFileSync(homeHtmlPath,homeHtml,'utf8');
+    var srcCnt=Object.keys(homeData).length;
+    console.log('  \u2713 homepage: injected CMS content ('+srcCnt+' fields from '+(fs.existsSync(homeJsonPath)?'homepage.json':'home.md')+')');
+  }
+} catch(e){console.warn('  (homepage CMS inject error: '+e.message+')');}
+
+
+// ===== INJECT be-ca PAGE CONTENT FROM CMS =====
+try {
+  var becaMdPath=path.join(ROOT,'content','pages','be-ca.md');
+  if(fs.existsSync(becaMdPath)){
+    var becaRaw=fs.readFileSync(becaMdPath,'utf8');
+    var becaData={};
+    var becaFm=becaRaw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if(becaFm){
+      var bLines2=becaFm[1].split(/\r?\n/); var bi2=0;
+      while(bi2<bLines2.length){
+        var bl2=bLines2[bi2];
+        var bm2=bl2.match(/^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$/);
+        if(bm2&&!bl2.startsWith(' ')){
+          var bkey2=bm2[1],bval2=bm2[2].trim();
+          if(bval2==='>-'||bval2==='|-'||bval2==='|'||bval2==='>'){
+            var bls3=[];bi2++;
+            while(bi2<bLines2.length&&(bLines2[bi2].startsWith('  ')||bLines2[bi2].trim()==='')){bls3.push(bLines2[bi2].trim());bi2++;}
+            becaData[bkey2]=bls3.filter(Boolean).join(' ');continue;
+          } else { becaData[bkey2]=bval2.replace(/^["']|["']$/g,'').trim(); }
+        }
+        bi2++;
+      }
+    }
+    function escB2(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    var becaHtmlPath=path.join(DIST,'be-ca','index.html');
+    if(fs.existsSync(becaHtmlPath)&&Object.keys(becaData).length>0){
+      var becaHtml=fs.readFileSync(becaHtmlPath,'utf8');
+      becaHtml=becaHtml.replace(/(<[^>]+data-cms="([^"]+)"[^>]*>)[^<]*/g,function(m,tag,key){var v=becaData[key];return tag+(v!=null?escB2(v):m.replace(tag,''));});
+      becaHtml=becaHtml.replace(/<h2([^>]*data-cms-h1="([^"]+)"[^>]*data-cms-em="([^"]+)"[^>]*)>[^<]*<em>[^<]*<\/em>\.<\/h2>/g,function(m,attrs,h1k,emk){return '<h2'+attrs+'>'+escB2(becaData[h1k]||'')+' <em>'+escB2(becaData[emk]||'')+'</em>.</h2>';});
+      becaHtml=becaHtml.replace(/<img([^>]*)>/g,function(m,attrs){var km=attrs.match(/data-cms-imgsrc="([^"]+)"/);if(!km)return m;var v=becaData[km[1]];if(!v)return m;return '<img'+attrs.replace(/src="[^"]*"/,'src="'+v+'"')+'>';});
+      fs.writeFileSync(becaHtmlPath,becaHtml,'utf8');
+      console.log('  \u2713 be-ca: injected CMS content (ProMax / Infinity / Custom)');
+    }
+  }
+} catch(e){console.warn('  (be-ca CMS inject error: '+e.message+')');}
+
+// ===== INJECT TÊN DANH MỤC vào bộ lọc trang san-pham =====
+try {
+  var spCatPath = path.join(DIST, 'san-pham', 'index.html');
+  if (fs.existsSync(spCatPath)) {
+    var spCatHtml = fs.readFileSync(spCatPath, 'utf8');
+    var catJson = JSON.stringify(CATLABELS);
+    var orderJson = JSON.stringify(Object.keys(CATLABELS));
+    var spCatNew = spCatHtml
+      .replace(/var CAT = \{[\s\S]*?\};/, 'var CAT = ' + catJson + ';')
+      .replace(/var CATORDER = \[[\s\S]*?\];/, 'var CATORDER = ' + orderJson + ';');
+    if (spCatNew !== spCatHtml) {
+      fs.writeFileSync(spCatPath, spCatNew, 'utf8');
+      console.log('  \u2713 san-pham: injected ten danh muc (filter)');
+    }
+  }
+} catch(e){ console.warn('  (san-pham cat inject error: ' + e.message + ')'); }
+
+
+
+// ===== AUTO-GENERATE SITEMAP.XML (bao gồm tất cả bài blog) =====
+try {
+  var SM_STATIC = [
+    {u:'https://2daquatic.com/',           p:'1.0', c:'weekly'},
+    {u:'https://2daquatic.com/be-ca/',     p:'0.9', c:'weekly'},
+    {u:'https://2daquatic.com/san-pham/',  p:'0.9', c:'weekly'},
+    {u:'https://2daquatic.com/dich-vu/',   p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/ho-tro/',    p:'0.7', c:'monthly'},
+    {u:'https://2daquatic.com/lien-he/',   p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/be-thuc-te/', p:'0.8', c:'weekly'},
+    {u:'https://2daquatic.com/ca-canh-bien/', p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/ca-canh-bien-ha-noi/', p:'0.8', c:'monthly'},
+    {u:'https://2daquatic.com/blog/',      p:'0.8', c:'weekly'},
+    {u:'https://2daquatic.com/blog/setup-be-ca-bien-200l-cho-nguoi-moi-tu-a-den-z/', p:'0.7', c:'monthly'},
+  ];
+
+  var smToday = new Date().toISOString().split('T')[0];
+  var smEntries = SM_STATIC.map(function(s){
+    return '  <url>\n    <loc>'+s.u+'</loc>\n    <changefreq>'+s.c+'</changefreq>\n    <priority>'+s.p+'</priority>\n    <lastmod>'+smToday+'</lastmod>\n  </url>';
+  });
+  // Add all published blog articles
+  var smIdxPath = path.join(DIST,'content','articles-index.json');
+  if(fs.existsSync(smIdxPath)){
+    JSON.parse(fs.readFileSync(smIdxPath,'utf8')).filter(function(a){return a.published!==false;}).forEach(function(a){
+      var lm = a.date ? new Date(a.date).toISOString().split('T')[0] : smToday;
+      smEntries.push('  <url>\n    <loc>https://2daquatic.com/blog/'+a.slug+'/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n    <lastmod>'+lm+'</lastmod>\n  </url>');
+    });
+  }
+  // add product pages to sitemap
+  var pjSm=path.join(DIST,'products.json');
+  if(fs.existsSync(pjSm)){JSON.parse(fs.readFileSync(pjSm,'utf8')).filter(function(pr){return pr.slug;}).forEach(function(pr){
+    smEntries.push('  <url>\n    <loc>https://2daquatic.com/san-pham/'+pr.slug+'/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>');
+  });}
+  var smXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + smEntries.join('\n') + '\n</urlset>';
+  fs.writeFileSync(path.join(DIST,'sitemap.xml'), smXml, 'utf8');
+  console.log('  \u2713 sitemap.xml (' + smEntries.length + ' URLs)');
+} catch(e) { console.warn('  (sitemap error: '+e.message+')'); }
+
+// ===== TỰ ĐỘNG SINH REDIRECT TỪ FIELD "old_slugs" TRONG CMS =====
+// Khi đổi Slug (URL) của 1 sản phẩm/bài viết, điền slug CŨ vào field
+// "old_slugs" (list) trong CMS -> build sẽ tự thêm redirect 301 vào
+// _redirects, không cần Linh tự tay sửa file _redirects nữa.
+try {
+  var AR_LINES = [];
+  var pjRedir = path.join(DIST, 'products.json');
+  if (fs.existsSync(pjRedir)) {
+    JSON.parse(fs.readFileSync(pjRedir, 'utf8')).forEach(function (pr) {
+      if (pr.slug && Array.isArray(pr.old_slugs)) {
+        pr.old_slugs.forEach(function (old) {
+          old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
+          if (!old || old === pr.slug) return;
+          AR_LINES.push('/san-pham/' + old + '/    /san-pham/' + pr.slug + '/    301');
+          AR_LINES.push('/san-pham/' + old + '    /san-pham/' + pr.slug + '/    301');
+        });
+      }
+    });
+  }
+  var ajRedir = path.join(DIST, 'content', 'articles-index.json');
+  if (fs.existsSync(ajRedir)) {
+    JSON.parse(fs.readFileSync(ajRedir, 'utf8')).forEach(function (a) {
+      if (a.slug && Array.isArray(a.old_slugs)) {
+        a.old_slugs.forEach(function (old) {
+          old = String(old || '').trim().replace(/^\/+|\/+$/g, '');
+          if (!old || old === a.slug) return;
+          AR_LINES.push('/blog/' + old + '/    /blog/' + a.slug + '/    301');
+          AR_LINES.push('/blog/' + old + '    /blog/' + a.slug + '/    301');
+        });
+      }
+    });
+  }
+  if (AR_LINES.length) {
+    var redirPath = path.join(DIST, '_redirects');
+    var redirContent = fs.existsSync(redirPath) ? fs.readFileSync(redirPath, 'utf8') : '';
+    var AR_MARKER = '# === Fallback 404 ===';
+    var AR_BLOCK = '\n# === Auto-generated tu field "old_slugs" (build.js) ===\n' + AR_LINES.join('\n') + '\n\n';
+    redirContent = redirContent.indexOf(AR_MARKER) !== -1
+      ? redirContent.replace(AR_MARKER, AR_BLOCK + AR_MARKER)
+      : redirContent + AR_BLOCK;
+    fs.writeFileSync(redirPath, redirContent, 'utf8');
+    console.log('  \u2713 _redirects: tu dong them ' + AR_LINES.length + ' dong tu old_slugs');
+  }
+} catch (e) { console.warn('  (auto-redirect tu old_slugs error: ' + e.message + ')'); }
+
+
+console.log('');
+console.log('✅ Build complete! Output in dist/');
+console.log(`   Files in dist/: ${fs.readdirSync(DIST).length}`);
