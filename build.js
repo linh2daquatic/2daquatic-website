@@ -75,7 +75,7 @@ ROOT_FILES.forEach(file => {
 const FOLDERS = [
   'admin', 'be-ca', 'san-pham', 'dich-vu', 'ho-tro', 'lien-he',
   'ca-canh-bien', 'ca-canh-bien-ha-noi',
-  'blog', 'be-thuc-te', 'cam-on', 'css', 'images', 'content', 'functions', 'bao-gia'
+  'blog', 'be-thuc-te', 'cam-on', 'css', 'images', 'content', 'functions'
 ];
 
 FOLDERS.forEach(folder => {
@@ -795,7 +795,6 @@ try {
     {u:'https://2daquatic.com/dich-vu/',   p:'0.8', c:'monthly'},
     {u:'https://2daquatic.com/ho-tro/',    p:'0.7', c:'monthly'},
     {u:'https://2daquatic.com/lien-he/',   p:'0.8', c:'monthly'},
-    {u:'https://2daquatic.com/bao-gia/',   p:'0.8', c:'weekly'},
     {u:'https://2daquatic.com/be-thuc-te/', p:'0.8', c:'weekly'},
     {u:'https://2daquatic.com/ca-canh-bien/', p:'0.8', c:'monthly'},
     {u:'https://2daquatic.com/ca-canh-bien-ha-noi/', p:'0.8', c:'monthly'},

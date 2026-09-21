@@ -1176,6 +1176,186 @@
 </section>
 
 <!-- CATEGORIES -->
+<!-- =============================================================
+     MỤC GIỚI THIỆU 2DS REEF LOG — dán vào trang chủ 2daquatic.com
+     -------------------------------------------------------------
+     Tự chứa hoàn toàn: CSS nằm trong khối <style> ngay dưới, mọi
+     tên class đều bắt đầu bằng "r2ds-" nên không đụng gì tới CSS
+     sẵn có của site.
+
+     Chỗ có thể sửa:
+       • Đường dẫn app:     https://2ds.2daquatic.com
+       • Màu thương hiệu:   --r2ds-xanh
+     ============================================================= -->
+
+<section class="r2ds" id="cong-cu-2ds">
+<style>
+.r2ds{
+  --r2ds-nen:#0e2a47;
+  --r2ds-nen2:#123655;
+  --r2ds-xanh:#3bb2e0;
+  --r2ds-chu:#eaf3fa;
+  --r2ds-mo:#9db6cc;
+  padding:clamp(40px,7vw,76px) 20px;
+  background:#f5f8fb;
+}
+.r2ds *{box-sizing:border-box}
+.r2ds-in{max-width:1080px; margin:0 auto}
+
+.r2ds-box{
+  background:linear-gradient(135deg,var(--r2ds-nen) 0%,var(--r2ds-nen2) 100%);
+  border-radius:20px; overflow:hidden; position:relative;
+  box-shadow:0 20px 50px -24px rgba(14,42,71,.55);
+}
+.r2ds-box::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(90% 120% at 92% 0%,rgba(59,178,224,.28),transparent 58%);
+}
+.r2ds-grid{
+  position:relative; display:grid; grid-template-columns:1.15fr .85fr;
+  gap:clamp(24px,4vw,46px); align-items:center;
+  padding:clamp(28px,4.5vw,50px);
+}
+@media (max-width:860px){ .r2ds-grid{grid-template-columns:1fr} }
+
+.r2ds-nhan{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--r2ds-xanh);
+}
+.r2ds-nhan::before{content:''; width:22px; height:2px; background:var(--r2ds-xanh); border-radius:2px}
+
+.r2ds-h2{
+  color:#fff; font-size:clamp(25px,3.4vw,36px); line-height:1.18; font-weight:800;
+  letter-spacing:-.02em; margin:14px 0 0;
+}
+.r2ds-h2 em{font-style:normal; color:var(--r2ds-xanh)}
+.r2ds-p{color:var(--r2ds-chu); font-size:16px; line-height:1.72; margin:14px 0 0; max-width:52ch}
+
+.r2ds-ds{list-style:none; margin:20px 0 0; padding:0; display:grid; gap:11px}
+.r2ds-ds li{
+  display:flex; gap:11px; align-items:flex-start; list-style:none; margin:0;
+  color:var(--r2ds-chu); font-size:15px; line-height:1.6;
+}
+.r2ds-ds svg{width:20px; height:20px; flex:none; margin-top:2px; color:var(--r2ds-xanh)}
+.r2ds-ds b{color:#fff; font-weight:700}
+
+.r2ds-nut{display:flex; gap:11px; flex-wrap:wrap; margin-top:26px}
+.r2ds-a{
+  display:inline-flex; align-items:center; gap:9px; text-decoration:none;
+  padding:13px 24px; border-radius:11px; font-size:15.5px; font-weight:700;
+  transition:transform .15s, box-shadow .18s, background .18s;
+}
+.r2ds-a:hover{transform:translateY(-2px)}
+.r2ds-a1{background:var(--r2ds-xanh); color:#06243a; box-shadow:0 10px 26px -10px rgba(59,178,224,.8)}
+.r2ds-a1:hover{background:#56c2ea}
+.r2ds-a2{background:transparent; color:var(--r2ds-chu); border:1px solid rgba(255,255,255,.28)}
+.r2ds-a2:hover{border-color:var(--r2ds-xanh); color:var(--r2ds-xanh)}
+.r2ds-mien{color:var(--r2ds-mo); font-size:13px; margin-top:15px}
+.r2ds-mien b{color:var(--r2ds-chu)}
+
+/* ---- khối minh hoạ bên phải ---- */
+.r2ds-anh{display:grid; gap:12px}
+.r2ds-the{
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+  border-radius:14px; padding:15px 17px; backdrop-filter:blur(3px);
+}
+.r2ds-the .k{
+  font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--r2ds-mo);
+}
+.r2ds-the .v{
+  color:#fff; font-size:28px; font-weight:800; line-height:1.1; margin-top:4px;
+  font-variant-numeric:tabular-nums;
+}
+.r2ds-the .v small{font-size:13px; font-weight:600; color:var(--r2ds-mo)}
+.r2ds-the .n{color:var(--r2ds-xanh); font-size:12.5px; font-weight:700; margin-top:5px}
+.r2ds-doi{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.r2ds-song{display:block; width:100%; height:44px; margin-top:8px}
+</style>
+
+<div class="r2ds-in">
+<div class="r2ds-box">
+<div class="r2ds-grid">
+
+  <!-- ---------- cột chữ ---------- -->
+  <div>
+    <span class="r2ds-nhan">Công cụ miễn phí cho khách 2D</span>
+
+    <h2 class="r2ds-h2">Nhật ký bể mặn <em>2DS Reef Log</em></h2>
+
+    <p class="r2ds-p">Ghi chỉ số nước, theo dõi biên độ dao động, và để máy tự tính
+      liều châm bù cho bể của bạn — không cần biết dung dịch hãng nào, chỉ cần đo vài lần.</p>
+
+    <ul class="r2ds-ds">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17.5 8.5 11l4 3.5L21 5.5"/><path d="M15.5 5.5H21v5.5"/></svg>
+        <span><b>Sáu thông số cốt lõi</b> — KH, Ca, Mg, NO₃, PO₄, độ mặn — vẽ thành biểu đồ,
+          nhìn ra ngay bể đang trôi hay đang ổn.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8s5.6 5.9 5.6 9.8A5.6 5.6 0 0 1 12 18.2a5.6 5.6 0 0 1-5.6-5.6c0-3.9 5.6-9.8 5.6-9.8Z"/></svg>
+        <span><b>Máy tự học liều châm</b> — ghi liều đang chạy khi đo, vài lần là app tính ra
+          bể bạn ăn bao nhiêu mỗi ngày và cần châm bao nhiêu mL.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v18H5.5A2.5 2.5 0 0 1 3 18.5Z"/><path d="M21 5.5A2.5 2.5 0 0 0 18.5 3H13v18h5.5a2.5 2.5 0 0 0 2.5-2.5Z"/></svg>
+        <span><b>Cẩm nang video theo lộ trình</b> — từ lúc chưa có gì tới khi bể chạy ổn định,
+          chia nhóm sẵn cho người mới.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.7"/><path d="M4.6 20a7.4 7.4 0 0 1 14.8 0"/></svg>
+        <span><b>Bí chỗ nào bật chia sẻ cho 2D</b> — chúng tôi mở ra xem đúng thông số bể bạn
+          rồi tư vấn, không phải mô tả qua lại.</span>
+      </li>
+    </ul>
+
+    <div class="r2ds-nut">
+      <a class="r2ds-a r2ds-a1" href="https://2ds.2daquatic.com" target="_blank" rel="noopener">
+        Mở 2DS Reef Log
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="r2ds-a r2ds-a2" href="https://zalo.me/0866112334" target="_blank" rel="noopener">
+        Hỏi 2D qua Zalo
+      </a>
+    </div>
+
+    <p class="r2ds-mien"><b>Miễn phí, không cần tài khoản.</b> Dữ liệu lưu ngay trên máy bạn;
+      đăng nhập Gmail nếu muốn dùng chung điện thoại và máy tính.</p>
+  </div>
+
+  <!-- ---------- cột minh hoạ ---------- -->
+  <div class="r2ds-anh" aria-hidden="true">
+    <div class="r2ds-the">
+      <div class="k">KH — độ kiềm</div>
+      <div class="v">7.9 <small>dKH</small></div>
+      <div class="n">▲ 0.5 so với lần trước</div>
+      <svg class="r2ds-song" viewBox="0 0 200 44" preserveAspectRatio="none">
+        <rect x="0" y="13" width="200" height="17" fill="rgba(59,178,224,.16)"/>
+        <path d="M2 30 L36 33 L70 37 L104 40 L138 27 L172 22 L198 18"
+              fill="none" stroke="#3bb2e0" stroke-width="2.6"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="198" cy="18" r="4" fill="#3bb2e0"/>
+      </svg>
+    </div>
+
+    <div class="r2ds-doi">
+      <div class="r2ds-the">
+        <div class="k">Bể hút / ngày</div>
+        <div class="v">0.50 <small>dKH</small></div>
+      </div>
+      <div class="r2ds-the">
+        <div class="k">Đề xuất châm</div>
+        <div class="v">14.6 <small>mL</small></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+
 <section class="block categories" id="equipment">
   <div class="container">
     <div class="section-head">

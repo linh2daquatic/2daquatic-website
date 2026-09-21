@@ -160,5 +160,8 @@
 /vi-sinh-hoa-chat.html                                   /san-pham/    301
 /vi-sinh-song-prodibio-bio-digest.html                   /san-pham/    301
 
+# === Trang báo giá tự nhập đã ngưng — chuyển về liên hệ ===
+/bao-gia/*     /lien-he/    301
+
 # === Fallback 404 ===
 /*             /404.html    404
