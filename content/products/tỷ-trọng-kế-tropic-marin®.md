@@ -6,7 +6,7 @@ short_description: "Kiểm soát độ mặn chuẩn xác cho bể cá biển "
 image: /images/uploads/screenshot-2026-06-18-at-11.42.49.png
 gallery:
   - /images/uploads/screenshot-2026-06-18-at-11.37.45.png
-price: 1600000
+price: 1800000
 unit: Cái
 specs:
   - key: "Tên Sản Phẩm "
